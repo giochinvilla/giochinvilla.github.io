@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>The Boring Vice</title>
+
+    <style>
+        .simlink {
+            background-color: rgb(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.14), 0 0.1875em 0.125em -0.125em rgba(0, 0, 0, 0.2), 0 0.125em 0.25em 0 rgba(0, 0, 0, 0.12);
+            transition: all 1s ease-out;}
+        .simlink:hover {
+            background-color: rgb(0,0,0,0.2);}
+    </style>
+</head>
+<body onclick="start()">
+
+<audio id="audio" autoplay>
+    <source src="audio\Background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<table class="list" style="width: 180px; position: fixed; top: 1%; left: 0%;">
+    <tr><th style="border-radius: 0px 12px 0px 0px; font-size: 16px; background-color: rgba(32,81,220,0.5);">Menu</th></tr>
+    <tr><td class="menu-list"><a href="index.html">Weapon and Armor</a></td></tr>
+    <tr><td class="menu-list"><a href="magic.html">Magic and Potions</a></td></tr>
+    <tr><td class="menu-list"><a href="items.html">Items and Gemstones</a></td></tr>
+    <tr><td class="menu-list"><a href="movement.html">Tools and Vehicle</a></td></tr>
+    <tr><td class="menu-list"><a href="map.html">Campaign Map</a></td></tr>
+    <tr><td class="menu-list"><a href="lingering.html">Lingering</a></td></tr>
+    <tr><td class="menu-list"><a href="tarot.html">Deck of Tarot</a></td></tr>
+    <tr><td class="menu-list"><a href="downtime.html">Downtime Activities</a></td></tr>
+    <tr><td class="menu-list"><a href="worldbuild.html">World Building</a></td></tr>
+    <tr><td class="menu-list">Skyship</td></tr>
+    <tr><td class="menu-list" style="border-radius: 0px 0px 12px 0px;"><a href="stats.html">Campaign Stats</a></td></tr>
+</table>
+
+<p id="rest" onclick="toggle()" style="font-size: 36px; width: 10px; text-align: center; position: fixed; top: 0%; right: 50px;">&#128264;</p>
+<script>
+var load = 1;
+var x = document.getElementById('audio');
+function start() {
+    if (load == 1) {
+        x.play();
+        x.volume = 0;
+        load = 0;
+        }
+    }
+
+function toggle() {
+    if (load == 0) {
+        if (x.volume != 0) {
+            x.volume = 0;
+            document.getElementById("rest").innerHTML = "&#128264";
+            }
+        else {
+            x.volume = 0.1;
+            document.getElementById("rest").innerHTML = "&#128266;";
+            }
+        }
+    }
+</script>
+
+<div class="page">
+    <h1 style="text-align:center;">Skyship</h1>
+    <p>
+        A Skyship is the peak of modern tecnology for air movement. Its primary purpose is to carry the gear that would otherwise slow you down.
+    </p>
+    <h2 style="text-align:center;">Skyship Blueprint</h2>
+    <br>
+    <h1 class="simlink"; style="text-align:center;"><a href="simulator.html">Run Flight Simulator</a></h1>
+    <div id="test" style="text-align: center;">
+        <img id="gallery" onclick="change()" src="image/sky1.png" style="width:319px;height:575px;">
+    </div>
+    <br>
+    <script>
+        function change() {
+
+            if (document.getElementById("gallery").src.includes("image/sky1.png")) {
+                document.getElementById("gallery").src = "image/sky2.png";
+                }
+            else if (document.getElementById("gallery").src.includes("image/sky2.png")) {
+                document.getElementById("gallery").src = "image/sky3.png";
+                }
+            else if (document.getElementById("gallery").src.includes("image/sky3.png")) {
+                document.getElementById("gallery").src = "image/sky4.png";
+                }
+            else {
+                document.getElementById("gallery").src = "image/sky1.png";
+                }
+            }
+    </script>
+
+
+    <h2 style="text-align:center;">Skyship Damage</h2>
+    <div style="width: 90%; margin:auto;">
+        <table class="list">
+            <tr>
+                <th colspan="3">Parts</th>
+                <th>D100</th>
+                <th>Percentile</th>
+                <th>Armor Class</th>
+                <th>Hit Points</th>
+            </tr>
+            <tr>
+                <td colspan="3">Central Motor</td>
+                <td>1</td>
+                <td>1%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Lateral Motor / Combustion</td>
+                <td>2</td>
+                <td>1%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Rear Motor / Combustion</td>
+                <td>3</td>
+                <td>1%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Lateral Motor / Compressor</td>
+                <td>4</td>
+                <td>1%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Rear Motor / Compressor</td>
+                <td>5</td>
+                <td>1%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Rear Wings</td>
+                <td>6</td>
+                <td>1%</td>
+                <td>Cloth 11</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td colspan="3">Lateral Motor / Intake</td>
+                <td>7-8</td>
+                <td>2%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Rear Motor / Intake</td>
+                <td>9-10</td>
+                <td>2%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Lateral Motor / Sospendium</td>
+                <td>11-12</td>
+                <td>2%</td>
+                <td>Sospendium 21</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Rear Motor / Sospendium</td>
+                <td>13-14</td>
+                <td>2%</td>
+                <td>Sospendium 21</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Propeller / Central</td>
+                <td>15-16</td>
+                <td>2%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Propeller / Front</td>
+                <td>17-18</td>
+                <td>2%</td>
+                <td>Iron 19</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Mizzen Wings / Velaccio</td>
+                <td>19-22</td>
+                <td>4%</td>
+                <td>Cloth 11</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td colspan="3">Master Wings / Velaccio</td>
+                <td>23-26</td>
+                <td>4%</td>
+                <td>Cloth 11</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td colspan="3">Master Wings / Controvelaccio</td>
+                <td>27-30</td>
+                <td>4%</td>
+                <td>Cloth 11</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td colspan="3">Foremast Wings / Velaccio</td>
+                <td>31-34</td>
+                <td>4%</td>
+                <td>Cloth 11</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td colspan="3">Foremast Wings / Controvelaccio</td>
+                <td>35-38</td>
+                <td>4%</td>
+                <td>Cloth 11</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td colspan="3">Lateral Wings</td>
+                <td>39-43</td>
+                <td>5%</td>
+                <td>Cloth 11</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td colspan="3">Front Wings</td>
+                <td>44-49</td>
+                <td>6%</td>
+                <td>Cloth 11</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td colspan="3">Rear Hull</td>
+                <td>50-59</td>
+                <td>10%</td>
+                <td>Wood 15</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td colspan="3">Central Hull</td>
+                <td>60-69</td>
+                <td>10%</td>
+                <td>Wood 15</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td colspan="3">Front Hull</td>
+                <td>70-79</td>
+                <td>10%</td>
+                <td>Wood 15</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td colspan="3">First Balista</td>
+                <td>80-84</td>
+                <td>4%</td>
+                <td>15</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td colspan="3">Second Balista</td>
+                <td>85-87</td>
+                <td>4%</td>
+                <td>15</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td colspan="3">Third Balista</td>
+                <td>88-91</td>
+                <td>4%</td>
+                <td>15</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td colspan="3">Fourth Balista</td>
+                <td>92-95</td>
+                <td>4%</td>
+                <td>15</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td colspan="3">Nothing</td>
+                <td>96-100</td>
+                <td>5%</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+    </div>
+    <br>
+</div>
+<br>
+</body>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>The Boring Vice</title>
+</head>
+<body onclick="start()">
+
+<audio id="audio" autoplay>
+    <source src="audio\Background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<table class="list" style="width: 180px; position: fixed; top: 1%; left: 0%;">
+    <tr><th style="border-radius: 0px 12px 0px 0px; font-size: 16px; background-color: rgba(32,81,220,0.5);">Menu</th></tr>
+    <tr><td class="menu-list"><a href="index.html">Weapon and Armor</a></td></tr>
+    <tr><td class="menu-list"><a href="magic.html">Magic and Potions</a></td></tr>
+    <tr><td class="menu-list"><a href="items.html">Items and Gemstones</a></td></tr>
+    <tr><td class="menu-list"><a href="movement.html">Tools and Vehicle</a></td></tr>
+    <tr><td class="menu-list"><a href="map.html">Campaign Map</a></td></tr>
+    <tr><td class="menu-list"><a href="lingering.html">Lingering</a></td></tr>
+    <tr><td class="menu-list"><a href="tarot.html">Deck of Tarot</a></td></tr>
+    <tr><td class="menu-list">Downtime Activities</td></tr>
+    <tr><td class="menu-list"><a href="worldbuild.html">World Building</a></td></tr>
+    <tr><td class="menu-list"><a href="skyship.html">Skyship</a></td></tr>
+    <tr><td class="menu-list" style="border-radius: 0px 0px 12px 0px;"><a href="stats.html">Campaign Stats</a></td></tr>
+</table>
+<p id="rest" onclick="toggle()" style="font-size: 36px; width: 10px; text-align: center; position: fixed; top: 0%; right: 50px;">&#128264;</p>
+<script>
+var load = 1;
+var x = document.getElementById('audio');
+function start() {
+    if (load == 1) {
+        x.play();
+        x.volume = 0;
+        load = 0;
+        }
+    }
+
+function toggle() {
+    if (load == 0) {
+        if (x.volume != 0) {
+            x.volume = 0;
+            document.getElementById("rest").innerHTML = "&#128264";
+            }
+        else {
+            x.volume = 0.1;
+            document.getElementById("rest").innerHTML = "&#128266;";
+            }
+        }
+    }
+</script>
+
+<div class="page">
+    <h1 style="text-align:center;">Downtime Activities</h1>
+    <p>
+        The campaign benefits when characters have time between adventures to engage in other activities.
+        Allowing days, weeks, or months to pass between adventures stretches the campaign over a longer period
+        of time and helps to manage the characters' level progression, preventing them from gaining too much
+        power too quickly.
+    </p>
+    <h2 style="text-align:center;">Lifetimes Expenses</h2>
+    <p>
+        We can't talk about downtime without talking about lifestyle expenses. While some downtime activities allow
+        you to circumvent this cost, if you don't plan on doing anything with your downtime, you will be required
+        to pay this cost in order to afford lodging, food, and the maintaining of armor and weapons.
+    </p>
+    <div style="width: 50%; margin:auto;">
+    <table class="list">
+        <tr>
+            <th>Lifestyle</th>
+            <th>Meals x2</th>
+            <th>Inn Stays</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>Wretched</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>Squalid</td>
+            <td>3 Eres</td>
+            <td>4 Eres</td>
+            <td>10 Eres/Day</td>
+        </tr>
+        <tr>
+            <td>Poor</td>
+            <td>6 Eres</td>
+            <td>5 Eres</td>
+            <td>16 Eres/Day</td>
+        </tr>
+        <tr>
+            <td>Modest</td>
+            <td>50 Eres</td>
+            <td>15 Eres</td>
+            <td>80 Eres/Day</td>
+        </tr>
+        <tr>
+            <td>Comfortable</td>
+            <td>80 Eres</td>
+            <td>25 Eres</td>
+            <td>130 Eres/Day</td>
+        </tr>
+        <tr>
+            <td>Wealthy</td>
+            <td>150 Eres</td>
+            <td>40 Eres</td>
+            <td>230 Eres/Day</td>
+        </tr>
+        <tr>
+            <td>Aristocratic</td>
+            <td>400 Eres</td>
+            <td>100 Eres</td>
+            <td>600 Eres/Day</td>
+        </tr>
+    </table>
+    </div>
+    <br>
+    <h2 style="text-align:center;">Practicing a Profession</h2>
+    <p>
+        If you don't want to pay those pesky lifestyle expenses, you can go from action-packed
+        adventuring to working a job. Practicing a profession allows you to live a modest lifestyle
+        without paying the cost as long as you keep working.
+        Finally, if your character is willing to put themselves out there and has a proficiency
+        in performance, they can perform and maintain a wealthy lifestyle without paying the cost.
+    </p>
+    <h2 style="text-align:center;">Building A Stronghold</h2>
+    <p>
+        So, you have recently come into a bit of land, whether it be through money or murder.
+        You can now build a stronghold on it. Building a stronghold requires a lot of time and money
+        and usually should be done after a large adventure. Basically, the bigger the building is,
+        the more it cost and the longer it takes.
+    </p>
+    <h2 style="text-align:center;">Carousing</h2>
+    <p>
+        A player spends enough money to maintain a wealthy lifestyle, or 400 Eres/Day, and at the end of the period, they roll on a table to see what happens.
+        If you want to spend time with the upper class, you'll either need access to the local nobility or be disguised with one.
+        During the week you mingle, party, and socialize with members of that social class.
+    </p>
+    <ul>
+        <li><b>01-10</b><div style="font-size: 12px;">You are jailed for 1d4 days at the end of the downtime period
+            on charges of disorderly conduct and disturbing the peace. You can pay a fine of 10 gp to avoid jail time,
+            or you can try to resist arrest.</div></li><br>
+        <li><b>11-20</b><div style="font-size: 12px;">You regain consciousness in a strange place with no memory of how you
+            got there, and you have been robbed of 3d6 x 250 Eres.</div></li><br>
+        <li><b>21-40</b><div style="font-size: 12px;">You make an enemy. This person, business, or organization is now hostile to you.
+            The DM determines the offended party. You decide how you offended them.</div></li><br>
+        <li><b>41-50</b><div style="font-size: 12px;">You earn modest winnings from gambling and recuperate your lifestyle expenses
+            for the time spent carousing.</div></li><br>
+        <li><b>51-80</b><div style="font-size: 12px;">You find some allies and intel. They'll now help you. The DM determines the allies.</div></li><br>
+        <li><b>81-100</b><div style="font-size: 12px;">You find some allies and intel and you make a small fortune gambling. You gain 3d6 x 500 Eres.
+            Your carousing becomes the stuff of local legend.</div></li><br>
+    </ul>
+    <h2 style="text-align:center;">Crafting Magical Items</h2>
+    <p>
+        Crafting a magical item is a long and complicated process. First the crafter needs to be able to cast spells.
+        You will need materials, unlike non-magical items, magical items require specific materials that could take whole adventures to gather.
+    </p>
+    <h2 style="text-align:center;">Crime</h2>
+    <p>
+        You can spend your downtime planning and executing a heist. First, you spend 250 Eres and a workweek on intel.
+        Then you make, a series of crime related checks, such as stealth for not getting caught and deception since
+        you got caught. The amount of successful checks determines the outcome of the heist, ranging from being
+        caught and jailed to making it out with a small fortune.
+    </p>
+    <h2 style="text-align:center;">Gaining Renown</h2>
+    <p>
+        You can spend your downtime doing small task and socializing with members of a faction.
+    </p>
+    <h2 style="text-align:center;">Performing Sacred Rights</h2>
+    <p>
+        If there is a temple near you that is affiliated with your god, you can spend your time performing sacred
+        ceremonies such as weddings, funerals, and sacrifices. You will gain favor from your god or the church.
+        These can either be favors you can ask the church, help with spellcasting costs, or divine interventions from the god themselves.
+    </p>
+    <h2 style="text-align:center;">Pit Fighting</h2>
+    <p>
+        Pit fights consist of organized, competitive, non-lethal fights, though your DM can choose to make them lethal.
+        Your DM can choose to enact each of these fights, creating a separate combat encounter for each one.
+        Unlike committing crimes or gambling, you lose nothing if fail all your roles.
+    </p>
+    <h2 style="text-align:center;">Recuperating</h2>
+    <p>
+        In order to relax, you must be able to maintain a modest lifestyle while you recuperate.
+        You gain an advantage against any diseases and poisons affecting you, you end any effect
+        that stops you from regaining health, and you can restore one ability score back to its original
+        score if it had been decreased.
+    </p>
+    <h2 style="text-align:center;">Researching</h2>
+    <p>
+        You spend your downtime researching a specific subject or topic that you state at the beginning of your research.
+        Your DM can decide how long it takes to research the subject. At the end of the researching period, the DM will
+        give information relating to your research, ranging from locations to lore to monster statistics.
+    </p>
+    <h2 style="text-align:center;">Running a Business</h2>
+    <p>
+        Sometimes an adventurer just wants to settle down and run a business for a while.
+        These can range from taverns to stores to exotic services. Depending on the amount of days spent running the business,
+        you can either gain or lose an amount of gold, but spending more days running a business increases the
+        chance of gaining money.
+    </p>
+    <h2 style="text-align:center;">Scribing Spell Scrolls</h2>
+    <p>
+        In order to make spell scrolls you need the ability to cast spells, time, money, and any material components
+        needed for the spell. The time and amount of gold spent depend on the level for the spell; the higher
+        the spell level the more it cost to make.
+    </p>
+    <h2 style="text-align:center;">Sowing Rumors</h2>
+    <p>
+        You can spend your downtime and a little bit of extra money to spread rumors about a specific person or organization.
+        The bigger the place, the longer it takes for word to get around. The rumors can range from
+        scandalous accusations that will tarnish a reputation to good deeds that will make them seem
+        a little bit nicer.
+    </p>
+    <h2 style="text-align:center;">Training</h2>
+    <p>
+        First, you need to find a mentor or instructor to teach you how to do the skill.
+        After you find your teacher, you can spend a number of days learning the skill, and at the end of the process,
+        you'll be proficient in the tool or language.
+    </p>
+    <br>
+</div>
+</body>
+</html>

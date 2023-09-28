@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>The Boring Vice</title>
+
+</head>
+<body onclick="start()">
+
+<audio id="audio" autoplay>
+    <source src="audio\Background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<table class="list" style="width: 180px; position: fixed; top: 1%; left: 0%;">
+    <tr><th style="border-radius: 0px 12px 0px 0px; font-size: 16px; background-color: rgba(32,81,220,0.5);">Menu</th></tr>
+    <tr><td class="menu-list"><a href="index.html">Weapon and Armor</a></td></tr>
+    <tr><td class="menu-list"><a href="magic.html">Magic and Potions</a></td></tr>
+    <tr><td class="menu-list"><a href="items.html">Items and Gemstones</a></td></tr>
+    <tr><td class="menu-list"><a href="movement.html">Tools and Vehicle</a></td></tr>
+    <tr><td class="menu-list"><a href="map.html">Campaign Map</a></td></tr>
+    <tr><td class="menu-list"><a href="lingering.html">Lingering</a></td></tr>
+    <tr><td class="menu-list"><a href="tarot.html">Deck of Tarot</a></td></tr>
+    <tr><td class="menu-list"><a href="downtime.html">Downtime Activities</a></td></tr>
+    <tr><td class="menu-list">World Building</td></tr>
+    <tr><td class="menu-list"><a href="skyship.html">Skyship</a></td></tr>
+    <tr><td class="menu-list" style="border-radius: 0px 0px 12px 0px;"><a href="stats.html">Campaign Stats</a></td></tr>
+</table>
+<p id="rest" onclick="toggle()" style="font-size: 36px; width: 10px; text-align: center; position: fixed; top: 0%; right: 50px;">&#128264;</p>
+<script>
+var load = 1;
+var x = document.getElementById('audio');
+function start() {
+    if (load == 1) {
+        x.play();
+        x.volume = 0;
+        load = 0;
+        }
+    }
+
+function toggle() {
+    if (load == 0) {
+        if (x.volume != 0) {
+            x.volume = 0;
+            document.getElementById("rest").innerHTML = "&#128264";
+            }
+        else {
+            x.volume = 0.1;
+            document.getElementById("rest").innerHTML = "&#128266;";
+            }
+        }
+    }
+</script>
+
+<div class="page">
+    <h1 style="text-align:center;">World Building Stats</h1>
+    <p>
+        So, you have recently come into a bit of land, whether it be through money or murder. You can now build a stronghold on it.
+        Building a stronghold requires a lot of time and money and usually should be done after a large adventure.
+        Basically, the bigger the building is, the more it cost and the longer it takes. Overall, if you have the time and money
+        and your party doesn't have a base of operations, a guildhall would probably be the best investment for your party.
+    </p>
+    <div style="width: 90%; margin:auto;">
+    <table class="list">
+        <tr>
+            <th>Structure</th>
+            <th>Land Unit</th>
+            <th>Material Cost</th>
+            <th>Building Time</th>
+            <th style="font-size:10px;">Skilled Workers</th>
+            <th style="font-size:10px;">Unskilled Workers</th>
+        </tr>
+        <tr>
+            <td>Abbey</td>
+            <td>6 Units</td>
+            <td>2500K Eres</td>
+            <td>400 Days</td>
+            <td>5</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Cottage</td>
+            <td>1 Units</td>
+            <td>125K Eres</td>
+            <td>30 Days</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Guildhall</td>
+            <td>2 Units</td>
+            <td>750K Eres</td>
+            <td>60 Days</td>
+            <td>5</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Keep</td>
+            <td>6 Units</td>
+            <td>2500K Eres</td>
+            <td>400 Days</td>
+            <td>25</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>Noble Estate</td>
+            <td>4 Units</td>
+            <td>1250K Eres</td>
+            <td>150 Days</td>
+            <td>3</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Outpost or Fort</td>
+            <td>3 Units</td>
+            <td>750K Eres</td>
+            <td>100 Days</td>
+            <td>20</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Castle</td>
+            <td>10 Units</td>
+            <td>25000K Eres</td>
+            <td>1200 Days</td>
+            <td>80</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Temple</td>
+            <td>6 Units</td>
+            <td>2500K Eres</td>
+            <td>400 Days</td>
+            <td>10</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Fortified Tower</td>
+            <td>3 Units</td>
+            <td>750K Eres</td>
+            <td>100 Days</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Trading Post</td>
+            <td>2 Units</td>
+            <td>250K Eres</td>
+            <td>60 Days</td>
+            <td>4</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Large House</td>
+            <td>2 Units</td>
+            <td>250K Eres</td>
+            <td>60 Days</td>
+            <td>4</td>
+            <td>2</td>
+        </tr>
+    </table>
+    </div>
+    <h2 style="text-align:center;">Vehicle Structure</h2>
+    <div style="width: 90%; margin:auto;">
+    <table class="list">
+        <tr>
+            <th>Structure</th>
+            <th>Land Unit</th>
+            <th>Material Cost</th>
+            <th>Building Time</th>
+            <th style="font-size:10px;">Skilled Workers</th>
+            <th style="font-size:10px;">Unskilled Workers</th>
+        </tr>
+        <tr>
+            <td>Galley</td>
+            <td>4 Units</td>
+            <td>1500K Eres</td>
+            <td>100 Days</td>
+            <td>5</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Sailing Ship</td>
+            <td>2 Units</td>
+            <td>500K Eres</td>
+            <td>80 Days</td>
+            <td>2</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Warship</td>
+            <td>3 Units</td>
+            <td>1200K Eres</td>
+            <td>150 Days</td>
+            <td>3</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Skyship</td>
+            <td>5 Units</td>
+            <td>10000K Eres</td>
+            <td>120 Days</td>
+            <td>5</td>
+            <td>15</td>
+        </tr>
+    </table>
+    </div>
+    <h2 style="text-align:center;">Damaged Structures</h2>
+    <p>
+        You may also rebuild a damaged structure you happen upon, should the DM determine you can
+        make a legitimate claim to its ownership. You do not have to pay full price for such a structure and may
+        not necessarily have to purchase the land this structure is on. The construction time and cost of a
+        damaged structure varies directly with the amount of damage the structure has taken.
+    </p>
+    <div style="width: 90%; margin:auto;">
+    <table class="list">
+        <thead>
+        <tr>
+            <th>Damage</th>
+            <th>Appearance</th>
+        </tr>
+        <tr>
+            <td>0 %</td>
+            <td>Structure is immaculate</td>
+        </tr>
+        <tr>
+            <td>1-25 % </td>
+            <td>Roofs and walls have holes</td>
+        </tr>
+        <tr>
+            <td>26-50 %</td>
+            <td>Partially collapsed</td>
+        </tr>
+        <tr>
+            <td>51-75 %</td>
+            <td>Nature reclaimed structure</td>
+        </tr>
+        <tr>
+            <td>76-100 %</td>
+            <td>Scattered ruins</td>
+        </tr>
+    </table>
+    </div>
+
+    <h2 style="text-align:center;">Types of Structures</h2>
+    <ul>
+        <li><b>Abbey</b><div style="font-size: 12px;">A religious retreat for those so inclined. Made plain or ornate,
+            befitting its order, out of local stone or wood. Contains mostly communal living quarters for up to
+            100 persons.</div></li><br>
+        <li><b>Cottage or medium house</b><div style="font-size: 12px;"> A small to medium cozy hovel, shop, or home that can house a
+            maximum of 5 people in close quarters. Made of thatch, lumber, brick, or similar.</div></li><br>
+        <li><b>Guildhall</b><div style="font-size: 12px;">A large and often-storied house dedicated to housing members of a guild,
+            typically all of a single profession or adventurous bent. Contains semi-private quarters for up to 25
+            individuals.</div></li><br>
+        <li><b>Keep or small castle</b><div style="font-size: 12px;">Fit to rule over a fiefdom or barony, this structure is equipped with heavy
+            stone walls, turrets, and spires. There is a private room for the master of the keep, as well as private
+            rooms for up to 50 distinguished guests. This structure may also house up to 450 servants or
+            men-at-arms in less comfortable, occasionally communal living space.</div></li><br>
+        <li><b>Noble estate with manor</b><div style="font-size: 12px;"> A fine manor house on a wide tract of land, expertly manicured or
+            tailored how you wish. Contains private rooms for up to 15 individuals, as well as lower quality and well
+            hidden semi-private quarters for a serving staff of up to 35 persons.</div></li><br>
+        <li><b>Outpost or fort</b><div style="font-size: 12px;"> A forward, rough military establishment hewn from rock or timber, this structure
+            is a friendly presence in a hostile land. Contains private quarters for up to 25 officers and common bunks
+            for up to 225 soldiers and staff.</div></li><br>
+        <li><b>Palace or large castle</b><div style="font-size: 12px;"> An opulent, beautiful, enormous structure, the worthy seat of a kingdom
+            or empire. Contains personal chambers for the structure’s owners, private quarters for up to 200
+            distinguished guests, and somewhat shabby residences for up to 1,800 servants and soldiers.</div></li><br>
+        <li><b>Temple</b><div style="font-size: 12px;"> A large, solemn place carved in the image of a god or gods, decorated to suit their
+            personalities, using whichever materials, forms, and iconography that the associated deities find most
+            pleasing. Contains communal bunks suitable for up to 100 pilgrims or acolytes, and private quarters for up
+            to 25 ranking members of the clergy.</div></li><br>
+        <li><b>Fortified Tower</b><div style="font-size: 12px;"> A large single spire set somewhere high and remote with an excellent view,
+            fortified towers are typically used as military lookouts, wizard’s spires, or immense lighthouses. Includes
+            private rooms for up to 25 occupants; tightly-packed bunks for up to 100 visitors, acolytes, or staff.</div></li><br>
+        <li><b>Trading post or large house</b><div style="font-size: 12px;"> Either a single, large building or a simple and colorfully adorned
+            set of shacks, tents, or shops set up against a harbor, river, or crossroads, each holding wares ranging
+            from astounding to mundane. Comes equipped with private lodging for 5 important persons and bunks or
+            hammocks for up to 45 travellers, traders, or passing merchants.</div></li><br>
+    </ul>
+    <h2 style="text-align:center;">Extra Structure</h2>
+    <div style="width: 90%; margin:auto;">
+    <table class="list">
+        <tr>
+            <th>Structure</th>
+            <th>Land Unit</th>
+            <th>Material Cost</th>
+            <th>Building Time</th>
+            <th style="font-size:10px;">Skilled Workers</th>
+            <th style="font-size:10px;">Unskilled Workers</th>
+        </tr>
+        <tr>
+            <td>Mill</td>
+            <td>1 Units</td>
+            <td>500K Eres</td>
+            <td>30 Days</td>
+            <td>2</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Sewer</td>
+            <td>1 Units</td>
+            <td>200K Eres</td>
+            <td>30 Days</td>
+            <td>2</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Mine</td>
+            <td>1 Units</td>
+            <td>50K Eres</td>
+            <td>14 Days</td>
+            <td>1</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Tavern</td>
+            <td>1 Units</td>
+            <td>1000K Eres</td>
+            <td>60 Days</td>
+            <td>2</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Market</td>
+            <td>5 Units</td>
+            <td>100K Eres</td>
+            <td>30 Days</td>
+            <td>2</td>
+            <td>15</td>
+        </tr>
+    </table>
+    </div>
+    <br>
+</div>
+<br>
+<div class="page">
+    <h1 style="text-align:center;">Furnishing Your Rooms</h1>
+    <p>
+        Any time after a structure is built, the owner may choose to furnish already available rooms within the
+        structure.
+    </p>
+    <div style="width: 90%; margin:auto;">
+    <table class="list">
+        <tr>
+            <th>Room</th>
+            <th>Land Unit</th>
+            <th>Material Cost</th>
+            <th>Building Time</th>
+        </tr>
+        <tr>
+            <td>Alchemist's Lab</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Arcanist's Study</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Armory</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Barracks</td>
+            <td>2 Units</td>
+            <td>125K Eres</td>
+            <td>30 Days</td>
+        </tr>
+        <tr>
+            <td>Battle Ring</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Chapel</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Defensive Walls</td>
+            <td>2 Units</td>
+            <td>125K Eres</td>
+            <td>30 Days</td>
+        </tr>
+        <tr>
+            <td>Air Docks</td>
+            <td>2 Units</td>
+            <td>125K Eres</td>
+            <td>30 Days</td>
+        </tr>
+        <tr>
+            <td>Water Docks</td>
+            <td>2 Units</td>
+            <td>125K Eres</td>
+            <td>30 Days</td>
+        </tr>
+        <tr>
+            <td>Garden</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Jails</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Library</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Magic Enchanter</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Moat</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Poisoner's Room</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Ritual Circle</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Smithy</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Siege Workshop</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>Stables</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+        <tr>
+            <td>War Room</td>
+            <td>1 Units</td>
+            <td>75K Eres</td>
+            <td>15 Days</td>
+        </tr>
+    </table>
+    </div>
+    <h2 style="text-align:center;">Rooms Bonuses</h2>
+    <ul>
+        <li><b>Alchemist’s Lab</b><div style="font-size: 12px;">Benefit: All transmutation spells cast within this room by the owners of this structure and their allies have
+            twice their normal duration, and half their normal materials cost. In addition, alchemist’s supplies, a
+            poisoner’s kit and an herbalism kit are always considered to be present here, and within this room any
+            checks with these tools are made with advantage by individuals who have proficiency with them.</div></li><br>
+        <li><b>Arcanist’s Study</b><div style="font-size: 12px;"> Choose abjuration, conjuration, enchantment, or illusion. While present within this room, spells in
+            the chosen school cast by the owners of this structure and their allies have twice their normal duration,
+            and half their normal materials cost. Arcana checks made here that deal with this chosen school of magic
+            have advantage. This room may be built multiple times, and each time a different school must be chosen.</div></li><br>
+        <li><b>Armory</b><div style="font-size: 12px;">When the structure is under attack, any hireling that is not a spellcaster or soldier and that the
+            structure requires for maintenance may visit the armory and afterwards count as a guard.
+            Hirelings equipped in this way may also be used offensively rather than simply in defense of the structure.
+            Doing so deprives a structure of its hireling staff, however, and removing more
+            than a quarter of your structure’s hirelings from its grounds will cause any other benefits the structure
+            provides to cease, as the hirelings left behind struggle to cover for those absent.</div></li><br>
+        <li><b>Battle Ring</b><div style="font-size: 12px;">Those that spend at least an hour sparring or training here become conditioned for battle, which
+            lasts until their next long rest. When a creature that is conditioned for battle rolls initiative, it has
+            advantage on the first attack it makes on its first turn in combat.</div></li><br>
+        <li><b>Chapel</b><div style="font-size: 12px;"> This room is under the effects of a permanent hallow spell, the details of which are decided upon
+            when the construction of this room is completed. Religion checks made here that deal with the lore
+            surrounding the deity, philosophy, or religion the chapel is associated with have advantage</div></li><br>
+        <li><b>Air Docks</b><div style="font-size: 12px;"> A number of airships equal to your structure’s total room points may moor safely at this room,
+            which is likely a spire or free-floating dock. Mechanical elevators and cranes are also present to raise and
+            lower cargo.</div></li><br>
+        <li><b>Water Docks</b><div style="font-size: 12px;"> A number of ships equal to twice your structure’s total room points may lay anchor safely at this
+            room, which is likely a harbor or waterfront.</div></li><br>
+        <li><b>Garden</b><div style="font-size: 12px;"> Contains an assortment of herbs and grown vegetables. Every 30 days, the garden provides
+            enough ingredients to make either 10 potions of common quality, 4 potions of uncommon quality, or one
+            potion of rare quality.
+            After the herbs have been picked, the chosen potions must be successfully brewed as a batch
+            with an alchemist supplies check. The DC for this check is 10 for common potions, 15 for uncommon
+            potions, and 20 for a rare potion. A failure destroys the herbs gathered from this garden until they regrow
+            after another 30 days.</div></li><br>
+        <li><b>Jails</b><div style="font-size: 12px;"> You have cells available to securely hold a number of humanoids up to five times your
+            structure’s total room points. Prisoners may only escape if they are unguarded, and either have access to
+            this room’s key (five of which come with this room), or by using thieves’ tools to make four successful DC
+            15 Dexterity checks.</div></li><br>
+        <li><b>Library</b><div style="font-size: 12px;"> When taking at least an hour to perform an Intelligence or Wisdom check to find specific
+            knowledge within this room, you gain advantage on the roll. Even if you do not (or cannot) succeed on
+            this roll, you can typically uncover a hint as to where else in the world this information may be found.</div></li><br>
+        <li><b>Magical Enchanter</b><div style="font-size: 12px;"> A spellcaster hireling or a character with the Spellcasting or Pact Magic features may use this
+            room to make any magic item that is not a potion or artifact. Crafting magic items requires the ability to
+            cast at least one spell of a certain level, with higher level spells corresponding to rarer items</div></li><br>
+
+        <li><b>Moat</b><div style="font-size: 12px;">Provides your structure with a roughly circular moat around it, 200 feet wide and 10 feed deep.The moat count as difficult
+        terrain, and people not tall enough have to swim to cross it. The moat also have a lowerable drawbridge.</div></li><br>
+
+        <li><b>Poisoner’s Grotto</b><div style="font-size: 12px;"> Every 30 days, this room provides enough ingredients to make a quantity of poison.</div></li><br>
+        <li><b>Ritual Circle</b><div style="font-size: 12px;"> Spells may be cast as rituals in half the usual time here without expending any components that
+            do not have an associated cost in gold. If a ritual has components with a gold cost, this cost is halved
+            when the ritual is performed in this room. While here, the owners of this structure and their allies have
+            advantage on all rolls required by rituals.</div></li><br>
+        <li><b>Smithy</b><div style="font-size: 12px;">  When you first make this room, choose a specific type of artisan’s tools, such as smith’s tools.
+            These tools are always present in this room, and individuals that are proficient with these tools can create
+            items in half the normal time while working in this room.
+        </div></li><br>
+        <li><b>Siege Workshop</b><div style="font-size: 12px;"> A team of at least 10 properly-skilled hirelings can build siege equipment here. The workshop
+            may build one of the following options at any one time:<br>
+            • Ballista. Takes 15 days, costs 1,000 Eres in materials and labor.<br>
+            • Cannon. Takes 15 days (and a knowledge of gunpowder), costs 1,500 Eres in materials and labor.<br>
+            • Cauldron, suspended. Takes 15 days, costs 1,000 Eres in materials and labor.<br>
+            • Mangonel. Takes 30 days, costs 3,000 Eres in materials and labor.<br>
+            • Ram. Takes 15 days, costs 1,000 Eres in materials and labor.<br>
+            • Siege Tower. Takes 60 days, costs 5,000 Eres in materials and labor.<br>
+            • Trebuchet. Takes 60 days, costs 5,000 Eres in materials and labor.<br>
+        </div></li><br>
+        <li><b>Stables</b><div style="font-size: 12px;">  Your structure gains the ability to house and support horses or other animals trained to be used
+            as mounts, and can hold four of these creatures for each unit of your structure’s maximum room points.
+            Mounts that receive a long rest within this room have their movement speed increased by 10 feet until
+            their next long rest. This stable does not come equipped with mounts, and mounts must be acquired by
+            other means.</div></li><br>
+        <li><b>War Room</b><div style="font-size: 12px;"> Soldiers friendly to the owner of this structure may have their journeys (of up to 7 days) planned
+            within this room. Doing so effectively doubles the overland speed of these soldiers, causing them to
+            complete the planned journey in half the normal time.
+            In addition, when a structure that cont
+            ains a war room is under attack, all creatures fighting in the
+            structure’s defense add 1d4 to their attack rolls to hit.</div></li><br>
+    </ul>
+</div>
+<br>
+<div class="page">
+    <h1 style="text-align:center;">Extra Info</h1>
+    <p>
+        Any time after a structure is built, the owner may choose to furnish already available rooms within the
+        structure.
+    </p>
+    <div style="width: 50%; margin:auto;">
+    <table class="list">
+        <tr>
+            <th>Traps</th>
+            <th>Time</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center;">PHYSICAL TRAPS</td>
+        </tr>
+        <tr>
+            <td>Falling Net</td>
+            <td>7 Days</td>
+            <td>15K Eres</td>
+        </tr>
+        <tr>
+            <td>Fire-Breathing Statue</td>
+            <td>7 Days</td>
+            <td>20K Eres</td>
+        </tr>
+        <tr>
+            <td>Pit, simple</td>
+            <td>7 Days</td>
+            <td>10K Eres</td>
+        </tr>
+        <tr>
+            <td>Pit, hidden</td>
+            <td>7 Days</td>
+            <td>20K Eres</td>
+        </tr>
+        <tr>
+            <td>Pit, locking</td>
+            <td>7 Days</td>
+            <td>30K Eres</td>
+        </tr>
+        <tr>
+            <td>Pit, spiked</td>
+            <td>7 Days</td>
+            <td>40K Eres</td>
+        </tr>
+        <tr>
+            <td>Poison Darts</td>
+            <td>7 Days</td>
+            <td>25K Eres</td>
+        </tr>
+        <tr>
+            <td>Poison Needle</td>
+            <td>7 Days</td>
+            <td>30K Eres</td>
+        </tr>
+        <tr>
+            <td>Rolling Sphere</td>
+            <td>7 Days</td>
+            <td>40K Eres</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center;">MAGICAL TRAPS</td>
+        </tr>
+        <tr>
+            <td>Alarm</td>
+            <td>---</td>
+            <td>10K Eres</td>
+        </tr>
+        <tr>
+            <td>Animate Object</td>
+            <td>---</td>
+            <td>30K Eres</td>
+        </tr>
+        <tr>
+            <td>Antimagic Field</td>
+            <td>---</td>
+            <td>45K Eres</td>
+        </tr>
+        <tr>
+            <td>Circle of Power</td>
+            <td>---</td>
+            <td>30K Eres</td>
+        </tr>
+        <tr>
+            <td>Reverse Gravity</td>
+            <td>---</td>
+            <td>40K Eres</td>
+        </tr>
+        <tr>
+            <td>Unseen Servant</td>
+            <td>---</td>
+            <td>5K Eres</td>
+        </tr>
+        <tr>
+            <td>Zone of Truth</td>
+            <td>---</td>
+            <td>15K Eres</td>
+        </tr>
+    </table>
+    </div>
+    <h2 style="text-align:center;">Hireling and Soldiers</h2>
+    <p>
+        Any large-scale structure requires constant work and upkeep to remain operational, and roving heroes
+        aren’t usually predisposed to building maintenance. Hirelings are individuals that can perform ordinary or
+        skilled tasks at your behest, expecting payment in return. Hirelings of any sort must be paid to retain their services, and hirelings will typically desert their
+        service after 7 days without pay.
+    </p>
+    <div style="width: 50%; margin:auto;">
+    <table class="list">
+        <tr>
+            <th>Hireling</th>
+            <th>Pay</th>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">HIRELINGS</td>
+        </tr>
+        <tr>
+            <td>Skilled Hirelings</td>
+            <td>100 Eres/Day</td>
+        </tr>
+        <tr>
+            <td>Unskilled Hirelings</td>
+            <td>10 Eres/Day</td>
+        </tr>
+        <tr>
+            <td>Slaves</td>
+            <td>Free</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">SOLDIERS</td>
+        </tr>
+        <tr>
+            <td>Guard</td>
+            <td>100 Eres/Day</td>
+        </tr>
+        <tr>
+            <td>Knight</td>
+            <td>1000 Eres/Day</td>
+        </tr>
+    </table>
+    </div>
+    <br>
+</div>

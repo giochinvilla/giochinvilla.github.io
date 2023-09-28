@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>The Boring Vice</title>
+
+    <style>
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 40px;
+            background-color: #ccc;
+            border-radius: 40px;
+        }
+
+        .container:hover input ~ .checkmark {
+            background-color: #bbb;
+        }
+
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+
+        .earth{
+            width:100px;
+            height:100px;
+            border-radius:50px;
+            background:#333;
+            font-size:25px;
+            position:absolute;
+            left:50%;
+            top:50%;
+            }
+
+        .sun{
+            width:30px;
+            height:30px;
+            border-radius:15px;
+            background:#333;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-120px;
+            margin-top:-120px;
+            transform-origin:175px 175px;
+            }
+
+        .sunmoon{
+            width:10px;
+            height:10px;
+            border-radius:5px;
+            background:#FF0;
+            position:relative;
+            top:-10px;
+            left:-10px;
+            transform-origin:25px 25px;
+            }
+
+        .firstmoon{
+            width:15px;
+            height:15px;
+            border-radius:15px;
+            background:#FF0;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-80px;
+            margin-top:-80px;
+            transform-origin:135px 135px;
+            }
+
+        .secondmoon{
+            width:15px;
+            height:15px;
+            border-radius:15px;
+            background:#FF0;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-60px;
+            margin-top:-60px;
+            transform-origin:115px 115px;
+            }
+
+        .earth-load{
+            width:450px;
+            height:450px;
+            border-radius:220px;
+            border:1px solid #666;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-170px;
+            margin-top:-170px;
+            }
+
+        .moon-load{
+            width:360px;
+            height:360px;
+            border-radius:220px;
+            border:1px solid #666;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-125px;
+            margin-top:-125px;
+            }
+
+        .secondmoon-load{
+            width:300px;
+            height:300px;
+            border-radius:220px;
+            border:1px solid #666;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-96px;
+            margin-top:-96px;
+            }
+        </style>
+
+</head>
+<body onclick="start()">
+
+<audio id="audio" autoplay>
+    <source src="audio\Background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<table class="list" style="width: 180px; position: fixed; top: 1%; left: 0%;">
+    <tr><th style="border-radius: 0px 12px 0px 0px; font-size: 16px; background-color: rgba(32,81,220,0.5);">Menu</th></tr>
+    <tr><td class="menu-list"><a href="index.html">Weapon and Armor</a></td></tr>
+    <tr><td class="menu-list"><a href="magic.html">Magic and Potions</a></td></tr>
+    <tr><td class="menu-list"><a href="items.html">Items and Gemstones</a></td></tr>
+    <tr><td class="menu-list"><a href="movement.html">Tools and Vehicle</a></td></tr>
+    <tr><td class="menu-list">Campaign Map</td></tr>
+    <tr><td class="menu-list"><a href="lingering.html">Lingering</a></td></tr>
+    <tr><td class="menu-list"><a href="tarot.html">Deck of Tarot</a></td></tr>
+    <tr><td class="menu-list"><a href="downtime.html">Downtime Activities</a></td></tr>
+    <tr><td class="menu-list"><a href="worldbuild.html">World Building</a></td></tr>
+    <tr><td class="menu-list"><a href="skyship.html">Skyship</a></td></tr>
+    <tr><td class="menu-list" style="border-radius: 0px 0px 12px 0px;"><a href="stats.html">Campaign Stats</a></td></tr>
+</table>
+<p id="rest" onclick="toggle()" style="font-size: 36px; width: 10px; text-align: center; position: fixed; top: 0%; right: 50px;">&#128264;</p>
+<script>
+var load = 1;
+var x = document.getElementById('audio');
+function start() {
+    if (load == 1) {
+        x.volume = 0;
+        x.play();
+        load = 0;
+        }
+    }
+
+function toggle() {
+    if (load == 0) {
+        if (x.volume != 0) {
+            x.volume = 0;
+            document.getElementById("rest").innerHTML = "&#128264";
+            }
+        else {
+            x.volume = 0.1;
+            document.getElementById("rest").innerHTML = "&#128266;";
+            }
+        }
+    }
+</script>
+</table>
+<div class="page">
+    <h1 style="text-align:center;">Map</h1>
+    <p>
+        This is the campaign global map. Your adventure will see you travel between the continent of Waves. Numerous kingdoms exist within this continent.
+        Each has its own story, its own politics of its secrets and its plots. Centered by the large tower at its center and surrounded by peaks that cannot be reached like a rose,
+        the realms of mortals thrive. There are numerous breeds that have come to this continent in the hope of finding success.
+    </p>
+    <div style="text-align:center;"><input type="range" id="zoom" min="600" max="4000" value="600" class="slider" onclick="setZoom()"></div>
+    <h3 id="value" style="text-align:center;">Zoom: 100%</h3>
+    <div id="scroll" style="width: 600px; height: 600px; overflow: scroll; margin-left: auto; margin-right: auto;">
+    <img src="image/map.png" id="map" style="width: 600px; height: 600px; "></img>
+    </div>
+
+    <h2 style="text-align:center;">The Kingdoms</h2>
+
+    <p>
+        Currently there are 17 kingdoms on the continent.
+        They are scattered and varied. There are the elven realms immersed in the deepest forests.
+        The kingdom in the flying islands is the most developed kingdom, their technological researches are the most advanced,
+        but they would be nothing without the enormous quality of materials coming from the dwarven kingdom.
+        Dragonborns and tieflings prefer the mild east sea, the most prosperous for fishing. It is said that in the north,
+        someone still lives in the shadow of the tower. But few have ever returned from that area.
+    </p>
+    <div style="width: 70%; margin:auto;">
+    <table class="list">
+        <tr>
+            <th>Realm</th>
+            <th colspan="2">Races</th>
+        </tr>
+        <tr>
+            <td>Atholien Kingdom</td>
+            <td colspan="2">Human, Halfelf, Elf, Halfling, Aasimar</td>
+        </tr>
+        <tr>
+            <td>GF2 (TBA)</td>
+            <td colspan="2">Human, Halfelf, Elf, Halfling, Aasimar</td>
+        </tr>
+        <tr>
+            <td>GF3 (TBA)</td>
+            <td colspan="2">Tiefling, Dragonborn, Human</td>
+        </tr>
+        <tr>
+            <td>Wyidyr Kingdom</td>
+            <td colspan="2">Human, Halfelf, Elf, Halfling, Aasimar</td>
+        </tr>
+        <tr>
+            <td>GF5 (TBA)</td>
+            <td colspan="2">Human, Halfelf, Tiefling, Dwarf</td>
+        </tr>
+        <tr>
+            <td>GF6 (TBA)</td>
+            <td colspan="2">Human, Halfelf, Elf, Gnome, Halfling</td>
+        </tr>
+        <tr>
+            <td>GF7 (TBA)</td>
+            <td colspan="2">Human, Halfelf, Elf, Gnome, Halfling</td>
+        </tr>
+        <tr>
+            <td>GF8 (TBA)</td>
+            <td colspan="2">Genasi, Human, Dragonborn, Tiefling</td>
+        </tr>
+        <tr>
+            <td>GF9 (TBA)</td>
+            <td colspan="2">Genasi, Human, Dragonborn, Tiefling</td>
+        </tr>
+        <tr>
+            <td>GF10 (TBA)</td>
+            <td colspan="2">Genasi, Human, Dragonborn, Tiefling</td>
+        </tr>
+        <tr>
+            <td>ELF1 (TBA)</td>
+            <td colspan="2">Elf, Halfelf, Gnome</td>
+        </tr>
+        <tr>
+            <td>ELF2 (TBA)</td>
+            <td colspan="2">Elf, Halfelf, Human, Halfling</td>
+        </tr>
+        <tr>
+            <td>Dwarfs Kingdom</td>
+            <td colspan="2">Dwarf</td>
+        </tr>
+        <tr>
+            <td>REG (TBA)</td>
+            <td colspan="2">Human, Gnome, Halfelf, Elf, Goblin, Orc</td>
+        </tr>
+        <tr>
+            <td>ORC (TBA)</td>
+            <td colspan="2">Orc, Halforc, Hobgoblin, Goblin</td>
+        </tr>
+        <tr>
+            <td>ION (TBA)</td>
+            <td colspan="2">Human, Halfelf, Elf, Halfling, Aasimar</td>
+        </tr>
+        <tr>
+            <td>Twirlgate Republic</td>
+            <td colspan="2">Dwarf, Human, Halfelf, Tiefling, Dragonborn</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+  function setZoom() {
+    var zoom = document.getElementById("zoom").value;
+    var topScroll = document.getElementById("scroll").scrollTop;
+    var leftScroll = document.getElementById("scroll").scrollLeft;
+    var currentWidth = parseFloat(document.getElementById("map").style.width);
+    var top = topScroll/currentWidth*zoom;
+    var left = leftScroll/currentWidth*zoom;
+
+    document.getElementById("value").innerHTML = "Zoom: " + parseInt(zoom*100/600) + "%";
+
+    document.getElementById("map").style.width = zoom + "px";
+    document.getElementById("map").style.height = zoom + "px";
+    document.getElementById("scroll").scrollTop = top;
+    document.getElementById("scroll").scrollLeft = left;
+    }
+</script>
+
+</div>
+<br>
+<div class="page">
+    <h1 style="text-align:center;">Skymap</h1>
+    <div style="font-family: Courier; text-align: center; font-size: 20px;">Start</div>
+    <div style="margin-left:auto; margin-right:auto; width: 40px;">
+            <label class="container" style="text-align: center; display: block;"><div style="opacity: 0;">x</div><input type="checkbox" id="myCheck"><span class="checkmark"></span></label>
+    </div>
+    <br>
+    <div id="internalClock" style="font-family: Courier; text-align: center; font-size: 24px;">Day: 0 Time: 09:00</div>
+    <br>
+    <div style="position:relative; width: 87%; height: 600px;">
+        <div class="earth-load"></div>
+        <div class="moon-load"></div>
+        <div class="secondmoon-load"></div>
+
+        <div id="dataSun" style="font-family: Courier;">Sun: 0</div>
+        <div id="dataSunmoon" style="font-family: Courier;">Sun Moon: 0</div>
+        <div id="dataFirstmoon" style="font-family: Courier;">Outer Moon: 0</div>
+        <div id="dataSecondmoon" style="font-family: Courier;">Inner Moon: 0</div>
+
+        <div class="earth" id="earth"></div>
+        <div class="firstmoon" id="firstmoon"></div>
+        <div class="secondmoon" id="secondmoon"></div>
+        <div class="sun" id="sun"><div class="sunmoon" id="sunmoon"></div></div>
+    </div>
+    <h3 id="dataSpeed" style="text-align: center;">Clock Time: 10</h3>
+    <div style="text-align:center;"><input class="slider" type="range" id="speed" min="0" max="90" onclick="setClock()"></div>
+    <h3 style="text-align: center;">Set Timer</h3>
+    <div style="text-align:center;">
+        <input type="number" id="day" min="0" max="29" value="0">
+        <input type="number" id="hour" min="0" max="23" value="0">
+        <button onclick="fastSkip()">Confirm</button>
+    </div>
+    <br>
+    <script>
+
+var intervalId = setInterval(myFunction, 10);
+function startInterval(_interval) {
+  intervalId = setInterval(myFunction, _interval/1.25);
+  document.getElementById("dataSpeed").innerHTML = "Clock Time: " + _interval/1.25;
+}
+
+function setClock() {
+    clearInterval(intervalId);
+    var clock = document.getElementById("speed").value;
+    startInterval(clock);
+    }
+
+var day = 0;
+
+var sunClock = 0;
+var sunmoonClock = 0;
+var firstmoonClock = 0;
+var secondmoonClock = 0;
+
+function fastSkip() {
+    var SkipDay = document.getElementById("day").value;
+    var SkipHour = document.getElementById("hour").value;
+    day = SkipDay;
+    var hour = 0;
+    if (SkipHour < 9) {
+        hour = 360-(135-SkipHour/12*180);
+        }
+    else {
+        hour = SkipHour/12*180-135;
+        }
+    sunClock = sunClock = hour;
+    if (SkipDay == 0 && SkipHour < 9) {
+        SkipDay = 29;}
+    sunmoonClock = ((SkipDay*360 + hour)*(1/30))%360;
+    firstmoonClock = ((SkipDay*360 + hour)*(9/30))%360;
+    secondmoonClock = ((SkipDay*360 + hour)*(1/30))%360;
+    }
+
+function myFunction() {
+  if (document.getElementById("myCheck").checked == true){
+
+    sunClock = sunClock+(1/8);
+    sunmoonClock = sunmoonClock+((1/30)/8);
+    firstmoonClock = firstmoonClock+((9/30)/8);
+    secondmoonClock = secondmoonClock+((1/30)/8);
+
+    if (sunClock%360==0) sunClock=0;
+    if (sunmoonClock>360) sunmoonClock=sunmoonClock-360;
+    if (firstmoonClock>360) firstmoonClock=firstmoonClock-360;
+    if (secondmoonClock>360) secondmoonClock=secondmoonClock-360;
+
+    var list = [sunClock,firstmoonClock,secondmoonClock];
+    var name = ["sun","firstmoon","secondmoon"];
+
+    var i;
+        for (i = 0; i < 3; i++) {
+            if (list[i]/360<0.5) {
+                var sunset = 1-(list[i]/360 - 0.375)/0.125;
+                document.getElementById(name[i]).style.opacity = sunset;
+                }
+            if (list[i]/360>0.5) {
+                var sunrise = (list[i]/360 - 0.75)/0.125;
+                document.getElementById(name[i]).style.opacity = sunrise;
+                }
+            }
+
+    var hour = sunClock/15+9;
+    if (hour == 24) {
+        day++;
+        if (day == 30) day = 0;
+        }
+    if (hour > 24) {
+        hour = hour-24;
+        }
+    var minutes = (hour-Math.floor(hour))*60;
+    document.getElementById("internalClock").innerHTML = "Day: " + day + " Time: " + ("0" + Math.floor(hour)).slice(-2) + ":" + ("0" + Math.floor(minutes)).slice(-2);
+
+    if (secondmoonClock > 44.8) {
+        document.getElementById("secondmoon").style.backgroundColor = "red";
+        document.getElementById("firstmoon").style.backgroundColor = "red";
+        }
+    if (secondmoonClock > 45.2) {
+        document.getElementById("secondmoon").style.backgroundColor = "#FF0";
+        document.getElementById("firstmoon").style.backgroundColor = "#FF0";
+        }
+
+    if (sunmoonClock > 179.8) {
+        document.getElementById("sunmoon").style.backgroundColor = "red";
+        document.getElementById("sun").style.backgroundColor = "red";
+        }
+    if (sunmoonClock > 180.2) {
+        document.getElementById("sunmoon").style.backgroundColor = "#FF0";
+        document.getElementById("sun").style.backgroundColor = "white";
+        }
+
+    document.getElementById("dataSun").innerHTML = "Sun: " + sunClock.toFixed(3) + "°";
+    document.getElementById("dataSunmoon").innerHTML = "Sun Moon: " + sunmoonClock.toFixed(3) + "°";
+    document.getElementById("dataFirstmoon").innerHTML = "Outer Moon: " + firstmoonClock.toFixed(3) + "°";
+    document.getElementById("dataSecondmoon").innerHTML = "Inner Moon: " + secondmoonClock.toFixed(3) + "°";
+
+    document.getElementById("sun").style.transform = "rotate(" + sunClock + "deg)";
+    document.getElementById("sunmoon").style.transform = "rotate(" + sunmoonClock + "deg)";
+    document.getElementById("firstmoon").style.transform = "rotate(" + firstmoonClock + "deg)";
+    document.getElementById("secondmoon").style.transform = "rotate(" + secondmoonClock + "deg)";
+  }
+}
+</script>
+
+</div>
+
+</body>
+</html>
