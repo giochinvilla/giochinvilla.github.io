@@ -1,0 +1,144 @@
+
+html {
+    height: 100%;
+     background: url(peakpx.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Candara;
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+/*Fonts*/
+
+@font-face { font-family: Pixel; src: url('pixel.ttf'); } 
+@font-face { font-family: Avenge; src: url('AVENGE.otf'); } 
+@font-face { font-family: Couture; src: url('couture.otf'); } 
+
+/*SidebarNav*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*Header*/
+
+#header {
+	transition: width .3s;
+	z-index: 1; 
+	background-color: #2A2B26; 
+	position: fixed; 
+	top: 0; 
+	width: 100%; 
+	height: 100px; 
+	margin: 0px; 
+	padding-top: 15px;
+	text-align:center;
+}
+
+#header-menu {
+	position:fixed;
+	top: 15px;
+	color:#818181;
+	right: 50px;
+	font-size:50px;
+	cursor:pointer;
+}
+
+#header-logo {
+	width:100px;
+	position:fixed;
+	top: 5px;
+	left: 50px;
+	transition: left .3s;
+}
+
+/*Footer*/
+
+#footer {
+	background-color: #2A2B26;
+	width: 100%;
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	margin:0px;
+	padding: 0px;
+}
+
+#footer-image {
+	width: 70%;
+	max-width: 1000px;
+	position: relative;
+	top: 20px;
+}
+
+/*Main*/
+
+#main {
+  transition: margin-left .3s;
+}
+
+#main-title {
+	font-size: 64px;
+	text-align:center;
+	font-family: Avenge;
+	padding-top: 200px;
+}
+
+.main-announcement {
+	padding: 10px;
+	background-color: #E44146;
+	color: white;
+	text-align:center;
+	font-size:24px;
+	font-family: Pixel;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*Screen*/
+
+@media screen and (max-width: 1080px) {
+
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .header {width: 45%;}
+  .header {margin-top: 30px;}
+}
+
+@media screen and (max-width: 800px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 24px;}
+  .header {width: 0px;}
+}
