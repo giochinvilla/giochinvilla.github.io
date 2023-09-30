@@ -4,16 +4,34 @@
 	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
 	<link rel="stylesheet" href="./sideNav/sideNav.css">
 	
+	<script type="text/javascript" src="./eventBox/eventBox.js"></script>
+	
 	<link rel="stylesheet" href="./header/header.css">
+	<link rel="stylesheet" href="./fonts/fonts.css">
 	
 	<script type="text/javascript" src="HTMLloader.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Giochi in Villa</title>
-	
 </head>
 
 <body onload="loadEvents()" style="margin: 0px;">
+	<script>
+		function loadEvents() {
+			document.getElementById("event1").innerHTML = "[TEST]";
+			document.getElementById("event2").innerHTML = "[TEST]";
+			document.getElementById("event3").innerHTML = "[TEST]";
+			document.getElementById("eventImage1").src = "evento1.png";
+			document.getElementById("eventImage2").src = "evento1.png";
+			document.getElementById("eventImage3").src = "evento1.png";
+			
+			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
+			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
+			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
+			
+			eventBox();
+			}
+	</script>
 
 	<!--SideNav-->
 	<div loadHTML="./sideNav/sideNav.html"></div> 
@@ -50,107 +68,17 @@
 			</td></tr>
 		</table>
 		
-		<!--Last Events-->
-		<br><br><br>
-
-		<div style="text-align: center">
-		<span style="display: inline-block;">
-		<table style="margin-left: 20px; margin-right: 20px; width:90%; text-align:center;">
-		<tr>
-			<td style="margin: auto;"><img style="width:360px;" id = "eventImage2"></td>
-		</tr>
-		<tr>
-			<td>
-				<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
-						<div id="event1" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
-						<div style="padding: 15px;">
-						<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
-							<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
-								<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
-							</div>
-						</div>
-						</a></div>
-						</div>
-			</td>
-		</tr>
-	</table>
-
-	</span>
-	<span style="display: inline-block;">
-		
-	<table style="margin-left: 20px; margin-right: 20px; width:90%; text-align:center;">
-		<tr>
-			<td style="margin: auto;"><img style="width:360px;" id = "eventImage3"></td>
-		</tr>
-		<tr>
-			<td>
-				<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
-						<div id="event2" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
-						<div style="padding: 15px;">
-						<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
-							<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
-								<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
-							</div>
-						</div>
-						</a></div>
-						</div>
-			</td>
-		</tr>
-	</table>
-
-	</span>
-	<span style="display: inline-block;">
-		
-	<table style="margin-left: 20px; margin-right: 20px; width:90%; text-align:center;">
-		<tr>
-			<td style="margin: auto;"><img style="width:360px;" id = "eventImage1"></td>
-		</tr>
-		<tr>
-			<td>
-				<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
-						<div id="event3" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
-						<div style="padding: 15px;">
-						<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
-							<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
-								<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
-							</div>
-						</div>
-						</a></div>
-						</div>
-			</td>
-		</tr>
-	</table>
-
-	</span>
+	<!--Last Events-->
+	<br><br><br>
+	
+	<div style="text-align: center">
+		<div loadHTML="./eventBox/eventBox.html"></div>
+		<div loadHTML="./eventBox/eventBox.html"></div>
+		<div loadHTML="./eventBox/eventBox.html"></div>
 	</div>
 
-
-	<h1 w3-include-html="box.html"></h1> 
-
-
-
-		<!--Footer-->
-		<div loadHTML="./header/footer.html"></div> 
-
-
-
-	<script>
-		function loadEvents() {
-			document.getElementById("event1").innerHTML = "[TEST]";
-			document.getElementById("event2").innerHTML = "[TEST]";
-			document.getElementById("event3").innerHTML = "[TEST]";
-			document.getElementById("eventImage1").src = "evento1.png";
-			document.getElementById("eventImage2").src = "evento1.png";
-			document.getElementById("eventImage3").src = "evento1.png";
-			
-			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
-			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
-			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
-			
-			includeHTML();
-			}
-	</script>
-
-
-	</body>
-	</html>
+	<!--Footer-->
+	<div loadHTML="./header/footer.html"></div> 
+	</div>
+</body>
+</html>
