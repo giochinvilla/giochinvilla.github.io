@@ -1,214 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
+	<link rel="stylesheet" href="./sideNav/sideNav.css">
+	
+	<link rel="stylesheet" href="./header/header.css">
+	
+	<script type="text/javascript" src="HTMLloader.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Giochi in Villa</title>
 	
 </head>
 
-<!--SideNav-->
 <body onload="loadEvents()" style="margin: 0px;">
-	<div id="mySidenav" class="sidenav">
-	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="#">Chi Siamo</a>
-	  <a href="#">Eventi</a>
-	  <a href="#">Dove puoi trovarci</a>
-	  <a href="#">Contatti</a>
-	  <a href="#">Sponsor</a>
-	</div>
-	
-<div id="main">
 
-	<!--Header-->
-	<div id="header">
-		<img class="header" src="Header.png">
-		<span id="header-menu" onclick="openNav()">&#9776;</span>
-		<img id="header-logo" onclick="openNav()" src="logo.png">
-	</div>
+	<!--SideNav-->
+	<div loadHTML="./sideNav/sideNav.html"></div> 
 	
-	<!--Title-->
-	<div id="main-title">Associazione Giochi in Villa</div>
-	
-	<!--Announcements-->
-	<div class="main-announcement">Ogni Lunedi dalle 20:30 alle 23:30 <br> Viale Ferraris 1 - Santa Maria di Sala (VE)</div>
-	
-	<!--Next Event-->
-	<table style="border-collapse: collapse; width: 85%; max-width:650px; margin:auto;">
-		<tr><td style="padding:0px;">
-			<div style="background-color: #111; margin:auto; color: white; text-align:center; font-size:36px; font-family: Avenge; padding: 10px;">Prossimo Evento</div>
-		</td></tr>
-		<tr><td style="padding:0px;">
-			<div style="margin:auto; width: 87%; max-width:600px; height: 300px; background-size: contain; text-align:center;" id = "nextEventImage">
-				<br>
-				<div id="nextEvent" style="font-size: 64px; font-family: Avenge; padding: 15x; color:white;"></div>
-				<div id="nextEventDate" style="font-size: 32px; font-family: Couture; padding: 15px; color:#E44146;"></div>
-				<br>
-				<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
-					<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
-						<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
-					</div>
-				</a></div>
-	
-			</div>
-		</td></tr>
+	<div id="main">
+
+		<!--Header-->
+		<div loadHTML="./header/header.html"></div> 
+		
+		<!--Title-->
+		<div id="main-title">Associazione Giochi in Villa</div>
+		
+		<!--Announcements-->
+		<div class="main-announcement">Ogni Lunedi dalle 20:30 alle 23:30 <br> Viale Ferraris 1 - Santa Maria di Sala (VE)</div>
+		
+		<!--Next Event-->
+		<table style="border-collapse: collapse; width: 85%; max-width:650px; margin:auto;">
+			<tr><td style="padding:0px;">
+				<div style="background-color: #111; margin:auto; color: white; text-align:center; font-size:36px; font-family: Avenge; padding: 10px;">Prossimo Evento</div>
+			</td></tr>
+			<tr><td style="padding:0px;">
+				<div style="margin:auto; width: 87%; max-width:600px; height: 300px; background-size: contain; text-align:center;" id = "nextEventImage">
+					<br>
+					<div id="nextEvent" style="font-size: 64px; font-family: Avenge; padding: 15x; color:white;"></div>
+					<div id="nextEventDate" style="font-size: 32px; font-family: Couture; padding: 15px; color:#E44146;"></div>
+					<br>
+					<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
+						<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
+							<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
+						</div>
+					</a></div>
+		
+				</div>
+			</td></tr>
+		</table>
+		
+		<!--Last Events-->
+		<br><br><br>
+
+		<div style="text-align: center">
+		<span style="display: inline-block;">
+		<table style="margin-left: 20px; margin-right: 20px; width:90%; text-align:center;">
+		<tr>
+			<td style="margin: auto;"><img style="width:360px;" id = "eventImage2"></td>
+		</tr>
+		<tr>
+			<td>
+				<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
+						<div id="event1" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
+						<div style="padding: 15px;">
+						<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
+							<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
+								<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
+							</div>
+						</div>
+						</a></div>
+						</div>
+			</td>
+		</tr>
 	</table>
-	
-	<!--Last Events-->
-	<br><br><br>
 
-	<div style="text-align: center">
+	</span>
 	<span style="display: inline-block;">
+		
 	<table style="margin-left: 20px; margin-right: 20px; width:90%; text-align:center;">
-	<tr>
-		<td style="margin: auto;"><img style="width:360px;" id = "eventImage2"></td>
-	</tr>
-	<tr>
-		<td>
-			<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
-					<div id="event1" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
-					<div style="padding: 15px;">
-					<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
-						<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
-							<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
+		<tr>
+			<td style="margin: auto;"><img style="width:360px;" id = "eventImage3"></td>
+		</tr>
+		<tr>
+			<td>
+				<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
+						<div id="event2" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
+						<div style="padding: 15px;">
+						<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
+							<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
+								<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
+							</div>
 						</div>
-					</div>
-					</a></div>
-					</div>
-		</td>
-	</tr>
-</table>
-
-</span>
-<span style="display: inline-block;">
-	
-<table style="margin-left: 20px; margin-right: 20px; width:90%; text-align:center;">
-	<tr>
-		<td style="margin: auto;"><img style="width:360px;" id = "eventImage3"></td>
-	</tr>
-	<tr>
-		<td>
-			<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
-					<div id="event2" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
-					<div style="padding: 15px;">
-					<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
-						<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
-							<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
+						</a></div>
 						</div>
-					</div>
-					</a></div>
-					</div>
-		</td>
-	</tr>
-</table>
+			</td>
+		</tr>
+	</table>
 
-</span>
-<span style="display: inline-block;">
-	
-<table style="margin-left: 20px; margin-right: 20px; width:90%; text-align:center;">
-	<tr>
-		<td style="margin: auto;"><img style="width:360px;" id = "eventImage1"></td>
-	</tr>
-	<tr>
-		<td>
-			<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
-					<div id="event3" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
-					<div style="padding: 15px;">
-					<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
-						<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
-							<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
-						</div>
-					</div>
-					</a></div>
-					</div>
-		</td>
-	</tr>
-</table>
-
-</span>
-</div>
-
-
-<h1 w3-include-html="box.html"></h1> 
-
-
-
-	<!--Footer-->
-
-	<div style="text-align:center;"><img src="foto.png" id="footer-image"></div>
-	<footer id="footer">
-		<p style="color:white">Author: TheViceroys</p>
-		<p style="color:white">Powered by Github</p>
-		<p style="color:white">da mettere contatti, e altri link? socials?</p>
-		<p style="color:white">TODO better automation, other pages: chi siamo[?], Event list [ok], dove trovarci? unire coi social??/contatti?, Sponsor, buona idea?, pagina per WH?</p>
-	</footer>
-</div>
-
-
-<script>
-	function loadEvents() {
-		document.getElementById("event1").innerHTML = "[TEST]";
-		document.getElementById("event2").innerHTML = "[TEST]";
-		document.getElementById("event3").innerHTML = "[TEST]";
-		document.getElementById("eventImage1").src = "evento1.png";
-		document.getElementById("eventImage2").src = "evento1.png";
-		document.getElementById("eventImage3").src = "evento1.png";
+	</span>
+	<span style="display: inline-block;">
 		
-		document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
-		document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
-		document.getElementById('nextEventImage').style.background = "url(evento1.png)";
-		
-		includeHTML();
-		}
-</script>
+	<table style="margin-left: 20px; margin-right: 20px; width:90%; text-align:center;">
+		<tr>
+			<td style="margin: auto;"><img style="width:360px;" id = "eventImage1"></td>
+		</tr>
+		<tr>
+			<td>
+				<div style="width:300px; background-color: #E44146; margin:auto; position: relative; top: -50px; text-align: center;">
+						<div id="event3" style="font-size: 24px; font-family: Avenge; color:white; padding: 10px;"></div>
+						<div style="padding: 15px;">
+						<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
+							<div style="width: 150px; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
+								<div style="padding: 15px; color:white; font-size: 24px; text-align:center; font-family: Avenge;">Scopri</div>
+							</div>
+						</div>
+						</a></div>
+						</div>
+			</td>
+		</tr>
+	</table>
 
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain attribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
+	</span>
+	</div>
 
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById("logo").style.left = "300px";
-  document.getElementById("header").style.width = window.innerWidth-250 + "px";
-}
+	<h1 w3-include-html="box.html"></h1> 
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("logo").style.left = "50px";
-  document.getElementById("header").style.width = window.innerWidth + "px";
-}
-</script>
 
-</body>
-</html>
+
+		<!--Footer-->
+		<div loadHTML="./header/footer.html"></div> 
+
+
+
+	<script>
+		function loadEvents() {
+			document.getElementById("event1").innerHTML = "[TEST]";
+			document.getElementById("event2").innerHTML = "[TEST]";
+			document.getElementById("event3").innerHTML = "[TEST]";
+			document.getElementById("eventImage1").src = "evento1.png";
+			document.getElementById("eventImage2").src = "evento1.png";
+			document.getElementById("eventImage3").src = "evento1.png";
+			
+			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
+			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
+			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
+			
+			includeHTML();
+			}
+	</script>
+
+
+	</body>
+	</html>

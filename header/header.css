@@ -1,0 +1,51 @@
+/*Header*/
+
+#header {
+	transition: width .3s;
+	z-index: 1; 
+	background-color: #2A2B26; 
+	position: fixed; 
+	top: 0; 
+	width: 100%; 
+	height: 100px; 
+	margin: 0px; 
+	padding-top: 15px;
+	text-align:center;
+}
+
+#header-menu {
+	position:fixed;
+	top: 15px;
+	color:#818181;
+	right: 50px;
+	font-size:50px;
+	cursor:pointer;
+}
+
+#header-logo {
+	width:100px;
+	position:fixed;
+	top: 5px;
+	left: 50px;
+	transition: left .3s;
+}
+
+/*Footer*/
+
+#footer {
+	background-color: #2A2B26;
+	width: 100%;
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	margin:0px;
+	padding: 0px;
+}
+
+#footer-image {
+	width: 70%;
+	max-width: 1000px;
+	position: relative;
+	top: 20px;
+}
