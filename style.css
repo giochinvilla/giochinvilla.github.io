@@ -20,7 +20,7 @@ html {
 
 #main-subtitle {
 	font-size: 48px;
-	text-align:center;
+	text-align: center;
 	font-family: Avenge;
 }
 
@@ -33,6 +33,19 @@ html {
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
+
+.button {
+	transition: background-color 1s;
+	width: 150px;
+	border: white 3px solid;
+	background-color:#111;
+	position: relative;
+	top: -5px; 
+	left: -8px;
+}
+
+.button:hover {
+	background-color: #E44146;
 
 /*Screen*/
 
