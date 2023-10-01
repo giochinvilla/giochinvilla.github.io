@@ -23,13 +23,21 @@
 <body onload="loadEvents()" style="margin: 0px;">
 	<script>
 		function loadEvents() {
+		document.getElementById('testing').innerHTML = "[TEST1]";
 			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
 			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
 			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
-			
+			document.getElementById('testing').innerHTML = "[TEST2]";
 			eventBox();
 			includeHTML();
-
+			document.getElementById('testing').innerHTML = "[TEST3]";
+			document.getElementById("eventImage_1").src = "evento1.png";
+			document.getElementById("eventImage_2").src = "evento1.png";
+			document.getElementById("eventImage_3").src = "evento1.png";
+			document.getElementById("eventName_1").innerHTML = "[TEST]";
+			document.getElementById("eventName_2").innerHTML = "[TEST]";
+			document.getElementById("eventName_3").innerHTML = "[TEST]";
+			document.getElementById('testing').innerHTML = "[TEST4]";
 			}
 	</script>
 
@@ -40,7 +48,7 @@
 
 		<!--Header-->
 		<div loadHTML="./header/header.html"></div> 
-		<div>patch 0.1.D</div>
+		<div id="testing">patch 0.1.E</div>
 		<div style="margin-top: 150px;"></div>
 		
 		<!--Announcements-->
