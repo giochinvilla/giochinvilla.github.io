@@ -1,11 +1,10 @@
 function eventBox() {
-			var clsImage = document.getElementsByClassName("eventImage"); 
-			var clsName = document.getElementsByClassName("eventName"); 
-			var clsLink = document.getElementsByClassName("eventLink"); 
-			for (n=0, length = clsImage.length; n < length; n++) {
-				clsImage[n].setAttribute("id","eventImage_" + (n + 1)); 
-				clsName[n].setAttribute("id","eventLink_" + (n + 1)); 
-				clsLink[n].setAttribute("id","eventName_" + (n + 1)); 
-			}
-		
+	const cls1 = document.getElementsByClassName('eventImage');
+	const cls2 = document.getElementsByClassName('eventName');
+	const cls3 = document.getElementsByClassName('eventLink');
+	for (let i = 0; i < cls1.length; i++) {
+		cls1[i].setAttribute('id', "eventImage_" + (i + 1));
+		cls2[i].setAttribute('id', "eventName_" + (i + 1));
+		cls3[i].setAttribute('id', "eventLink_" + (i + 1));
 	}
+}
