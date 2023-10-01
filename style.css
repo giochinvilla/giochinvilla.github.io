@@ -1,11 +1,11 @@
 
 html {
-    height: 100%;
-     background: url(peakpx.jpg) no-repeat center center fixed;
+    /*height: 100%;
+    background: url(peakpx.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
     font-family: Candara;
     scroll-behavior: smooth;
     font-size: 14px;
@@ -17,8 +17,8 @@ html {
   transition: margin-left .3s;
 }
 
-#main-title {
-	font-size: 64px;
+#main-subtitle {
+	font-size: 48px;
 	text-align:center;
 	font-family: Avenge;
 	padding-top: 200px;

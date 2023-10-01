@@ -30,6 +30,13 @@
 	transition: left .3s;
 }
 
+#header-title {
+	font-size: 64px;
+	text-align:center;
+	font-family: Avenge;
+	color:white;
+}
+
 /*Footer*/
 
 #footer {

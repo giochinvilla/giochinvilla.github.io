@@ -8,11 +8,16 @@
 	
 	<link rel="stylesheet" href="./header/header.css">
 	<link rel="stylesheet" href="./fonts/fonts.css">
+	<link rel="stylesheet" href="./discoveryBanner/discoveryBanner.css">
 	
 	<script type="text/javascript" src="HTMLloader.js""></script>
 	<link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Giochi in Villa</title>
+	
+	<style>
+
+	</style>
 </head>
 
 <body onload="loadEvents()" style="margin: 0px;">
@@ -42,11 +47,12 @@
 		<!--Header-->
 		<div loadHTML="./header/header.html"></div> 
 		
-		<!--Title-->
-		<div id="main-title">Associazione Giochi in Villa</div>
-		
 		<!--Announcements-->
 		<div class="main-announcement">Ogni Lunedi dalle 20:30 alle 23:30 <br> Viale Ferraris 1 - Santa Maria di Sala (VE)</div>
+		
+		<!--Subtitle-->
+		<div id="main-subtitle">Eventi</div>
+		<br><br>
 		
 		<!--Next Event-->
 		<table style="border-collapse: collapse; width: 85%; max-width:650px; margin:auto;">
@@ -69,17 +75,22 @@
 			</td></tr>
 		</table>
 		
-	<!--Last Events-->
-	<br><br><br>
-	
-	<div style="text-align: center">
-		<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
-		<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
-		<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
-	</div>
+		<!--Discover Banner-->
+		
+		<div loadHTML="./discoveryBanner/discoveryBanner.html"></div> 
+		
+			
+		<!--Last Events-->
+		<br><br><br>
+		
+		<div style="text-align: center">
+			<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
+		</div>
 
-	<!--Footer-->
-	<div loadHTML="./header/footer.html"></div> 
+		<!--Footer-->
+		<div loadHTML="./header/footer.html"></div> 
 	</div>
 </body>
 </html>
