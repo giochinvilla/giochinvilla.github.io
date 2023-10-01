@@ -10,14 +10,14 @@
 	transition: height .8s;
 	margin:auto;
 	width: 100%;
-	height: 150px;
+	height: 100px;
 	background-size: contain;
 	text-align:center;
 	display: table;
 }
 
 .discover-banner-holder:hover {
-	height: 250px;
+	height: 200px;
 }
 
 .discover-banner-holder:hover .discover-banner{
