@@ -30,11 +30,15 @@
 			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
 					
 			includeHTML();
-			eventBox();
 			
-			document.getElementById("testA").innerHTML = document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName_1").innerHTML;
-			document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName_1").innerHTML = "[TEST1]";
-			document.getElementById("testB").innerHTML = document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName_1").innerHTML;
+			document.getElementById("testA").innerHTML = document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName").innerHTML;
+			document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
+			document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
+			document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
+			document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
+			document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
+			document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
+			document.getElementById("testB").innerHTML = document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName").innerHTML;
 			}
 	</script>
 
