@@ -30,14 +30,22 @@
 		}
 	</style>
 	
-	<script>
-	  function resizeIframe(obj) {
-		obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-	  }
-	</script>
 </head>
 
 <body onload="loadEvents()" style="margin: 0px;">
+	<script>
+		function loadEvents() {
+			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
+			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
+			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
+					
+			includeHTML();
+			
+						
+			document.getElementById("eventName").innerHTML = "[TEST1]";
+			document.getElementById("eventImage").innerHTML = "evento1.png";
+		}
+	</script>
 
 	<!--SideNav-->
 	<div loadHTML="./sideNav/sideNav.html"></div> 
@@ -86,11 +94,6 @@
 		<br><br><br>
 		<div id="testA">xxx</div>
 		<div id="testB">xxx</div>
-		<div style="text-align: center">
-			<span style="display: inline-block;><iframe src="./eventBox/eventBox.html" class="eventBoxFrame" frameborder="0"></iframe></span>
-			<span style="display: inline-block;><iframe src="./eventBox/eventBox.html" class="eventBoxFrame" frameborder="0"></iframe></span>
-			<span style="display: inline-block;><iframe src="./eventBox/eventBox.html" class="eventBoxFrame" frameborder="0"></iframe></span>
-		</div>
 		
 		<div style="text-align: center">
 			<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
@@ -161,33 +164,6 @@
 
 		<!--Footer-->
 		<div loadHTML="./header/footer.html"></div>
-		
-			<script>
-		function loadEvents() {
-			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
-			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
-			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
-					
-			includeHTML();
-			
-			window.setTimeout(function() {
-				var x = document.getElementsByClassName("eventBoxFrame")[0];
-						document.getElementById('testA').innerHTML = x.length;
-						var y = (x.contentWindow || x.contentDocument);
-						if (y.document) y = y.document;
-						y.getElementById("eventName").innerHTML = "[TEST1]";
-						
-						document.getElementsByTagName('iframe')[0].contentDocument.getElementById("eventName").innerHTML = "[TEST1]";
-						document.getElementsByTagName('iframe')[0].contentDocument.getElementById("eventImage").innerHTML = "evento1.png";
-						document.getElementsByClassName("eventBoxFrame")[1].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
-						document.getElementsByClassName("eventBoxFrame")[1].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
-						document.getElementsByClassName("eventBoxFrame")[2].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
-						document.getElementsByClassName("eventBoxFrame")[2].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
-				
-			  }, 10000);
-			
-			}
-	</script>
 
 FARE COLORE HOVER SCOPRI e zoom immagine
 <div id="testing">patch 0.1.J</div>
