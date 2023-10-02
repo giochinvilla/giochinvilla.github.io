@@ -13,11 +13,10 @@ function eventBox() {
 		cls3[i].setAttribute('id', "eventLink_" + (i + 1));
 	}
 
-	 var iframe = document.getElementById("eventBoxFrame");
-
-	var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[0];
-
-	elmnt.style.display = "none";
+	var iframe = document.getElementsByClassName("eventBoxFrame");
+	for (let i = 0; i < iframe.length; i++) {
+		iframe[0].contentWindow.document.getElementsByClassName('eventName')[0].setAttribute('id', "eventName_" + (i + 1));
+	}
 
 	
 	/*var iframea = document.getElementById("eventBoxFrame");
