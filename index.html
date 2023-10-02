@@ -170,8 +170,8 @@
 					
 			includeHTML();
 			
-			document.getElementsByTagName('iframe')[0].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
-			document.getElementsByTagName('iframe')[0].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
+			document.getElementsByTagName('iframe')[0].contentDocument.getElementById("eventName").innerHTML = "[TEST1]";
+			document.getElementsByTagName('iframe')[0].contentDocument.getElementById("eventImage").innerHTML = "evento1.png";
 			document.getElementsByClassName("eventBoxFrame")[1].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
 			document.getElementsByClassName("eventBoxFrame")[1].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
 			document.getElementsByClassName("eventBoxFrame")[2].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
