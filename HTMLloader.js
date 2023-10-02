@@ -20,7 +20,6 @@ function includeHTML() {
       }      
       xhttp.open("GET", file, true);
       xhttp.send();
-	  document.getElementById("testA").innerHTML = document.getElementsByClassName("eventName").length
       /*exit the function:*/
       return;
     }

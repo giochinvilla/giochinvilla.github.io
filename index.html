@@ -34,17 +34,17 @@
 
 <body onload="loadEvents()" style="margin: 0px;">
 	<script>
-		function loadEvents() {
+		async function loadEvents() {
 			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
 			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
 			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
 					
-			includeHTML();
+			await includeHTML();
 			
+			document.getElementById("testA").innerHTML = document.getElementsByClassName("eventName").length
 			
-		
-			
-			document.getElementById("eventImage").innerHTML = "evento1.png";}
+			document.getElementById("eventImage").innerHTML = "evento1.png";
+		}
 	</script>
 
 	<!--SideNav-->
