@@ -16,7 +16,7 @@ function eventBox() {
 	var iframe = document.getElementsByClassName("eventBoxFrame");
 	for (let i = 0; i < iframe.length; i++) {
 		document.getElementById("testA").innerHTML = iframe.length;
-		iframe[0].contentWindow.document.getElementById('eventName').setAttribute('id', "eventName_" + (i + 1));
+		iframe[0].contentWindow.document.getElementsByClassName('eventName')[0].setAttribute('id', "eventName_" + (i + 1));
 	}
 
 	
