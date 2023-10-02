@@ -41,11 +41,11 @@
 		}
 		
 		let promise = new Promise(function(myResolve, myReject) {
-			HTMLleader();
+			HTMLloader();
 			myResolve("OK");
 		});
 		
-		myPromise.then(
+		promise.then(
 		function(value) {
 		document.getElementById("testA").innerHTML = document.getElementsByClassName("eventName").length
 			document.getElementByClassName("eventImage")[0].innerHTML = "evento1.png";
