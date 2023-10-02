@@ -22,9 +22,7 @@ function includeHTML() {
 		  xhttp.send();
 		  /*exit the function:*/
 		  return;
-
 		}
-		
 	  }
 	  subloadEvents();
 };

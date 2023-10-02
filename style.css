@@ -1,4 +1,15 @@
-
+html {
+	height: 100%;
+	background: url(peakpx.jpg) no-repeat center center fixed;
+	background-color: rgb(255,255,255,0.3);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: Candara;
+	scroll-behavior: smooth;
+	font-size: 14px;
+}
 
 /*Main*/
 
