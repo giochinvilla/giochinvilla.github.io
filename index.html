@@ -15,9 +15,11 @@
     <meta charset="UTF-8">
     <title>Giochi in Villa</title>
 	
-	<style>
-
-	</style>
+	<script>
+	  function resizeIframe(obj) {
+		obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+	  }
+	</script>
 </head>
 
 <body onload="loadEvents()" style="margin: 0px;">
@@ -70,9 +72,9 @@
 		<div id="testA">testbad</div>
 		
 		<div style="text-align: center">
-			<iframe src="./eventBox/eventBox.html" class="eventBoxFrame" style="frameborder=0;"></iframe>
-			<iframe src="./eventBox/eventBox.html" class="eventBoxFrame" style="frameborder=0;"></iframe>
-			<iframe src="./eventBox/eventBox.html" class="eventBoxFrame" style="frameborder=0;"></iframe>
+			<iframe src="./eventBox/eventBox.html" class="eventBoxFrame" frameborder="0" scrolling="no" onload="resizeIframe(this)" />
+			<iframe src="./eventBox/eventBox.html" class="eventBoxFrame" frameborder="0" scrolling="no" onload="resizeIframe(this)" />
+			<iframe src="./eventBox/eventBox.html" class="eventBoxFrame" frameborder="0" scrolling="no" onload="resizeIframe(this)" />
 		</div>
 		
 		<div style="text-align: center">
