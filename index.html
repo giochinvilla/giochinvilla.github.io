@@ -40,7 +40,9 @@
 			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
 					
 			includeHTML();
-			
+		}
+		
+				function diocane() {
 						
 			document.getElementById("eventName").innerHTML = "[TEST1]";
 			document.getElementById("eventImage").innerHTML = "evento1.png";
@@ -96,7 +98,7 @@
 		<div id="testB">xxx</div>
 		
 		<div style="text-align: center">
-			<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html" onload="diocane()"></span>
 			<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
 			<span style="display: inline-block;" loadHTML="./eventBox/eventBox.html"></span>
 		</div>
