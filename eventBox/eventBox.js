@@ -12,4 +12,24 @@ function eventBox() {
 	for (let i = 0; i < cls3.length; i++) {
 		cls3[i].setAttribute('id', "eventLink_" + (i + 1));
 	}
+
+	 var iframe = document.getElementById("eventBoxFrame");
+
+	var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[0];
+
+	elmnt.style.display = "none";
+
+	
+	/*var iframea = document.getElementById("eventBoxFrame");
+    var innerDoc = iframea.contentDocument || iframea.contentWindow.document;
+	const iframe = document.getElementById('eventBoxFrame');
+	document.getElementById("testA").innerHTML = "B.1";
+	const iframe2 = iframe.contentDocument || iframe.contentWindow.document;
+	document.getElementById("testA").innerHTML = "B.2";
+	const iframe3 = iframe2.getElementById("eventName");
+	document.getElementById("testA").innerHTML = "B.3";
+	iframe3[0].setAttribute('id', "eventName_" + (i + 1));
+	document.getElementById("testA").innerHTML = "C";
+	iframe.contentDocument.getElementsByClassName('eventName')[0].textContent = "Reach";
+	document.getElementById("testA").innerHTML = "D";*/
 }
