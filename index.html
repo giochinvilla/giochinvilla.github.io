@@ -35,9 +35,6 @@
 <body onload="loadEvents()" style="margin: 0px;">
 	<script>
 		async function loadEvents() {
-			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
-			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
-			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
 					
 			includeHTML();
 			return "true";
@@ -45,6 +42,10 @@
 		
 		loadEvents().then(
 			function(value) {
+			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
+			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
+			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
+			
 			document.getElementById("testA").innerHTML = document.getElementsByClassName("eventName").length
 			document.getElementByClassName("eventImage")[0].innerHTML = "evento1.png";
 			}
