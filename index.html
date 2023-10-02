@@ -32,7 +32,9 @@
 			includeHTML();
 			eventBox();
 			
+			document.getElementById("testA").innerHTML = document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName_1").innerHTML;
 			document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName_1").innerHTML = "[TEST1]";
+			document.getElementById("testB").innerHTML = document.getElementsByClassName("eventBoxFrame")[0].contentWindow.document.getElementById("eventName_1").innerHTML;
 			}
 	</script>
 
@@ -81,8 +83,8 @@
 		
 		<!--Last Events-->
 		<br><br><br>
-		<div id="testA">testbad</div>
-		
+		<div id="testA">xxx</div>
+		<div id="testB">xxx</div>
 		<div style="text-align: center">
 			<iframe src="./eventBox/eventBox.html" class="eventBoxFrame" frameborder="0" scrolling="no" onload="resizeIframe(this)" allowtransparency = "true"></iframe>
 			<iframe src="./eventBox/eventBox.html" class="eventBoxFrame" frameborder="0" scrolling="no" onload="resizeIframe(this)" allowtransparency = "true"></iframe>
