@@ -171,6 +171,7 @@
 			includeHTML();
 			
 			var x = document.getElementsByClassName("eventBoxFrame")[0];
+			document.getElementById('testA').innerHTML = x.length;
 			var y = (x.contentWindow || x.contentDocument);
 			if (y.document)y = y.document;
 			y.getElementById("eventName").innerHTML = "[TEST1]";
