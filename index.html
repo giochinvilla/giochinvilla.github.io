@@ -21,6 +21,23 @@
 </head>
 
 <body onload="loadEvents()" style="margin: 0px;">
+	<script>
+		function loadEvents() {
+			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
+			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
+			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
+					
+			includeHTML();
+			eventBox();
+			
+			document.getElementById("eventName_1").innerHTML = "[TEST1]";
+			document.getElementById("eventName_2").innerHTML = "[TEST2]";
+			document.getElementById("eventName_3").innerHTML = "[TEST3]";
+			document.getElementById("eventImage_1").src = "evento1.png";
+			document.getElementById("eventImage_2").src = "evento1.png";
+			document.getElementById("eventImage_3").src = "evento1.png";
+			}
+	</script>
 
 	<!--SideNav-->
 	<div loadHTML="./sideNav/sideNav.html"></div> 
@@ -149,23 +166,5 @@ FARE COLORE HOVER SCOPRI e zoom immagine
 <div id="testing">patch 0.1.J</div>
 	</div>
 	
-	
-		<script>
-		function loadEvents() {
-			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
-			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
-			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
-					
-			includeHTML();
-			eventBox();
-			
-			document.getElementById("eventName_1").innerHTML = "[TEST1]";
-			document.getElementById("eventName_2").innerHTML = "[TEST2]";
-			document.getElementById("eventName_3").innerHTML = "[TEST3]";
-			document.getElementById("eventImage_1").src = "evento1.png";
-			document.getElementById("eventImage_2").src = "evento1.png";
-			document.getElementById("eventImage_3").src = "evento1.png";
-			}
-	</script>
 </body>
 </html>
