@@ -17,7 +17,7 @@ document.getElementById("testA").innerHTML = "A";
 	document.getElementById("testA").innerHTML = "B";
 	for (let i = 0; i < iframe.length; i++) {
 		document.getElementById("testA").innerHTML = "C";
-		iframe[0].contentWindow.document.getElementsByClassName('eventName')[0].setAttribute('id', "eventName_" + (i + 1));
+		iframe[0].contentWindow.document.getElementsById('eventName').setAttribute('id', "eventName_" + (i + 1));
 	}
 	document.getElementById("testA").innerHTML = "D";
 
