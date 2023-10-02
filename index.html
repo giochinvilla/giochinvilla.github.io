@@ -34,6 +34,7 @@
 
 <body onload="loadEvents()" style="margin: 0px;">
 	<script>
+
 		function loadEvents() {
 			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
 			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
@@ -41,7 +42,7 @@
 		}
 		
 		let promise = new Promise(function(myResolve, myReject) {
-			HTMLloader();
+			includeHTML();
 			myResolve("OK");
 		});
 		
