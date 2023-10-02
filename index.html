@@ -171,20 +171,20 @@
 			includeHTML();
 			
 			window.setTimeout(function() {
-    var x = document.getElementsByClassName("eventBoxFrame")[0];
-			document.getElementById('testA').innerHTML = x.length;
-			var y = (x.contentWindow || x.contentDocument);
-			if (y.document) y = y.document;
-			y.getElementById("eventName").innerHTML = "[TEST1]";
-			
-			document.getElementsByTagName('iframe')[0].contentDocument.getElementById("eventName").innerHTML = "[TEST1]";
-			document.getElementsByTagName('iframe')[0].contentDocument.getElementById("eventImage").innerHTML = "evento1.png";
-			document.getElementsByClassName("eventBoxFrame")[1].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
-			document.getElementsByClassName("eventBoxFrame")[1].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
-			document.getElementsByClassName("eventBoxFrame")[2].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
-			document.getElementsByClassName("eventBoxFrame")[2].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
-    })
-  }, 1000);
+				var x = document.getElementsByClassName("eventBoxFrame")[0];
+						document.getElementById('testA').innerHTML = x.length;
+						var y = (x.contentWindow || x.contentDocument);
+						if (y.document) y = y.document;
+						y.getElementById("eventName").innerHTML = "[TEST1]";
+						
+						document.getElementsByTagName('iframe')[0].contentDocument.getElementById("eventName").innerHTML = "[TEST1]";
+						document.getElementsByTagName('iframe')[0].contentDocument.getElementById("eventImage").innerHTML = "evento1.png";
+						document.getElementsByClassName("eventBoxFrame")[1].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
+						document.getElementsByClassName("eventBoxFrame")[1].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
+						document.getElementsByClassName("eventBoxFrame")[2].contentWindow.document.getElementById("eventName").innerHTML = "[TEST1]";
+						document.getElementsByClassName("eventBoxFrame")[2].contentWindow.document.getElementById("eventImage").innerHTML = "evento1.png";
+				
+			  }, 1000);
 			
 			}
 	</script>
