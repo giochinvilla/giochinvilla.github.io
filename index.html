@@ -43,14 +43,14 @@
 			return "true";
 		}
 		
-		loadEvents().then() {
+		loadEvents().then(
 			function(value) {
 			document.getElementById("testA").innerHTML = document.getElementsByClassName("eventName").length
 			document.getElementByClassName("eventImage")[0].innerHTML = "evento1.png";
 			
 			},
 			function(error) {}
-		}
+		);
 	</script>
 
 	<!--SideNav-->
