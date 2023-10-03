@@ -23,3 +23,17 @@
 		display: none;
 	}
 }
+
+div.wrapper {
+  overflow: hidden;
+}
+div.wrapper > div {
+  width: 100%;
+  height: 100%;
+  transition: background-size 4s ease;
+  background-size: 100%;
+  background-position: center center;
+}
+div.wrapper:hover > div {
+  background-size: 120%;
+}
