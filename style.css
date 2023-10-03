@@ -27,19 +27,19 @@ html {
 	padding: 10px;
 	color: white;
 	text-align:center;
-	font-size:24px;
+	font-size:20px;
 	font-family: Pixel;
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
 
 .header-padding {
-	margin-top: 70px;
+	margin-top: 90px;
 }
 
 @media screen and (max-width: 750px) {
   .main-announcement {
-	  font-size:18px;
+	  font-size:16px;
   }
   
   .main-subtitle {
@@ -47,7 +47,7 @@ html {
   }
   
   .header-padding {
-	  margin-top: 60px;
+	  margin-top: 80px;
   }
 }
 
@@ -61,7 +61,7 @@ html {
   }
   
     .header-padding {
-	  margin-top: 50px;
+	  margin-top: 70px;
   }
 }
 

@@ -15,15 +15,15 @@
 
 #header-menu {
 	position:fixed;
-	top: 10px;
+	top: 5px;
 	color:#818181;
-	right: 40px;
+	right: 50px;
 	font-size:45px;
 	cursor:pointer;
 }
 
 #header-logo {
-	width:50px;
+	width:60px;
 	position:fixed;
 	top: 5px;
 	left: 50px;
