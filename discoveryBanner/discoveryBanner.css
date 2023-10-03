@@ -1,5 +1,5 @@
 .discover-banner {
-	transition: opacity .8s;
+	transition: opacity 1.4s;
 	opacity:0;
 	color:white;
 	vertical-align: middle;
