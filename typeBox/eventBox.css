@@ -38,6 +38,16 @@
 	text-align: center;
 }
 
+.nexteventBanner {
+	width: 150px;
+	background-color:white;
+	margin: auto;
+	transform: rotate(-0.08turn);
+	position:relative;
+	top: 60px;
+	left: -130px;
+}
+
 @media screen and (max-width: 840px) {
 	.eventBoxTable {
 		display: none;
@@ -51,4 +61,7 @@
 	width:200px;
 	top: -30px;
 	}
+	.nexteventBanner {
+	top: 50px;
+	left: -75px;
 }
