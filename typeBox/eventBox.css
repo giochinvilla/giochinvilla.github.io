@@ -19,11 +19,6 @@
 	padding: 10px;
 }
 
-.eventImage {
-	width: 360px;
-	height: 360px;
-}
-
 .eventLink {
 	text-decoration: none;
 }
@@ -50,14 +45,6 @@
 @media screen and (max-width: 840px) {
 	.eventBoxTable {
 		display: none;
-	}
-	.eventImage {
-		width: 250px;
-		height: 250px;
-	}
-	.eventDesc {
-		width:200px;
-		top: -30px;
 	}
 	.nexteventBanner {
 		top: 50px;
