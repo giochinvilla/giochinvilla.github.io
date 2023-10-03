@@ -17,8 +17,6 @@
 	margin:auto;
 	width: 100%;
 	text-align: center;
-	padding: 15px;
-	border:red solid 1px;
 }
 
 @media screen and (max-width: 840px) {
