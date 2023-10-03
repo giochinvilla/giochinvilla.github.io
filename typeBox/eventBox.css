@@ -14,9 +14,6 @@
 
 .eventLink {
 	text-decoration: none;
-	margin:auto;
-	width: 100%;
-	text-align: center;
 }
 
 @media screen and (max-width: 840px) {
