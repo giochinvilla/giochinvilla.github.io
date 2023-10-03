@@ -41,11 +41,28 @@
 
 @media screen and (max-width: 750px) {
 	#header {
+		height: 60px;
+	}
+	#header-logo {
+		width: 42px;
+		left: 35px;
+	}
+	#header-title {
+		font-size: 42px;
+	}
+	#header-menu {
+		right: 35px;
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#header {
 		height: 50px;
 	}
-	#headerlogo {
-		width: 40px;
-		left: 15px;
+	#header-logo {
+		width: 35px;
+		left: 20px;
 	}
 	#header-title {
 		font-size: 24px;
