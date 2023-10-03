@@ -17,7 +17,7 @@ html {
   transition: margin-left .3s;
 }
 
-#main-subtitle {
+.main-subtitle {
 	font-size: 48px;
 	text-align: center;
 	font-family: Avenge;
@@ -31,6 +31,18 @@ html {
 	font-family: Pixel;
 	margin-bottom: 20px;
 	margin-top: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  .main-announcement {
+	  font-size:14px;
+	  margin-bottom: 10px;
+	  margin-top: 10px;
+  }
+  
+  .main-subtitle {
+	  font-size: 30px;
+  }
 }
 
 .button {
@@ -53,12 +65,9 @@ html {
 
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-  .header {width: 45%;}
-  .header {margin-top: 30px;}
 }
 
 @media screen and (max-width: 800px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 24px;}
-  .header {width: 0px;}
 }
