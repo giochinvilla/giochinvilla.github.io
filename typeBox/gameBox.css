@@ -1,0 +1,23 @@
+.gameBoxSpan {
+	display: inline-block;
+	width: 300px;
+	height: 450px;
+	margin: 10px;
+	background-color: #c7c7c7;
+}
+
+.gameName {
+	padding:15px;
+	font-size: 24px;
+	font-family:Avenge;
+}
+
+.gameLink {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 660px) {
+	.gameImage {
+		display: none;
+	}
+}
