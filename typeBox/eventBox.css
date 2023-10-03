@@ -52,15 +52,14 @@
 		display: none;
 	}
 	.eventImage {
-	background-image: url(default.png);
-	width: 250px;
-	height: 250px;
+		width: 250px;
+		height: 250px;
 	}
 	.eventDesc {
-	width:200px;
-	top: -30px;
+		width:200px;
+		top: -30px;
 	}
 	.nexteventBanner {
-	top: 50px;
-	left: -75px;
+		top: 50px;
+		left: -75px;
 }
