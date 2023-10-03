@@ -20,4 +20,8 @@
 	.gameImage {
 		display: none;
 	}
+	
+	.gameBoxSpan {
+		height: 150px;
+	}
 }
