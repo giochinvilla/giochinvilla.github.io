@@ -23,13 +23,7 @@
 <body onload="loadEvents()" style="margin: 0px;">
 	<script>
 
-		function loadEvents() {
-			document.getElementById("nextEvent").innerHTML = "SALA GIOCA";
-			document.getElementById("nextEventDate").innerHTML = "12.11.2023<br> dalle 9:00 alle 19:00";
-			document.getElementById('nextEventImage').style.background = "url(evento1.png)";
-			
-			document.getElementById("debug").innerHTML = window.innerWidth;
-			
+		function loadEvents() {			
 			includeHTML();
 		}
 		
@@ -40,7 +34,7 @@
 			document.getElementsByClassName("gameName")[3].innerHTML = "DipinGIV";
 		
 			document.getElementsByClassName("eventName")[0].innerHTML = "test";
-			document.getElementsByClassName("eventImage")[0].src = "evento1.png";
+			document.getElementsByClassName("eventImage")[0].background-image = "url(evento1.png)";
 		}
 	</script>
 
@@ -60,31 +54,7 @@
 		<hr style="width: 70%; border: 1px black solid;">
 		<br>
 		
-		<!--Next Event-->
-	
-		<table style="border-collapse: collapse; width: 85%; max-width:650px; margin:auto;">
-			<tr><td style="padding:0px;">
-			<div style="background-color:white; margin: auto;">
-							<div style="width: 100%; border: white 3px solid; background-color:#111; position: relative; top: -5px; left: -8px;">
-								<div style="padding: 10px; color:white; font-size: 36px; text-align:center; font-family: Avenge;">Prossimo Evento</div></div></div>
-			</td></tr>
-			<tr><td style="padding:0px;">
-				<div style="margin:auto; width: 87%; max-width:600px; height: 300px; background-size: contain; text-align:center;" id = "nextEventImage">
-					<br>
-					<div id="nextEvent" style="font-size: 64px; font-family: Avenge; padding: 15x; color:white;"></div>
-					<div id="nextEventDate" style="font-size: 32px; font-family: Couture; padding: 15px; color:#E44146;"></div>
-					<br>
-					<div style="width: 150px; background-color:white; margin: auto;"><a style="text-decoration: none;" href="https://www.w3schools.com/">
-						<div class="button">
-							<div class="sub-button">Scopri</div>
-						</div>
-					</a></div>
-		
-				</div>
-			</td></tr>
-		</table>
-		
-		<!--Last Events-->
+		<!--Events-->
 		<br><br><br>
 		
 		<div style="text-align: center">
@@ -133,10 +103,8 @@
 		<!--Footer-->
 		<div loadHTML="./header/footer.html"></div>
 
-footer, nextevent, altre pagine, pulire codice
+footer, altre pagine,sidenav
 	</div>
-	<div style="font-size:36px;" id="debug"></div>
-	
 
 </body>
 </html>

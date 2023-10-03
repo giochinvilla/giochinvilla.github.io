@@ -19,12 +19,36 @@
 	padding: 10px;
 }
 
+.eventImage {
+	background-image: url(default.png);
+	width: 360px;
+	height: 360px;
+}
+
 .eventLink {
 	text-decoration: none;
+}
+
+.eventDesc {
+	width:300px;
+	background-color: #c7c7c7;
+	margin:auto;
+	position: relative;
+	top: -50px;
+	text-align: center;
 }
 
 @media screen and (max-width: 840px) {
 	.eventBoxTable {
 		display: none;
+	}
+	.eventImage {
+	background-image: url(default.png);
+	width: 250px;
+	height: 250px;
+	}
+	.eventDesc {
+	width:200px;
+	top: -30px;
 	}
 }
