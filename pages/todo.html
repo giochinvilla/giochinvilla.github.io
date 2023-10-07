@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
+	<link rel="stylesheet" href="./sideNav/sideNav.css">
+	
+	<link rel="stylesheet" href="./header/header.css">
+	<link rel="stylesheet" href="./fonts/fonts.css">
+	<link rel="stylesheet" href="./discoveryBanner/discoveryBanner.css">
+	<link rel="stylesheet" href="./typeBox/eventBox.css">
+	<link rel="stylesheet" href="./typeBox/gameBox.css">
+	
+	<script type="text/javascript" src="HTMLloader.js"></script>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Giochi in Villa</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+
+<body onload="loadEvents()" style="margin: 0px;">
+	<script>
+
+		function loadEvents() {			
+			includeHTML();
+		}
+		
+		function subloadEvents() {
+			document.getElementsByClassName("gameName")[0].innerHTML = "Warhammer";
+			document.getElementsByClassName("gameName")[1].innerHTML = "Giochi da tavolo";
+			document.getElementsByClassName("gameName")[2].innerHTML = "Giochi di ruolo";
+			document.getElementsByClassName("gameName")[3].innerHTML = "DipinGIV";
+		
+			document.getElementsByClassName("eventName")[0].innerHTML = "test";
+		}
+	</script>
+
+	<!--SideNav-->
+	<div loadHTML="./sideNav/sideNav.html"></div> 
+
+	<div id="main">
+
+		<!--Header-->
+		<div loadHTML="./header/header.html"></div> 
+		<div>loading</div>
+		<div class="header-padding"></div>
+		
+		<!--Subtitle-->
+		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
+		<div class="main-subtitle">I nostri eventi</div>
+		<hr style="width: 70%; border: 1px black solid;">
+		<br>
+		
+		<!--Events-->
+		
+		<div style="text-align: center">
+			<span style="display: inline-block;" loadHTML="./typeBox/nexteventBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./typeBox/eventBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./typeBox/eventBox.html"></span>
+		</div>
+		
+		<!--Announcements-->
+		<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30 <br> in Viale Ferraris 1 - Santa Maria di Sala</div>
+		
+		
+		<!--Discover Banner-->
+		<div loadHTML="./discoveryBanner/discoveryBanner.html"></div> 
+		
+		<!--Subtitle-->
+		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
+		<div class="main-subtitle">I nostri giochi</div>
+		<hr style="width: 70%; border: 1px black solid;">
+		<br>
+		
+		<!--Socials-->
+		
+		<div style= "text-align:center">
+			<span style="display: inline-block;" loadHTML="./typeBox/gameBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./typeBox/gameBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./typeBox/gameBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./typeBox/gameBox.html"></span>
+		</div>
+		<br><br>
+		
+		<!--Subtitle-->
+		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
+		<div class="main-subtitle">Seguici e contattaci</div>
+		<hr style="width: 70%; border: 1px black solid;">
+		<br>
+		
+		<!--Socials-->
+	
+		<div style= "text-align:center">
+			<a style="display: inline-block; width: 300px; height: 140px; margin: 10px; background-color: #333; border-radius: 10px; text-decoration:none;" href="https://www.instagram.com/giochinvilla/?hl=it"><i class="fa fa-instagram" style="font-size:48px; margin: 20px; color:white;"></i><div style="color:white; font-family: Avenge; font-size:18px;">@giochiinvilla</div></a>
+			<a style="display: inline-block; width: 300px; height: 140px; margin: 10px; background-color: #333; border-radius: 10px; text-decoration:none;" href="https://www.facebook.com/giochiinvilla/"><i class="fa fa-facebook-f" style="font-size:48px; margin: 20px; color:white;"></i><div style="color:white; font-family: Avenge; font-size:18px;">giochiinvilla</div></a>
+			<a style="display: inline-block; width: 300px; height: 140px; margin: 10px; background-color: #333; border-radius: 10px; text-decoration:none;" href="mailto: giochinvilla@gmail.com"><i class="fa fa-envelope" style="font-size:48px; margin: 20px; color:white;"></i><div style="color:white; font-family: Avenge; font-size:18px;">giochinvilla@gmail.com</div></a>
+		</div>
+
+		<!--Footer-->
+		<div loadHTML="./header/footer.html"></div>
+	</div>
+
+</body>
+</html>
+
+<!--Credit to TheViceroys-->
