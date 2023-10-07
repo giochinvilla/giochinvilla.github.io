@@ -4,6 +4,9 @@
 	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
 	<link rel="stylesheet" href="../sideNav/sideNav.css">
 	
+	<script type="text/javascript" src="../slideshow/slideshow.js"></script>
+	<link rel="stylesheet" href="../slideshow/slideshow.css">
+	
 	<link rel="stylesheet" href="../header/header.css">
 	<link rel="stylesheet" href="../fonts/fonts.css">
 	
@@ -22,16 +25,10 @@
 
 		function loadEvents() {			
 			includeHTML();
+			showSlides();
 		}
 		
-		function subloadEvents() {
-			document.getElementsByClassName("gameName")[0].innerHTML = "Warhammer";
-			document.getElementsByClassName("gameName")[1].innerHTML = "Giochi da tavolo";
-			document.getElementsByClassName("gameName")[2].innerHTML = "Giochi di ruolo";
-			document.getElementsByClassName("gameName")[3].innerHTML = "DipinGIV";
-		
-			document.getElementsByClassName("eventName")[0].innerHTML = "test";
-		}
+		function subloadEvents() {}
 	</script>
 
 	<!--SideNav-->
@@ -45,7 +42,7 @@
 		<div class="header-padding"></div>
 		
 		<!--Subtitle-->
-		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
+		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="../images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
 		<div class="main-subtitle">Chi Siamo</div>
 		<hr style="width: 70%; border: 1px black solid;">
 		<br>
@@ -57,19 +54,30 @@
 			</div>
 		</div>
 		
-		<div style="text-align: center">
-			<span style="display: inline-block;" loadHTML="./typeBox/nexteventBox.html"></span>
-			<span style="display: inline-block;" loadHTML="./typeBox/eventBox.html"></span>
-			<span style="display: inline-block;" loadHTML="./typeBox/eventBox.html"></span>
-		</div>
-		
+		<br>
 		<!--Announcements-->
 		<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30 <br> in Viale Ferraris 1 - Santa Maria di Sala</div>
+
+		<br>
+		<!--Slideshow-->
+		<div class="slideshow-container">
+			<div class="fade">
+				<img src="../images/technical/footer.png" style="width:100%">
+			</div>
+			
+			<div class="fade">
+				<img src="../images/technical/footer.png" style="width:100%">
+			</div>
+			
+			<div class="fade">
+				<img src="../images/technical/footer.png" style="width:100%">
+			</div>
+		</div>
 		
-		<br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br>
 		
 		<!--Subtitle-->
-		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
+		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="../images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
 		<div class="main-subtitle">Seguici e contattaci</div>
 		<hr style="width: 70%; border: 1px black solid;">
 		<br>
