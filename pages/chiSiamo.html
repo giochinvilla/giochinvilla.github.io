@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
 	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
-	<link rel="stylesheet" href="./sideNav/sideNav.css">
+	<link rel="stylesheet" href="../sideNav/sideNav.css">
 	
-	<link rel="stylesheet" href="./header/header.css">
-	<link rel="stylesheet" href="./fonts/fonts.css">
-	<link rel="stylesheet" href="./discoveryBanner/discoveryBanner.css">
-	<link rel="stylesheet" href="./typeBox/eventBox.css">
-	<link rel="stylesheet" href="./typeBox/gameBox.css">
+	<link rel="stylesheet" href="../header/header.css">
+	<link rel="stylesheet" href="../fonts/fonts.css">
 	
-	<script type="text/javascript" src="HTMLloader.js"></script>
-	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="../HTMLloader.js"></script>
+	<link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
     <title>Giochi in Villa</title>
 	
@@ -33,17 +30,7 @@
 			document.getElementsByClassName("gameName")[2].innerHTML = "Giochi di ruolo";
 			document.getElementsByClassName("gameName")[3].innerHTML = "DipinGIV";
 		
-			document.getElementsByClassName("eventName")[0].innerHTML = "Sala Gioca in Villa Farsetti";
-			document.getElementsByClassName("eventImage")[0].style.backgroundImage = "url(./images/eventi/salaGioca.png)";
-			document.getElementsByClassName("eventLink")[0].setAttribute("href",  "https://www.w3schools.com/");
-			
-			document.getElementsByClassName("eventName")[1].innerHTML = "Serata a Sant'Angelo di Santa Maria di Sala";
-			document.getElementsByClassName("eventImage")[1].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
-			document.getElementsByClassName("eventLink")[1].setAttribute("href",  "https://www.w3schools.com/");
-			
-			document.getElementsByClassName("eventName")[2].innerHTML = "Serata a Caltana";
-			document.getElementsByClassName("eventImage")[2].style.backgroundImage = "url(./images/eventiPatronati/patronatoCaltana.webp)";
-			document.getElementsByClassName("eventLink")[2].setAttribute("href",  "https://www.w3schools.com/");
+			document.getElementsByClassName("eventName")[0].innerHTML = "test";
 		}
 	</script>
 
@@ -59,40 +46,27 @@
 		
 		<!--Subtitle-->
 		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
-		<div class="main-subtitle">I nostri eventi</div>
+		<div class="main-subtitle">Chi Siamo</div>
 		<hr style="width: 70%; border: 1px black solid;">
 		<br>
 		
-		<!--Events-->
+		<!--Descriptive-->
+		<div style="width: 100%; text-align:center;">
+			<div style="width: 70%; height: 140px; margin:auto; background-color: #555; border-radius: 10px; color:white; font-family: Avenge; font-size:18px; padding: 25px;">
+			Qui ci andrebbe una descrizione, che io non so fare, perchè sono un programmatore, non uno scrittore... chiunque ne sia in grado vi prego... aiuto!
+			</div>
+		</div>
 		
 		<div style="text-align: center">
 			<span style="display: inline-block;" loadHTML="./typeBox/nexteventBox.html"></span>
-			<span style="display: inline-block;" loadHTML="./typeBox/nexteventBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./typeBox/eventBox.html"></span>
 			<span style="display: inline-block;" loadHTML="./typeBox/eventBox.html"></span>
 		</div>
 		
 		<!--Announcements-->
 		<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30 <br> in Viale Ferraris 1 - Santa Maria di Sala</div>
 		
-		
-		<!--Discover Banner-->
-		<div loadHTML="./discoveryBanner/discoveryBanner.html"></div> 
-		
-		<!--Subtitle-->
-		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
-		<div class="main-subtitle">I nostri giochi</div>
-		<hr style="width: 70%; border: 1px black solid;">
-		<br>
-		
-		<!--Games-->
-		
-		<div style= "text-align:center">
-			<span style="display: inline-block;" loadHTML="./typeBox/gameBox.html"></span>
-			<span style="display: inline-block;" loadHTML="./typeBox/gameBox.html"></span>
-			<span style="display: inline-block;" loadHTML="./typeBox/gameBox.html"></span>
-			<span style="display: inline-block;" loadHTML="./typeBox/gameBox.html"></span>
-		</div>
-		<br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
 		
 		<!--Subtitle-->
 		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
