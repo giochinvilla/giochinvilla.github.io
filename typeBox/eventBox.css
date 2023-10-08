@@ -12,21 +12,13 @@
 	text-align:center;
 }
 
-.eventName {
-	font-size: 20px;
-	font-family: Avenge;
-	color:white;
-	padding: 15px;
-	height: 55px;
-}
-
 .eventLink {
 	text-decoration: none;
 }
 
 .eventDesc {
 	width:250px;
-	height:150px;
+	height:80px;
 	background-color: #c7c7c7;
 	margin:auto;
 	position: relative;
