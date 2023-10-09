@@ -31,11 +31,13 @@
 	text-align:center;
 	margin: auto;
 	color: black;
+	font-weight: bold;
 }
 
 .discover-banner-title {
 	font-size: 42px;
 	font-family: Avenge;
+	color: black;
 }
 
 @media screen and (max-width: 1100px) {
