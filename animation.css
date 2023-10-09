@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+}
+
+.content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  text-transform: uppercase;
+  font-size: 36px;
+  text-align: center;
+  margin: 0;
+  font-family: Pixel;
+  color: var(--color-primary);
+  //color: transparent;
+  //background-color: white;
+  //background-clip: text;
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.3rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 2px 2px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary),
+      8px 8px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary),
+      8px 8px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary),
+      8px 8px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 2px 2px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-8px, -8px);
+  }
+  50% {
+    transform: translate(-8px, -8px);
+  }
+  60% {
+    transform: translate(-8px, -8px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 24px;
+}
+.waviy span {
+  font-family: Avenge;
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
