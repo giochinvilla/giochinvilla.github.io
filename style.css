@@ -83,11 +83,11 @@ html {
 	background-color: #E44146;
 }
 
-div.wrapper {
+div.wrapper1 {
   overflow: hidden;
 }
 
-div.wrapper > div {
+div.wrapper1 > div {
 	width: 100%;
 	height: 100%;
 	transition: background-size 4s ease;
@@ -95,7 +95,7 @@ div.wrapper > div {
 	background-position: center center;
 }
 
-div.wrapper:hover > div {
+div.wrapper1:hover > div {
 	background-size: 120%;
 }
 
