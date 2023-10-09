@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/x-icon" href="./images/technical/favicon.ico">
+
+	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
+	<link rel="stylesheet" href="./sideNav/sideNav.css">
+	
+	<link rel="stylesheet" href="./header/header.css">
+	<link rel="stylesheet" href="./fonts/fonts.css">
+	<link rel="stylesheet" href="./discoveryBanner/discoveryBanner.css">
+	<link rel="stylesheet" href="./typeBox/eventBox.css">
+	<link rel="stylesheet" href="./typeBox/gameBox.css">
+	<link rel="stylesheet" href="./parallax/parallax.css">
+	
+	<link rel="stylesheet" href="./animation.css">
+	
+	<script type="text/javascript" src="HTMLloader.js"></script>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Giochi in Villa</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+
+<body onload="loadEvents()" style="margin: 0px;">
+	<script>
+
+		function loadEvents() {			
+			includeHTML();
+		}
+		
+		function subloadEvents() {
+			document.getElementsByClassName("gameName")[0].innerHTML = "Warhammer";
+			document.getElementsByClassName("gameName")[1].innerHTML = "Giochi da tavolo";
+			document.getElementsByClassName("gameName")[2].innerHTML = "Giochi di ruolo";
+			document.getElementsByClassName("gameName")[3].innerHTML = "DipinGIV";
+		
+			document.getElementsByClassName("eventImage")[0].style.backgroundImage = "url(./images/eventi/salaGioca.png)";
+			document.getElementsByClassName("eventLink")[0].setAttribute("href",  "https://www.w3schools.com/");
+			
+			document.getElementsByClassName("eventImage")[1].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
+			document.getElementsByClassName("eventLink")[1].setAttribute("href",  "https://www.w3schools.com/");
+			
+			document.getElementsByClassName("eventImage")[2].style.backgroundImage = "url(./images/eventiPatronati/patronatoCaltana.webp)";
+			document.getElementsByClassName("eventLink")[2].setAttribute("href",  "https://www.w3schools.com/");
+			
+			document.getElementsByClassName("gameImage")[0].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
+			document.getElementsByClassName("gameImage")[1].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
+			document.getElementsByClassName("gameImage")[2].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
+			document.getElementsByClassName("gameImage")[3].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
+		}
+	</script>
+
+	<!--SideNav-->
+	<div loadHTML="./sideNav/sideNav.html"></div> 
+
+	<div id="main">
+
+		<!--Header-->
+		<div loadHTML="./header/header.html"></div> 
+		<div>loading</div>
+		<div class="header-padding"></div>
+		
+		<!--Subtitle-->
+		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
+		<div style="font-family: Couture; font-size: 36px; text-align:center;">I nostri Eventi</div>
+		<hr style="width: 70%; border: 1px black solid;">
+		<br>
+		
+		<!--Announcements-->
+		<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30 <br> in Viale Ferraris 1 - Santa Maria di Sala</div>
+		
+		
+		<div class="sp-container" style="border: red 1px solid;">
+  <div class="sp-content" style="border: red 1px solid;">
+    <div class="sp-globe"></div>
+    <h2 class="frame-1">ASSEMBLA</h2>
+    <h2 class="frame-2">COMBATTI</h2>
+    <h2 class="frame-3">GIOCA</h2>
+  </div>
+</div>
+
+
+
+
+<br><br><br><br>
+
+		<!--Events-->
+		
+		<div style="text-align: center">
+			<span style="display: inline-block;" loadHTML="./typeBox/nexteventBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./typeBox/nexteventBox.html"></span>
+			<span style="display: inline-block;" loadHTML="./typeBox/eventBox.html"></span>
+		</div>
+		
+		<div id=container1 style="text-align:center; font-family: Couture;">
+		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
+  Gioca insieme a noi 
+  <span><div id=flip1>
+    <div><div>Warhammer</div></div>
+    <div><div>Dungeon & Dragons</div></div>
+    <div><div>Magic</div></div>
+  </div></span>
+  <hr style="width: 70%; border: 1px black solid;">
+<br>
+</div>
+
+		<div class="container">
+			<div class="wrapper">
+				<div class="card wrapper1" style="background-color: #4ec7f3;">
+				<div>
+				<br>
+					<div style="color:white; font-family: Couture; font-size:26px;">Warhammer</div>
+					<img src="./images/technical/warhammer.png" style="width: 100px;"></img>
+					<div class="box-3">
+						<div class="btn btn-three">
+							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+			<div class="wrapper">
+				<div class="card wrapper1" style="background-color: #42c58a;">
+				<div>
+				<br>
+					<div style="color:white; font-family: Couture; font-size:26px;">Giochi di Ruolo</div>
+					<img src="./images/technical/dungeonsanddragons.png" style="width: 100px;"></img>
+					<div class="box-3">
+						<div class="btn btn-three">
+							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+					
+					
+			<div class="wrapper">
+				<div class="card wrapper1" style="background-color: #DC143C;">
+				<div>
+				<br>
+					<div style="color:white; font-family: Couture; font-size:26px;">Giochi da tavolo</div>
+					<img src="./images/technical/tabletop.png" style="width: 100px;"></img>
+					<div class="box-3">
+						<div class="btn btn-three">
+							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+			<div class="wrapper">
+				<div class="card wrapper1" style="background-color: #E6C000;">
+				<div>
+				<br>
+					<div style="color:white; font-family: Couture; font-size:26px;">Magic</div>
+					<img src="./images/technical/tabletop.png" style="width: 100px;"></img>
+					<div class="box-3">
+						<div class="btn btn-three">
+							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		
+		<!--Subtitle-->
+		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
+		<div style="font-family: Couture; font-size: 36px; text-align:center;">Seguici e contattaci</div>
+		<hr style="width: 70%; border: 1px black solid;">
+		<br>
+		
+		<!--Socials-->
+	
+		<div style= "text-align:center;">
+			<div style="display: inline-block; width: 300px; height: 200px; margin: 10px; background-color: #333; border-radius: 10px;">
+				<i class="fa fa-instagram" style="font-size:48px; margin: 20px; color:white;"></i>
+				<div style="color:white; font-family: Couture; font-size:18px;">@giochiinvilla</div>
+				<br>
+				<a style="text-decoration:none;" href="https://www.instagram.com/giochinvilla/?hl=it">
+					<div class="btn btn-two">
+						<span style="text-align:center; font-family: Couture; font-size: 20px; padding: 10px;">Segui</span>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block; width: 300px; height: 200px; margin: 10px; background-color: #333; border-radius: 10px;">
+				<i class="fa fa-facebook-f" style="font-size:48px; margin: 20px; color:white;"></i>
+				<div style="color:white; font-family: Couture; font-size:18px;">@giochiinvilla</div>
+				<br>
+				<a style="text-decoration:none;" href="https://www.facebook.com/giochiinvilla/">
+					<div class="btn btn-two">
+						<span style="text-align:center; font-family: Couture; font-size: 20px; padding: 10px;">Leggi</span>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block; width: 300px; height: 200px; margin: 10px; background-color: #333; border-radius: 10px;">
+				<i class="fa fa-envelope" style="font-size:48px; margin: 20px; color:white;"></i>
+				<div style="color:white; font-family: Couture; font-size:18px;">@giochiinvilla</div>
+				<br>
+				<a style="text-decoration:none;" href="mailto: giochinvilla@gmail.com">
+					<div class="btn btn-two">
+						<span style="text-align:center; font-family: Couture; font-size: 20px; padding: 10px;">Scrivi</span>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<!--Footer-->
+		<div loadHTML="./header/footer.html"></div>
+	</div>
+<script>
+var words = document.getElementsByClassName('word');
+var wordArray = [];
+var currentWord = 0;
+
+words[currentWord].style.opacity = 1;
+for (var i = 0; i < words.length; i++) {
+  splitLetters(words[i]);
+}
+
+function changeWord() {
+  var cw = wordArray[currentWord];
+  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+  for (var i = 0; i < cw.length; i++) {
+    animateLetterOut(cw, i);
+  }
+  
+  for (var i = 0; i < nw.length; i++) {
+    nw[i].className = 'letter behind';
+    nw[0].parentElement.style.opacity = 1;
+    animateLetterIn(nw, i);
+  }
+  
+  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+}
+
+function animateLetterOut(cw, i) {
+  setTimeout(function() {
+    cw[i].className = 'letter out';
+  }, i*80);
+}
+
+function animateLetterIn(nw, i) {
+  setTimeout(function() {
+    nw[i].className = 'letter in';
+  }, 340+(i*80));
+}
+
+function splitLetters(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+  
+  wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 4000);
+</script>
+
+</body>
+</html>
+
+<!--Credit to TheViceroys-->
