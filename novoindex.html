@@ -10,12 +10,16 @@
 	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
 	<link rel="stylesheet" href="./sideNav/sideNav.css">
 	
+	<script type="text/javascript" src="./containers/slideshowContainer.js"></script>
+	<link rel="stylesheet" href="./containers/slideshowContainer.css">
+	
 	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./button.css">
 	<link rel="stylesheet" href="./animation.css">
 	<link rel="stylesheet" href="./header/header.css">
 	<link rel="stylesheet" href="./fonts/fonts.css">
-	<link rel="stylesheet" href="./containers/slideshowContainer.css">
 	<link rel="stylesheet" href="./containers/coloredContainer.css">
+	<link rel="stylesheet" href="./containers/linkContainer.css">
 	<link rel="stylesheet" href="./titles/paragraphTitle.css">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -68,44 +72,10 @@
 	
 	<!--Socials-->
 	<div loadHTML="./titles/paragraphTitle.html"></div>
-		
-	<div class="animatable fadeInDown">
-		<div style= "text-align:center;">
-			<div style="display: inline-block; width: 300px; height: 200px; margin: 10px; background-color: #333; border-radius: 10px;">
-				<i class="fa fa-instagram" style="font-size:48px; margin: 20px; color:white;"></i>
-				<div style="color:white; font-family: Couture; font-size:18px;">@giochiinvilla</div>
-				<br>
-				<a style="text-decoration:none;" href="https://www.instagram.com/giochinvilla/?hl=it">
-					<div class="btn btn-two">
-						<span style="text-align:center; font-family: Couture; font-size: 20px; padding: 10px;">Segui</span>
-					</div>
-				</a>
-			</div>
-			<div style="display: inline-block; width: 300px; height: 200px; margin: 10px; background-color: #333; border-radius: 10px;">
-				<i class="fa fa-facebook-f" style="font-size:48px; margin: 20px; color:white;"></i>
-				<div style="color:white; font-family: Couture; font-size:18px;">@giochiinvilla</div>
-				<br>
-				<a style="text-decoration:none;" href="https://www.facebook.com/giochiinvilla/">
-					<div class="btn btn-two">
-						<span style="text-align:center; font-family: Couture; font-size: 20px; padding: 10px;">Leggi</span>
-					</div>
-				</a>
-			</div>
-			<div style="display: inline-block; width: 300px; height: 200px; margin: 10px; background-color: #333; border-radius: 10px;">
-				<i class="fa fa-envelope" style="font-size:48px; margin: 20px; color:white;"></i>
-				<div style="color:white; font-family: Couture; font-size:18px;">@giochiinvilla</div>
-				<br>
-				<a style="text-decoration:none;" href="mailto: giochinvilla@gmail.com">
-					<div class="btn btn-two">
-						<span style="text-align:center; font-family: Couture; font-size: 20px; padding: 10px;">Scrivi</span>
-					</div>
-				</a>
-			</div>
-		</div>
-</div>
 
 	<!--Footer-->
 	<div loadHTML="./header/footer.html"></div>
+	<div loadHTML="./containers/linkContainer.html"></div>
 	
 	<script>
 		jQuery(function($) {
@@ -136,33 +106,6 @@
 		  $(window).trigger('scroll');
 
 		});
-	</script>
-
-	<script>
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-		  let i;
-		  let slides = document.getElementsByClassName("slides");
-		  let dots = document.getElementsByClassName("dot");
-		  let slideIndex = n;
-		  if (n > slides.length) {slideIndex = 1}    
-		  if (n < 1) {slideIndex = slides.length}
-		  for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";  
-		  }
-		  for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		  }
-		  slides[slideIndex-1].style.display = "block";  
-		  dots[slideIndex-1].className += " active";
-		}
 	</script>
 </body>
 </html>

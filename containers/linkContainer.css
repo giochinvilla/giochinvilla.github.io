@@ -1,0 +1,16 @@
+
+.linkContainer {
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	margin: 10px;
+	background-color: #333;
+	border-radius: 10px;
+	color:white;
+	font-family: Couture;
+	font-size:18px;
+}
+
+.linkContainer .emoji {
+	font-size:48px;
+}
