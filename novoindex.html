@@ -2,68 +2,45 @@
 <html lang="en">
 <head>
 	<link rel="icon" type="image/x-icon" href="./images/technical/favicon.ico">
+	<meta charset="UTF-8">
+    <title>Giochi in Villa</title>
+
+	<script type="text/javascript" src="HTMLloader.js"></script>
 
 	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
 	<link rel="stylesheet" href="./sideNav/sideNav.css">
 	
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="./header/header.css">
 	<link rel="stylesheet" href="./fonts/fonts.css">
-	<link rel="stylesheet" href="./discoveryBanner/discoveryBanner.css">
-	<link rel="stylesheet" href="./typeBox/eventBox.css">
-	<link rel="stylesheet" href="./typeBox/gameBox.css">
-	<link rel="stylesheet" href="./parallax/parallax.css">
-	
 	<link rel="stylesheet" href="./animation.css">
 	
-	<script type="text/javascript" src="HTMLloader.js"></script>
-	<link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <title>Giochi in Villa</title>
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="loadEvents()" style="margin: 0px;">
+<body onload="loadEvents()">
 	<script>
-
 		function loadEvents() {			
 			includeHTML();
 		}
 		
 		function subloadEvents() {
 			document.getElementsByClassName("gameName")[0].innerHTML = "Warhammer";
-			document.getElementsByClassName("gameName")[1].innerHTML = "Giochi da tavolo";
-			document.getElementsByClassName("gameName")[2].innerHTML = "Giochi di ruolo";
-			document.getElementsByClassName("gameName")[3].innerHTML = "DipinGIV";
-		
 			document.getElementsByClassName("eventImage")[0].style.backgroundImage = "url(./images/eventi/salaGioca.png)";
 			document.getElementsByClassName("eventLink")[0].setAttribute("href",  "https://www.w3schools.com/");
-			
-			document.getElementsByClassName("eventImage")[1].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
-			document.getElementsByClassName("eventLink")[1].setAttribute("href",  "https://www.w3schools.com/");
-			
-			document.getElementsByClassName("eventImage")[2].style.backgroundImage = "url(./images/eventiPatronati/patronatoCaltana.webp)";
-			document.getElementsByClassName("eventLink")[2].setAttribute("href",  "https://www.w3schools.com/");
-			
 			document.getElementsByClassName("gameImage")[0].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
-			document.getElementsByClassName("gameImage")[1].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
-			document.getElementsByClassName("gameImage")[2].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
-			document.getElementsByClassName("gameImage")[3].style.backgroundImage = "url(./images/eventiPatronati/patronatoSantAngelo.webp)";
 		}
 	</script>
 
 	<!--SideNav-->
 	<div loadHTML="./sideNav/sideNav.html"></div> 
 
-	<div id="main">
-
-		<!--Header-->
-		<div loadHTML="./header/header.html"></div> 
-		<div>loading</div>
-		<div class="header-padding"></div>
+	<!--Header-->
+	<div loadHTML="./header/header.html"></div> 
+	<div> </div>
+	<div class="header-padding"></div>
 		
 		<!--Subtitle--><div class="animatable fadeInDown">
 		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
@@ -74,9 +51,15 @@
 		<!--Announcements-->
 		<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30 <br> in Viale Ferraris 1 - Santa Maria di Sala</div>
 		
-		<div class="container">
+		<!--EVENTI EVENTI-->
+		
+		<div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <div class="container">
 		<div class="wrapper">
-				<div class="card wrapper1" style="background-color: #42c58a; width: 1000px;">
+				<div class="card wrapper1" style="background-color: #42c58a; width: 1000px; ">
 				<div>
 					<img style="width: 100%; height: 17rem; object-fit: cover; filter: blur(2px); -webkit-filter: blur(2px);" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.gettyimages.com.au%2Fgi-resources%2Fimages%2Ffrontdoor%2Fcreative%2FPanoramicImagesRM%2FFD_image.jpg&f=1"></img>
 					<div style="color:white; font-family: Couture; font-size:26px; position: relative; top: -17rem;">EVENTO_1</div>
@@ -88,6 +71,54 @@
 				</div>
 				</div>
 			</div></div>
+
+</div>
+
+<div class="mySlides fade">
+    <div class="container">
+		<div class="wrapper">
+				<div class="card wrapper1" style="background-color: #42c58a; width: 1000px;">
+				<div>
+					<img style="width: 100%; height: 17rem; object-fit: cover; filter: blur(2px); -webkit-filter: blur(2px);" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.gettyimages.com.au%2Fgi-resources%2Fimages%2Ffrontdoor%2Fcreative%2FPanoramicImagesRM%2FFD_image.jpg&f=1"></img>
+					<div style="color:white; font-family: Couture; font-size:26px; position: relative; top: -17rem;">EVENTO_2</div>
+					<div class="box-3" style="position: relative; top: -9rem; width: 300px; left: 350px;">
+						<div class="btn btn-three">
+							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div></div>
+</div>
+
+<div class="mySlides fade">
+    <div class="container">
+		<div class="wrapper">
+				<div class="card wrapper1" style="background-color: #42c58a; width: 1000px;">
+				<div>
+					<img style="width: 100%; height: 17rem; object-fit: cover; filter: blur(2px); -webkit-filter: blur(2px);" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.gettyimages.com.au%2Fgi-resources%2Fimages%2Ffrontdoor%2Fcreative%2FPanoramicImagesRM%2FFD_image.jpg&f=1"></img>
+					<div style="color:white; font-family: Couture; font-size:26px; position: relative; top: -17rem;">EVENTO_3</div>
+					<div class="box-3" style="position: relative; top: -9rem; width: 300px; left: 350px;">
+						<div class="btn btn-three">
+							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div></div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+		
+		<!--FINE EVENTI EVENTI-->
+		
+		
+	
 		
 		<div class="animatable fadeInDown"><div id=container1 style="text-align:center; font-family: Couture;">
 		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
@@ -208,8 +239,8 @@
 </div>
 		<!--Footer-->
 		<div loadHTML="./header/footer.html"></div>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	
 <script>
 
 jQuery(function($) {
@@ -240,6 +271,36 @@ jQuery(function($) {
   $(window).trigger('scroll');
 
 });
+</script>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
 </script>
 </body>
 </html>
