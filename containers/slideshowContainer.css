@@ -35,7 +35,7 @@
 	font-family: Couture;
 	font-size: 42px;
 	position: relative;
-	top: -240px;
+	top: -250px;
 }
 
 .slideshowContainer .card .subtitle {
@@ -43,12 +43,12 @@
 	font-family: Couture;
 	font-size: 26px;
 	position: relative;
-	top: -230px;
+	top: -240px;
 }
 
 .slideshowContainer .card .button {
 	position: relative;
-	top: -150px;
+	top: -80px;
 }
 
 .slideshowContainer .card:hover img {
@@ -61,7 +61,6 @@
   max-width: 70%;
   position: relative;
   margin: auto;
-  border: 1px red solid;
 }
 
 .dot {
