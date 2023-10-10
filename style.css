@@ -65,27 +65,6 @@ body {
   }
 }
 
-.button {
-	transition: background-color 1s;
-	width: 150px;
-	border: white 3px solid;
-	background-color:#111;
-	position: relative;
-	top: -5px; 
-	left: -8px;
-}
-
-.sub-button {
-	padding: 15px;
-	color:white;
-	font-size: 24px;
-	text-align: center;
-	font-family: Avenge;
-}
-
-.button:hover {
-	background-color: #E44146;
-}
 
 div.wrapper1 {
   overflow: hidden;
