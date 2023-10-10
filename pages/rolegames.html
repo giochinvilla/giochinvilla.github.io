@@ -38,6 +38,8 @@
 			document.getElementsByClassName("paragraphSubtitleTitle")[0].innerHTML = "Coriolis";
 			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dungeons & Dragons";
 			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Seventh Sea";
+			
+			showSlides(1);
 		}
 	</script>
 
@@ -51,6 +53,9 @@
 	<!--Events-->
 	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
 	
+	<!--Announcements-->
+	<div class="main-announcement" style="background-color: #E44146;">Work in progress!</div>
+	
 			<div class="card wrapper" style="background-color: #4ec7f3;">
 				<br>
 				<div class="title">Giochi di ruolo per tutti</div>
@@ -61,12 +66,12 @@
 			</div>
 			
 			
-			<div class="slideshow-container">
+	<div class="slideshow-container">
 		<div class="slides fade">
 			<div class="slideshowContainer">
 				<div class="wrapper">
 					<div class="card">
-						<img class="eventImage" src="./images/technical/default.png"></img>
+						<img class="eventImage" src="../images/technical/default.png"></img>
 					</div>
 				</div>
 			</div>
@@ -75,7 +80,7 @@
 			<div class="slideshowContainer">
 				<div class="wrapper">
 					<div class="card">
-						<img class="eventImage" src="./images/technical/default.png"></img>
+						<img class="eventImage" src="../images/technical/default.png"></img>
 					</div>
 				</div>
 			</div>
@@ -84,7 +89,7 @@
 			<div class="slideshowContainer">
 				<div class="wrapper">
 					<div class="card">
-						<img class="eventImage" src="./images/technical/default.png"></img>
+						<img class="eventImage" src="../images/technical/default.png"></img>
 					</div>
 				</div>
 			</div>
@@ -95,9 +100,6 @@
 	<span class="dot" onclick="currentSlide(2)"></span> 
 	<span class="dot" onclick="currentSlide(3)"></span> 
 </div>
-			
-	<!--Announcements-->
-	<div class="main-announcement" style="background-color: #E44146;">Work in progress!</div>
 
 	<!--Footer-->
 	<div loadHTML="../header/footer.html"></div>
