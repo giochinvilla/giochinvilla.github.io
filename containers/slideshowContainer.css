@@ -16,7 +16,6 @@
     border-radius: 40px;
     height: 256px;
     width: 90%;
-	max-width: 1000px;
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -59,7 +58,8 @@
 /*Slideshow*/
 
 .slideshow-container {
-  max-width: 70%;
+  max-width: 90%;
+  max-width: 1000px;
   position: relative;
   margin: auto;
 }
