@@ -57,13 +57,13 @@
 
 	<!--Header-->
 	<div loadHTML="./header/header.html"></div> 
-	
-	<!--Announcements-->
-	<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30<br> in Viale Ferraris 1 - Santa Maria di Sala</div>
 		
 	<!--Events-->
 	<div loadHTML="./titles/paragraphTitle.html"></div>
 	<div loadHTML="./containers/slideshowContainer.html"></div> 
+	
+	<!--Announcements-->
+	<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30<br> in Viale Ferraris 1 - Santa Maria di Sala</div>
 	
 	<!--Games-->
 	<div loadHTML="./titles/paragraphAnimatedTitle.html"></div> 
@@ -72,41 +72,35 @@
 	
 	<!--Socials-->
 	<div loadHTML="./titles/paragraphTitle.html"></div>
+	<div loadHTML="./containers/linkContainer.html"></div>
 
 	<!--Footer-->
 	<div loadHTML="./header/footer.html"></div>
-	<div loadHTML="./containers/linkContainer.html"></div>
 	
 	<script>
-		jQuery(function($) {
-		  // Function which adds the 'animated' class to any '.animatable' in view
-		  var doAnimations = function() {
-			
-			// Calc current offset and get all animatables
+	jQuery(function($) {
+		var doAnimations = function() {
+
 			var offset = $(window).scrollTop() + $(window).height(),
 				$animatables = $('.animatable');
-			
-			// Unbind scroll handler if we have no animatables
+
 			if ($animatables.length == 0) {
 			  $(window).off('scroll', doAnimations);
 			}
-			
-			// Check all animatables and animate them if necessary
-				$animatables.each(function(i) {
-			   var $animatable = $(this);
-					if (($animatable.offset().top + $animatable.height() - 20) < offset) {
-				$animatable.removeClass('animatable').addClass('animated');
-					}
+
+			$animatables.each(function(i) {
+				var $animatable = $(this);
+				if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+					$animatable.removeClass('animatable').addClass('animated');
+				}
 			});
-
-			};
+		};
 		  
-		  // Hook doAnimations on scroll, and trigger a scroll
-			$(window).on('scroll', doAnimations);
-		  $(window).trigger('scroll');
-
-		});
+		$(window).on('scroll', doAnimations);
+		 $(window).trigger('scroll');
+	});
 	</script>
+	
 </body>
 </html>
 
