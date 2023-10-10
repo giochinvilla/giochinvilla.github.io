@@ -37,6 +37,9 @@
 			document.getElementsByClassName("paragraphSubtitleTitle")[0].innerHTML = "Warhammer";
 			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dungeons & Dragons";
 			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Magic";
+			
+			let slideIndex = 1;
+			showSlides(slideIndex);
 		}
 	</script>
 
@@ -203,8 +206,6 @@ jQuery(function($) {
 
 
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
