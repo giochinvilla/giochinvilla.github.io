@@ -1,0 +1,29 @@
+.coloredContainer {
+  display: inline-block;
+  text-align:center;
+  margin: auto;
+  width: 100%;
+}
+.coloredContainer .wrapper {
+  display: inline-block;
+  transform: skew(-10deg);
+  transition: 0.25s;
+  margin: 20px;
+}
+.coloredContainer .wrapper:hover {
+  transform: translateX(-1rem) translateY(-1rem) skew(-10deg);
+}
+
+.coloredContainer .card {
+  border-radius: 40px;
+  height: 16rem;
+  width: 20rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.coloredContainer .card .title {
+	color:white;
+	font-family: Couture;
+	font-size:26px;
+}

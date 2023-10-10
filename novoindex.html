@@ -10,11 +10,12 @@
 	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
 	<link rel="stylesheet" href="./sideNav/sideNav.css">
 	
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./animation.css">
 	<link rel="stylesheet" href="./header/header.css">
 	<link rel="stylesheet" href="./fonts/fonts.css">
-	<link rel="stylesheet" href="./animation.css">
 	<link rel="stylesheet" href="./containers/slideshowContainer.css">
+	<link rel="stylesheet" href="./containers/coloredContainer.css">
 	<link rel="stylesheet" href="./titles/paragraphTitle.css">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,6 +29,9 @@
 		}
 		
 		function subloadEvents() {
+			document.getElementsByClassName("coloredTitle")[0].innerHTML = "Warhammer";
+			document.getElementsByClassName("coloredImage")[0].src = "./images/technical/warhammer.png"
+
 			document.getElementsByClassName("eventImage")[0].src = "./images/eventi/salaGioca.png";
 			document.getElementsByClassName("eventTitle")[0].innerHTML = "Example";
 			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "Example";
@@ -37,9 +41,9 @@
 			document.getElementsByClassName("paragraphSubtitleTitle")[0].innerHTML = "Warhammer";
 			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dungeons & Dragons";
 			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Magic";
+			document.getElementsByClassName("paragraphTitleTitle")[2].innerHTML = "Seguici e contattaci";
 			
-			let slideIndex = 1;
-			showSlides(slideIndex);
+			showSlides(1);
 		}
 	</script>
 
@@ -49,91 +53,22 @@
 
 	<!--Header-->
 	<div loadHTML="./header/header.html"></div> 
-		
-	<!--Subtitle-->
-	<div loadHTML="./titles/paragraphTitle.html"></div>
-		
+	
 	<!--Announcements-->
 	<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30<br> in Viale Ferraris 1 - Santa Maria di Sala</div>
 		
 	<!--Events-->
-	<divloadHTML="./containers/slideshowContainer.html"></div> 
+	<div loadHTML="./titles/paragraphTitle.html"></div>
+	<div loadHTML="./containers/slideshowContainer.html"></div> 
 	
-	<!--Animated-Subtitle-->
+	<!--Games-->
 	<div loadHTML="./titles/paragraphAnimatedTitle.html"></div> 
+	<div loadHTML="./containers/coloredContainer.html"></div> 
+	<br><br>
 	
-<div class="animatable fadeInDown">
-		<div class="container">
-			<div class="wrapper">
-				<div class="card wrapper1" style="background-color: #4ec7f3;">
-				<div>
-				<br>
-					<div style="color:white; font-family: Couture; font-size:26px;">Warhammer</div>
-					<img src="./images/technical/warhammer.png" style="width: 100px;"></img>
-					<div class="box-3">
-						<div class="btn btn-A">
-							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-			
-			<div class="wrapper">
-				<div class="card wrapper1" style="background-color: #42c58a;">
-				<div>
-				<br>
-					<div style="color:white; font-family: Couture; font-size:26px;">Giochi di Ruolo</div>
-					<img src="./images/technical/dungeonsanddragons.png" style="width: 100px;"></img>
-					<div class="box-3">
-						<div class="btn btn-A">
-							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-					
-					
-			<div class="wrapper">
-				<div class="card wrapper1" style="background-color: #DC143C;">
-				<div>
-				<br>
-					<div style="color:white; font-family: Couture; font-size:26px;">Giochi da tavolo</div>
-					<img src="./images/technical/tabletop.png" style="width: 100px;"></img>
-					<div class="box-3">
-						<div class="btn btn-A">
-							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-			
-			<div class="wrapper">
-				<div class="card wrapper1" style="background-color: #E6C000;">
-				<div>
-				<br>
-					<div style="color:white; font-family: Couture; font-size:26px;">Magic</div>
-					<img src="./images/technical/tabletop.png" style="width: 100px;"></img>
-					<div class="box-3">
-						<div class="btn btn-A">
-							<span style="font-family: Couture; font-size: 20px; text-align:center; margin-top: 10px;">Scopri</span>
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-		</div></div>
-		<br><br>
+	<!--Socials-->
+	<div loadHTML="./titles/paragraphTitle.html"></div>
 		
-		<!--Subtitle--><div class="animatable fadeInDown">
-		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="./images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
-		<div style="font-family: Couture; font-size: 36px; text-align:center;">Seguici e contattaci</div>
-		<hr style="width: 70%; border: 1px black solid;">
-		<br></div>
-		
-		<!--Socials-->
 	<div class="animatable fadeInDown">
 		<div style= "text-align:center;">
 			<div style="display: inline-block; width: 300px; height: 200px; margin: 10px; background-color: #333; border-radius: 10px;">
@@ -168,70 +103,67 @@
 			</div>
 		</div>
 </div>
-		<!--Footer-->
-		<div loadHTML="./header/footer.html"></div>
-	
-	
-<script>
 
-jQuery(function($) {
-  // Function which adds the 'animated' class to any '.animatable' in view
-  var doAnimations = function() {
-    
-    // Calc current offset and get all animatables
-    var offset = $(window).scrollTop() + $(window).height(),
-        $animatables = $('.animatable');
-    
-    // Unbind scroll handler if we have no animatables
-    if ($animatables.length == 0) {
-      $(window).off('scroll', doAnimations);
-    }
-    
-    // Check all animatables and animate them if necessary
-		$animatables.each(function(i) {
-       var $animatable = $(this);
-			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
-        $animatable.removeClass('animatable').addClass('animated');
+	<!--Footer-->
+	<div loadHTML="./header/footer.html"></div>
+	
+	<script>
+		jQuery(function($) {
+		  // Function which adds the 'animated' class to any '.animatable' in view
+		  var doAnimations = function() {
+			
+			// Calc current offset and get all animatables
+			var offset = $(window).scrollTop() + $(window).height(),
+				$animatables = $('.animatable');
+			
+			// Unbind scroll handler if we have no animatables
+			if ($animatables.length == 0) {
+			  $(window).off('scroll', doAnimations);
 			}
-    });
+			
+			// Check all animatables and animate them if necessary
+				$animatables.each(function(i) {
+			   var $animatable = $(this);
+					if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+				$animatable.removeClass('animatable').addClass('animated');
+					}
+			});
 
-	};
-  
-  // Hook doAnimations on scroll, and trigger a scroll
-	$(window).on('scroll', doAnimations);
-  $(window).trigger('scroll');
+			};
+		  
+		  // Hook doAnimations on scroll, and trigger a scroll
+			$(window).on('scroll', doAnimations);
+		  $(window).trigger('scroll');
 
-});
-</script>
+		});
+	</script>
 
+	<script>
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
 
-<script>
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slides");
-  let dots = document.getElementsByClassName("dot");
-  let slideIndex = n;
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("slides");
+		  let dots = document.getElementsByClassName("dot");
+		  let slideIndex = n;
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
 </body>
 </html>
 

@@ -1,33 +1,4 @@
 
-
-
-
-.container {
-  display: inline-block;
-
-  text-align:center;
-  margin: auto;
-  width: 100%;
-}
-.container .wrapper {
-  display: inline-block;
-  transform: skew(-10deg);
-  transition: 0.25s;
-  margin: 20px;
-}
-.container .wrapper:hover {
-  transform: translateX(-1rem) translateY(-1rem) skew(-10deg);
-}
-.container .card {
-  border-radius: 40px;
-  height: 16rem;
-  width: 20rem;
-
-  position: relative;
-  overflow: hidden;
-}
-
-
 .btn-two {
   color: #FFF;
   transition: all 0.5s;
