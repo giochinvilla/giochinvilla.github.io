@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="../containers/coloredContainer.css">
 	<link rel="stylesheet" href="../containers/linkContainer.css">
 	<link rel="stylesheet" href="../titles/paragraphTitle.css">
+	<link rel="stylesheet" href="../containers/descriptionContainer.css">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,7 +39,8 @@
 			document.getElementsByClassName("paragraphSubtitleTitle")[0].innerHTML = "Coriolis";
 			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dungeons & Dragons";
 			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Seventh Sea";
-			
+			document.getElementsByClassName("paragraphTitleTitle")[1].innerHTML = "Le nostre campagne";
+			document.getElementsByClassName("paragraphTitleTitle")[2].innerHTML = "Galleria";
 			showSlides(1);
 		}
 	</script>
@@ -50,44 +52,30 @@
 	<!--Header-->
 	<div loadHTML="../header/header.html"></div> 
 		
-	<!--Events-->
+	<!--Descriptive-->
 	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
 	
-	<!--Announcements-->
-	<div class="main-announcement" style="background-color: #E44146;">Work in progress!</div>
-	
-	
-		<div class="coloredContainer">
-			<div class="card wrapper" style="background-color: #4ec7f3; width: 70%; max-width: 1500px; heigth: 150px;">
+		<div class="descriptionContainer">
+			<div class="card wrapper btl btl-A" style="background-color: #42c58a">
 				<br>
 				<div class="title">Giochi di ruolo per tutti</div>
-				<div style="font-size: 20px; text-align:center; width: 70%; margin:auto; color:white">
+				<div class="desc">
 				Giochi Di Ruolo per tutti i gusti! Dal fantastico Dungeons & Dragons al rocambolesco 7th Sea al fantascientifico Coriolis, in associazione abbiamo molti
 				Master pronti a far provare mirabolanti avventure ai giocatori curiosi di mettersi in gioco!
 				</div>
 			</div>
-			</div>
+		</div>
+		
+	<!--Announcements-->
+	<div class="main-announcement" style="background-color: #42c58a;">Vuoi giocare? Contatta uno dei nostri master d’associazione!</div>
 			
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
 			
 	<div class="slideshow-container">
-		<div class="slides fade">
-			<div class="slideshowContainer">
-				<div class="wrapper">
-					<div class="card">
-						<img class="eventImage" src="../images/technical/default.png"></img>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slides fade">
-			<div class="slideshowContainer">
-				<div class="wrapper">
-					<div class="card">
-						<img class="eventImage" src="../images/technical/default.png"></img>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="slides fade">
 			<div class="slideshowContainer">
 				<div class="wrapper">
@@ -120,12 +108,10 @@
 	<span class="dot" onclick="currentSlide(1)"></span> 
 	<span class="dot" onclick="currentSlide(2)"></span> 
 	<span class="dot" onclick="currentSlide(3)"></span> 
-	<span class="dot" onclick="currentSlide(4)"></span> 
-	<span class="dot" onclick="currentSlide(5)"></span> 
 </div>
 
 		<!--Announcements-->
-	<div class="main-announcement" style="background-color: #E44146;">Scrivere campagne attive, masters?</div>
+	<div class="main-announcement" style="background-color: #E44146;">Scrivere campagne attive, masters?, METTERE titolo ti riporta alla homepage, sistemare roba</div>
 
 	<!--Footer-->
 	<div loadHTML="../header/footer.html"></div>
