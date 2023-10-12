@@ -79,10 +79,20 @@
 		
 	<!--Events-->
 	<div loadHTML="./titles/paragraphTitle.html"></div>
-	<div loadHTML="./containers/slideshowContainer.html"></div> 
+	<div class="slideshow-container">
+		<div loadHTML="./containers/slideshowContainer.html"></div> 
+		<div loadHTML="./containers/slideshowContainer.html"></div> 
+		<div loadHTML="./containers/slideshowContainer.html"></div> 
+	</div>
+	
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
 	
 	<!--Announcements-->
-	<div class="main-announcement" style="background-color: #E44146;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30<br> in Viale Ferraris 1 - Santa Maria di Sala</div>
+	<div class="main-announcement" style="background-color: #DC143C;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30<br> in Viale Ferraris 1 - Santa Maria di Sala</div>
 	
 	<!--Games-->
 	<div loadHTML="./titles/paragraphAnimatedTitle.html"></div> 
