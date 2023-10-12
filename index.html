@@ -46,6 +46,10 @@
 			document.getElementsByClassName("coloredLink")[1].setAttribute("href", "./pages/rolegames.html");
 			document.getElementsByClassName("coloredLink")[2].setAttribute("href", "./pages/tablegames.html");
 			document.getElementsByClassName("coloredLink")[3].setAttribute("href", "./pages/cardsgames.html");
+			document.getElementsByClassName("coloredColor")[0].style.backgroundColor = "#4ec7f3";
+			document.getElementsByClassName("coloredColor")[0].style.backgroundColor = "#42c58a";
+			document.getElementsByClassName("coloredColor")[0].style.backgroundColor = "#dc143c";
+			document.getElementsByClassName("coloredColor")[0].style.backgroundColor = "#e6c000";
 
 			document.getElementsByClassName("eventImage")[0].src = "./images/eventi/salaGioca.png";
 			document.getElementsByClassName("eventTitle")[0].innerHTML = "Example";
@@ -96,7 +100,17 @@
 	
 	<!--Games-->
 	<div loadHTML="./titles/paragraphAnimatedTitle.html"></div> 
-	<div loadHTML="./containers/coloredContainer.html"></div> 
+	
+	<div class="coloredContainer">
+		<div style="display: inline-block;">
+			<div loadHTML="./containers/coloredContainer.html"></div> 
+			<div loadHTML="./containers/coloredContainer.html"></div> 
+		</div>
+				<div style="display: inline-block;">
+			<div loadHTML="./containers/coloredContainer.html"></div> 
+			<div loadHTML="./containers/coloredContainer.html"></div> 
+		</div>
+	</div>
 	<br><br>
 	
 	<!--Socials-->
