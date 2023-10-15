@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/x-icon" href="../images/technical/favicon.ico">
+	<meta charset="UTF-8">
+    <title>Giochi in Villa</title>
+
+	<script type="text/javascript" src="../HTMLloader.js"></script>
+
+	<script type="text/javascript" src="../sideNav/sideNav.js"></script>
+	<link rel="stylesheet" href="../sideNav/sideNav.css">
+	
+	<script type="text/javascript" src="../containers/slideshowContainer.js"></script>
+	<link rel="stylesheet" href="../containers/slideshowContainer.css">
+	
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../button.css">
+	<link rel="stylesheet" href="../animation.css">
+	<link rel="stylesheet" href="../header/header.css">
+	<link rel="stylesheet" href="../fonts/fonts.css">
+	<link rel="stylesheet" href="../containers/coloredContainer.css">
+	<link rel="stylesheet" href="../containers/linkContainer.css">
+	<link rel="stylesheet" href="../titles/paragraphTitle.css">
+	<link rel="stylesheet" href="../containers/descriptionContainer.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body onload="loadEvents()">
+	<script>
+		function loadEvents() {			
+			includeHTML();
+		}
+		
+		function subloadEvents() {
+			document.getElementsByClassName("paragraphTitleTitle")[0].innerHTML = "Giochi di ruolo";
+			document.getElementsByClassName("paragraphSubtitleTitle")[0].innerHTML = "Coriolis";
+			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dungeons & Dragons";
+			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Seventh Sea";
+			document.getElementsByClassName("paragraphTitleTitle")[1].innerHTML = "Le nostre campagne";
+			document.getElementsByClassName("paragraphTitleTitle")[2].innerHTML = "Galleria";
+			document.getElementsByClassName("paragraphTitleTitle")[3].innerHTML = "Seguici e contattaci";
+			
+			showSlides(1);
+			
+			document.getElementsByClassName("slideshowContainer_switch")[0].style.display = "none";
+			document.getElementsByClassName("slideshowContainer_switch")[1].style.display = "none";
+			document.getElementsByClassName("slideshowContainer_switch")[2].style.display = "none";
+			document.getElementsByClassName("eventImage")[0].src = "../images/rolegames_gallery/gallery1.jpg";
+			document.getElementsByClassName("eventImage")[1].src = "../images/rolegames_gallery/gallery2.jpg";
+			document.getElementsByClassName("eventImage")[2].src = "../images/rolegames_gallery/gallery3.jpg";
+			
+			document.getElementsByClassName("coloredTitle")[0].innerHTML = "Campagna di Alteras";
+			document.getElementsByClassName("coloredTitle")[1].innerHTML = "Giochi di ruolo";
+			document.getElementsByClassName("coloredImage")[0].src = "./images/technical/warhammer.png"
+			document.getElementsByClassName("coloredImage")[1].src = "./images/technical/dungeonsanddragons.png"
+			document.getElementsByClassName("coloredLink")[0].setAttribute("href", "./pages/rolegames.html");
+			document.getElementsByClassName("coloredLink")[1].setAttribute("href", "./pages/rolegames.html");
+			document.getElementsByClassName("coloredColor")[0].style.backgroundColor = "#4ec7f3";
+			document.getElementsByClassName("coloredColor")[1].style.backgroundColor = "#42c58a";
+		}
+	</script>
+
+	<!--SideNav-->
+	<div loadHTML="../sideNav/sideNav.html"></div> 
+	<div>_<div>
+
+	<!--Header-->
+	<div loadHTML="../header/header.html"></div> 
+		
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
+	
+		<div class="descriptionContainer">
+			<div class="card wrapper btl btl-A" style="background-color: #333">
+				<br>
+				<div class="title">Giochi di ruolo per tutti</div>
+				<div class="desc">
+				Giochi Di Ruolo per tutti i gusti! Dal fantastico Dungeons & Dragons al rocambolesco 7th Sea al fantascientifico Coriolis, in associazione abbiamo molti
+				Master pronti a far provare mirabolanti avventure ai giocatori curiosi di mettersi in gioco!<br>
+				Che tu sia un master in cerca di giocatori, un giocatore in cerca di master o un gruppo già formato
+				in cerca di un luogo dove passare il tempo qui potrai rilassarti e divertirti!
+				</div>
+			</div>
+		</div>
+			
+	<br><br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	
+	<!--Announcements-->
+	<div class="main-announcement" style="background-color: #DC143C;">Vuoi giocare? Contatta uno dei nostri master d’associazione!</div>
+	
+	<div class="coloredContainer">
+		<div style="display: inline-block;">
+			<div loadHTML="./containers/coloredContainer.html"></div> 
+			<div loadHTML="./containers/coloredContainer.html"></div> 
+		</div>
+	</div>
+	
+	<br><br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div class="slideshow-container">
+		<div loadHTML="../containers/slideshowContainer.html"></div> 
+		<div loadHTML="../containers/slideshowContainer.html"></div> 
+		<div loadHTML="../containers/slideshowContainer.html"></div> 
+	</div>
+	
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+	
+	<br><br>
+	
+	<!--Socials-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div loadHTML="../containers/linkContainer.html"></div>
+
+	<!--Footer-->
+	<div loadHTML="../header/footer.html"></div>
+	
+</body>
+</html>
+
+<!--Credit to TheViceroys-->
