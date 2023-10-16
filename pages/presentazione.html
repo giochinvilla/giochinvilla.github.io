@@ -1,124 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="icon" type="image/x-icon" href="./images/technical/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="../images/technical/favicon.ico">
+	<meta charset="UTF-8">
+    <title>Giochi in Villa</title>
+
+	<script type="text/javascript" src="../HTMLloader.js"></script>
 
 	<script type="text/javascript" src="../sideNav/sideNav.js"></script>
 	<link rel="stylesheet" href="../sideNav/sideNav.css">
 	
+	<script type="text/javascript" src="../containers/slideshowContainer.js"></script>
+	<link rel="stylesheet" href="../containers/slideshowGallery.css">
+	
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../button.css">
+	<link rel="stylesheet" href="../animation.css">
 	<link rel="stylesheet" href="../header/header.css">
 	<link rel="stylesheet" href="../fonts/fonts.css">
-	<link rel="stylesheet" href="../parallax/parallax.css">
-	
-	<script type="text/javascript" src="../HTMLloader.js"></script>
-	<link rel="stylesheet" href="../style.css">
-    <meta charset="UTF-8">
-    <title>Giochi in Villa</title>
+	<link rel="stylesheet" href="../containers/coloredContainer.css">
+	<link rel="stylesheet" href="../containers/linkContainer.css">
+	<link rel="stylesheet" href="../titles/paragraphTitle.css">
+	<link rel="stylesheet" href="../containers/descriptionContainer.css">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="loadEvents()" style="margin: 0px;">
+<body onload="loadEvents()">
 	<script>
-
 		function loadEvents() {			
 			includeHTML();
 		}
 		
-		function subloadEvents() {}
+		function subloadEvents() {
+			document.getElementsByClassName("paragraphTitleTitle")[0].innerHTML = "Giochi di ruolo";
+			document.getElementsByClassName("paragraphSubtitleTitle")[0].innerHTML = "Coriolis";
+			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dungeons & Dragons";
+			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Seventh Sea";
+			document.getElementsByClassName("paragraphTitleTitle")[1].innerHTML = "Le nostre campagne";
+			document.getElementsByClassName("paragraphTitleTitle")[2].innerHTML = "Galleria";
+			document.getElementsByClassName("paragraphTitleTitle")[3].innerHTML = "Seguici e contattaci";
+			
+			showSlides(1);
+			
+			document.getElementsByClassName("eventImage")[0].src = "../images/rolegames_gallery/gallery1.jpg";
+			document.getElementsByClassName("eventImage")[1].src = "../images/rolegames_gallery/gallery2.jpg";
+			document.getElementsByClassName("eventImage")[2].src = "../images/rolegames_gallery/gallery3.jpg";
+			
+			document.getElementsByClassName("coloredTitle")[0].innerHTML = "Saga di Alteras";
+			document.getElementsByClassName("coloredTitle")[1].innerHTML = "Campagna di Sofia";
+			document.getElementsByClassName("coloredTitle")[2].innerHTML = "In arrivo...";
+			document.getElementsByClassName("coloredImage")[0].src = "../images/technical/dungeonsanddragons.png"
+			document.getElementsByClassName("coloredImage")[1].src = "../images/technical/dungeonsanddragons.png"
+			document.getElementsByClassName("coloredImage")[2].src = "../images/technical/dungeonsanddragons.png"
+			document.getElementsByClassName("coloredLink")[0].setAttribute("href", "https://homebrewery.naturalcrit.com/share/PjrIv-he-Bh2");
+			document.getElementsByClassName("coloredColor")[0].style.backgroundColor = "#42c58a";
+			document.getElementsByClassName("coloredColor")[1].style.backgroundColor = "#42c58a";
+			document.getElementsByClassName("coloredColor")[2].style.backgroundColor = "#e6c000";
+			document.getElementsByClassName("coloredContainer_switch")[1].style.display = "none";
+			document.getElementsByClassName("coloredContainer_switch")[2].style.display = "none";
+		}
 	</script>
 
 	<!--SideNav-->
 	<div loadHTML="../sideNav/sideNav.html"></div> 
+	<div>_<div>
 
-	<div id="main">
-
-		<!--Header-->
-		<div loadHTML="../header/header.html"></div> 
-		<div>loading</div>
+	<!--Header-->
+	<div loadHTML="../header/header.html"></div> 
 		
-		<!--Parallax-->
-		<div class="bgimg-1">
-		<div class="header-padding"></div>
-		
-			<!--Subtitle-->
-			<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="../images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
-			<div class="main-subtitle">Chi Siamo e cosa facciamo</div>
-			<hr style="width: 70%; border: 1px black solid;">
-			
-			<!--Text-->
-			<br><br>
-			<div style="color:black; padding: 15px 80px; text-align: justify; width: 70%; margin:auto;">
-				<div style="font-size: 20px; font-family: Couture;">Giochi in Villa e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici per il gioco da tavolo. Nel 2019 abbiamo iniziato la nostra
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
+	
+		<div class="descriptionContainer">
+			<div class="card wrapper btl btl-A" style="background-color: #333">
+				<br>
+				<div class="title">Chi Siamo e cosa facciamo</div>
+				<div class="desc">
+				Giochi in Villa e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici per il gioco da tavolo. Nel 2019 abbiamo iniziato la nostra
 				attivita' sul territorio di Santa Maria di Sala, portando tutti i lunedi' sera giochi di societa' e strategia in grado di appassionare e divertire tutte le fasce di eta'.
 				Il nostro e' un hobby che unisce ed aiuta a sviluppare quella convivialita' che con il passare del tempo e' sempre piu' difficile trovare.<br>
 				I giochi che proponiamo sono di tutti i	generi conosciuti ed apprezzati sia da appassionati che	non; al Giochi in Villa si possono trovare sia party
-				games che giochi in scatola collaborativi o di gestione, giochi di miniature come lo strategico Warhammer 40k e giochi di ruolo come il famoso Dungeons & Dragons.</div>
-			</div>	
-			<br><br>
-		</div>
-
-		<!--Parallax-->
-		<div class="bgimg-2">
-		<br><br>
-		
-			<!--Subtitle-->
-			<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="../images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
-			<div class="main-subtitle">Gioca con noi</div>
-			<hr style="width: 70%; border: 1px black solid;">
-			
-			<!--Text-->
-			<br><br>
-			<div style="color:black; padding: 15px 80px; text-align: justify; width: 70%; margin:auto;">
-				<div style="font-size: 20px; font-family: Couture;">Da un paio di anni abbiamo cominciato a collaborare	con diverse realta' simili del territorio facendoci conoscere anche fuori dal comune salese, abbiamo
-				GIOCA D'INIZIATIVA organizzato fiere ed eventi e ogni secondo giovedi' del mese abbiamo portato l’attivita' dell'associazione nei patronati del comune.
-				Siamo un'associazione viva e in crescita e abbiamo molti progetti che speriamo, un giorno, possano rendere il comune di Santa Maria di Sala un punto
-				di riferimento per tutti gli appassionati di giochi da tavolo e non solo!</div>
-				</div>	
-				<br><br>
+				games che giochi in scatola collaborativi o di gestione, giochi di miniature come lo strategico Warhammer 40k e giochi di ruolo come il famoso Dungeons & Dragons.
+				</div>
+			</div>
 		</div>
 			
-		<!--Parallax-->
-		<div class="bgimg-3">
-		<br><br>
-		
-			<!--Subtitle-->
-			<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="../images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
-			<div class="main-subtitle">TODO ALTRO</div>
-			<hr style="width: 70%; border: 1px black solid;">
-			
-			<!--Text-->
-			<br><br>
-			<div style="color:black; padding: 15px 80px; text-align: justify; width: 70%; margin:auto;">
-				<div style="font-size: 20px; font-family: Couture;">Da un paio di anni abbiamo cominciato a collaborare	con diverse realta' simili del territorio facendoci conoscere anche fuori dal comune salese, abbiamo
-				GIOCA D'INIZIATIVA organizzato fiere ed eventi e ogni secondo giovedi' del mese abbiamo portato l’attivita' dell'associazione nei patronati del comune.
-				Siamo un'associazione viva e in crescita e abbiamo molti progetti che speriamo, un giorno, possano rendere il comune di Santa Maria di Sala un punto
-				di riferimento per tutti gli appassionati di giochi da tavolo e non solo!</div>
-				</div>	
-				<br><br>
-		</div>
-			
-		
-		<!--Subtitle-->
-		<div style="width:100%; text-align:center; margin-bottom: 10px;"><img src="../images/technical/subtitle-logo.png" width="30px" style="margin-auto;"></div>
-		<div class="main-subtitle">Seguici e contattaci</div>
-		<hr style="width: 70%; border: 1px black solid;">
-		<br>
-		
-		<!--Socials-->
+	<br><br>
 	
-		<div style= "text-align:center">
-			<a style="display: inline-block; width: 300px; height: 140px; margin: 10px; background-color: #333; border-radius: 10px; text-decoration:none;" href="https://www.instagram.com/giochinvilla/?hl=it"><i class="fa fa-instagram" style="font-size:48px; margin: 20px; color:white;"></i><div style="color:white; font-family: Avenge; font-size:18px;">@giochiinvilla</div></a>
-			<a style="display: inline-block; width: 300px; height: 140px; margin: 10px; background-color: #333; border-radius: 10px; text-decoration:none;" href="https://www.facebook.com/giochiinvilla/"><i class="fa fa-facebook-f" style="font-size:48px; margin: 20px; color:white;"></i><div style="color:white; font-family: Avenge; font-size:18px;">giochiinvilla</div></a>
-			<a style="display: inline-block; width: 300px; height: 140px; margin: 10px; background-color: #333; border-radius: 10px; text-decoration:none;" href="mailto: giochinvilla@gmail.com"><i class="fa fa-envelope" style="font-size:48px; margin: 20px; color:white;"></i><div style="color:white; font-family: Avenge; font-size:18px;">giochinvilla@gmail.com</div></a>
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
+	
+		<div class="descriptionContainer">
+			<div class="card wrapper btl btl-A" style="background-color: #333">
+				<br>
+				<div class="title">Chi Siamo e cosa facciamo</div>
+				<div class="desc">
+				Da un paio di anni abbiamo cominciato a collaborare	con diverse realta' simili del territorio facendoci conoscere anche fuori dal comune salese, abbiamo
+				GIOCA D'INIZIATIVA organizzato fiere ed eventi e ogni secondo giovedi' del mese abbiamo portato l’attivita' dell'associazione nei patronati del comune.
+				Siamo un'associazione viva e in crescita e abbiamo molti progetti che speriamo, un giorno, possano rendere il comune di Santa Maria di Sala un punto
+				di riferimento per tutti gli appassionati di giochi da tavolo e non solo!
+				</div>
+			</div>
 		</div>
-
-		<!--Footer-->
-		<div loadHTML="../header/footer.html"></div>
+			
+	<br><br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
+	
+		<div class="descriptionContainer">
+			<div class="card wrapper btl btl-A" style="background-color: #333">
+				<br>
+				<div class="title">Gioca con noi</div>
+				<div class="desc">
+				Giochi in Villa e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici per il gioco da tavolo. Nel 2019 abbiamo iniziato la nostra
+				attivita' sul territorio di Santa Maria di Sala, portando tutti i lunedi' sera giochi di societa' e strategia in grado di appassionare e divertire tutte le fasce di eta'.
+				Il nostro e' un hobby che unisce ed aiuta a sviluppare quella convivialita' che con il passare del tempo e' sempre piu' difficile trovare.<br>
+				I giochi che proponiamo sono di tutti i	generi conosciuti ed apprezzati sia da appassionati che	non; al Giochi in Villa si possono trovare sia party
+				games che giochi in scatola collaborativi o di gestione, giochi di miniature come lo strategico Warhammer 40k e giochi di ruolo come il famoso Dungeons & Dragons.
+				</div>
+			</div>
+		</div>
+			
+	<br><br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	
+	<!--Announcements-->
+	<div class="main-announcement" style="background-color: #DC143C;">Vuoi giocare? Contatta uno dei nostri master d’associazione!</div>
+	
+	<div class="coloredContainer">
+		<div style="display: inline-block;">
+			<div loadHTML="../containers/coloredContainer.html"></div> 
+		</div> 
+		<div style="display: inline-block;">
+			<div loadHTML="../containers/coloredContainer.html"></div> 
+		</div>
+		<div style="display: inline-block;">
+			<div loadHTML="../containers/coloredContainer.html"></div> 
+		</div>
 	</div>
+	
+	<br><br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div class="slideshow-container">
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+	</div>
+	
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+	
+	<br><br>
+	
+	<!--Socials-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div loadHTML="../containers/linkContainer.html"></div>
 
+	<!--Footer-->
+	<div loadHTML="../header/footer.html"></div>
+	
 </body>
 </html>
 
