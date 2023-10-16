@@ -40,8 +40,8 @@
 			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dal 2018";
 			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "A Santa Maria di Sala";
 			document.getElementsByClassName("paragraphTitleTitle")[1].innerHTML = "Gioca con noi";
-			document.getElementsByClassName("paragraphTitleTitle")[2].innerHTML = "La presenza nel territorio";
-			document.getElementsByClassName("paragraphTitleTitle")[3].innerHTML = "Galleria";
+			document.getElementsByClassName("paragraphTitleTitle")[2].innerHTML = "Galleria";
+			document.getElementsByClassName("paragraphTitleTitle")[3].innerHTML = "La presenza nel territorio";
 			document.getElementsByClassName("paragraphTitleTitle")[4].innerHTML = "Seguici e contattaci";
 			
 			showSlides(1);
@@ -63,7 +63,7 @@
 	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
 	
 		<div class="descriptionContainer">
-			<div class="card wrapper btl btl-A" style="background-color: #DC143C">
+			<div class="card wrapper btl btl-A" style="background-color: #333">
 				<br>
 				<div class="title"></div>
 				<div class="desc">
@@ -82,7 +82,7 @@
 	<div loadHTML="../titles/paragraphTitle.html"></div>
 	
 		<div class="descriptionContainer">
-			<div class="card wrapper btl btl-A" style="background-color: #e6c000">
+			<div class="card wrapper btl btl-A" style="background-color: #333">
 				<br>
 				<div class="title"></div>
 				<div class="desc">
@@ -98,12 +98,28 @@
 	
 	<!--Descriptive-->
 	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div class="slideshow-container">
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+	</div>
+	
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+	
+	<br><br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
 	
 		<div class="descriptionContainer">
-			<div class="card wrapper btl btl-A" style="background-color: #42c58a">
+			<div class="card wrapper btl btl-A" style="background-color: #333">
 				<br>
 				<div class="title">il progetto fiera</div>
-				<div class="desc">
+				<div class="desc" style="font-size: 16px;">
 				L'associazione Giochi in Villa in collaborazione con
 				il comune di Santa Maria di Sala e I'assessorato
 				alla cultura organizza diversi eventi sul territorio.
@@ -122,24 +138,8 @@
 			</div>
 		</div>
 	
-	<img style="height: 400px; width: 250px; position: relative; top: -270px; left: 100px; transform: rotate(-0.05turn);" src="../images/generalevent.png"></img>
+	<img style="height: 400px; width: 250px; position: absolute; top: -270px; left: 100px; transform: rotate(-0.05turn);" src="../images/generalevent.png"></img>
 			
-	<br><br>
-	
-	<!--Descriptive-->
-	<div loadHTML="../titles/paragraphTitle.html"></div>
-	<div class="slideshow-container">
-		<div loadHTML="../containers/slideshowGallery.html"></div> 
-		<div loadHTML="../containers/slideshowGallery.html"></div> 
-		<div loadHTML="../containers/slideshowGallery.html"></div> 
-	</div>
-	
-	<div style="text-align:center">
-		<span class="dot" onclick="currentSlide(1)"></span> 
-		<span class="dot" onclick="currentSlide(2)"></span> 
-		<span class="dot" onclick="currentSlide(3)"></span> 
-	</div>
-	
 	<br><br>
 	
 	<!--Socials-->
