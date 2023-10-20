@@ -52,3 +52,11 @@
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
+@media screen and (max-width: 750px) {
+  .descriptionContainer .card .desc {
+    font-size:12px;
+  }
+  .descriptionContainer .card .title {
+	font-size:16px;
+  }
+}
