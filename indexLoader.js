@@ -17,16 +17,12 @@ function subloadEvents() {
 			document.getElementsByClassName("coloredColor")[3].style.backgroundColor = "#e6c000";
 
 			document.getElementsByClassName("eventImage")[0].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[0].innerHTML = "Example";
-			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "Example";
+			document.getElementsByClassName("eventTitle")[0].innerHTML = "Sala Gioca";
+			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "Il 12 Novembre in Villa Farsetti";
 			
-			document.getElementsByClassName("eventImage")[1].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[1].innerHTML = "Example";
-			document.getElementsByClassName("eventSubtitle")[1].innerHTML = "Example";
-			
-			document.getElementsByClassName("eventImage")[2].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[2].innerHTML = "Example";
-			document.getElementsByClassName("eventSubtitle")[2].innerHTML = "Example";
+			document.getElementsByClassName("eventImage")[1].src = "./images/eventi/ordalia.png";
+			document.getElementsByClassName("eventTitle")[1].innerHTML = "Ordalia II";
+			document.getElementsByClassName("eventSubtitle")[1].innerHTML = "Tornao di Warhammer 40k a 2000pt";
 			
 			document.getElementsByClassName("paragraphTitleTitle")[0].innerHTML = "I nostri eventi";
 			document.getElementsByClassName("paragraphTitleTitle")[1].innerHTML = "Gioca insieme a noi";
@@ -34,6 +30,6 @@ function subloadEvents() {
 			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dungeons & Dragons";
 			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Magic";
 			document.getElementsByClassName("paragraphTitleTitle")[2].innerHTML = "Seguici e contattaci";
-			
+
 			showSlides(1);
 		}
