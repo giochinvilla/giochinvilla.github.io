@@ -1,40 +1,36 @@
 .descriptionContainer {
-  text-align:center;
-  margin: auto;
-  width: 100%;
+ text-align:center;
+ margin: auto;
+ width: 100%;
 }
 .descriptionContainer .wrapper {
-  margin: auto;
-  padding-bottom: 15px;
-  width: 70%;
-  max-width: 1500px;
+ margin: auto;
+ padding-bottom: 15px;
+ width: 70%;
+ max-width: 1500px;
 }
-
 .descriptionContainer .card {
-  border-radius: 80px;
-  position: relative;
-  overflow: hidden;
+ border-radius: 80px;
+ position: relative;
+ overflow: hidden;
 }
-
 .descriptionContainer .card .title {
-	color:white;
-	font-family: Couture;
-	font-size:26px;
-	width: 70%;
-	margin:auto;
+ color:white;
+ font-family: Couture;
+ font-size:26px;
+ width: 70%;
+ margin:auto;
 }
-
 .descriptionContainer .card .desc {
-	font-size: 20px;
-	text-align:center;
-	width: 70%;
-	margin:auto;
-	color:white;
+ font-size: 20px;
+ text-align:center;
+ width: 70%;
+ margin:auto;
+ color:white;
 }
-
 .descriptionContainer .btl-A {
-  overflow: hidden;
-  position: relative;
+ overflow: hidden;
+ position: relative;
   
   &:after {
     background: #fff;
@@ -50,9 +46,7 @@
     z-index: 1;
   }
 }
-
 .descriptionContainer .btl-A:hover {
-  
   &:after {
     left: 120%;
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);

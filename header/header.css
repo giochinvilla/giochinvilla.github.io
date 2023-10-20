@@ -1,46 +1,40 @@
-/*Header*/
-
 #header {
-	transition: width .3s;
-	z-index: 1; 
-	background-color: #2A2B26; 
-	position: fixed; 
-	top: 0; 
-	width: 100%; 
-	height: 60px; 
-	margin: 0px; 
-	padding-top: 15px;
-	text-align:center;
+ transition: width .3s;
+ z-index: 1; 
+ background-color: #2A2B26; 
+ position: fixed; 
+ top: 0; 
+ width: 100%; 
+ height: 60px; 
+ margin: 0px; 
+ padding-top: 15px;
+ text-align:center;
 }
-
 #header-menu {
-	position:fixed;
-	top: 5px;
-	color:#818181;
-	right: 50px;
-	font-size:45px;
-	cursor:pointer;
+ position:fixed;
+ top: 5px;
+ color:#818181;
+ right: 50px;
+ font-size:45px;
+ cursor:pointer;
 }
-
 #header-logo {
-	width:60px;
-	position:fixed;
-	top: 5px;
-	left: 50px;
-	transition: left .3s;
+ width:60px;
+ position:fixed;
+ top: 5px;
+ left: 50px;
+ transition: left .3s;
 }
-
 #header-title {
-	padding-top: 5px;
-	font-size: 45px;
-	text-align: center;
-	font-family: Avenge;
-	color:white;
-	width: 70%;
-	text-decoration:none;
+ padding-top: 5px;
+ font-size: 45px;
+ text-align: center;
+ font-family: Avenge;
+ color:white;
+ width: 70%;
+ text-decoration:none;
 }
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
 	#header {
 		height: 50px;
 	}
@@ -56,23 +50,16 @@
 		font-size: 30px;
 	}
 }
-
-/*Footer*/
-
 #footer {
-	background-color: #2A2B26;
-	width: 100%;
-	height: 20px;
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-	margin:0px;
-	padding: 0px;
+ background-color: #2A2B26;
+ width: 100%;
+ height: 20px;
+ margin: 0px;
+ padding: 0px;
 }
-
 #footer-image {
-	width: 70%;
-	max-width: 1000px;
-	position: relative;
-	top: 5px;
+ width: 70%;
+ max-width: 1000px;
+ position: relative;
+ top: 5px;
 }
