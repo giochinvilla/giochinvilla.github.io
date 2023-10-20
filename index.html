@@ -4,76 +4,23 @@
 	<link rel="icon" type="image/x-icon" href="./images/technical/favicon.ico">
 	<meta charset="UTF-8">
     <title>Giochi in Villa</title>
-
-	<script type="text/javascript" src="HTMLloader.js"></script>
-
-	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
-	<link rel="stylesheet" href="./sideNav/sideNav.css">
-	
-	<script type="text/javascript" src="./containers/slideshowContainer.js"></script>
-	<link rel="stylesheet" href="./containers/slideshowContainer.css">
 	
 	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./button.css">
-	<link rel="stylesheet" href="./animation.css">
-	<link rel="stylesheet" href="./header/header.css">
 	<link rel="stylesheet" href="./fonts/fonts.css">
+	
+	<link rel="stylesheet" href="./sideNav/sideNav.css">
+	<link rel="stylesheet" href="./containers/slideshowContainer.css">
+	<link rel="stylesheet" href="./header/header.css">
 	<link rel="stylesheet" href="./containers/coloredContainer.css">
 	<link rel="stylesheet" href="./containers/linkContainer.css">
 	<link rel="stylesheet" href="./titles/paragraphTitle.css">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="loadEvents()">
-	<script>
-		function loadEvents() {			
-			includeHTML();
-		}
-		
-		function subloadEvents() {
-			document.getElementsByClassName("coloredTitle")[0].innerHTML = "Warhammer";
-			document.getElementsByClassName("coloredTitle")[1].innerHTML = "Giochi di ruolo";
-			document.getElementsByClassName("coloredTitle")[2].innerHTML = "Giochi da tavolo";
-			document.getElementsByClassName("coloredTitle")[3].innerHTML = "Giochi di carte";
-			document.getElementsByClassName("coloredImage")[0].src = "./images/technical/warhammer.png"
-			document.getElementsByClassName("coloredImage")[1].src = "./images/technical/dungeonsanddragons.png"
-			document.getElementsByClassName("coloredImage")[2].src = "./images/technical/tabletop.png"
-			document.getElementsByClassName("coloredImage")[3].src = "./images/technical/cards.png"
-			document.getElementsByClassName("coloredLink")[0].setAttribute("href", "./pages/warhammer.html");
-			document.getElementsByClassName("coloredLink")[1].setAttribute("href", "./pages/rolegames.html");
-			document.getElementsByClassName("coloredLink")[2].setAttribute("href", "./pages/tablegames.html");
-			document.getElementsByClassName("coloredLink")[3].setAttribute("href", "./pages/cardsgames.html");
-			document.getElementsByClassName("coloredColor")[0].style.backgroundColor = "#4ec7f3";
-			document.getElementsByClassName("coloredColor")[1].style.backgroundColor = "#42c58a";
-			document.getElementsByClassName("coloredColor")[2].style.backgroundColor = "#dc143c";
-			document.getElementsByClassName("coloredColor")[3].style.backgroundColor = "#e6c000";
-
-			document.getElementsByClassName("eventImage")[0].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[0].innerHTML = "Example";
-			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "Example";
-			
-			document.getElementsByClassName("eventImage")[1].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[1].innerHTML = "Example";
-			document.getElementsByClassName("eventSubtitle")[1].innerHTML = "Example";
-			
-			document.getElementsByClassName("eventImage")[2].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[2].innerHTML = "Example";
-			document.getElementsByClassName("eventSubtitle")[2].innerHTML = "Example";
-			
-			document.getElementsByClassName("paragraphTitleTitle")[0].innerHTML = "I nostri eventi";
-			document.getElementsByClassName("paragraphTitleTitle")[1].innerHTML = "Gioca insieme a noi";
-			document.getElementsByClassName("paragraphSubtitleTitle")[0].innerHTML = "Warhammer";
-			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Dungeons & Dragons";
-			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Magic";
-			document.getElementsByClassName("paragraphTitleTitle")[2].innerHTML = "Seguici e contattaci";
-			
-			showSlides(1);
-		}
-	</script>
-
+<body>
 	<!--SideNav-->
 	<div loadHTML="./sideNav/sideNav.html"></div> 
 	<div>_<div>
@@ -119,6 +66,20 @@
 
 	<!--Footer-->
 	<div loadHTML="./header/footer.html"></div>
+	
+	<!--Script-->
+	<script type="text/javascript" src="HTMLloader.js"></script>
+	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
+	<script type="text/javascript" src="./containers/slideshowContainer.js"></script>
+	<script type="text/javascript" src="./indexLoader.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		function loadEvents() {			
+			includeHTML();
+		}
+		loadEvents();
+	</script>
 	
 </body>
 </html>
