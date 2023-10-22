@@ -22,42 +22,19 @@
  margin:auto;
 }
 .descriptionContainer .card .desc {
- font-size: 20px;
+ font-size: 18px;
  text-align:center;
  width: 70%;
  margin:auto;
  color:white;
 }
-.descriptionContainer .btl-A {
- overflow: hidden;
- position: relative;
-  
-  &:after {
-    background: #fff;
-    content: "";
-    height: 400px;
-    left: -300px;
-    opacity: .2;
-    position: absolute;
-    top: -50px;
-    transform: rotate(35deg);
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    width: 80px;
-    z-index: 1;
-  }
-}
-.descriptionContainer .btl-A:hover {
-  &:after {
-    left: 120%;
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-}
+
 @media screen and (max-width: 750px) {
   .descriptionContainer .card .desc {
-    font-size: 8px;
+    font-size: 12px;
   }
   .descriptionContainer .card .title {
-	font-size: 16px;
+	font-size: 18px;
   }
   .descriptionContainer .wrapper {
 	width: 90%;
