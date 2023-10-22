@@ -62,7 +62,7 @@
   .descriptionContainer .wrapper {
 	width: 90%;
   }
-  .descriptionContainer .btl-A {
-	  display: none;
+  .descriptionContainer .btl-A &:after {
+	display: none;
   }
 }
