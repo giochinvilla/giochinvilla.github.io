@@ -26,6 +26,19 @@
  bottom:45%;
  display:block;
 }
+
+@media screen and (max-width: 750px) {
+  .paragraphTitle .paragraphTitleTitle {
+    font-size: 30px;
+  }
+  .paragraphTitle .paragraphSubtitleTitle {
+    font-size: 30px;
+  }
+  .paragraphTitle .container {
+	font-size: 30px;
+  }
+}
+
 .paragraphTitle .flip {
  height:50px;
  overflow:hidden;
@@ -48,6 +61,7 @@
 .paragraphTitle .flip div:last-child div {
  background:#DC143C;
 }
+
 @keyframes show {
  0% {margin-top:-270px;}
  5% {margin-top:-180px;}
