@@ -37,6 +37,16 @@
   .paragraphTitle .container {
 	font-size: 30px;
   }
+  @keyframes show {
+	 0% {margin-top:-240px;}
+	 5% {margin-top:-160px;}
+	 33% {margin-top:-160px;}
+	 38% {margin-top:-80px;}
+	 66% {margin-top:-80px;}
+	 71% {margin-top:0px;}
+	 99.99% {margin-top:0px;}
+	 100% {margin-top:-240px;}
+}
 }
 
 .paragraphTitle .flip {
