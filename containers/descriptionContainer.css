@@ -1,5 +1,6 @@
 .descriptionContainer {
  text-align:justify;
+ text-justify: inter-word;
  margin: auto;
  width: 100%;
 }
@@ -37,7 +38,7 @@
     font-size: 16px;
   }
   .descriptionContainer .card .title {
-	font-size: 20px;
+	font-size: 24px;
   }
   .descriptionContainer .wrapper {
 	width: 100%;
