@@ -16,6 +16,7 @@
  overflow: hidden;
 }
 .descriptionContainer .card .title {
+ text-align:center;
  color:white;
  font-family: Couture;
  font-size:26px;
