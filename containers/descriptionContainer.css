@@ -6,7 +6,7 @@
 .descriptionContainer .wrapper {
  margin: auto;
  padding-bottom: 15px;
- width: 70%;
+ width: 75%;
  max-width: 1500px;
 }
 .descriptionContainer .card {
@@ -38,10 +38,9 @@
   }
   .descriptionContainer .card .title {
 	font-size: 18px;
-	width: 70%;
   }
   .descriptionContainer .wrapper {
-	width: 85%;
+	width: 100%;
   }
   .descriptionContainer .btl-A &:after {
 	display: none;
