@@ -17,12 +17,12 @@ function subloadEvents() {
 			document.getElementsByClassName("coloredColor")[3].style.backgroundColor = "#e6c000";
 
 			document.getElementsByClassName("eventImage")[0].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[0].innerHTML = "PARTE DA RIFARE!!!";
-			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "Il 12 Novembre in Villa Farsetti";
+			document.getElementsByClassName("eventTitle")[0].innerHTML = "";
+			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "";
 			
 			document.getElementsByClassName("eventImage")[1].src = "./images/eventi/ordalia.png";
-			document.getElementsByClassName("eventTitle")[1].innerHTML = "Ordalia II";
-			document.getElementsByClassName("eventSubtitle")[1].innerHTML = "Tornao di Warhammer 40k a 2000pt";
+			document.getElementsByClassName("eventTitle")[1].innerHTML = "";
+			document.getElementsByClassName("eventSubtitle")[1].innerHTML = "";
 			
 			document.getElementsByClassName("paragraphTitleTitle")[0].innerHTML = "I nostri eventi";
 			document.getElementsByClassName("paragraphTitleTitle")[1].innerHTML = "Gioca insieme a noi";

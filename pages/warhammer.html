@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/x-icon" href="../images/technical/favicon.ico">
+	<meta charset="UTF-8">
+    <title>Giochi in Villa</title>
+	
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../button.css">
+	<link rel="stylesheet" href="../fonts/fonts.css">
+	
+	<link rel="stylesheet" href="../sideNav/sideNav.css">
+	<link rel="stylesheet" href="../header/header.css">
+	<link rel="stylesheet" href="../containers/coloredContainer.css">
+	<link rel="stylesheet" href="../containers/linkContainer.css">
+	<link rel="stylesheet" href="../titles/paragraphTitle.css">
+	<link rel="stylesheet" href="../containers/slideshowGallery.css">
+	<link rel="stylesheet" href="../containers/descriptionContainer.css">
+	<link rel="stylesheet" href="../sideNav/sideNav.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<!--SideNav-->
+	<div loadHTML="../sideNav/sideNav.html"></div> 
+	<div>_<div>
+
+	<!--Header-->
+	<div loadHTML="../header/header.html"></div> 
+		
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
+	
+		<div class="descriptionContainer">
+			<div class="card wrapper" style="background-color: #333">
+				<br>
+				<div class="title">Lorem ipsum dolor</div>
+				<div class="desc">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+				</div>
+			</div>
+		</div>
+			
+	<br><br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	
+	<!--Announcements-->
+	<div class="main-announcement" style="background-color: #DC143C;">Vuoi giocare? Vieni a trovarci il lunedi!</div>
+	
+	<div style="text-align:center;"><img style="width: 90%; max-width: 800px;" src="../images/flyers/warhammer_games.png"></img></div>
+	
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div class="slideshow-container">
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+	</div>
+	
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+	
+	<br><br>
+	
+	<!--Socials-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div loadHTML="../containers/linkContainer.html"></div>
+
+	<!--Footer-->
+	<div loadHTML="../header/footer.html"></div>
+	
+	<!--Script-->
+	<script type="text/javascript" src="../HTMLloader.js"></script>
+	<script type="text/javascript" src="../sideNav/sideNav.js"></script>
+	<script type="text/javascript" src="../containers/slideshowContainer.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./warhammerLoader.js"></script>
+
+	<script>	
+		function loadEvents() {			
+			includeHTML();
+		}
+		loadEvents();
+	</script>
+</body>
+</html>
+
+<!--Credit to TheViceroys-->

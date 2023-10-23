@@ -1,0 +1,50 @@
+.descriptionContainer {
+ text-align:justify;
+ text-justify: inter-word;
+ margin: auto;
+ width: 100%;
+}
+.descriptionContainer .wrapper {
+ margin: auto;
+ padding-bottom: 15px;
+ width: 80%;
+ max-width: 1500px;
+}
+.descriptionContainer .card {
+ border-radius: 80px;
+ position: relative;
+ overflow: hidden;
+}
+.descriptionContainer .card .title {
+ text-align:center;
+ color:white;
+ font-family: Couture;
+ font-size:26px;
+ width: 80%;
+ margin:auto;
+}
+.descriptionContainer .card .desc {
+ font-size: 18px;
+ text-align:center;
+ width: 80%;
+ margin:auto;
+ color:white;
+}
+
+@media screen and (max-width: 750px) {
+  .descriptionContainer .card {
+    border-radius: 0px;
+  }
+  .descriptionContainer .card .desc {
+    font-size: 16px;
+  }
+  .descriptionContainer .card .title {
+	font-size: 24px;
+  }
+  .descriptionContainer .wrapper {
+	width: 100%;
+  }
+  .descriptionContainer .btl-A &:after {
+	display: none;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/x-icon" href="../images/technical/favicon.ico">
+	<meta charset="UTF-8">
+    <title>Giochi in Villa</title>
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../button.css">
+	<link rel="stylesheet" href="../fonts/fonts.css">
+	<link rel="stylesheet" href="../sideNav/sideNav.css">
+	<link rel="stylesheet" href="../header/header.css">
+	<link rel="stylesheet" href="../containers/linkContainer.css">
+	<link rel="stylesheet" href="../titles/paragraphTitle.css">
+	<link rel="stylesheet" href="../containers/slideshowGallery.css">
+	<link rel="stylesheet" href="../containers/descriptionContainer.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<!--SideNav-->
+	<div loadHTML="../sideNav/sideNav.html"></div> 
+	<div>_<div>
+
+	<!--Header-->
+	<div loadHTML="../header/header.html"></div> 
+		
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphAnimatedTitle.html"></div>
+	
+		<div class="descriptionContainer">
+			<div class="card wrapper" style="background-color: #333">
+				<br>
+				<div class="title"></div>
+				<div class="desc">
+				Giochi in Villa e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici per il gioco da tavolo. Nel 2019 abbiamo iniziato la nostra
+				attivita' sul territorio di Santa Maria di Sala, portando tutti i lunedi' sera giochi di societa' e strategia in grado di appassionare e divertire tutte le fasce di eta'.
+				Il nostro e' un hobby che unisce ed aiuta a sviluppare quella convivialita' che con il passare del tempo e' sempre piu' difficile trovare.<br>
+				I giochi che proponiamo sono di tutti i	generi conosciuti ed apprezzati sia da appassionati che	non; al Giochi in Villa si possono trovare sia party
+				games che giochi in scatola collaborativi o di gestione, giochi di miniature come lo strategico Warhammer 40k e giochi di ruolo come il famoso Dungeons & Dragons.
+				</div>
+			</div>
+		</div>
+			
+	<br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	
+		<div class="descriptionContainer">
+			<div class="card wrapper" style="background-color: #333">
+				<br>
+				<div class="title"></div>
+				<div class="desc">
+				Da un paio di anni abbiamo cominciato a collaborare	con diverse realta' simili del territorio facendoci conoscere anche fuori dal comune salese. Abbiamo organizzato eventi come
+				GIOCA D'INIZIATIVA e fiere, ed ogni secondo giovedi' del mese abbiamo portato l’attivita' dell'associazione nei patronati del comune.
+				Siamo un'associazione viva e in crescita e abbiamo molti progetti che speriamo, un giorno, possano rendere il comune di Santa Maria di Sala un punto
+				di riferimento per tutti gli appassionati di giochi da tavolo e non solo!
+				</div>
+			</div>
+		</div>
+			
+	<br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	
+	<div style="text-align:center;"><img style="width: 90%; max-width: 800px;" src="../images/flyers/events.png"></img></div>
+	
+		<div class="descriptionContainer">
+			<div class="card wrapper" style="background-color: #333">
+				<br>
+				<div class="title">il progetto fiera</div>
+				<div class="desc">
+				L'associazione Giochi in Villa, in collaborazione con
+				il comune di Santa Maria di Sala e l'assessorato
+				alla cultura, organizza diversi eventi sul territorio.
+				Abbiamo organizzato il primo evento COMICS &
+				GAMES di Santa Maria di Sala ed abbiamo
+				riscosso un grande successo con piu di duemila
+				visitatori in un giorno. Il Farsetti Comix & Games è
+				stata un‘occasione per dimostrare il nostro
+				impegno e la nostra volonta di organizzare eventi
+				che lascino un segno positivo sul territorio. Inoltre
+				ogni secondo giovedi del mese portiamo le attivita
+				di associazione nei patronati del comune e
+				collaboriamo con la pubblica amministrazione per
+				coinvolgere i giovani.  
+				</div>
+			</div>
+		</div>
+			
+	<br>
+	
+	<!--Descriptive-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div class="slideshow-container">
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+		<div loadHTML="../containers/slideshowGallery.html"></div> 
+	</div>
+	
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+	
+	<br>
+	
+	<!--Socials-->
+	<div loadHTML="../titles/paragraphTitle.html"></div>
+	<div loadHTML="../containers/linkContainer.html"></div>
+
+	<!--Footer-->
+	<div loadHTML="../header/footer.html"></div>
+	
+	<!--Script-->
+	<script type="text/javascript" src="../HTMLloader.js"></script>
+	<script type="text/javascript" src="../sideNav/sideNav.js"></script>
+	<script type="text/javascript" src="../containers/slideshowContainer.js"></script>
+	<script type="text/javascript" src="./presentazioneLoader.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		function loadEvents() {			
+			includeHTML();
+		}
+		loadEvents();
+	</script>
+	
+</body>
+</html>
+
+<!--Credit to TheViceroys-->
