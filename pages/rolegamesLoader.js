@@ -12,4 +12,5 @@
 			document.getElementsByClassName("eventImage")[0].src = "../images/rolegames_gallery/gallery1.png";
 			document.getElementsByClassName("eventImage")[1].src = "../images/rolegames_gallery/gallery2.png";
 			document.getElementsByClassName("eventImage")[2].src = "../images/rolegames_gallery/gallery3.png";
+			document.getElementsByClassName("eventImage")[3].src = "../images/rolegames_gallery/gallery4.png";
 		}
