@@ -17,12 +17,12 @@ function subloadEvents() {
 			document.getElementsByClassName("coloredColor")[3].style.backgroundColor = "#e6c000";
 
 			document.getElementsByClassName("eventImage")[0].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[0].innerHTML = "";
-			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "";
+			document.getElementsByClassName("eventTitle")[0].innerHTML = "&#8205;";
+			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "&#8205;";
 			
 			document.getElementsByClassName("eventImage")[1].src = "./images/eventi/ordalia.png";
-			document.getElementsByClassName("eventTitle")[1].innerHTML = "";
-			document.getElementsByClassName("eventSubtitle")[1].innerHTML = "";
+			document.getElementsByClassName("eventTitle")[1].innerHTML = "&#8205;";
+			document.getElementsByClassName("eventSubtitle")[1].innerHTML = "&#8205;";
 			
 			document.getElementsByClassName("paragraphTitleTitle")[0].innerHTML = "I nostri eventi";
 			document.getElementsByClassName("paragraphTitleTitle")[1].innerHTML = "Gioca insieme a noi";

@@ -12,5 +12,5 @@
 			document.getElementsByClassName("eventImage")[0].src = "../images/tablegames_gallery/gallery1.png";
 			document.getElementsByClassName("eventImage")[1].src = "../images/tablegames_gallery/gallery2.png";
 			document.getElementsByClassName("eventImage")[2].src = "../images/tablegames_gallery/gallery3.png";
-			document.getElementsByClassName("eventImage")[2].src = "../images/tablegames_gallery/gallery4.png";
+			document.getElementsByClassName("eventImage")[3].src = "../images/tablegames_gallery/gallery4.png";
 		}
