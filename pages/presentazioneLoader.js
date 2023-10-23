@@ -10,7 +10,7 @@ function subloadEvents() {
 			
 			showSlides(1);
 			
-			document.getElementsByClassName("eventImage")[0].src = "../images/rolegames_gallery/gallery1.jpg";
-			document.getElementsByClassName("eventImage")[1].src = "../images/rolegames_gallery/gallery2.jpg";
-			document.getElementsByClassName("eventImage")[2].src = "../images/rolegames_gallery/gallery3.jpg";
+			document.getElementsByClassName("eventImage")[0].src = "../images/presentazione_gallery/gallery1.jpg";
+			document.getElementsByClassName("eventImage")[1].src = "../images/presentazione_gallery/gallery2.jpg";
+			document.getElementsByClassName("eventImage")[2].src = "../images/presentazione_gallery/gallery3.jpg";
 		}
