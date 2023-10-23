@@ -1,6 +1,6 @@
 #header {
  transition: width .3s;
- z-index: 1; 
+ z-index: 2; 
  background-color: #2A2B26; 
  position: fixed; 
  top: 0; 

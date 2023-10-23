@@ -17,7 +17,7 @@ function subloadEvents() {
 			document.getElementsByClassName("coloredColor")[3].style.backgroundColor = "#e6c000";
 
 			document.getElementsByClassName("eventImage")[0].src = "./images/eventi/salaGioca.png";
-			document.getElementsByClassName("eventTitle")[0].innerHTML = "Sala Gioca";
+			document.getElementsByClassName("eventTitle")[0].innerHTML = "PARTE DA RIFARE!!!";
 			document.getElementsByClassName("eventSubtitle")[0].innerHTML = "Il 12 Novembre in Villa Farsetti";
 			
 			document.getElementsByClassName("eventImage")[1].src = "./images/eventi/ordalia.png";
