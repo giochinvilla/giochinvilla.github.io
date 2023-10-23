@@ -1,5 +1,5 @@
 		function subloadEvents() {
-			document.getElementsByClassName("paragraphTitleTitle")[0].innerHTML = "Giochi di ruolo";
+			document.getElementsByClassName("paragraphTitleTitle")[0].innerHTML = "Giochi di carte";
 			document.getElementsByClassName("paragraphSubtitleTitle")[0].innerHTML = "Yu-gi-ho";
 			document.getElementsByClassName("paragraphSubtitleTitle")[1].innerHTML = "Magic";
 			document.getElementsByClassName("paragraphSubtitleTitle")[2].innerHTML = "Pokemon";
