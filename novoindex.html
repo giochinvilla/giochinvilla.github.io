@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.overheader {
+  padding: 5px;
+  color: white;
+  text-align: center;
+  background: #333;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  z-index: 3;
+}
+
+.overheader b {
+  font-size: 30px;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.font-adapt {
+	font-size: calc(0.1875 * 10vw);
+}
+.font-adapt-text {
+	font-size: calc(0.1875 * 7vw);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+  .font-adapt {
+	font-size: calc(0.25 * 10vw);
+	}
+	.font-adapt-text {
+	font-size: calc(0.25 * 7vw);
+}
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Create three unequal columns that floats next to each other */
+.header-column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.header-column.side {
+  width: 15%;
+}
+
+/* Middle column */
+.header-column.middle {
+  width: 70%;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+    .font-adapt {
+	font-size: 5vw;
+	}
+	.font-adapt-text {
+	font-size: 3vw;
+}
+}
+
+</style>
+<link rel="stylesheet" href="./button.css">
+<link rel="stylesheet" href="./fonts/fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="overheader">
+	<div class="row">
+  <div class="header-column side">
+    <div>Lorem</div>
+  </div>
+
+  <div class="header-column middle">
+    <div><b>Giochi in Villa</b></div>
+  </div>
+  
+  <div class="header-column side">
+    <div>Lorem</div>
+  </div>
+</div>
+</div>
+
+<div></div>
+<br><br><br><br>
+
+<div class="header">
+  <h1>My Website</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+  
+  <div class="card">
+      <h1 style="float: left; font-family: Couture;"><img src="./images/technical/subtitle-logo.png" style="width: 24px; margin-right: 15px;"></img><span style="background-color: #4ec7f3; border: #4ec7f3 1px solid; border-radius: 10px; font-size: 24px; color:white; widht: 40px; padding: 3px;">EVENTO</span>&nbsp;SALA GIOCA</h1>
+      <h3 style="float: right; text-align:right;">Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023</h3>
+      <div class="fakeimg" style="height:200px; overflow:hidden;"><img style="width: 100%;" src="./images/eventi/salaGioca.png"></img></div>
+      <p>TESTO DESCRITTIVO!! Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+   
+
+    <a class="btn-C" href="#">SCOPRI</a>
+    <div class="btn-C-icon">
+    </div>
+</div>
+   
+  
+  <div class="card">
+		<div class="row">
+		
+  <div class="column" style="background-color: #67d0a1; text-align:center;">
+    <h2 class="font-adapt" style="font-family: Couture; color:white; height: 50px;">Giochi di Ruolo</h2>
+	<img src="./images/technical/dungeonsanddragons.png" style="width: 50%;"></img>
+    <p class="font-adapt-text" style="color:white;">L'amicizia prospera quando trovi il tempo per divertirti e ridere.</p>
+	<div class="button">
+				<div class="btn btn-A">
+					<span>Scopri</span>
+				</div>
+			</div>
+  </div>
+  
+    <div class="column" style="background-color: #71d2f5; text-align:center;">
+    <h2 class="font-adapt" style="font-family: Couture; color:white; height: 50px;">Giochi da Tavolo</h2>
+	<img src="./images/technical/tabletop.png" style="width: 50%;"></img>
+    <p class="font-adapt-text" style="color:white;">L'amicizia prospera quando trovi il tempo per divertirti e ridere.</p>
+	<div class="button">
+				<div class="btn btn-A">
+					<span>Scopri</span>
+				</div>
+			</div>
+  </div>
+  
+      <div class="column" style="background-color: #e34262; text-align:center;">
+    <h2 class="font-adapt" style="font-family: Couture; color:white; height: 50px;">Giochi di Carte</h2>
+	<img src="./images/technical/cards.png" style="width: 50%;"></img>
+    <p class="font-adapt-text" style="color:white;">L'amicizia prospera quando trovi il tempo per divertirti e ridere.</p>
+	<div class="button">
+				<div class="btn btn-A">
+					<span>Scopri</span>
+				</div>
+			</div>
+  </div>
+  
+      <div class="column" style="background-color: #ebcc32; text-align:center;">
+    <h2 class="font-adapt" style="font-family: Couture; color:white; height: 50px;">Warhammer</h2>
+	<img src="./images/technical/warhammer.png" style="width: 50%;"></img>
+    <p class="font-adapt-text" style="color:white;">L'amicizia prospera quando trovi il tempo per divertirti e ridere.</p>
+	<div class="button">
+				<div class="btn btn-A">
+					<span>Scopri</span>
+				</div>
+			</div>
+  </div>
+    </div>
+	
+	</div>
+	
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+	
+	
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <div loadHTML="./header/footer.html"></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+<script type="text/javascript" src="./indexLoader.js"></script>
+<script type="text/javascript" src="HTMLloader.js"></script>
+	<script>
+		function loadEvents() {			
+			includeHTML();
+		}
+		loadEvents();
+	</script>
+	
+</body>
+</html>
