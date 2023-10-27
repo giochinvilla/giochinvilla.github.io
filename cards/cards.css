@@ -44,7 +44,16 @@
 	background-color: #4ec7f3;
 	border: #4ec7f3 1px solid;
 	border-radius: 10px;
-	font-size: 24px;
+	font-size: 28px;
+	color:white;
+	padding: 3px;
+}
+
+.mini-eventTag {
+	background-color: #4ec7f3;
+	border: #4ec7f3 1px solid;
+	border-radius: 10px;
+	font-size: 14px;
 	color:white;
 	padding: 3px;
 }
