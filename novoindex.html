@@ -85,11 +85,6 @@ body {
 }
 
 /* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
 
 /* Clear floats after the columns */
 .row::after {
@@ -106,25 +101,19 @@ body {
   margin-top: 20px;
 }
 
-.font-adapt {
-	font-size: calc(0.1875 * 10vw);
-}
-.font-adapt-text {
-	font-size: calc(0.1875 * 7vw);
-}
-
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
     padding: 0;
   }
-  .font-adapt {
-	font-size: calc(0.25 * 10vw);
+  h2 {
+		font-size:calc(0.25 * 10vw);
 	}
-	.font-adapt-text {
-	font-size: calc(0.25 * 7vw);
-}
+	p {
+		font-size: calc(0.25 * 7vw);
+	}
+
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -152,35 +141,23 @@ body {
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 15px;
+
+
+.linkContainer {
+ width: 100%;
+ height: 80px;
+ color:white;
+ font-family: Couture;
+}
+.linkContainer .emoji {
+ font-size:36px;
 }
 
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
-  }
-    .font-adapt {
-	font-size: 5vw;
-	}
-	.font-adapt-text {
-	font-size: 3vw;
-}
-}
 
 </style>
 <link rel="stylesheet" href="./button.css">
 <link rel="stylesheet" href="./fonts/fonts.css">
+<link rel="stylesheet" href="./cards/cards.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -217,84 +194,53 @@ body {
 </div>
 
 <div class="row">
-  <div class="leftcolumn">
-  
-  <div class="card">
-      <h1 style="float: left; font-family: Couture;"><img src="./images/technical/subtitle-logo.png" style="width: 24px; margin-right: 15px;"></img><span style="background-color: #4ec7f3; border: #4ec7f3 1px solid; border-radius: 10px; font-size: 24px; color:white; widht: 40px; padding: 3px;">EVENTO</span>&nbsp;SALA GIOCA</h1>
-      <h3 style="float: right; text-align:right;">Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023</h3>
-      <div class="fakeimg" style="height:200px; overflow:hidden;"><img style="width: 100%;" src="./images/eventi/salaGioca.png"></img></div>
-      <p>TESTO DESCRITTIVO!! Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <!-- Left Column -->
+    <div class="leftcolumn">
+ 
+		<!-- Article -->
+		<div class="card">
+			<h1>
+				<img src="./images/technical/subtitle-logo.png"></img>
+				<span class="eventTag">EVENTO</span> 									<!-- Tag -->
+				&nbsp;SALA GIOCA														<!-- Title -->
+			</h1>
+			<h3>Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023</h3>					<!-- Subtitle -->
+			<div class="image"><img src="./images/eventi/salaGioca.png"></img></div>	<!-- Image -->
+			<p>TESTO DESCRITTIVO!! Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+			ullamco.</p>
+		   
+			<a class="btn-C" href="#">SCOPRI</a>										<!-- Color -->
+			<div class="btn-C-icon"></div>												<!-- Color -->
+		</div>
    
+		<!-- Departments Selection -->
+		<div loadHTML="./cards/technical/departmentsSelection.html"></div>
 
-    <a class="btn-C" href="#">SCOPRI</a>
-    <div class="btn-C-icon">
-    </div>
-</div>
-   
-  
-  <div class="card">
-		<div class="row">
-		
-  <div class="column" style="background-color: #67d0a1; text-align:center;">
-    <h2 class="font-adapt" style="font-family: Couture; color:white; height: 50px;">Giochi di Ruolo</h2>
-	<img src="./images/technical/dungeonsanddragons.png" style="width: 50%;"></img>
-    <p class="font-adapt-text" style="color:white;">L'amicizia prospera quando trovi il tempo per divertirti e ridere.</p>
-	<div class="button">
-				<div class="btn btn-A">
-					<span>Scopri</span>
-				</div>
-			</div>
-  </div>
-  
-    <div class="column" style="background-color: #71d2f5; text-align:center;">
-    <h2 class="font-adapt" style="font-family: Couture; color:white; height: 50px;">Giochi da Tavolo</h2>
-	<img src="./images/technical/tabletop.png" style="width: 50%;"></img>
-    <p class="font-adapt-text" style="color:white;">L'amicizia prospera quando trovi il tempo per divertirti e ridere.</p>
-	<div class="button">
-				<div class="btn btn-A">
-					<span>Scopri</span>
-				</div>
-			</div>
-  </div>
-  
-      <div class="column" style="background-color: #e34262; text-align:center;">
-    <h2 class="font-adapt" style="font-family: Couture; color:white; height: 50px;">Giochi di Carte</h2>
-	<img src="./images/technical/cards.png" style="width: 50%;"></img>
-    <p class="font-adapt-text" style="color:white;">L'amicizia prospera quando trovi il tempo per divertirti e ridere.</p>
-	<div class="button">
-				<div class="btn btn-A">
-					<span>Scopri</span>
-				</div>
-			</div>
-  </div>
-  
-      <div class="column" style="background-color: #ebcc32; text-align:center;">
-    <h2 class="font-adapt" style="font-family: Couture; color:white; height: 50px;">Warhammer</h2>
-	<img src="./images/technical/warhammer.png" style="width: 50%;"></img>
-    <p class="font-adapt-text" style="color:white;">L'amicizia prospera quando trovi il tempo per divertirti e ridere.</p>
-	<div class="button">
-				<div class="btn btn-A">
-					<span>Scopri</span>
-				</div>
-			</div>
-  </div>
-    </div>
+		<!-- Article -->
+		<div class="card">
+			<h1>
+				<img src="./images/technical/subtitle-logo.png"></img>
+				<span class="eventTag">EVENTO</span> 									<!-- Tag -->
+				&nbsp;SALA GIOCA														<!-- Title -->
+			</h1>
+			<h3>Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023</h3>					<!-- Subtitle -->
+			<div class="image"><img src="./images/eventi/salaGioca.png"></img></div>	<!-- Image -->
+			<p>TESTO DESCRITTIVO!! Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+			ullamco.</p>
+		   
+			<a class="btn-C" href="#">SCOPRI</a>										<!-- Color -->
+			<div class="btn-C-icon"></div>												<!-- Color -->
+		</div>
 	
+	<!-- End Left Column -->
 	</div>
-	
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-	
-	
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
+	<!-- Right Column -->
+	<div class="rightcolumn">
+
+	<div class="card">
+            <h2 style="font-family: Couture; color:black; text-align:center; width: 100%;">Chi siamo</h2>
       <div class="fakeimg" style="height:100px;">Image</div>
       <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
     </div>
@@ -304,11 +250,44 @@ body {
       <div class="fakeimg"><p>Image</p></div>
       <div class="fakeimg"><p>Image</p></div>
     </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <div loadHTML="./header/footer.html"></div>
+    
+	<!-- Socials -->
+	<div class="card-nopad" style="background-color: #bbb;">
+		<h2>Seguici</h2>
+
+		<div>
+			<div>
+				<a href="https://www.instagram.com/giochinvilla/?hl=it">
+				<div class="btn-wrapper">
+					<div class="btn-B">
+						<span><i class="fa fa-instagram emoji"></i> Instagram</span>
+					</div></div>
+				</a>
+			</div>
+			<br>
+			<div>
+				<a href="https://www.facebook.com/giochiinvilla/">
+				<div class="btn-wrapper">
+					<div class="btn-B">
+						<span><i class="fa fa-facebook emoji"></i> Facebook</span>
+					</div></div>
+				</a>
+			</div>
+			<br>
+			<div>
+				<a href="mailto: giochinvilla@gmail.com">
+				<div class="btn-wrapper">
+					<div class="btn-B">
+						<span><i class="fa fa-envelope emoji"></i> Gmail</span>
+					</div></div>
+				</a>
+			</div>
+			<br>
+		</div>
     </div>
-  </div>
+	
+	<!-- End Left Column -->
+	</div>
 </div>
 
 <div class="footer">

@@ -113,3 +113,47 @@
  height: 50px;
  width: 100%;
 }
+
+
+.btn-C{
+  display: block;
+  font-size: 20px;
+  font-family: "Couture";
+  width: 200px;
+  height: 50px;
+  line-height: 45px;
+  text-decoration: none;
+  background: #71d2f5;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #71d2f5;
+  transition: all .55s;
+  position: relative;
+  left: calc(50% - 100px);
+  z-index: 1;
+}
+
+.btn-C-icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: relative;
+  transform: rotate(45deg);
+  left: calc(50% + 40px);
+  top: -50px;
+  z-index: 0;
+  transition: all .55s;
+}
+
+.btn-C:hover{
+  width: 150px;
+  left: calc(50% - 75px);
+  border: 3px solid #4ec7f3;
+  background: transparent;
+  color: #4ec7f3;
+}
+
+.btn-C:hover + .btn-C-icon{
+  border: 3px solid #4ec7f3;
+  left: calc(50% + 70px);
+}
