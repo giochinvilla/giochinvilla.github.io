@@ -41,7 +41,7 @@
 
 /* General Impostation for Card Articles Tags */
 
-.eventTag {
+.blueTag {
 	background-color: #4ec7f3;
 	border: #4ec7f3 1px solid;
 	border-radius: 10px;
@@ -50,7 +50,7 @@
 	padding: 3px;
 }
 
-.tournamentTag {
+.greenTag {
 	background-color: #67d0a1;
 	border: #67d0a1 1px solid;
 	border-radius: 10px;
@@ -59,7 +59,7 @@
 	padding: 3px;
 }
 
-.comixTag {
+.yellowTag {
 	background-color: #ebcc32;
 	border: #ebcc32 1px solid;
 	border-radius: 10px;
@@ -68,7 +68,7 @@
 	padding: 3px;
 }
 
-.announcementTag {
+.redTag {
 	background-color: #e34262;
 	border: #e34262 1px solid;
 	border-radius: 10px;
@@ -77,7 +77,7 @@
 	padding: 3px;
 }
 
-.mini-eventTag {
+.mini-blueTag {
 	background-color: #4ec7f3;
 	border: #4ec7f3 1px solid;
 	border-radius: 10px;
@@ -87,7 +87,7 @@
 	font-family: Couture;
 }
 
-.mini-tournamentTag {
+.mini-greenTag {
 	background-color: #67d0a1;
 	border: #67d0a1 1px solid;
 	border-radius: 10px;
@@ -97,7 +97,7 @@
 	font-family: Couture;
 }
 
-.mini-comixTag {
+.mini-yellowTag {
 	background-color: #ebcc32;
 	border: #ebcc32 1px solid;
 	border-radius: 10px;
@@ -107,7 +107,7 @@
 	font-family: Couture;
 }
 
-.mini-announcementTag {
+.mini-redTag {
 	background-color: #e34262;
 	border: #e34262 1px solid;
 	border-radius: 10px;
