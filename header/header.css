@@ -1,65 +1,50 @@
-#header {
- transition: width .3s;
- z-index: 2; 
- background-color: #2A2B26; 
- position: fixed; 
- top: 0; 
- width: 100%; 
- height: 60px; 
- margin: 0px; 
- padding-top: 15px;
- text-align:center;
+.overheader {
+  padding: 5px;
+  color: white;
+  text-align: center;
+  background: #333;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  z-index: 3;
 }
-#header-menu {
- position:fixed;
- top: 5px;
- color:#818181;
- right: 50px;
- font-size:45px;
- cursor:pointer;
+
+.header {
+  padding: 0px;
+  text-align: center;
+  background: white;
+  background-color: rgb(241,241,241,0.65);
+  border-radius: 5px 5px 0px 0px;
 }
-#header-logo {
- width:60px;
- position:fixed;
- top: 5px;
- left: 50px;
- transition: left .3s;
+
+.header h1 {
+  font-size: 50px;
 }
-#header-title {
- padding-top: 5px;
- font-size: 45px;
- text-align: center;
- font-family: Avenge;
- color:white;
- width: 70%;
- text-decoration:none;
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
-@media screen and (max-width: 750px) {
-	#header {
-		height: 50px;
-	}
-	#header-logo {
-		width: 50px;
-		left: 20px;
-	}
-	#header-title {
-		font-size: 24px;
-	}
-	#header-menu {
-		right: 15px;
-		font-size: 30px;
-	}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 1s;
 }
-#footer {
- background-color: #2A2B26;
- width: 100%;
- height: 20px;
- margin: 0px;
- padding: 0px;
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
-#footer-image {
- width: 70%;
- max-width: 1000px;
- position: relative;
- top: 5px;
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
 }

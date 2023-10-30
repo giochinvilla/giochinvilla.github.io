@@ -1,179 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial;
-  padding: 2%;
-  background: url(./images/technical/background2.jpg) no-repeat center center fixed;
-  
-}
-
-/* Header/Blog Title */
-.overheader {
-  padding: 5px;
-  color: white;
-  text-align: center;
-  background: #333;
-  position: fixed;
-  top:0px;
-  left: 0px;
-  width: 100%;
-  z-index: 3;
-}
-
-.overheader b {
-  font-size: 30px;
-}
-
-.header {
-  padding: 0px;
-  text-align: center;
-  background: white;
-  background-color: rgb(241,241,241,0.65);
-  border-radius: 5px 5px 0px 0px;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: 1s;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-
-  padding-left: 20px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-    background-color: rgb(241,241,241,0.85);
-  border-radius: 5px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-  h2 {
-		font-size:calc(0.25 * 10vw);
-	}
-	p {
-		font-size: calc(0.25 * 7vw);
-	}
-
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-
-/* Create three unequal columns that floats next to each other */
-.header-column {
-  float: left;
-  padding: 10px;
-}
-
-/* Left and right column */
-.header-column.side {
-  width: 15%;
-}
-
-/* Middle column */
-.header-column.middle {
-  width: 70%;
-}
-
-/* Create three equal columns that floats next to each other */
-
-
-.linkContainer {
- width: 100%;
- height: 80px;
- color:white;
- font-family: Couture;
-}
-.linkContainer .emoji {
- font-size:36px;
-}
-
-
-</style>
-<link rel="stylesheet" href="./button.css">
-<link rel="stylesheet" href="./fonts/fonts.css">
-<link rel="stylesheet" href="./cards/cards.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./button.css">
+	<link rel="stylesheet" href="./header/header.css">
+	<link rel="stylesheet" href="./fonts/fonts.css">
+	<link rel="stylesheet" href="./cards/cards.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 </head>
 <body>
+<!-- Overheader -->
+<div class="overheader"><div style="font-family: Avenge; letter-spacing: 1px; font-size: 30px;">Giochi in Villa</div></div>
+<br>
 
-<div class="overheader">
-	<div class="row">
-		<div class="header-column side"></div>
-
-		<div class="header-column middle">
-			<div style="font-family: Avenge; letter-spacing: 1px; font-size: 30px;">Giochi in Villa</div>
-		</div>
-		
-		<div class="header-column side"></div>
-	</div>
-</div>
-
-<div></div>
-<br><br><br><br>
-
+<!-- Header -->
 <div class="header">
   <img src="./images/technical/header.png" style="width: 90%; max-width: 1000px;"></img>
 </div>
@@ -206,7 +47,7 @@ body {
 		</div>
 		
 		<!-- Departments Selection -->
-		<div loadHTML="./cards/technical/departmentsSelection.html"></div>
+		<div loadHTML="./cards/technical/departments.html"></div>
 
 		<!-- Article -->
 		<div class="card">
@@ -227,45 +68,18 @@ body {
 	
 	<!-- End Left Column -->
 	</div>
+	
 	<!-- Right Column -->
 	<div class="rightcolumn">
-
-	<!-- Presentation -->
-	<div class="card">
-		<h2 style="font-family: Couture; color:black; text-align:center; width: 100%;">Chi siamo</h2>
-		<p style="font-family: Arvo; text-align: justify; font-size: 14px;"><b>Giochi in Villa</b> e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici per il gioco da tavolo.
-		 Il nostro e' un hobby che unisce ed aiuta a sviluppare quella convivialita' che con il passare del tempo e' sempre piu' difficile trovare.<br>
-		 Unisciti a noi per restare aggiornato di tutti gli eventi!</p>
-		<a class="btn-C" href="#">PARTECIPA</a>
-		<div class="btn-C-icon"></div>
-    </div>
-	
-	<!-- Last Events -->
-	<div class="card">
-		<h2 style="font-family: Couture; color:black; text-align:center; width: 100%;">Ultimi eventi</h2>
-		<p style="font-family: Arvo; text-align: justify; font-size: 14px;">Guarda gli ultimi post che abbiamo pubblicato ed eventi che abbiamo organizzato!</p>
-		<div style="padding: 10px;">
-			<div style="font-family: Arvo; font-size: 18px; padding: 5px;"><span class="mini-eventTag">EVENTO</span>&nbsp;Coming Soon</div><img src="./images/eventi/salaGioca.png" style="width:100%; height: 100px;"></img>
-			<div style="font-family: Arvo; font-size: 18px; padding: 5px;"><span class="mini-eventTag">EVENTO</span>&nbsp;Coming Soon</div><img src="./images/eventi/salaGioca.png" style="width:100%; height: 100px;"></img>
-			<div style="font-family: Arvo; font-size: 18px; padding: 5px;"><span class="mini-eventTag">EVENTO</span>&nbsp;Coming Soon</div><img src="./images/eventi/salaGioca.png" style="width:100%; height: 100px;"></img>
-		</div>
-		<br>
-		<a class="btn-C" href="#">LEGGI</a>
-		<div class="btn-C-icon"></div>
-    </div>
-    
-	<!-- Socials -->
-	<div loadHTML="./cards/technical/socials.html"></div>
-	
-	<!-- End Left Column -->
+		<div loadHTML="./cards/technical/presentation.html"></div>
+		<div loadHTML="./cards/technical/events.html"></div>
+		<div loadHTML="./cards/technical/socials.html"></div>
 	</div>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-<script type="text/javascript" src="./indexLoader.js"></script>
-<script type="text/javascript" src="HTMLloader.js"></script>
+	<div class="card"></div>
+
+	<script type="text/javascript" src="HTMLloader.js"></script>
 	<script>
 		function loadEvents() {			
 			includeHTML();

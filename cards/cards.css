@@ -5,11 +5,7 @@
   padding: 10px 40px 10px 40px;
   margin-top: 30px;
   border-radius: 5px;
-}
-
-.card-nopad {
-  padding: 0px;
-  margin-top: 20px;
+  font-family: Arvo;
 }
 
 /* General Impostation for Card Articles */
@@ -37,6 +33,10 @@
 
 .card .image img {
 	width: 100%;
+}
+
+.card .emoji {
+	font-size:36px;
 }
 
 /* General Impostation for Card Articles Tags */
@@ -190,36 +190,4 @@
 
 .card .yellow:hover {
 	background-color: #e6c000;
-}
-
-/* General Impostation for Card Social */
-
-.card-nopad h2 {
-	padding-top: 20px; 
-	font-family: Couture; 
-	color: white; 
-	text-align: center; 
-	width: 100%;
-}
-
-.card-nopad div {
-	text-align:center;
-}
-
-.card-nopad div div {
-	height: 50px;
-	color:white;
-	font-family: Couture;
-}
-
-.card-nopad span {
-	font-size: 12px;
-}
-
-.card-nopad a {
-	text-decoration:none;
-}
-
-.card-nopad .emoji {
-	font-size:36px;
 }
