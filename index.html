@@ -1,77 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<link rel="icon" type="image/x-icon" href="./images/technical/favicon.ico">
-	<meta charset="UTF-8">
-    <title>Giochi in Villa</title>
-	
-	<link rel="stylesheet" href="./style.css">
-	<link rel="stylesheet" href="./button.css">
+	<link rel="stylesheet" href="./generalCSS/style.css">
+	<link rel="stylesheet" href="./generalCSS/button.css">
+	<link rel="stylesheet" href="./generalCSS/header.css">
 	<link rel="stylesheet" href="./fonts/fonts.css">
-	
-	<link rel="stylesheet" href="./sideNav/sideNav.css">
-	<link rel="stylesheet" href="./containers/slideshowContainer.css">
-	<link rel="stylesheet" href="./header/header.css">
-	<link rel="stylesheet" href="./containers/coloredContainer.css">
-	<link rel="stylesheet" href="./containers/linkContainer.css">
-	<link rel="stylesheet" href="./titles/paragraphTitle.css">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./cards/cards.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 </head>
-
 <body>
-	<!--SideNav-->
-	<div loadHTML="./sideNav/sideNav.html"></div> 
-	<div>_<div>
+	<!-- Overheader -->
+	<div class="overheader"><div style="font-family: Avenge; letter-spacing: 1px; font-size: 30px;">Giochi in Villa</div></div>
+	<br>
 
-	<!--Header-->
-	<div loadHTML="./header/header.html"></div> 
+	<!-- Header -->
+	<div class="header">
+	  <img src="./images/technical/header.png" style="width: 90%; max-width: 1000px;"></img>
+	</div>
+
+	<div class="topnav">
+	  <a href="./index.html">Home</a>
+	  <a href="#">Eventi</a>
+	  <a href="#" style="float:right">Contatti</a>
+	</div>
+
+	<div class="row">
+		<!-- Left Column -->
+		<div class="leftcolumn">
+	 
+			<div loadHTML="./cards/articles/article1.html"></div>
+			<div loadHTML="./cards/technical/departments.html"></div>
+			<div loadHTML="./cards/articles/article2.html"></div>
+			<div loadHTML="./cards/articles/article3.html"></div>
 		
-	<!--Events-->
-	<div loadHTML="./titles/paragraphTitle.html"></div>
-	<div class="slideshow-container">
-		<div loadHTML="./containers/slideshowContainer.html"></div> 
-		<div loadHTML="./containers/slideshowContainer.html"></div> 
-	</div>
-	
-	<div style="text-align:center">
-		<span class="dot" onclick="currentSlide(1)"></span> 
-		<span class="dot" onclick="currentSlide(2)"></span> 
-	</div>
-	
-	<!--Announcements-->
-	<div class="main-announcement" style="background-color: #DC143C;">Ci trovi ogni Lunedi dalle 20:30 alle 23:30<br> in Viale Ferraris 1 - Santa Maria di Sala</div>
-	
-	<!--Games-->
-	<div loadHTML="./titles/paragraphAnimatedTitle.html"></div> 
-	
-	<div class="coloredContainer">
-		<div style="display: inline-block;">
-			<div loadHTML="./containers/coloredContainer.html"></div> 
-			<div loadHTML="./containers/coloredContainer.html"></div> 
+		<!-- End Left Column -->
 		</div>
-		<div style="display: inline-block;">
-			<div loadHTML="./containers/coloredContainer.html"></div> 
-			<div loadHTML="./containers/coloredContainer.html"></div> 
+		
+		<!-- Right Column -->
+		<div class="rightcolumn">
+			<div loadHTML="./cards/technical/presentation.html"></div>
+			<div loadHTML="./cards/technical/events.html"></div>
+			<div loadHTML="./cards/technical/socials.html"></div>
 		</div>
 	</div>
-	<br><br>
-	
-	<!--Socials-->
-	<div loadHTML="./titles/paragraphTitle.html"></div>
-	<div loadHTML="./containers/linkContainer.html"></div>
 
-	<!--Footer-->
-	<div loadHTML="./header/footer.html"></div>
-	
-	<!--Script-->
 	<script type="text/javascript" src="HTMLloader.js"></script>
-	<script type="text/javascript" src="./sideNav/sideNav.js"></script>
-	<script type="text/javascript" src="./containers/slideshowContainer.js"></script>
-	<script type="text/javascript" src="./indexLoader.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
 	<script>
 		function loadEvents() {			
 			includeHTML();
@@ -81,5 +55,3 @@
 	
 </body>
 </html>
-
-<!--Credit to TheViceroys-->
