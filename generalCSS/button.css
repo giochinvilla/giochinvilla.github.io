@@ -212,7 +212,7 @@
 }
 .btn-C-yellow:hover {
 	border: 3px solid #ebcc32;
-	color: #67d0a1;
+	color: #ebcc32;
 }
 
 .btn-C-yellow:hover + .btn-C-icon{
