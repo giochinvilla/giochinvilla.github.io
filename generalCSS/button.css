@@ -71,10 +71,10 @@
   height: 50px;
   line-height: 50px;
   text-decoration: none;
-  background: #ebcc32;
+  background: #e34262;
   text-align: center;
   color: #fff;
-  border: 3px solid #ebcc32;
+  border: 3px solid #e34262;
   transition: all .55s;
   position: relative;
   left: calc(50% - 100px);
@@ -110,18 +110,18 @@
 .btn-E:hover{
   width: 150px;
   left: calc(50% - 75px);
-  border: 3px solid #ebcc32;
+  border: 3px solid #e34262;
   background: transparent;
-  color: #67d0a1;
+  color: #e34262;
 }
 
 .btn-E:hover + .btn-E-icon-RX{
-  border: 3px solid #ebcc32;
+  border: 3px solid #e34262;
   left: calc(50% + 70px);
 }
 
 .btn-E:hover + .btn-E-icon-RX + .btn-E-icon-SX{
-  border: 3px solid #ebcc32;
+  border: 3px solid #e34262;
   left: calc(50% - 135px);
 }
 
