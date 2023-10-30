@@ -1,81 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="./button.css">
-	<link rel="stylesheet" href="./header/header.css">
+	<link rel="stylesheet" href="./generalCSS/style.css">
+	<link rel="stylesheet" href="./generalCSS/button.css">
+	<link rel="stylesheet" href="./generalCSS/header.css">
 	<link rel="stylesheet" href="./fonts/fonts.css">
 	<link rel="stylesheet" href="./cards/cards.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 </head>
 <body>
-<!-- Overheader -->
-<div class="overheader"><div style="font-family: Avenge; letter-spacing: 1px; font-size: 30px;">Giochi in Villa</div></div>
-<br>
+	<!-- Overheader -->
+	<div class="overheader"><div style="font-family: Avenge; letter-spacing: 1px; font-size: 30px;">Giochi in Villa</div></div>
+	<br>
 
-<!-- Header -->
-<div class="header">
-  <img src="./images/technical/header.png" style="width: 90%; max-width: 1000px;"></img>
-</div>
+	<!-- Header -->
+	<div class="header">
+	  <img src="./images/technical/header.png" style="width: 90%; max-width: 1000px;"></img>
+	</div>
 
-<div class="topnav">
-  <a href="#">Home</a>
-  <a href="#">Eventi</a>
-  <a href="#" style="float:right">Contatti</a>
-</div>
+	<div class="topnav">
+	  <a href="#">Home</a>
+	  <a href="#">Eventi</a>
+	  <a href="#" style="float:right">Contatti</a>
+	</div>
 
-<div class="row">
-    <!-- Left Column -->
-    <div class="leftcolumn">
- 
-		<!-- Article -->
-		<div class="card">
-			<h1>
-				<img src="./images/technical/subtitle-logo.png"></img>
-				<span class="eventTag">EVENTO</span> 									<!-- Tag -->
-				&nbsp;SALA GIOCA														<!-- Title -->
-			</h1>
-			<h3>Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023</h3>					<!-- Subtitle -->
-			<div class="image"><img src="./images/eventi/salaGioca.png"></img></div>	<!-- Image -->
-			<p>TESTO DESCRITTIVO!! Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-			ullamco.</p>
-		   
-			<a class="btn-C" href="#">SCOPRI</a>										<!-- Color -->
-			<div class="btn-C-icon"></div>												<!-- Color -->
+	<div class="row">
+		<!-- Left Column -->
+		<div class="leftcolumn">
+	 
+			<div loadHTML="./cards/articles/article1.html"></div>
+			<div loadHTML="./cards/technical/departments.html"></div>
+			<div loadHTML="./cards/articles/article2.html"></div>
+			<div loadHTML="./cards/articles/article3.html"></div>
+		
+		<!-- End Left Column -->
 		</div>
 		
-		<!-- Departments Selection -->
-		<div loadHTML="./cards/technical/departments.html"></div>
-
-		<!-- Article -->
-		<div class="card">
-			<h1>
-				<img src="./images/technical/subtitle-logo.png"></img>
-				<span class="tournamentTag">TORNEO</span> 								<!-- Tag -->
-				&nbsp;ORDALIA II														<!-- Title -->
-			</h1>
-			<h3>Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023</h3>					<!-- Subtitle -->
-			<div class="image"><img src="./images/eventi/ordalia.png"></img></div>		<!-- Image -->
-			<p>TESTO DESCRITTIVO!! Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-			ullamco.</p>
-		   
-			<a class="btn-D" href="#">SCOPRI</a>										<!-- Color -->
-			<div class="btn-D-icon"></div>												<!-- Color -->
+		<!-- Right Column -->
+		<div class="rightcolumn">
+			<div loadHTML="./cards/technical/presentation.html"></div>
+			<div loadHTML="./cards/technical/events.html"></div>
+			<div loadHTML="./cards/technical/socials.html"></div>
 		</div>
-	
-	<!-- End Left Column -->
 	</div>
-	
-	<!-- Right Column -->
-	<div class="rightcolumn">
-		<div loadHTML="./cards/technical/presentation.html"></div>
-		<div loadHTML="./cards/technical/events.html"></div>
-		<div loadHTML="./cards/technical/socials.html"></div>
-	</div>
-</div>
 
 	<div class="card"></div>
 
