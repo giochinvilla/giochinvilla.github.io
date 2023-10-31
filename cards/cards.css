@@ -130,7 +130,7 @@
 	font-family: Couture; 
 	color:white; 
 	height: 50px;
-	font-size: 30px;
+	font-size: 26px;
 }
 
 .card .column img {
@@ -149,11 +149,25 @@
 	.card .column img {
 		width: 20%
 	}
+	.card .column h2 {
+		height: 15px;
+		font-size: 30px;
+	}
+	.card .column p {
+		font-size: 18px;
+	}
 }
 
 @media screen and (max-width:850px) {
 	.card .column {
 		width: 25%;
+	}
+	.card .column h2 {
+		height: 50px;
+		font-size: 20px;
+	}
+	.card .column p {
+		font-size: 14px;
 	}
 }
 
@@ -163,6 +177,13 @@
 	}
 	.card .column img {
 		width: 20%
+	}
+	.card .column h2 {
+		height: 15px;
+		font-size: 30px;
+	}
+	.card .column p {
+		font-size: 18px;
 	}
 }
 
