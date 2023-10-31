@@ -47,25 +47,25 @@
 
 @media screen and (max-width:700px) {
 	.card .desc {
-		font-size:16px;
+		font-size: 15px;
 	}
 	.card h1 {
-		font-size: 26px; 
+		font-size: 24px; 
 	}
 	.card h3 {
-		font-size: 17px; 
+		font-size: 16px; 
 	}
 }
 
 @media screen and (max-width:400px) {
 	.card .desc {
-		font-size:14px;
+		font-size: 14px;
 	}
 	.card h1 {
-		font-size: 20px; 
+		font-size: 18px; 
 	}
 	.card h3 {
-		font-size: 15px; 
+		font-size: 14px; 
 	}
 }
 
@@ -84,7 +84,6 @@
 	background-color: #67d0a1;
 	border: #67d0a1 1px solid;
 	border-radius: 10px;
-	font-size: 28px;
 	color:white;
 	padding: 3px;
 }
@@ -93,7 +92,6 @@
 	background-color: #ebcc32;
 	border: #ebcc32 1px solid;
 	border-radius: 10px;
-	font-size: 28px;
 	color:white;
 	padding: 3px;
 }
@@ -102,7 +100,6 @@
 	background-color: #e34262;
 	border: #e34262 1px solid;
 	border-radius: 10px;
-	font-size: 28px;
 	color:white;
 	padding: 3px;
 }
