@@ -26,7 +26,7 @@
 }
 
 .card .image {
-	height:200px;
+	max-height:200px;
 	overflow:hidden;
 	width: 100%;
 }
@@ -160,7 +160,7 @@
 		width: 20%
 	}
 	.card .column h2 {
-		height: 15px;
+		height: 25px;
 		font-size: 30px;
 	}
 	.card .column p {
@@ -174,10 +174,13 @@
 	}
 	.card .column h2 {
 		height: 50px;
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.card .column p {
 		font-size: 14px;
+	}
+	.card .column img {
+		width: 50%
 	}
 }
 
@@ -194,6 +197,12 @@
 	}
 	.card .column p {
 		font-size: 18px;
+	}
+}
+
+@media screen and (max-width:500px) {
+	.card .column h2 {
+		font-size: 20px;
 	}
 }
 
