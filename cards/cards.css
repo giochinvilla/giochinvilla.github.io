@@ -11,11 +11,13 @@
 /* General Impostation for Card Articles */
 
 .card h1 {
+  font-size: 32px; 
   float: left;
   font-family: Couture;
 }
 
 .card h3 {
+  font-size: 19px; 
   float: right;
   text-align:right;
 }
@@ -47,11 +49,23 @@
 	.card .desc {
 		font-size:16px;
 	}
+	.card h1 {
+		font-size: 26px; 
+	}
+	.card h3 {
+		font-size: 17px; 
+	}
 }
 
 @media screen and (max-width:400px) {
 	.card .desc {
 		font-size:14px;
+	}
+	.card h1 {
+		font-size: 20px; 
+	}
+	.card h3 {
+		font-size: 15px; 
 	}
 }
 
