@@ -39,6 +39,22 @@
 	font-size:36px;
 }
 
+.card .desc {
+	font-size:18px;
+}
+
+@media screen and (max-width:700px) {
+	.card .desc {
+		font-size:16px;
+	}
+}
+
+@media screen and (max-width:400px) {
+	.card .desc {
+		font-size:14px;
+	}
+}
+
 /* General Impostation for Card Articles Tags */
 
 .blueTag {
@@ -203,6 +219,18 @@
 @media screen and (max-width:500px) {
 	.card .column h2 {
 		font-size: 20px;
+	}
+	.card .column p {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width:400px) {
+	.card .column h2 {
+		font-size: 16px;
+	}
+	.card .column p {
+		font-size: 14px;
 	}
 }
 
