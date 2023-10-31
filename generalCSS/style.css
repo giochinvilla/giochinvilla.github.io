@@ -25,15 +25,20 @@ body {
   clear: both;
 }
 
+@media screen and (max-width: 1200px) {
+  .leftcolumn {   
+    width: 60%;
+    padding: 10px;
+  }
+  .rightcolumn {   
+    width: 40%;
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
     padding: 0;
-  }
-  h2 {
-	font-size:calc(0.25 * 10vw);
-  }
-  p {
-	font-size: calc(0.25 * 7vw);
   }
 }
