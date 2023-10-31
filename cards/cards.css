@@ -130,7 +130,7 @@
 	font-family: Couture; 
 	color:white; 
 	height: 50px;
-	font-size: 40px;
+	font-size: 30px;
 }
 
 .card .column img {
@@ -146,6 +146,9 @@
 	.card .column {
 		width: 100%;
 	}
+	.card .column img {
+		width: 20%
+	}
 }
 
 @media screen and (max-width:850px) {
@@ -157,6 +160,9 @@
 @media screen and (max-width:650px) {
 	.card .column {
 		width: 100%;
+	}
+	.card .column img {
+		width: 20%
 	}
 }
 
