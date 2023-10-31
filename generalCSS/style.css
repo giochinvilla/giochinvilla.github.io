@@ -39,15 +39,15 @@ body {
 @media screen and (max-width: 1000px) {
   .leftcolumn {   
     width: 65%;
-    padding: 5px;
+    padding: 10px;
   }
   .rightcolumn {   
     width: 35%;
-    padding: 5px;
+    padding: 10px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
     padding: 0;
