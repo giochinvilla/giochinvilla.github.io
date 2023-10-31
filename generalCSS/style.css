@@ -27,16 +27,16 @@ body {
 
 @media screen and (max-width: 1200px) {
   .leftcolumn {   
-    width: 60%;
+    width: 55%;
     padding: 10px;
   }
   .rightcolumn {   
-    width: 40%;
+    width: 45%;
     padding: 10px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
     padding: 0;
