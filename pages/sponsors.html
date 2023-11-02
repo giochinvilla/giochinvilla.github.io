@@ -79,7 +79,7 @@
 	
 	<script>
 		function loadEvents() {			
-			includeHTML();
+			
 			document.getElementById('decreaseLink').href = `../pages/sponsors.html?number=${number-1}`;
             document.getElementById('increaseLink').href = `../pages/sponsors.html?number=${number+1}`;
 			
@@ -104,6 +104,7 @@
 			}
 		  }      
 		}
+		includeHTML();
 	  }
 		loadEvents();
 	</script>
