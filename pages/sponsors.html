@@ -74,72 +74,24 @@
 		if (isNaN(number)) {
 			number = 0;
 		}
-
         loadHTMLFiles(number, 'insertionPoint');
     </script>
 	
 	<script>
 		function loadEvents() {			
 			includeHTML();
+			document.getElementById('decreaseLink').href = "#?number=${number-1}";
+            document.getElementById('increaseLink').href = "#?number=${number+1}";
+			
+			const fs = require('fs');
+			const dir = './folder';
+
+			fs.readdir(dir, (err, files) => {
+			  console.log(files.length);
+			});
+			
 		}
 		loadEvents();
 	</script>
-	
-	
-    <script>
-        // Function to check if a file exists
-        async function fileExists(filename) {
-            try {
-        let response = await fetch(`../cards/articles/${filename}`);
-        if (response.ok) {
-            return true;
-        } else {
-            return false;
-        }
-    } catch (error) {
-        return false;
-    }
-		}
-
-        // Function to update the number and enable/disable links
-        async function updateNumberAndLinks(number) {
-			decreaseLink.href = "#?number=${number-1}";
-			increaseLink.href = "#?number=${number+1}";
-		
-            const numberElement = document.getElementById('number');
-            const decreaseLink = document.getElementById('decreaseLink');
-            const increaseLink = document.getElementById('increaseLink');
-
-            numberElement.textContent = number;
-            decreaseLink.disabled = number === 0;
-
-            const nextFileName = `article${number * 3 + 4}.html`;
-			console.log('Filename:', nextFileName);
-            const fileExistsNext = await fileExists(nextFileName);
-            increaseLink.disabled = !fileExistsNext;
-        }
-
-        // Update the number and links
-        updateNumberAndLinks(number);
-		
-        // Add event listeners to the links
-        document.getElementById('decreaseLink').addEventListener('click', async (event) => {
-            event.preventDefault();
-            if (number > 0) {
-                number--;
-                await updateNumberAndLinks(number);
-            }
-        });
-
-        document.getElementById('increaseLink').addEventListener('click', async (event) => {
-            event.preventDefault();
-            const nextFileName = `article${number * 3 + 4}.html`;
-            const fileExistsNext = await fileExists(nextFileName);
-            if (fileExistsNext) {
-                number++;
-                await updateNumberAndLinks(number);
-            }
-        });
-    </script>
 </body>
 </html>
