@@ -32,9 +32,9 @@
 			<div id="insertionPoint"></div>
 			
 			<p>
-				Number of loaded HTML files: <span id="number">0</span><br>
-				<a href="#" id="decreaseLink">Link 1</a>
-				<a href="#" id="increaseLink">Link 2</a>
+				Number: <span id="number">0</span><br>
+				<a href="#" id="decreaseLink">Decrease</a>
+				<a href="#" id="increaseLink">Increase</a>
 			</p>
 		
 		<!-- End Left Column -->
@@ -86,42 +86,56 @@
 	</script>
 	
 	
-        <script>
-        // Function to check if a specific file exists and disable links
-        function checkAndDisableLinks(number) {
-            const maxAllowedLinks = number * 3 + 4; // Calculate the maximum allowed links
-            const links = document.querySelectorAll('a'); // Get all links on the page
-
-            const filename = `article${number * 3 + 4}.html`; // Construct the filename
-            const fileURL = `../cards/articles/${filename}`; // Construct the file URL
-
-            // Use fetch to check if the file exists
-            fetch(fileURL)
-                .then(response => {
-                    if (response.status === 200) {
-                        // The file exists, proceed
-                        return response.text();
-                    } else {
-                        // The file does not exist, handle as needed
-                        throw new Error('File not found');
-                    }
-                })
-                .then(data => {
-                    // Update the number of loaded HTML files
-                    document.getElementById('number').textContent = number;
-
-                    // Disable or enable links based on the conditions
-                    links[0].disabled = number === 0; // Disable Link 1 if number is 0
-                    links[1].disabled = number * 3 + 1 >= maxAllowedLinks; // Disable Link 2 if conditions are not met
-                })
-                .catch(error => {
-                    // Handle the error (e.g., file not found)
-                    console.error('Fetch error:', error);
-                });
+    <script>
+        // Function to check if a file exists
+        async function fileExists(filename) {
+            try {
+                await fetch(`../cards/articles/${filename}`);
+                return true;
+            } catch (error) {
+                return false;
+            }
         }
 
-        // Call the function with the initial number
-        checkAndDisableLinks(number);
+        // Function to update the number and enable/disable links
+        async function updateNumberAndLinks(number) {
+            const numberElement = document.getElementById('number');
+            const decreaseLink = document.getElementById('decreaseLink');
+            const increaseLink = document.getElementById('increaseLink');
+
+            numberElement.textContent = number;
+            decreaseLink.disabled = number === 0;
+
+            const nextFileName = `article${number * 3 + 4}.html`;
+            const fileExistsNext = await fileExists(nextFileName);
+            increaseLink.disabled = !fileExistsNext;
+        }
+
+        // Get the initial number from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        let number = parseInt(urlParams.get('number')) || 0;
+
+        // Update the number and links
+        updateNumberAndLinks(number);
+
+        // Add event listeners to the links
+        document.getElementById('decreaseLink').addEventListener('click', async (event) => {
+            event.preventDefault();
+            if (number > 0) {
+                number--;
+                await updateNumberAndLinks(number);
+            }
+        });
+
+        document.getElementById('increaseLink').addEventListener('click', async (event) => {
+            event.preventDefault();
+            const nextFileName = `article${number * 3 + 4}.html`;
+            const fileExistsNext = await fileExists(nextFileName);
+            if (fileExistsNext) {
+                number++;
+                await updateNumberAndLinks(number);
+            }
+        });
     </script>
 </body>
 </html>
