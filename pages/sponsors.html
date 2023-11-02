@@ -32,7 +32,6 @@
 			<div id="insertionPoint"></div>
 			
 			<p>
-				Number: <span id="number">0</span><br>
 				<a href="#" id="decreaseLink" class="enable">Decrease</a>
 				<a href="#" id="increaseLink" class="enable">Increase</a>
 			</p>
@@ -82,29 +81,14 @@
 			
 			document.getElementById('decreaseLink').href = `../pages/sponsors.html?number=${number-1}`;
             document.getElementById('increaseLink').href = `../pages/sponsors.html?number=${number+1}`;
-			
-		
+				
 		if (number == 0) {
 			document.getElementById('decreaseLink').classList.add("disable");
 			document.getElementById('decreaseLink').classList.remove("enable");
 		}
-		var file, xhttp;
-		file = `../cards/articles/article${(number*3)+4}.html`;
-		if (file) {
-		console.log(file);
-		  xhttp = new XMLHttpRequest();
-		  xhttp.onreadystatechange = function() {
-			if (this.readyState == 4) {
-			console.log(this.status);
-			  if (this.status == 404) {
-			  console.log("done");
-				document.getElementById('increaseLink').classList.add("disable");
-				document.getElementById('increaseLink').classList.remove("enable");
-			  }
-			}
-			xhttp.open("GET", file, true);
-		  xhttp.send();
-		  }      
+		if (number => 1) {
+			document.getElementById('increaseLink').classList.add("disable");
+			document.getElementById('increaseLink').classList.remove("enable");
 		}
 		includeHTML();
 	  }
