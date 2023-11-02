@@ -246,6 +246,6 @@
 
 .disable {
 	pointer-events: none !important;
-	background: #999999 !important;
-	border: #999999 !important;
+	background: #555 !important;
+	border: #555 !important;
 }
