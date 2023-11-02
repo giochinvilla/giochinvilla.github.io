@@ -113,10 +113,6 @@
                 });
         }
 
-        // Get the initial number from the URL
-        urlParams = new URLSearchParams(window.location.search);
-        number = parseInt(urlParams.get('number')) || 0;
-
         // Call the function with the initial number
         checkAndDisableLinks(number);
     </script>
