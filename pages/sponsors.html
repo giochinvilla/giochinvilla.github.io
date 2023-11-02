@@ -103,6 +103,9 @@
 
         // Function to update the number and enable/disable links
         async function updateNumberAndLinks(number) {
+			decreaseLink.href = "#?number=${number-1}";
+			increaseLink.href = "#?number=${number+1}";
+		
             const numberElement = document.getElementById('number');
             const decreaseLink = document.getElementById('decreaseLink');
             const increaseLink = document.getElementById('increaseLink');
