@@ -33,8 +33,8 @@
 			
 			<p>
 				Number: <span id="number">0</span><br>
-				<a href="#" id="decreaseLink">Decrease</a>
-				<a href="#" id="increaseLink">Increase</a>
+				<a href="#" id="decreaseLink" class="enable">Decrease</a>
+				<a href="#" id="increaseLink" class="enable">Increase</a>
 			</p>
 		
 		<!-- End Left Column -->
@@ -84,14 +84,22 @@
             document.getElementById('increaseLink').href = `../pages/sponsors.html?number=${number+1}`;
 			
 		
-		if (number == 0) document.getElementById('decreaseLink').disable;
+		if (number == 0) {
+			document.getElementById('decreaseLink').href = "";
+			document.getElementById('decreaseLink').classList.add("disable");
+			document.getElementById('decreaseLink').classList.remove("enable");
+		}
 		var file, xhttp;
 		file = "`../cards/articles/article${(number*3)+4}.html`";
 		if (file) {
 		  xhttp = new XMLHttpRequest();
 		  xhttp.onreadystatechange = function() {
 			if (this.readyState == 4) {
-			  if (this.status == 404) {document.getElementById('increaseLink').disable;}
+			  if (this.status == 404) {
+				document.getElementById('increaseLink').href = "";
+				document.getElementById('increaseLink').classList.add("disable");
+				document.getElementById('increaseLink').classList.remove("enable");
+			  }
 			}
 		  }      
 		}
