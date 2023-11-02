@@ -111,10 +111,6 @@
             increaseLink.disabled = !fileExistsNext;
         }
 
-        // Get the initial number from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        let number = parseInt(urlParams.get('number')) || 0;
-
         // Update the number and links
         updateNumberAndLinks(number);
 
