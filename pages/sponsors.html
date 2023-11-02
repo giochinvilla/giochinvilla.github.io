@@ -56,9 +56,9 @@
         function loadHTMLFiles(number, insertionPoint) {
             const container = document.createElement('div');
             
-            for (let i = 1; i <= number; i++) {
+            for (let i = 0; i <= 2; i++) {
                 const div = document.createElement('div');
-                div.setAttribute('loadHTML', `../cards/articles/article${i}.html`);
+                div.setAttribute('loadHTML', `../cards/articles/article${number+i}.html`);
                 container.appendChild(div);
             }
 
@@ -76,7 +76,7 @@
         if (!isNaN(number)) {
             loadHTMLFiles(number, 'insertionPoint'); // 'insertionPoint' is the ID of the element where you want to insert the loaded HTML
         } else {
-            document.body.innerHTML = '<p>Invalid input number.</p>';
+            loadHTMLFiles(1, 'insertionPoint');
         }
     </script>
 	
