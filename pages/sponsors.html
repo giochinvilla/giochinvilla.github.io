@@ -30,6 +30,12 @@
 		<div class="leftcolumn">
 	 
 			<div id="insertionPoint"></div>
+			
+			<p>
+				Number of loaded HTML files: <span id="number">0</span><br>
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+			</p>
 		
 		<!-- End Left Column -->
 		</div>
@@ -50,7 +56,7 @@
             
             for (let i = 1; i <= 4; i++) {
                 const div = document.createElement('div');
-                div.setAttribute('loadHTML', `../cards/articles/article${number*3+i}.html`);
+                div.setAttribute('loadHTML', `../cards/articles/article${(number*3)+i}.html`);
                 container.appendChild(div);
             }
 
@@ -79,5 +85,32 @@
 		loadEvents();
 	</script>
 	
+	<script>
+        // Function to check the number of elements in the folder and disable links
+        function checkAndDisableLinks(number) {
+            const maxAllowedLinks = number * 3 + 1; // Calculate the maximum allowed links
+            const links = document.querySelectorAll('a'); // Get all links on the page
+            const articlesFolderURL = '../cards/articles'; // Set the folder path
+
+            fetch(articlesFolderURL)
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+                    const folderElements = doc.querySelectorAll('a'); // Get elements in the folder
+
+                    // Update the number of loaded HTML files
+                    document.getElementById('number').textContent = folderElements.length;
+
+                    // Disable or enable links based on the conditions
+                    links[0].disabled = number === 0; // Disable Link 1 if number is 0
+                    links[1].disabled = folderElements.length < maxAllowedLinks; // Disable Link 2 if conditions are not met
+                });
+        }
+
+        // Call the function with your specific number
+        checkAndDisableLinks(2); // Change the number to your specific value
+
+    </script>
 </body>
 </html>
