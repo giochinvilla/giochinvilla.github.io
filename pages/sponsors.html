@@ -106,33 +106,19 @@
                     // Disable or enable links based on the conditions
                     links[0].disabled = number === 0; // Disable Link 1 if number is 0
                     links[1].disabled = folderElements.length < maxAllowedLinks; // Disable Link 2 if conditions are not met
+
+                    // Set the href attributes of the links
+                    links[0].href = `?number=${Math.max(0, number - 1)}`;
+                    links[1].href = `?number=${number + 1}`;
                 });
         }
 
         // Get the initial number from the URL
-        const urlParams = new URLSearchParams(window.location.search);
+        urlParams = new URLSearchParams(window.location.search);
         let number = parseInt(urlParams.get('number')) || 0;
 
         // Call the function with the initial number
         checkAndDisableLinks(number);
-
-        // Add click event listeners to the links to update the number and reload the page
-        document.getElementById('decreaseLink').addEventListener('click', (event) => {
-            event.preventDefault();
-            number = Math.max(0, number - 1);
-            history.pushState({}, '', `?number=${number}`);
-            checkAndDisableLinks(number);
-            location.reload();
-        });
-
-        document.getElementById('increaseLink').addEventListener('click', (event) => {
-            event.preventDefault();
-            number++;
-            history.pushState({}, '', `?number=${number}`);
-            checkAndDisableLinks(number);
-            location.reload();
-        });
-
     </script>
 </body>
 </html>
