@@ -1,0 +1,257 @@
+.btn-wrapper {
+ width: 50%;
+ max-width: 300px;
+ margin:auto;
+}
+
+/* General Impostation for A button */
+
+.btn-A span {
+ z-index: 2; 
+ display: block;
+ position: absolute;
+ width: 100%;
+ font-family: Couture;
+ font-size: 20px;
+ text-align:center;
+ margin-top: 10px;
+}
+
+.btn-A::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 1;
+ background-color: rgba(255,255,255,0.2);
+ transition: all 0.3s;
+}
+
+.btn-A:hover::before {
+ opacity: 0;
+ transform: scale(0.5,0.5);
+}
+
+.btn-A::after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 1;
+ opacity: 0;
+ transition: all 0.3s;
+ border: 1px solid rgba(255,255,255,0.8);
+ transform: scale(1.2,1.2);
+}
+
+.btn-A:hover::after {
+ opacity: 1;
+ transform: scale(1,1);
+}
+
+.btn-A {
+ color: #FFF;
+ transition: all 0.5s;
+ position: relative;
+ height: 50px;
+ width: 100%;
+}
+
+/* General Impostation for E button */
+
+.btn-E{
+  display: block;
+  font-size: 20px;
+  font-family: "Couture";
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  background: #e34262;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #e34262;
+  transition: all .55s;
+  position: relative;
+  left: calc(50% - 100px);
+  z-index: 1;
+}
+
+.btn-E-icon-RX{
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+  position: relative;
+  transform: rotate(45deg);
+  left: calc(50% + 40px);
+  top: -40px;
+  z-index: 0;
+  transition: all .55s;
+  display: inline-block
+}
+
+.btn-E-icon-SX{
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+  position: relative;
+  transform: rotate(45deg);
+  left: calc(50% - 105px);
+  top: -40px;
+  z-index: 0;
+  transition: all .55s;
+  display: inline-block
+}
+
+.btn-E:hover{
+  width: 150px;
+  left: calc(50% - 75px);
+  border: 3px solid #e34262;
+  background: transparent;
+  color: #e34262;
+}
+
+.btn-E:hover + .btn-E-icon-RX{
+  border: 3px solid #e34262;
+  left: calc(50% + 70px);
+}
+
+.btn-E:hover + .btn-E-icon-RX + .btn-E-icon-SX{
+  border: 3px solid #e34262;
+  left: calc(50% - 135px);
+}
+
+/* General Impostation for C button */
+
+.btn-C{
+  display: block;
+  font-size: 20px;
+  font-family: "Couture";
+  width: 200px;
+  height: 50px;
+  line-height: 45px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  transition: all .55s;
+  position: relative;
+  left: calc(50% - 100px);
+  z-index: 1;
+}
+
+.btn-C-icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: relative;
+  transform: rotate(45deg);
+  left: calc(50% + 40px);
+  top: -50px;
+  z-index: 0;
+  transition: all .55s;
+}
+
+.btn-C:hover{
+  width: 150px;
+  left: calc(50% - 75px);
+  background: transparent;
+}
+
+.btn-C:hover + .btn-C-icon{
+  left: calc(50% + 70px);
+}
+
+/* General Impostation for C button colors */
+
+.btn-C-blue {
+	background: #71d2f5;
+	border: 3px solid #71d2f5;
+}
+.btn-C-blue:hover {
+	border: 3px solid #71d2f5;
+	color: #71d2f5;
+}
+
+.btn-C-blue:hover + .btn-C-icon{
+	border: 3px solid #71d2f5;
+}
+
+.btn-C-green {
+	background: #67d0a1;
+	border: 3px solid #67d0a1;
+}
+.btn-C-green:hover {
+	border: 3px solid #67d0a1;
+	color: #67d0a1;
+}
+
+.btn-C-green:hover + .btn-C-icon{
+	border: 3px solid #67d0a1;
+}
+
+.btn-C-red {
+	background: #e34262;
+	border: 3px solid #e34262;
+}
+.btn-C-red:hover {
+	border: 3px solid #e34262;
+	color: #e34262;
+}
+
+.btn-C-red:hover + .btn-C-icon{
+	border: 3px solid #e34262;
+}
+
+.btn-C-yellow {
+	background: #ebcc32;
+	border: 3px solid #ebcc32;
+}
+.btn-C-yellow:hover {
+	border: 3px solid #ebcc32;
+	color: #ebcc32;
+}
+
+.btn-C-yellow:hover + .btn-C-icon{
+	border: 3px solid #ebcc32;
+}
+
+/* General Impostation for F button colors */
+
+.btn-F{
+  display: block;
+  font-size: 20px;
+  font-family: "Couture";
+  width: 200px;
+  height: 50px;
+  line-height: 45px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  transition: all .55s;
+  position: relative;
+  z-index: 1;
+  background: #71d2f5;
+  border: 3px solid #71d2f5;
+}
+
+.btn-F:hover{
+  background: transparent;
+  border: 3px solid #71d2f5;
+  color: #71d2f5;
+}
+
+.disable {
+	pointer-events: none !important;
+	background: #aaa !important;
+	border: #aaa !important;
+}
+
+@media screen and (max-width: 550px) {
+	.btn-F{
+	  width: 120px;
+	}
+}
