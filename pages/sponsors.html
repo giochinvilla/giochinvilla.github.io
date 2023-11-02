@@ -32,13 +32,11 @@
 			<div id="insertionPoint"></div>
 			
 			<div class="card">
-			
-				<a class="btn-C btn-C-blue" href="https://www.instagram.com/giochinvilla/">SCOPRI</a>	<!-- Color -->
-				<span style="width: 50%">
+				<span style="float: left";>
 					<a class="btn-F btn-F-prev" id="decreaseLink">prev</a>
 					<div class="btn-F-icon btn-F-icon-prev"></div>
 				</span>
-				<span style="width: 50%">
+				<span style="float: right;">
 					<a class="btn-F btn-F-next" id="increaseLink">next</a>
 					<div class="btn-F-icon btn-F-icon-next"></div>
 				</span>
@@ -89,6 +87,12 @@
 			
 			document.getElementById('decreaseLink').href = `../pages/sponsors.html?number=${number-1}`;
             document.getElementById('increaseLink').href = `../pages/sponsors.html?number=${number+1}`;
+			
+			let number = parseInt(urlParams.get('number'));
+		
+			if (isNaN(number)) {
+				number = 0;
+			}
 				
 		if (number == 0) {
 			document.getElementById('decreaseLink').classList.add("disable");
