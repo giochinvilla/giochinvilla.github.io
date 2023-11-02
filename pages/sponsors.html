@@ -83,14 +83,19 @@
 			document.getElementById('decreaseLink').href = "#?number=${number-1}";
             document.getElementById('increaseLink').href = "#?number=${number+1}";
 			
-			const fs = require('fs');
-			const dir = './folder';
-
-			fs.readdir(dir, (err, files) => {
-			  console.log(files.length);
-			});
-			
+		
+		if (number == 0) document.getElementById('decreaseLink').disable;
+		var file, xhttp;
+		file = "`../cards/articles/article${(number*3)+4}.html`";
+		if (file) {
+		  xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+			  if (this.status == 404) {document.getElementById('increaseLink').disable;}
+			}
+		  }      
 		}
+	  }
 		loadEvents();
 	</script>
 </body>
