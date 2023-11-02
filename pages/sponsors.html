@@ -91,11 +91,13 @@
 			
 			document.getElementById('decreaseLink').href = `../pages/sponsors.html?number=${number-1}`;
             document.getElementById('increaseLink').href = `../pages/sponsors.html?number=${number+1}`;
-				
+				console.log(number);
 		if (number == 0) {
+		console.log("why");
 			document.getElementById('decreaseLink').classList.add("disable");
 		}
 		if (number => 1) {
+		console.log("hat");
 			document.getElementById('increaseLink').classList.add("disable");
 		}
 		includeHTML();
