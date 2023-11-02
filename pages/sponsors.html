@@ -90,17 +90,15 @@
         // Function to check if a file exists
         async function fileExists(filename) {
             try {
-				const response = await fetch(`../cards/articles/${filename}`);
-				if (response.status === 200) {
-					return true;
-				} else if (response.status === 404) {
-					return false; // Handle 404 explicitly
-				} else {
-					throw new Error(`Unexpected response status: ${response.status}`);
-				}
-			} catch (error) {
-				return false;
-			}
+        const response = await fetch(`../cards/articles/${filename}`);
+        if (response.ok) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (error) {
+        return false;
+    }
 		}
 
         // Function to update the number and enable/disable links
