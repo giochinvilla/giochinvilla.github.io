@@ -86,30 +86,37 @@
 	</script>
 	
 	
-    <script>
-        // Function to check the number of elements in the folder and disable links
+        <script>
+        // Function to check if a specific file exists and disable links
         function checkAndDisableLinks(number) {
             const maxAllowedLinks = number * 3 + 4; // Calculate the maximum allowed links
             const links = document.querySelectorAll('a'); // Get all links on the page
-            const articlesFolderURL = '../cards/articles'; // Set the folder path
 
-            fetch(articlesFolderURL)
-                .then(response => response.text())
+            const filename = `article${number * 3 + 4}.html`; // Construct the filename
+            const fileURL = `../cards/articles/${filename}`; // Construct the file URL
+
+            // Use fetch to check if the file exists
+            fetch(fileURL)
+                .then(response => {
+                    if (response.status === 200) {
+                        // The file exists, proceed
+                        return response.text();
+                    } else {
+                        // The file does not exist, handle as needed
+                        throw new Error('File not found');
+                    }
+                })
                 .then(data => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(data, 'text/html');
-                    const folderElements = doc.querySelectorAll('a'); // Get elements in the folder
-
                     // Update the number of loaded HTML files
-                    document.getElementById('number').textContent = folderElements.length;
+                    document.getElementById('number').textContent = number;
 
                     // Disable or enable links based on the conditions
                     links[0].disabled = number === 0; // Disable Link 1 if number is 0
-                    links[1].disabled = folderElements.length < maxAllowedLinks; // Disable Link 2 if conditions are not met
-
-                    // Set the href attributes of the links
-                    links[0].href = `?number=${Math.max(0, number - 1)}`;
-                    links[1].href = `?number=${number + 1}`;
+                    links[1].disabled = number * 3 + 1 >= maxAllowedLinks; // Disable Link 2 if conditions are not met
+                })
+                .catch(error => {
+                    // Handle the error (e.g., file not found)
+                    console.error('Fetch error:', error);
                 });
         }
 
