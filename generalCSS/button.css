@@ -218,3 +218,79 @@
 .btn-C-yellow:hover + .btn-C-icon{
 	border: 3px solid #ebcc32;
 }
+
+/* General Impostation for F button colors */
+
+.btn-F{
+  display: block;
+  font-size: 20px;
+  font-family: "Couture";
+  width: 200px;
+  height: 50px;
+  line-height: 45px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  transition: all .55s;
+  position: relative;
+  z-index: 1;
+  background: #71d2f5;
+  border: 3px solid #71d2f5;
+}
+
+.btn-F-next{
+  left: calc(30% - 100px);
+}
+
+.btn-F-prev{
+  left: calc(70% + 100px);
+}
+
+.btn-F-icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: relative;
+  transform: rotate(45deg);
+  left: calc(20% + 40px);
+  top: -50px;
+  z-index: 0;
+  transition: all .55s;
+}
+
+.btn-F-icon-next{
+  left: calc(30% + 40px);
+}
+
+.btn-F-icon-prev{
+  left: calc(70% - 40px);
+}
+
+.btn-F-next:hover{
+  width: 150px;
+  left: calc(30% - 75px);
+  background: transparent;
+  border: 3px solid #71d2f5;
+  color: #71d2f5;
+}
+
+.btn-F-prev:hover{
+  width: 150px;
+  left: calc(70% + 75px);
+  background: transparent;
+}
+
+.btn-F-next:hover + .btn-F-next-icon{
+  left: calc(30% + 70px);
+  border: 3px solid #71d2f5;
+}
+
+.btn-F-prev:hover + .btn-F-prev-icon{
+  left: calc(70% - 70px);
+  border: 3px solid #71d2f5;
+}
+
+.disable {
+	pointer-events: none;
+	background: #999999;
+}

@@ -31,10 +31,18 @@
 	 
 			<div id="insertionPoint"></div>
 			
-			<p>
-				<a href="#" id="decreaseLink" class="enable">Decrease</a>
-				<a href="#" id="increaseLink" class="enable">Increase</a>
-			</p>
+			<div class="card">
+			
+				<a class="btn-C btn-C-blue" href="https://www.instagram.com/giochinvilla/">SCOPRI</a>	<!-- Color -->
+				<span style="width: 50%">
+					<a class="btn-F btn-F-prev" id="decreaseLink">prev</a>
+					<div class="btn-F-icon btn-F-icon-prev"></div>
+				</span>
+				<span style="width: 50%">
+					<a class="btn-F btn-F-next" id="increaseLink">next</a>
+					<div class="btn-F-icon btn-F-icon-next"></div>
+				</span>
+			</div>
 		
 		<!-- End Left Column -->
 		</div>
@@ -84,15 +92,13 @@
 				
 		if (number == 0) {
 			document.getElementById('decreaseLink').classList.add("disable");
-			document.getElementById('decreaseLink').classList.remove("enable");
 		}
 		if (number => 1) {
 			document.getElementById('increaseLink').classList.add("disable");
-			document.getElementById('increaseLink').classList.remove("enable");
 		}
 		includeHTML();
 	  }
-		loadEvents();
+	  loadEvents();
 	</script>
 </body>
 </html>
