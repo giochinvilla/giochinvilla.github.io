@@ -81,16 +81,16 @@
     </script>
 	
 	<script>
-		function loadEvents() {			
-			
-			document.getElementById('decreaseLink').href = `../pages/sponsors.html?number=${number-1}`;
-            document.getElementById('increaseLink').href = `../pages/sponsors.html?number=${number+1}`;
-			
+		function loadEvents() {	
+
 			let number = parseInt(urlParams.get('number'));
 		
 			if (isNaN(number)) {
 				number = 0;
-			}
+			}		
+			
+			document.getElementById('decreaseLink').href = `../pages/sponsors.html?number=${number-1}`;
+            document.getElementById('increaseLink').href = `../pages/sponsors.html?number=${number+1}`;
 				
 		if (number == 0) {
 			document.getElementById('decreaseLink').classList.add("disable");
