@@ -58,7 +58,7 @@
             
             for (let i = 0; i <= 2; i++) {
                 const div = document.createElement('div');
-                div.setAttribute('loadHTML', `../cards/articles/article${number+i}.html`);
+                div.setAttribute('loadHTML', `../cards/articles/article${number*3+i}.html`);
                 container.appendChild(div);
             }
 
@@ -74,7 +74,7 @@
         const number = parseInt(urlParams.get('number'));
 
         if (!isNaN(number)) {
-            loadHTMLFiles(number, 'insertionPoint'); // 'insertionPoint' is the ID of the element where you want to insert the loaded HTML
+            loadHTMLFiles(number, 'insertionPoint');
         } else {
             loadHTMLFiles(1, 'insertionPoint');
         }
@@ -86,31 +86,6 @@
 		}
 		loadEvents();
 	</script>
-	
-	<script>
-        // Function to load HTML files based on the input number and starting point
-        function loadHTMLFiles(number, startingPoint) {
-            const container = document.body;
-            container.innerHTML = ''; // Clear the current content
-
-            for (let i = startingPoint; i < startingPoint + number; i++) {
-                const div = document.createElement('div');
-                div.setAttribute('loadHTML', `./cards/technical/${i}.html`);
-                container.appendChild(div);
-            }
-        }
-
-        // Get the input number and starting point from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const number = parseInt(urlParams.get('number'));
-        const startingPoint = parseInt(urlParams.get('startingPoint'));
-
-        if (!isNaN(number) && !isNaN(startingPoint)) {
-            loadHTMLFiles(number, startingPoint);
-        } else {
-            document.body.innerHTML = '<p>Invalid input.</p>';
-        }
-    </script>
 	
 </body>
 </html>
