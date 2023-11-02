@@ -107,6 +107,7 @@
             decreaseLink.disabled = number === 0;
 
             const nextFileName = `article${number * 3 + 4}.html`;
+			console.log('Filename:', nextFileName);
             const fileExistsNext = await fileExists(nextFileName);
             increaseLink.disabled = !fileExistsNext;
         }
