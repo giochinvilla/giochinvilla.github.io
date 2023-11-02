@@ -19,5 +19,4 @@ function includeHTML() {
 		  return;
 		}
 	  }
-	  subloadEvents();
 };

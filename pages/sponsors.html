@@ -74,7 +74,7 @@
         if (!isNaN(number)) {
             loadHTMLFiles(number, 'insertionPoint');
         } else {
-            loadHTMLFiles(1, 'insertionPoint');
+            loadHTMLFiles(0, 'insertionPoint');
         }
     </script>
 	
@@ -89,7 +89,7 @@
     <script>
         // Function to check the number of elements in the folder and disable links
         function checkAndDisableLinks(number) {
-            const maxAllowedLinks = number * 3 + 1; // Calculate the maximum allowed links
+            const maxAllowedLinks = number * 3 + 4; // Calculate the maximum allowed links
             const links = document.querySelectorAll('a'); // Get all links on the page
             const articlesFolderURL = '../cards/articles'; // Set the folder path
 
