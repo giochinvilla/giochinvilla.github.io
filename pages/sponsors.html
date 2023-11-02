@@ -54,7 +54,7 @@
         function loadHTMLFiles(number, insertionPoint) {
             const container = document.createElement('div');
             
-            for (let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 3; i++) {
                 const div = document.createElement('div');
                 div.setAttribute('loadHTML', `../cards/articles/article${(number*3)+i}.html`);
                 container.appendChild(div);
