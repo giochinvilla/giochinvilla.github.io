@@ -82,7 +82,7 @@
 	border: #4ec7f3 1px solid;
 	border-radius: 10px;
 	color:white;
-	padding: 3px;
+	padding: 2px;
 }
 
 .greenTag {
@@ -90,7 +90,7 @@
 	border: #67d0a1 1px solid;
 	border-radius: 10px;
 	color:white;
-	padding: 3px;
+	padding: 2px;
 }
 
 .yellowTag {
@@ -98,7 +98,7 @@
 	border: #ebcc32 1px solid;
 	border-radius: 10px;
 	color:white;
-	padding: 3px;
+	padding: 2px;
 }
 
 .redTag {
@@ -106,47 +106,7 @@
 	border: #e34262 1px solid;
 	border-radius: 10px;
 	color:white;
-	padding: 3px;
-}
-
-.mini-blueTag {
-	background-color: #4ec7f3;
-	border: #4ec7f3 1px solid;
-	border-radius: 10px;
-	font-size: 14px;
-	color:white;
-	padding: 3px;
-	font-family: Couture;
-}
-
-.mini-greenTag {
-	background-color: #67d0a1;
-	border: #67d0a1 1px solid;
-	border-radius: 10px;
-	font-size: 14px;
-	color:white;
-	padding: 3px;
-	font-family: Couture;
-}
-
-.mini-yellowTag {
-	background-color: #ebcc32;
-	border: #ebcc32 1px solid;
-	border-radius: 10px;
-	font-size: 14px;
-	color:white;
-	padding: 3px;
-	font-family: Couture;
-}
-
-.mini-redTag {
-	background-color: #e34262;
-	border: #e34262 1px solid;
-	border-radius: 10px;
-	font-size: 14px;
-	color:white;
-	padding: 3px;
-	font-family: Couture;
+	padding: 2px;
 }
 
 /* General Impostation for Card Department Selection */
