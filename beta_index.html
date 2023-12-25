@@ -50,10 +50,20 @@
         </ul>
       </div>
 	  <form class="d-flex">
-        <button class="btn btn-info text-white" type="button" onclick="playMusic()">Fidati</button>
+        <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#myModal" type="button" onclick="playMusic()">Fidati</button>
       </form>
     </div>
   </nav>
+  
+  <div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1>Non dovevi!</h1>
+      </div>
+    </div>
+  </div>
+</div>
   
   <div class="row m-auto">
     <div class="col-xl-9 ps-xl-5 p-3">
