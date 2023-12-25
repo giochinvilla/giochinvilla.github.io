@@ -1,3 +1,8 @@
+body {
+  font-family: Couture;
+  background: url(../images/technical/background2.jpg) no-repeat center center fixed;
+}
+
 .btn-A span {
   z-index: 2; 
   display: block;
