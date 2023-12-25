@@ -28,65 +28,33 @@
 	  
 	  <div class="container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded">
 	    <div class="row">
-		  <div class="col-lg-3 col-md-3 text-white bg-danger text-center">
+		  <div class="col-lg-3 col-md-3 text-white bg-danger text-center p-4">
 		    <h2>Giochi di Ruolo</h2>
-			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>
-			  
+			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>  
 			<a href="./pages/roleplay_games.html"> <div class="button"><div class="btn btn-A"><span>Scopri</span></div></div></a>
-			  
 		  </div>
-		  <div class="col-lg-3 col-md-3 text-white bg-warning">q</div>
-		  <div class="col-lg-3 col-md-3 text-white bg-danger">q</div>
-		  <div class="col-lg-3 col-md-3 text-white bg-primary">q</div>
-		</div>
-		<h1>My First Bootstrap Page</h1>
-		<p>This part is inside a .container class.</p>
-		<p>The .container class provides a responsive fixed width container.</p>
-		<p>Resize the browser window to see that the container width will change at different breakpoints.</p>
-	  </div>
-		
-	  <div class="container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded">
-
-	    <div class="row">
-		  <div class="col-lg-9 text-white">
-			<h2>
-			  <img src="../images/technical/subtitle-logo.png"></img>
-			  <span class="badge bg-primary rounded-pill" id="badge">EVENTO</span>
-			  <span id="title">SALA GIOCA</span>
-			</h2>
+		  
+		  <div class="col-lg-3 col-md-3 text-white bg-warning text-center p-4">
+		    <h2>Giochi da Tavolo</h2>
+			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>  
+			<a href="./pages/roleplay_games.html"> <div class="button"><div class="btn btn-A"><span>Scopri</span></div></div></a>
 		  </div>
-		  <div class="col-lg-3 text-white text-end">
-			<h5 id="subtitle">Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023</h5>
+		  
+		  <div class="col-lg-3 col-md-3 text-white bg-danger text-center p-4">
+		    <h2>Giochi di Carte</h2>
+			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>  
+			<a href="./pages/roleplay_games.html"> <div class="button"><div class="btn btn-A"><span>Scopri</span></div></div></a>
+		  </div>
+		  
+		  <div class="col-lg-3 col-md-3 text-white bg-warning text-center p-4">
+		    <h2>Warhammer 40k</h2>
+			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>  
+			<a href="./pages/roleplay_games.html"> <div class="button"><div class="btn btn-A"><span>Scopri</span></div></div></a>
 		  </div>
 		</div>
-		
-		<div><img src="../images/eventi/article1.webp"></img></div>
-		
-		<p id="description">Siamo lieti di presentarvi Sala Gioca, il nuovo evento targato Giochi in Villa 
-	completamente pensato per il gioco e soprattutto... Per i giocatori!<br>
-	Domenica 12 Novembre, nella sala teatro di Villa Farsetti, vi aspettiamo per 
-	farvi provare un'infinità di nuovi giochi, molti dei quali offerti dai nostri 
-	numerosi sponsor! Dai più colorati e divertenti, ai più seri e competitivi, 
-	ce n'è davvero per tutti i gusti! E non solo! Ad attendervi anche tornei di 
-	carte, di warhammer, stand espositivi, avventure gdr e food truck!</p>
-	
 	  </div>
-	
-	  <div class="container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded">
-	    <div class="row">
-		  <div class="col-lg-3 col-md-3 text-white bg-danger">q</div>
-		  <div class="col-lg-3 col-md-3 text-white bg-warning">q</div>
-		  <div class="col-lg-3 col-md-3 text-white bg-danger">q</div>
-		  <div class="col-lg-3 col-md-3 text-white bg-primary">q</div>
-		</div>
-		<h1>My First Bootstrap Page</h1>
-		<p>This part is inside a .container class.</p>
-		<p>The .container class provides a responsive fixed width container.</p>
-		<p>Resize the browser window to see that the container width will change at different breakpoints.</p>
-	  </div>
-	  
-	
-	
+		
+	  <div id="templateContainer"></div>
 	
 	</div>
     <div class="col-lg-3 text-white bg-secondary p-5">.col</div>
@@ -114,9 +82,9 @@ function bannerTemplate(templateVariables) {
 		"<div class='row'>" + 
 		  "<div class='col-lg-9 text-white'>" +
 			"<h2>" + 
-			  "<img src='../images/technical/subtitle-logo.png' style='width: 24px; margin-right: 15px;'></img>" + 
+			  "<img class='img-fluid' src='../images/technical/subtitle-logo.png' style='width: 28px; margin-right: 15px;'></img>" + 
 			  "<span class='badge bg-{{color}} rounded-pill'>{{badge}}</span>" + 
-			  "<span>{{title}}</span>" + 
+			  "<span> {{title}}</span>" + 
 			"</h2>" + 
 		  "</div>" +
 		  "<div class='col-lg-3 text-white text-end'>" +
