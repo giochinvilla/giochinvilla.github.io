@@ -44,7 +44,7 @@
     </div>
   </nav>
   
-  <div class="row">
+  <div class="row m-auto">
     <div class="col-lg-9 ps-sm-5 p-3">
 		
 	  <div class="alert alert-danger"><strong>Attenzione!</strong> Grazie dell'attenzione</div>
@@ -150,7 +150,7 @@ function bannerTemplate(templateVariables, container) {
 		"<br>" +
 		"<div><img class='img-fluid' src='../images/eventi/article1.webp'></img></div>" +
 		"<br>" +
-		"<h6>{{description}}<h6>" +
+		"<h5>{{description}}</h5>" +
 	
 	  "</div>";
 
@@ -163,8 +163,8 @@ function bannerTemplate(templateVariables, container) {
     document.getElementById(container).innerHTML = template;
 }
 
-loadTemplateVariables(bannerTemplate, "template_variables_1.json", "templateContainer_1");
-loadTemplateVariables(bannerTemplate, "template_variables_2.json", "templateContainer_2");
+loadTemplateVariables(bannerTemplate, "template_variables.json", "templateContainer_1");
+loadTemplateVariables(bannerTemplate, "template_variables.json", "templateContainer_2");
 </script>
 
 </body>
