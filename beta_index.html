@@ -79,9 +79,9 @@
 
 
 <script>
-function loadTemplateVariables(callback) {
+function loadTemplateVariables(callback, file) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "template_variables.json", true);
+    xhr.open("GET", file, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var templateVariables = JSON.parse(xhr.responseText);
@@ -91,9 +91,8 @@ function loadTemplateVariables(callback) {
     xhr.send();
 }
 
-// Populate the template with variables
-function populateTemplate(templateVariables) {
-    // Your HTML template
+function bannerTemplate(templateVariables) {
+
     var template = "" +
 	  "<div class='container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded'>" + 
 		"<div class='row'>" + 
@@ -115,13 +114,16 @@ function populateTemplate(templateVariables) {
 	
 	  "</div>";
 
-    template = template.replace("{{title}}", templateVariables.name);
-    template = template.replace("{{badge}}", templateVariables.email);
+    template = template.replace("{{title}}", templateVariables.title);
+    template = template.replace("{{badge}}", templateVariables.badge);
+	template = template.replace("{{color}}", templateVariables.color);
+    template = template.replace("{{subtitle}}", templateVariables.subtitle);
+	template = template.replace("{{description}}", templateVariables.description);
 
     document.getElementById("templateContainer").innerHTML = template;
 }
 
-loadTemplateVariables(populateTemplate);
+loadTemplateVariables(bannerTemplate, "template_variables.json");
 </script>
 
 </body>
