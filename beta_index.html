@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+  <title>Giochi in Villa</title>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel="icon" type="image/x-icon" href="./images/technical/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+</head>
+<body>
+  
+<div class="container-fluid">
+  <h1>Two Unequal Responsive Columns</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
+  
+  
+  
+  <div class="row">
+    <div class="col-lg-9 text-white p-lg-5 p-md-4 p-3">
+		
+
+	  <div class="alert alert-danger">
+		<strong>Success!</strong> Indicates a successful or positive action.
+	  </div>
+		
+	  <div class="container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded">
+
+	    <div class="row">
+		  <div class="col-lg-9 text-white">
+			<h2>
+			  <img src="../images/technical/subtitle-logo.png"></img>
+			  <span class="badge bg-primary rounded-pill" id="badge">EVENTO</span>
+			  <span id="title">SALA GIOCA</span>
+			</h2>
+		  </div>
+		  <div class="col-lg-3 text-white text-end">
+			<h5 id="subtitle">Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023</h5>
+		  </div>
+		</div>
+		
+		<div><img src="../images/eventi/article1.webp"></img></div>
+		
+		<p id="description">Siamo lieti di presentarvi Sala Gioca, il nuovo evento targato Giochi in Villa 
+	completamente pensato per il gioco e soprattutto... Per i giocatori!<br>
+	Domenica 12 Novembre, nella sala teatro di Villa Farsetti, vi aspettiamo per 
+	farvi provare un'infinità di nuovi giochi, molti dei quali offerti dai nostri 
+	numerosi sponsor! Dai più colorati e divertenti, ai più seri e competitivi, 
+	ce n'è davvero per tutti i gusti! E non solo! Ad attendervi anche tornei di 
+	carte, di warhammer, stand espositivi, avventure gdr e food truck!</p>
+	
+	  </div>
+	
+	  <div class="container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded">
+	    <div class="row">
+		  <div class="col-lg-3 col-md-3 text-white bg-danger">q</div>
+		  <div class="col-lg-3 col-md-3 text-white bg-warning">q</div>
+		  <div class="col-lg-3 col-md-3 text-white bg-danger">q</div>
+		  <div class="col-lg-3 col-md-3 text-white bg-primary">q</div>
+		</div>
+		<h1>My First Bootstrap Page</h1>
+		<p>This part is inside a .container class.</p>
+		<p>The .container class provides a responsive fixed width container.</p>
+		<p>Resize the browser window to see that the container width will change at different breakpoints.</p>
+	  </div>
+	
+	
+	
+	</div>
+    <div class="col-lg-3 text-white bg-secondary p-5">.col
+	<div id="templateContainer"></div>
+	</div>
+  </div>
+</div>
+
+
+
+<script>
+function loadTemplateVariables(callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "template_variables.json", true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var templateVariables = JSON.parse(xhr.responseText);
+            callback(templateVariables);
+        }
+    };
+    xhr.send();
+}
+
+// Populate the template with variables
+function populateTemplate(templateVariables) {
+    // Your HTML template
+    var template = "<p>Name: {{name}}</p><p>Email: {{email}}</p>";
+
+    // Replace placeholders with actual values
+    template = template.replace("{{name}}", templateVariables.name);
+    template = template.replace("{{email}}", templateVariables.email);
+
+    // Add a class to the template based on the input value
+    var inputClass = templateVariables.inputClass || ''; // Default to an empty string if inputClass is not provided
+    template = template.replace("{{inputClass}}", inputClass);
+
+    // Display the populated template
+    document.getElementById("templateContainer").innerHTML = template;
+}
+
+// Load template variables and populate the template
+loadTemplateVariables(populateTemplate);
+</script>
+
+</body>
+</html>
