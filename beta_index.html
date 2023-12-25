@@ -51,30 +51,30 @@
 	  
 	  <div id="templateContainer_1"></div>
 	  
-	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded" style='--bs-bg-opacity: .85;'>
+	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded border" style='--bs-bg-opacity: .85;'>
 	    <div class="row">
-		  <div class="col-lg-3 col-md-3 col-sm-6 text-white bg-success bg-gradient text-center p-4">
+		  <div class="col-md-3 col-6 text-white bg-success bg-gradient text-center p-4">
 		    <h3 style="height: 70px;">Giochi di Ruolo</h3>
 			<img src="./images/technical/dungeonsanddragons.png" style='width: 60%; max-width: 100px;'></img>  
 			<p style="height: 100px;">Che tu sia un elfo o un nano l'avventura ti aspetta!</p>
 			<a href="./pages/roleplay_games.html"><div class="btn-A"><span>Scopri</span></div></a>
 		  </div>
 		  
-		  <div class="col-lg-3 col-md-3 col-sm-6 text-white bg-info bg-gradient text-center p-4">
+		  <div class="col-md-3 col-6 text-white bg-info bg-gradient text-center p-4">
 		    <h3 style="height: 70px;">Giochi da Tavolo</h3>
 			<img src="./images/technical/tabletop.png" style='width: 60%; max-width: 100px;'></img>  
 			<p style="height: 100px;">Sei pronto a rovinare amicizie e conquistare la vittoria?</p>
 			<a href="./pages/roleplay_games.html"><div class="btn-A"><span>Scopri</span></div></a>
 		  </div>
 		  
-		  <div class="col-lg-3 col-md-3 col-sm-6 text-white bg-danger bg-gradient text-center p-4">
+		  <div class="col-md-3 col-6 text-white bg-danger bg-gradient text-center p-4">
 		    <h3 style="height: 70px;">Giochi di Carte</h3>
 			<img src="./images/technical/cards.png" style='width: 60%; max-width: 100px;'></img>  
 			<p style="height: 100px;">Bro fatti una vita, ancora con yughioh??</p>
 			<a href="./pages/roleplay_games.html"><div class="btn-A"><span>Scopri</span></div></a>
 		  </div>
 		  
-		  <div class="col-lg-3 col-md-3 col-sm-6 text-white bg-warning bg-gradient text-center p-4">
+		  <div class="col-md-3 col-6 text-white bg-warning bg-gradient text-center p-4">
 		    <h3 style="height: 70px;">Warhammer 40k</h3>
 			<img src="./images/technical/warhammer.png" style='width: 60%; max-width: 100px;'></img>  
 			<p style="height: 100px;">Sarai in grado di rispondere alla chiamata dell'Imperatore?</p>
@@ -87,7 +87,7 @@
 	
 	</div>
     <div class="col-lg-3 pe-sm-5 p-3">
-      <div class="container-fluid bg-light bg-gradient p-lg-4 p-md-3 p-2 mb-4 rounded bg-opacity-75 text-center">
+      <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-75 text-center border">
 	    <h3>CHI SIAMO</h3>
 		<p>Giochi in Villa e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici 
 		per il gioco da tavolo. Il nostro e' un hobby che unisce ed aiuta a sviluppare quella convivialita' 
@@ -96,7 +96,7 @@
 		<a class="btn-C" href="../pages/presentation.html">PARTECIPA</a><div class="btn-C-icon"></div>
 	  </div>
 	  
-	  <div class="container-fluid bg-light bg-gradient p-lg-4 p-md-3 p-2 mb-4 rounded bg-opacity-75 text-center">
+	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-75 text-center border">
 	    <h3>ULTIMI EVENTI</h3>
 		<p>Resta aggiornato esplorando i nostri eventi più recenti. Dai game night ai workshop, il nostro calendario 
 		offre esperienze uniche. Sia che tu sia un abituale o un novizio, troverai sempre qualcosa di emozionante 
@@ -104,7 +104,7 @@
 		<a class="btn-C" href="../pages/presentation.html">PARTECIPA</a><div class="btn-C-icon"></div>
 	  </div>
 	  
-	  <div class="container-fluid bg-light bg-gradient p-lg-4 p-md-3 p-2 mb-4 rounded bg-opacity-75 text-center">
+	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-75 text-center border">
 	    <h3>SEGUICI</h3>
 		<p>Vuoi restare aggiornato in tempo reale per tutti gli eventi che proponiamo? Allora segui i nostri
 		social networks, dove pubblichiamo foto e volantini delle nostre iniziative nel territorio</p>
@@ -134,7 +134,7 @@ function loadTemplateVariables(callback, file, container) {
 function bannerTemplate(templateVariables, container) {
 
     var template = "" +
-	  "<div class='container-fluid bg-light bg-gradient p-lg-4 p-md-3 p-2 mb-4 rounded' style='--bs-bg-opacity: .85;'>" + 
+	  "<div class='container-fluid bg-light bg-gradient p-4 mb-4 rounded border' style='--bs-bg-opacity: .85;'>" + 
 		"<div class='row'>" + 
 		  "<div class='col-lg-9'>" +
 			"<h2>" + 
@@ -150,7 +150,7 @@ function bannerTemplate(templateVariables, container) {
 		"<br>" +
 		"<div><img class='img-fluid' src='../images/eventi/article1.webp'></img></div>" +
 		"<br>" +
-		"<h5>{{description}}</h5>" +
+		"<h6>{{description}}</h6>" +
 	
 	  "</div>";
 
