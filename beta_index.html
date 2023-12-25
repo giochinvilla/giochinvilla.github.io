@@ -96,29 +96,19 @@ function populateTemplate(templateVariables) {
     // Your HTML template
     var template = "
 	
-		<div class='container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded'>
+	  <div class='container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded'>
 
-			<div class='row'>
-			  <div class='col-lg-9 text-white'>
-				<h2>
-				  <img src='../images/technical/subtitle-logo.png'></img>
-				  <span class='badge bg-{{color}} rounded-pill'>{{badge}}</span>
-				  <span>{{title}}</span>
-				</h2>
-			  </div>
-			  <div class='col-lg-3 text-white text-end'>
-				<h5>{{subtitle}}</h5>
-			  </div>
-			</div>
-			
-			<div><img src='{{image}}'></img></div>
-			
-			<p>{{description}}</p>
-	  </div>";
+	    <div class='row'>
+		  <div class='col-lg-9 text-white'>
+			<h2>
+			  <img src='../images/technical/subtitle-logo.png'></img>
+			  <span class='badge bg-primary rounded-pill'>{{badge}}</span>
+			  <span>{{title}}</span>
+			</h2>";
 
     // Replace placeholders with actual values
     template = template.replace("{{title}}", templateVariables.name);
-    template = template.replace("{{subtitle}}", templateVariables.email);
+    template = template.replace("{{badge}}", templateVariables.email);
 
     // Add a class to the template based on the input value
     var inputClass = templateVariables.inputClass || ''; // Default to an empty string if inputClass is not provided
