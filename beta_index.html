@@ -24,37 +24,37 @@
 		
 	  <div class="alert alert-danger"><strong>Attenzione!</strong> Grazie dell'attenzione</div>
 	  
-	  <div id="templateContainer"></div>
+	  <div id="templateContainer_1"></div>
 	  
 	  <div class="container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded">
 	    <div class="row">
 		  <div class="col-lg-3 col-md-3 text-white bg-danger text-center p-4">
 		    <h3>Giochi di Ruolo</h3>
-			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>  
+			<img src="./images/technical/dungeonsanddragons.png" style='width: 50%; max-width: 50px; margin-right: 15px;'></img>  
 			<a href="./pages/roleplay_games.html"> <div class="button"><div class="btn btn-A"><span>Scopri</span></div></div></a>
 		  </div>
 		  
 		  <div class="col-lg-3 col-md-3 text-white bg-warning text-center p-4">
 		    <h3>Giochi da Tavolo</h3>
-			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>  
+			<img src="./images/technical/dungeonsanddragons.png" style='width: 50%; max-width: 50px; margin-right: 15px;'></img>  
 			<a href="./pages/roleplay_games.html"> <div class="button"><div class="btn btn-A"><span>Scopri</span></div></div></a>
 		  </div>
 		  
 		  <div class="col-lg-3 col-md-3 text-white bg-danger text-center p-4">
 		    <h3>Giochi di Carte</h3>
-			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>  
+			<img src="./images/technical/dungeonsanddragons.png" style='width: 50%; max-width: 50px; margin-right: 15px;'></img>  
 			<a href="./pages/roleplay_games.html"> <div class="button"><div class="btn btn-A"><span>Scopri</span></div></div></a>
 		  </div>
 		  
 		  <div class="col-lg-3 col-md-3 text-white bg-warning text-center p-4">
 		    <h3>Warhammer 40k</h3>
-			<img src="./images/technical/dungeonsanddragons.png" style='width: 40px; margin-right: 15px;'></img>  
+			<img src="./images/technical/dungeonsanddragons.png" style='width: 50%; max-width: 50px; margin-right: 15px;'></img>  
 			<a href="./pages/roleplay_games.html"> <div class="button"><div class="btn btn-A"><span>Scopri</span></div></div></a>
 		  </div>
 		</div>
 	  </div>
 		
-	  <div id="templateContainer"></div>
+	  <div id="templateContainer_2"></div>
 	
 	</div>
     <div class="col-lg-3 text-white bg-secondary p-5">.col</div>
@@ -63,26 +63,26 @@
 
 
 <script>
-function loadTemplateVariables(callback, file) {
+function loadTemplateVariables(callback, file, container) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", file, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var templateVariables = JSON.parse(xhr.responseText);
-            callback(templateVariables);
+            callback(templateVariables, container);
         }
     };
     xhr.send();
 }
 
-function bannerTemplate(templateVariables) {
+function bannerTemplate(templateVariables, container) {
 
     var template = "" +
 	  "<div class='container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded'>" + 
 		"<div class='row'>" + 
 		  "<div class='col-lg-9 text-white'>" +
 			"<h2>" + 
-			  "<img class='img' src='../images/technical/subtitle-logo.png' style='width: 28px; margin-right: 15px;'></img>" + 
+			  "<img class='img-fluid' src='../images/technical/subtitle-logo.png' style='width: 28px; margin-right: 15px;'></img>" + 
 			  "<span class='badge bg-{{color}} rounded-pill'>{{badge}}</span>" + 
 			  "<span> {{title}}</span>" + 
 			"</h2>" + 
@@ -93,8 +93,8 @@ function bannerTemplate(templateVariables) {
 	    "</div>" +
 		
 		"<div><img src='../images/eventi/article1.webp'></img></div>" +
-		
-		"<p class='h6'>{{description}}</p>" +
+		"<br>" +
+		"<h6>{{description}}<h6>" +
 	
 	  "</div>";
 
@@ -104,10 +104,11 @@ function bannerTemplate(templateVariables) {
     template = template.replace("{{subtitle}}", templateVariables.subtitle);
 	template = template.replace("{{description}}", templateVariables.description);
 
-    document.getElementById("templateContainer").innerHTML = template;
+    document.getElementById(container).innerHTML = template;
 }
 
-loadTemplateVariables(bannerTemplate, "template_variables.json");
+loadTemplateVariables(bannerTemplate, "template_variables.json", "templateContainer_1");
+loadTemplateVariables(bannerTemplate, "template_variables.json", "templateContainer_2");
 </script>
 
 </body>
