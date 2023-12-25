@@ -1,5 +1,13 @@
 {
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "inputClass": "custom-class"
+    "color": "primary",
+    "badge": "EVENTO",
+    "title": "SALA GIOCA"
+    "subtitle": "Sala Teatro<br>Santa Maria di Sala, Nov 12, 2023"
+    "description": "Siamo lieti di presentarvi Sala Gioca, il nuovo evento targato Giochi in Villa 
+	completamente pensato per il gioco e soprattutto... Per i giocatori!<br>
+	Domenica 12 Novembre, nella sala teatro di Villa Farsetti, vi aspettiamo per 
+	farvi provare un'infinità di nuovi giochi, molti dei quali offerti dai nostri 
+	numerosi sponsor! Dai più colorati e divertenti, ai più seri e competitivi, 
+	ce n'è davvero per tutti i gusti! E non solo! Ad attendervi anche tornei di 
+	carte, di warhammer, stand espositivi, avventure gdr e food truck!"
 }
