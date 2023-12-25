@@ -94,17 +94,7 @@ function loadTemplateVariables(callback) {
 // Populate the template with variables
 function populateTemplate(templateVariables) {
     // Your HTML template
-    var template = "
-	
-	  <div class='container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded'>
-
-	    <div class='row'>
-		  <div class='col-lg-9 text-white'>
-			<h2>
-			  <img src='../images/technical/subtitle-logo.png'></img>
-			  <span class='badge bg-primary rounded-pill'>{{badge}}</span>
-			  <span>{{title}}</span>
-			</h2>";
+    var template = "<div class='container-fluid bg-secondary p-lg-4 p-md-3 p-2 mb-4 rounded'><div class='row'><div class='col-lg-9 text-white'><h2><img src='../images/technical/subtitle-logo.png'></img><span class='badge bg-primary rounded-pill'>{{badge}}</span><span>{{title}}</span></h2>";
 
     // Replace placeholders with actual values
     template = template.replace("{{title}}", templateVariables.name);
