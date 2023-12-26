@@ -157,6 +157,7 @@ function bannerTemplate(templateVariables, container) {
 		"<br>" +
 		"<div><img class='img-fluid' src='../images/eventi/article1.webp'></img></div>" +
 		"<br>" +
+		"<div class='text-center'>{{extra_data}}</div>"
 	  "</div>";
 
     template = template.replace("{{title}}", templateVariables.title);
@@ -164,6 +165,7 @@ function bannerTemplate(templateVariables, container) {
 	template = template.replace("{{color}}", templateVariables.color);
     template = template.replace("{{subtitle}}", templateVariables.subtitle);
 	template = template.replace("{{description}}", templateVariables.description);
+	template = template.replace("{{extra_data}}", templateVariables.extra_data);
 
     document.getElementById(container).innerHTML = template;
 }
