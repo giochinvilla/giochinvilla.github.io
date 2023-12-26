@@ -121,10 +121,12 @@ function bannerTemplate(templateVariables, container) {
 		"<br>" +
 		"<h6>{{description}}</h6>" +
 		"<br>" +
-		"<div class='text-center'><a href='{{info_link}}' class='btn btn-secondary btn-lg' role='button'>Infopack</a></div>" +
+		"<div class='text-center'><a href='{{link_href_1}}' class='btn btn-{{link_color_1}} btn-lg {{link_class_1}}' role='button'>{{link_name_1}}</a></div>" +
+		"<br>" +
+		"<div class='text-center'><a href='{{link_href_2}}' class='btn btn-{{link_color_2}} btn-lg {{link_class_2}}' role='button'>{{link_cname_2}}</a></div>" +
 		"<br>" +
 		"<br>" +
-		"<div><img class='img-fluid' src='../images/eventi/article1.webp'></img></div>" +
+		"<div><img class='img-fluid' src='{{image}}'></img></div>" +
 		"<br>" +
 		"<div class='text-center'>{{extra_data}}</div>" +
 		"<br>" +
@@ -159,8 +161,16 @@ function bannerTemplate(templateVariables, container) {
 	template = template.replace("{{color}}", templateVariables.color);
     template = template.replace("{{subtitle}}", templateVariables.subtitle);
 	template = template.replace("{{description}}", templateVariables.description);
+	template = template.replace("{{image}}", templateVariables.image);
+	template = template.replace("{{link_href_1}}", templateVariables.link_href_1);
+	template = template.replace("{{link_color_1}}", templateVariables.link_color_1);
+	template = template.replace("{{link_class_1}}", templateVariables.link_class_1);
+	template = template.replace("{{link_name_1}}", templateVariables.link_name_1);
+	template = template.replace("{{link_href_2}}", templateVariables.link_href_2);
+	template = template.replace("{{link_color_2}}", templateVariables.link_color_2);
+	template = template.replace("{{link_class_2}}", templateVariables.link_class_2);
+		template = template.replace("{{link_name_2}}", templateVariables.link_name_2);
 	template = template.replace("{{extra_data}}", templateVariables.extra_data);
-	template = template.replace("{{info_link}}", templateVariables.info_link);
 	template = template.replace("{{carousel_display}}", templateVariables.carousel_display);
 	template = template.replace("{{carousel_1}}", templateVariables.carousel_1);
 	template = template.replace("{{carousel_2}}", templateVariables.carousel_2);
