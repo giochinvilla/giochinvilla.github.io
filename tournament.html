@@ -45,18 +45,15 @@
     <div class="col-xl-3 pe-xl-5 p-3">
       <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-75 text-center border">
 	    <h3>TORNEI PASSATI</h3>
-		<ul class="nav flex-column">
-		  <li class="nav-item bg-teal">
-		    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Ordalia</a>
-			<ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="./tournament.html?number=1">Ordalia I</a></li>
-			  <li><a class="dropdown-item" href="./tournament.html?number=2">Ordalia II</a></li>
-			</ul>
-		  </li>
-		  <li class="nav-item bg-teal">
-			<a class="nav-link" href="./tournament.html?number=2">Bhortrer</a>
-		  </li>
-		</ul>
+		<div class="dropdown">
+			<button class="btn btn-teal dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Ordalia
+			</button>
+		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<a class="dropdown-item" href="./tournament.html?number=1">Ordalia I</a>
+			<a class="dropdown-item" href="./tournament.html?number=2">Ordalia II</a>
+		  </div>
+		</div>
 	  </div>
 	  
 	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-75 text-center border">
