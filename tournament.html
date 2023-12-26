@@ -78,6 +78,7 @@
 
 <script>
 function paginator() {	
+	const urlParams = new URLSearchParams(window.location.search);
 	let number = parseInt(urlParams.get('number'));
 	if (isNaN(number)) {
 		number = 1;	
