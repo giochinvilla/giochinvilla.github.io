@@ -87,21 +87,21 @@ function paginator() {
 	let max_pages = 5;
 	
 	if (number == 1) {
-		document.getElementById('previous').classList.add("disable");
-		document.getElementById('first').classList.add("disable");
+		document.getElementById('previous').classList.add("disabled");
+		document.getElementById('first').classList.add("disabled");
 		document.getElementById('first').innerHTML = 1;
 		document.getElementById('second').innerHTML = 2;
 		document.getElementById('third').innerHTML = 3;
 	}
 	else if (number == max_pages) {
-		document.getElementById('next').classList.add("disable");
-		document.getElementById('third').classList.add("disable");
+		document.getElementById('next').classList.add("disabled");
+		document.getElementById('third').classList.add("disabled");
 		document.getElementById('first').innerHTML = max_pages-2;
 		document.getElementById('second').innerHTML = max_pages-1;
 		document.getElementById('third').innerHTML = max_pages;
 	}
 	else {
-		document.getElementById('second').classList.add("disable");
+		document.getElementById('second').classList.add("disabled");
 		document.getElementById('first').innerHTML = number-1;
 		document.getElementById('second').innerHTML = number;
 		document.getElementById('third').innerHTML = number+1;
