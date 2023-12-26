@@ -105,6 +105,9 @@ function loadTemplateVariables(callback, container, index) {
     var xhr = new XMLHttpRequest();
 	const urlParams = new URLSearchParams(window.location.search);
 	let number = parseInt(urlParams.get('number'));
+	if (isNaN(number)) {
+		number = 1;	
+		}
 	var file = "../template/post_variables_" + (number*3-index) + ".json"
     xhr.open("GET", file, true);
     xhr.onreadystatechange = function () {
