@@ -176,6 +176,7 @@ function bannerTemplate(templateVariables, container) {
 	template = template.replace("{{link_href}}", templateVariables.link_href);
 	template = template.replace("{{link_class}}", templateVariables.link_class);
 	template = template.replace("{{link_name}}", templateVariables.link_name);
+	template = template.replace("{{link_color}}", templateVariables.link_color);
 
     document.getElementById(container).innerHTML = template;
 }
