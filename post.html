@@ -92,12 +92,12 @@ function paginator() {
 		document.getElementById('second').innerHTML = number;
 		document.getElementById('third').innerHTML = number+1;
 	}
-	document.getElementById('previous').href = `./tournament.html?number=1`;
-	document.getElementById('next').href = `./tournament.html?number=${max_pages}`;
+	document.getElementById('previous').href = `./post.html?number=1`;
+	document.getElementById('next').href = `./post.html?number=${max_pages}`;
 	
-	document.getElementById('first').href = `./tournament.html?number=${document.getElementById("first").innerHTML}`;
-	document.getElementById('second').href = `./tournament.html?number=${document.getElementById("second").innerHTML}`;
-	document.getElementById('third').href = `./tournament.html?number=${document.getElementById("third").innerHTML}`;
+	document.getElementById('first').href = `./post.html?number=${document.getElementById("first").innerHTML}`;
+	document.getElementById('second').href = `./post.html?number=${document.getElementById("second").innerHTML}`;
+	document.getElementById('third').href = `./post.html?number=${document.getElementById("third").innerHTML}`;
 }
 
 
@@ -105,7 +105,7 @@ function loadTemplateVariables(callback, container, index) {
     var xhr = new XMLHttpRequest();
 	const urlParams = new URLSearchParams(window.location.search);
 	let number = parseInt(urlParams.get('number'));
-	var file = "./template/tournament_variables_" + number*3+index + ".json"
+	var file = "./template/post_variables_" + number*3+index + ".json"
     xhr.open("GET", file, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
