@@ -115,7 +115,7 @@ function loadTemplateVariables(callback, container) {
     var xhr = new XMLHttpRequest();
 	const urlParams = new URLSearchParams(window.location.search);
 	let number = parseInt(urlParams.get('number'));
-	var file = "./template/tournament_variables_" + number + ".json"
+	var file = "../template/tournament_variables_" + number + ".json"
     xhr.open("GET", file, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
