@@ -105,7 +105,7 @@ function loadTemplateVariables(callback, container, index) {
     var xhr = new XMLHttpRequest();
 	const urlParams = new URLSearchParams(window.location.search);
 	let number = parseInt(urlParams.get('number'));
-	var file = "./template/post_variables_" + (number*3+index) + ".json"
+	var file = "./template/post_variables_" + (number*3-index) + ".json"
     xhr.open("GET", file, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -180,9 +180,9 @@ function bannerTemplate(templateVariables, container) {
     document.getElementById(container).innerHTML = template;
 }
 
-loadTemplateVariables(bannerTemplate, "templateContainer_1",0);
-loadTemplateVariables(bannerTemplate, "templateContainer_2",1);
 loadTemplateVariables(bannerTemplate, "templateContainer_1",2);
+loadTemplateVariables(bannerTemplate, "templateContainer_2",1);
+loadTemplateVariables(bannerTemplate, "templateContainer_1",0);
 loadExternalHTML();
 paginator();
 
