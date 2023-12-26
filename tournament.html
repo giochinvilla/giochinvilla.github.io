@@ -28,8 +28,6 @@
 	  <div class="alert alert-danger"><strong>Attenzione!</strong> Grazie dell'attenzione</div>
 	  
 	  <div id="templateContainer_1"></div>
-		
-	  <div id="templateContainer_2"></div>
 	
 	</div>
     <div class="col-xl-3 pe-xl-5 p-3">
@@ -123,7 +121,8 @@ function bannerTemplate(templateVariables, container) {
 		"<br>" +
 		"<h6>{{description}}</h6>" +
 		"<br>" +
-		"<a href='{{info_link}}' class='btn btn-info btn-lg' role='button'>Infopack</a>" +
+		"<div class='text-center text-light'><a href='{{info_link}}' class='btn btn-info btn-lg' role='button'>Infopack</a></div>" +
+		"<br>" +
 		"<br>" +
 		"<div><img class='img-fluid' src='../images/eventi/article1.webp'></img></div>" +
 		"<br>" +
@@ -171,7 +170,6 @@ function bannerTemplate(templateVariables, container) {
 }
 
 loadTemplateVariables(bannerTemplate, "./template/tournament_variables_1.json", "templateContainer_1");
-loadTemplateVariables(bannerTemplate, "./template/tournament_variables_2.json", "templateContainer_2");
 loadExternalHTML();
 
 </script>
