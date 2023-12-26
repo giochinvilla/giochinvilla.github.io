@@ -24,8 +24,18 @@
   
   <div class="row m-auto">
     <div class="col-xl-9 ps-xl-5 p-3">
+	
+	  <div>
+		<ul class="pagination">
+		  <li class="page-item"><a class="page-link" href="#" id="previous">First</a></li>
+		  <li class="page-item"><a class="page-link" href="#" id="first">1</a></li>
+		  <li class="page-item"><a class="page-link" href="#" id="second">2</a></li>
+		  <li class="page-item"><a class="page-link" href="#" id="third">3</a></li>
+		  <li class="page-item"><a class="page-link" href="#" id="next">Last</a></li>
+		</ul>
+	  <div>
 		
-	  <div class="alert alert-danger"><strong>Attenzione!</strong> Grazie dell'attenzione</div>
+	  <div loadHTML="./annouce.html"></div>
 	  
 	  <div id="templateContainer_1"></div>
 	
@@ -67,6 +77,43 @@
 
 
 <script>
+function paginator() {	
+	let number = parseInt(urlParams.get('number'));
+	if (isNaN(number)) {
+		number = 1;	
+		}		
+	
+	let max_pages = 5;
+	
+	if (number == 1) {
+		document.getElementById('previous').classList.add("disable");
+		document.getElementById('first').classList.add("disable");
+		document.getElementById('first').innerHTML = 1;
+		document.getElementById('second').innerHTML = 2;
+		document.getElementById('third').innerHTML = 3;
+	}
+	else if (number == max_pages) {
+		document.getElementById('next').classList.add("disable");
+		document.getElementById('third').classList.add("disable");
+		document.getElementById('first').innerHTML = max_pages-2;
+		document.getElementById('second').innerHTML = max_pages-1;
+		document.getElementById('third').innerHTML = max_pages;
+	}
+	else {
+		document.getElementById('second').classList.add("disable");
+		document.getElementById('first').innerHTML = number-1;
+		document.getElementById('second').innerHTML = number;
+		document.getElementById('third').innerHTML = number+1;
+	}
+	document.getElementById('previous').href = `#?number=1`;
+	document.getElementById('next').href = `#?number=${max_pages}`;
+	
+	document.getElementById('first').href = `#?number=${document.getElementById("first").innerHTML}`;
+	document.getElementById('second').href = `#?number=${document.getElementById("second").innerHTML}`;
+	document.getElementById('third').href = `#?number=${document.getElementById("third").innerHTML}`;
+}
+
+
 function loadTemplateVariables(callback, file, container) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", file, true);
@@ -128,7 +175,7 @@ function bannerTemplate(templateVariables, container) {
 		"<br>" +
 		"<div><img class='img-fluid' src='{{image}}'></img></div>" +
 		"<br>" +
-		"<div class='text-center'>{{extra_data}}</div>" +
+		"<div class='text-center'>{{description_2}}</div>" +
 		"<br>" +
 		"<div id='demo' class='carousel slide d-{{carousel_display}}' data-bs-ride='carousel'>" +
 		  "<div class='carousel-indicators'>" +
@@ -170,7 +217,7 @@ function bannerTemplate(templateVariables, container) {
 	template = template.replace("{{link_color_2}}", templateVariables.link_color_2);
 	template = template.replace("{{link_class_2}}", templateVariables.link_class_2);
 		template = template.replace("{{link_name_2}}", templateVariables.link_name_2);
-	template = template.replace("{{extra_data}}", templateVariables.extra_data);
+	template = template.replace("{{description_2}}", templateVariables.extra_data);
 	template = template.replace("{{carousel_display}}", templateVariables.carousel_display);
 	template = template.replace("{{carousel_1}}", templateVariables.carousel_1);
 	template = template.replace("{{carousel_2}}", templateVariables.carousel_2);
@@ -181,6 +228,7 @@ function bannerTemplate(templateVariables, container) {
 
 loadTemplateVariables(bannerTemplate, "./template/tournament_variables_1.json", "templateContainer_1");
 loadExternalHTML();
+paginator();
 
 </script>
 
