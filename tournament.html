@@ -25,7 +25,7 @@
   <div class="row m-auto">
     <div class="col-xl-9 ps-xl-5 p-3">
 	
-	  <div class="container">
+	  <div class="container text-center text-info">
 		<ul class="pagination">
 		  <li class="page-item"><a class="page-link" href="#" id="previous">First</a></li>
 		  <li class="page-item"><a class="page-link" href="#" id="first">1</a></li>
@@ -106,12 +106,12 @@ function paginator() {
 		document.getElementById('second').innerHTML = number;
 		document.getElementById('third').innerHTML = number+1;
 	}
-	document.getElementById('previous').href = `./tornament.html?number=1`;
-	document.getElementById('next').href = `./tornament.html?number=${max_pages}`;
+	document.getElementById('previous').href = `./tournament.html?number=1`;
+	document.getElementById('next').href = `./tournament.html?number=${max_pages}`;
 	
-	document.getElementById('first').href = `./tornament.html?number=${document.getElementById("first").innerHTML}`;
-	document.getElementById('second').href = `./tornament.html?number=${document.getElementById("second").innerHTML}`;
-	document.getElementById('third').href = `./tornament.html?number=${document.getElementById("third").innerHTML}`;
+	document.getElementById('first').href = `./tournament.html?number=${document.getElementById("first").innerHTML}`;
+	document.getElementById('second').href = `./tournament.html?number=${document.getElementById("second").innerHTML}`;
+	document.getElementById('third').href = `./tournament.html?number=${document.getElementById("third").innerHTML}`;
 }
 
 
