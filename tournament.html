@@ -111,8 +111,11 @@ function paginator() {
 }
 
 
-function loadTemplateVariables(callback, file, container) {
+function loadTemplateVariables(callback, container) {
     var xhr = new XMLHttpRequest();
+	const urlParams = new URLSearchParams(window.location.search);
+	let number = parseInt(urlParams.get('number'));
+	var file = "./template/tournament_variables_" + number + ".json"
     xhr.open("GET", file, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -223,7 +226,7 @@ function bannerTemplate(templateVariables, container) {
     document.getElementById(container).innerHTML = template;
 }
 
-loadTemplateVariables(bannerTemplate, "./template/tournament_variables_1.json", "templateContainer_1");
+loadTemplateVariables(bannerTemplate, "templateContainer_1");
 loadExternalHTML();
 paginator();
 
