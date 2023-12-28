@@ -13,10 +13,10 @@
     "link_color_2": "success",
     "link_class_2": "disabled",
     "link_name_2": "Iscriviti",
-    "image": "./images/articles/article1.webp",
+    "image": "../images/longshot/example.webp",
     "description_3": "Congrats ai vincutoruy",
     "carousel_display": "block",
-    "carousel_1": "./images/articles/article1.webp",
-    "carousel_2": "./images/articles/article2.webp",
-    "carousel_3": "./images/articles/article1.webp"
+    "carousel_1": "../images/longshot/example.webp",
+    "carousel_2": "../images/longshot/example.webp",
+    "carousel_3": "../images/longshot/example.webp"
 }
