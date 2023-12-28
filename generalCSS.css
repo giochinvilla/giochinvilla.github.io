@@ -1,0 +1,8 @@
+body {
+  font-family: Google;
+  background: url(../images/technical/background2.jpg) no-repeat center center fixed;
+}
+
+.bg-teal {
+  background-color: #20c997;
+}
