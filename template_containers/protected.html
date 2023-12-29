@@ -55,7 +55,7 @@ function loadPage(pwd) {
 	hash= Sha1.hash(pwd);
 	
 	const urlParams = new URLSearchParams(window.location.search);
-	let number = parseInt(urlParams.get('page'));
+	let page = urlParams.get('page');
 	
 	var url= "../pages/" + hash + "/" + page;
 	$.ajax({
