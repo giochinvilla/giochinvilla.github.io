@@ -16,10 +16,6 @@
 </head>
 <body>
   
-  <div class="container-fluid text-center">
-    <img class='img-fluid' src='../images/backgrounds/header.webp'></img>
-  </div>
-  
   <div class="sticky-top" loadHTML="../template_containers/nav.html"></div>
   
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -50,10 +46,6 @@
 	</div>
 	<div class="col-xl-4 col-md-3 col-1"></div>
   </div>
-  <br><br><br><br><br><br>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-secondary">
-    <div class="ps-3">Powered by Github - Made by Vice</div>
-  </nav>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
@@ -70,11 +62,10 @@ function loadPage(pwd) {
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
 			parent.location.hash= hash;
-			$("#password").attr("placeholder","Wrong password");
+			$("#password").attr("placeholder","password");
 			$("#password").val("");
-			var alertElement = document.getElementById("alert");
-			alertElement.classList.remove("d-none");
-			alertElement.classList.add("d-none");
+			document.getElementById("alert").classList.remove("d-none");
+			document.getElementById("prealert").classList.add("d-none");
 		}
 	});
 }
