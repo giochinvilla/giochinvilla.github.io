@@ -33,6 +33,11 @@
     <div class="col-xl-4 col-md-3 col-1"></div>
 	<div class="col-xl-4 col-md-6 col-10">
 	
+	  <div class="alert alert-warning" role="alert" id="prealert">
+		<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+		<strong>Attenzione!</strong> Stai cercando di accedere ad un'area protetta!
+	  </div>
+	
 	  <div class="alert alert-danger d-none" role="alert" id="alert">
 		<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#exclamation-triangle-fill"/></svg>
 		<strong>Password Errata!</strong>
@@ -69,6 +74,7 @@ function loadPage(pwd) {
 			$("#password").val("");
 			var alertElement = document.getElementById("alert");
 			alertElement.classList.remove("d-none");
+			alertElement.classList.add("d-none");
 		}
 	});
 }
