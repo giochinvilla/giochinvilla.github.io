@@ -1,0 +1,13 @@
+{
+    "color": "info",
+    "badge": "EVENTO",
+    "title": "SALA GIOCA",
+    "subtitle": "Sala Teatro di Villa Farsetti, Nov 21, 2023",
+    "description": "Siamo lieti di presentarvi Sala Gioca, il nuovo evento targato Giochi in Villa completamente pensato per il gioco e soprattutto... Per i giocatori!<br>Domenica 12 Novembre, nella sala teatro di Villa Farsetti, vi aspettiamo per farvi provare un'infinità di nuovi giochi, molti dei quali offerti dai nostri numerosi sponsor! Dai più colorati e divertenti, ai più seri e competitivi, ce n'è davvero per tutti i gusti!<br><br>E non solo! Ad attendervi anche tornei di carte, di warhammer, stand espositivi, avventure gdr e food truck!",
+    "image": "../images/longshot/salagioca.webp",    
+    "description_2": "E anche il #salagioca è passato. Oltre 500 visitatori, 70 giocatori per i tornei di carte e di warhammer, tanti nuovi giochi da provare e ben due food truck a disposizione: un verdetto ben più che positivo per questa prima edizione! Leggi di più nel nostro articolo!",
+    "link_href": "../template_containers/protected.html?page=salagioca.html",
+    "link_name": "Leggi di piu' sull'evento",
+    "link_class": "",
+    "link_color": "primary"
+}
