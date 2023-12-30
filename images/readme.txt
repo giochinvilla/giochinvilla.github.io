@@ -1,4 +1,4 @@
 Standard Dimension for images:
 
-Longshot: 1080:500
-Middleshot: 1080:810
+Longshot: 800:370
+Middleshot: 700:525
