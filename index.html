@@ -42,7 +42,8 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		
 	  <div loadHTML="../template_containers/annouce.html"></div>
 	  
-	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded border" style='--bs-bg-opacity: .9;'>
+	  <div class="container-fluid bg-light bg-gradient p-2 mb-4 rounded border">
+	  <div class="container-fluid bg-light bg-gradient p-4 rounded border">
 	    <div class="row">
 		  <div class="col-md-3 col-6 text-white bg-teal bg-gradient text-center p-4">
 		    <h3 style="height: 70px;">Giochi di Ruolo</h3>
@@ -73,6 +74,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		  </div>
 		</div>
 	  </div>
+	  </div>
 	  
 	  <div class="row m-auto mb-4">
         <div class="col-lg-6 pe-lg-1 ps-lg-0 mb-4 mb-lg-0">
@@ -91,7 +93,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	  <div class="container-fluid bg-light bg-gradient p-2 mb-4 rounded border">
 	  <div class="container-fluid bg-light bg-gradient p-4 rounded border">
 	    <h3>
-		  <img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 15px;'></img>
+		  <img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>
 		  <span class='badge bg-danger rounded-pill text-white'>SERATE</span>
 		  <span> Rotazione Patronati 2024</span>
 		</h3>
@@ -137,7 +139,8 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	</div>
 	
     <div class="col-xl-3 pe-xl-5 p-3">
-      <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-9 text-center border">
+	  <div class="container-fluid bg-light bg-gradient p-2 mb-4 rounded border">
+      <div class="container-fluid bg-light bg-gradient p-4 rounded bg-opacity-9 text-center border">
 	    <h3>CHI SIAMO</h3>
 		<hr>
 		<p><strong>Giochi in Villa</strong> e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici 
@@ -146,14 +149,17 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		di tutti gli eventi!</p>
 		<a class="btn-C" href="https://www.google.it/maps/place/Viale+Ferraris,+1,+30036+L.p.+Santa+Maria+di+Sala+VE">PARTECIPA</a><div class="btn-C-icon"></div>
 	  </div>
+	  </div>
 	  
-	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-9 text-center border">
+	  <div class="container-fluid bg-light bg-gradient p-2 mb-4 rounded border">
+	  <div class="container-fluid bg-light bg-gradient p-4 rounded bg-opacity-9 text-center border">
 	    <h3>ULTIMI EVENTI</h3>
 		<hr>
 		<p>Resta aggiornato esplorando i nostri eventi più recenti. Dai game night ai workshop, il nostro calendario 
 		offre esperienze uniche. Sia che tu sia un abituale o un novizio, troverai sempre qualcosa di emozionante 
 		da fare con noi. Segna le date e unisciti a noi per creare ricordi e condividere esperienze speciali.</p>
 		<a class="btn-C" href="../pages/events.html">PARTECIPA</a><div class="btn-C-icon"></div>
+	  </div>
 	  </div>
 	  
 	  <div loadHTML="../template_containers/social.html"></div>
@@ -205,11 +211,11 @@ function loadExternalHTML() {
 function bannerTemplate(templateVariables, container) {
 
     var template = "" +
-	  "<div class='container-fluid bg-light bg-gradient p-4 rounded border' style='--bs-bg-opacity: .9; height:100%;'>" + 
+	  "<div class='container-fluid bg-light bg-gradient p-4 rounded border' style='height:100%;'>" + 
 		"<div class='row'>" + 
 		  "<div class='col-md-9 col-lg-12 col-xxl-9'>" +
 			"<h3>" + 
-			  "<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 15px;'></img>" + 
+			  "<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>" + 
 			  "<span class='badge bg-{{color}} rounded-pill text-white'>{{badge}}</span>" + 
 			  "<span> {{title}}</span>" + 
 			"</h3>" + 
