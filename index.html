@@ -42,7 +42,18 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		
 	  <div loadHTML="../template_containers/annouce.html"></div>
 	  
-	  <div id="templateContainer_1"></div>
+	  	  <div class="row m-auto mb-4">
+        <div class="col-lg-6 pe-lg-1 ps-lg-0 mb-4 mb-lg-0">
+		  <div class="container-fluid bg-light bg-gradient p-4 rounded border" style="height:100%">
+	        <div id="templateContainer_1"></div>
+		  </div>
+		</div>
+		<div class="col-lg-6 ps-lg-1 pe-lg-0">
+		  <div class="container-fluid bg-light bg-gradient p-4 rounded border" style="height:100%">
+	        <div id="templateContainer_2"></div>
+		  </div>
+		</div>
+	  </div>
 	  
 	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded border" style='--bs-bg-opacity: .9;'>
 	    <div class="row">
@@ -128,6 +139,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     <div class="col-xl-3 pe-xl-5 p-3">
       <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-9 text-center border">
 	    <h3>CHI SIAMO</h3>
+		<hr>
 		<p><strong>Giochi in Villa</strong> e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici 
 		per il gioco da tavolo. Il nostro e' un hobby che unisce ed aiuta a sviluppare quella convivialita' 
 		che con il passare del tempo e' sempre piu' difficile trovare. Unisciti a noi per restare aggiornato 
@@ -137,6 +149,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	  
 	  <div class="container-fluid bg-light bg-gradient p-4 mb-4 rounded bg-opacity-9 text-center border">
 	    <h3>ULTIMI EVENTI</h3>
+		<hr>
 		<p>Resta aggiornato esplorando i nostri eventi più recenti. Dai game night ai workshop, il nostro calendario 
 		offre esperienze uniche. Sia che tu sia un abituale o un novizio, troverai sempre qualcosa di emozionante 
 		da fare con noi. Segna le date e unisciti a noi per creare ricordi e condividere esperienze speciali.</p>
@@ -200,6 +213,7 @@ function bannerTemplate(templateVariables, container) {
 			  "<span class='badge bg-{{color}} rounded-pill text-white'>{{badge}}</span>" + 
 			  "<span> {{title}}</span>" + 
 			"</h2>" + 
+			"<hr>" +
 		  "</div>" +
 		  "<div class='col-lg-3 text-end'>" +
 		    "<h5>{{subtitle}}</h5>" +
