@@ -1,7 +1,6 @@
 body {
   font-family: Google;
-  background: url(../images/backgrounds/background#.webp) no-repeat center center fixed;
-  background-color: #AED5DA;
+  background-image: linear-gradient(#58C7D0, white);
 }
 
 .bg-teal {
