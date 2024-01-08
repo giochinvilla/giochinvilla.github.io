@@ -219,13 +219,11 @@ function bannerTemplate(templateVariables, container) {
 		"<h6 class='text-end'>{{subtitle}}</h6>" +
 		"<br>" +
 		"<h6>{{description}}</h6>" +
-		"<hr>" +
-		"<h6>{{description_2}}</h6>" +
 		"<br>" +
 		"<div class='text-center'><a href='{{link_href}}' class='btn btn-{{link_color}} btn-lg {{link_class}}' role='button'>{{link_name}}</a></div>" +
 		"<br>" +
-		"<div><img alt='Immagine' style='max-width: 800px; width: 100%;' class='img-fluid mx-auto d-block rounded' src='{{image}}'></img></div>" +
-	  "</div>";
+	  "</div>" +
+	  "<div><img alt='Immagine' style='max-width: 800px; width: 100%;' class='img-fluid mx-auto d-block rounded' src='{{image}}'></img></div>";
 
     template = template.replace("{{title}}", templateVariables.title);
     template = template.replace("{{badge}}", templateVariables.badge);
@@ -233,7 +231,6 @@ function bannerTemplate(templateVariables, container) {
     template = template.replace("{{subtitle}}", templateVariables.subtitle);
 	template = template.replace("{{description}}", templateVariables.description);
 	template = template.replace("{{image}}", templateVariables.image);
-	template = template.replace("{{description_2}}", templateVariables.description_2);
 	template = template.replace("{{link_href}}", templateVariables.link_href);
 	template = template.replace("{{link_class}}", templateVariables.link_class);
 	template = template.replace("{{link_name}}", templateVariables.link_name);
