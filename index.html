@@ -223,7 +223,7 @@ function bannerTemplate(templateVariables, container) {
 		"<div class='text-center'><a href='{{link_href}}' class='btn btn-{{link_color}} btn-lg {{link_class}}' role='button'>{{link_name}}</a></div>" +
 		"<br>" +
 	  "</div>" +
-	  "<div class='container w-100 mx-auto' style='position: absolute; bottom: -100px;'><img alt='Immagine' style='max-width: 800px; width: 100%;' class='img-fluid d-block shadow' src='{{image}}'></img></div>";
+	  "<div class='container w-100 mx-auto text-center' style='position: absolute; bottom: -100px;'><img alt='Immagine' style='max-width: 800px; height: 200px; width: 100%;' class='img-fluid d-block shadow' src='{{image}}'></img></div>";
 
     template = template.replace("{{title}}", templateVariables.title);
     template = template.replace("{{badge}}", templateVariables.badge);
