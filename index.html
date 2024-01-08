@@ -33,8 +33,8 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 <body>
   
   <div class="container-fluid text-center bg-white p-4" style="background-image: url('./images/backgrounds/header2.gif'); background-size:100% 100%;">
-    <h1 class="text-white d-none d-md-block" style="font-size: 3.5em; font-family: Pixel">Giochi in Villa</h1>
-	<h1 class="text-white d-block d-md-none" style="font-size: 2em; font-family: Pixel">Giochi in Villa</h1>
+    <h1 class="text-light d-none d-md-block" style="font-size: 3.5em; font-family: Pixel">Giochi in Villa</h1>
+	<h1 class="text-light d-block d-md-none" style="font-size: 2em; font-family: Pixel">Giochi in Villa</h1>
     <br class="d-none d-md-block">
 	<br class="d-none d-md-block">
 	<br class="d-none d-md-block">
@@ -141,7 +141,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	
     <div class="col-xl-3 pe-xl-5 p-3">
 	  
-      <div class="container-fluid p-4 mb-4 text-center bg-white border shadow">
+      <div class="container-fluid p-4 mb-4 text-center bg-white border shadow d-none d-xl-block">
 	    <h3>CHI SIAMO</h3>
 		<hr>
 		<p><strong>Giochi in Villa</strong> e' un’associazione no profit che nasce dalla passione comune di un gruppo di amici 
@@ -151,7 +151,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		<a class="btn-C" href="https://www.google.it/maps/place/Viale+Ferraris,+1,+30036+L.p.+Santa+Maria+di+Sala+VE">PARTECIPA</a><div class="btn-C-icon"></div>
 	  </div>
 
-	  <div class="container-fluid p-4 mb-4 text-center bg-white border shadow">
+	  <div class="container-fluid p-4 mb-4 text-center bg-white border shadow d-none d-xl-block">
 	    <h3>ULTIMI EVENTI</h3>
 		<hr>
 		<p>Resta aggiornato esplorando i nostri eventi più recenti. Dai game night ai workshop, il nostro calendario 
@@ -210,18 +210,13 @@ function bannerTemplate(templateVariables, container) {
 
     var template = "" +
 	  "<div class='container-fluid p-4 bg-white border' style='height:100%'>" + 
-		"<div class='row'>" + 
-		  "<div class='col-md-9 col-lg-12 col-xxl-9'>" +
-			"<h3>" + 
-			  "<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>" + 
-			  "<span class='badge bg-{{color}} rounded-pill text-white'>{{badge}}</span>" + 
-			  "<span> {{title}}</span>" + 
-			"</h3>" + 
-			"<hr>" +
-		  "</div>" +
-		  "<div class='col-md-3 col-lg-12 col-xxl-3 text-end'>" +
-		    "<h6>{{subtitle}}</h6>" +
-		  "</div>" +
+		"<h3>" + 
+		"<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>" + 
+		"<span class='badge bg-{{color}} rounded-pill text-white'>{{badge}}</span>" + 
+		"<span> {{title}}</span>" + 
+		"</h3>" + 
+		"<hr>" +
+		"<h6 class='text-end'>{{subtitle}}</h6>" +
 	    "</div>" +
 		"<br>" +
 		"<h6>{{description}}</h6>" +
