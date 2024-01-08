@@ -49,10 +49,10 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	  
 	  <div class="row m-auto mb-4">
         <div class="col-lg-6 pe-lg-1 ps-lg-0 mb-4 mb-lg-0 p-0">
-	      <div style="height:100%" id="templateContainer_1"></div>
+	      <div style="height:100%; position: relative;" id="templateContainer_1"></div>
 		</div>
 		<div class="col-lg-6 ps-lg-1 pe-lg-0 p-0">
-	      <div style="height:100%" id="templateContainer_2"></div>
+	      <div style="height:100%; position: relative;" id="templateContainer_2"></div>
 		</div>
 	  </div>
 	  
@@ -223,7 +223,7 @@ function bannerTemplate(templateVariables, container) {
 		"<div class='text-center'><a href='{{link_href}}' class='btn btn-{{link_color}} btn-lg {{link_class}}' role='button'>{{link_name}}</a></div>" +
 		"<br>" +
 	  "</div>" +
-	  "<div><img alt='Immagine' style='max-width: 800px; width: 100%;' class='img-fluid mx-auto d-block rounded' src='{{image}}'></img></div>";
+	  "<div class='container' style='position: absolute; top: -250px;'><img alt='Immagine' style='max-width: 800px; width: 100%;' class='img-fluid mx-auto d-block rounded' src='{{image}}'></img></div>";
 
     template = template.replace("{{title}}", templateVariables.title);
     template = template.replace("{{badge}}", templateVariables.badge);
