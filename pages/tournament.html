@@ -166,19 +166,14 @@ function loadExternalHTML() {
 function bannerTemplate(templateVariables, container) {
 
     var template = "" +
-	  "<div class='container-fluid p-4 bg-white border'>" + 
-		"<div class='row'>" + 
-		  "<div class='col-lg-9'>" +
-			"<h2>" + 
-			  "<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width: 28px; margin-right: 15px;'></img>" + 
-			  "<span class='badge bg-{{color}} rounded-pill text-white'>{{badge}}</span>" + 
-			  "<span> {{title}}</span>" + 
-			"</h2>" + 
-		  "</div>" +
-		  "<div class='col-lg-3 text-end'>" +
-		    "<h5>{{subtitle}}</h5>" +
-		  "</div>" +
-	    "</div>" +
+	  "<div class='container-fluid p-4 bg-white border' style='height:100%'>" + 
+		"<h3>" + 
+		"<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>" + 
+		"<span class='badge bg-{{color}} rounded-pill text-white'>{{badge}}</span>" + 
+		"<span> {{title}}</span>" + 
+		"</h3>" + 
+		"<hr>" +
+		"<h6 class='text-end'>{{subtitle}}</h6>" +
 		"<br>" +
 		"<h6>{{description}}</h6>" +
 		"<br>" +
@@ -193,8 +188,8 @@ function bannerTemplate(templateVariables, container) {
 		"<br>" +
 		"<div>{{description_3}}</div>" +
 		"<br>" +
-		"<div id='demo' style='max-width: 700px; margin: auto;' class='carousel slide d-{{carousel_display}}' data-bs-ride='carousel'>" +
-		  "<div class='carousel-indicators'>" +
+		"<div id='demo' style='max-width: 700px; margin: auto;' class='bg-white border p-2 shadow carousel slide d-{{carousel_display}}' data-bs-ride='carousel'>" +
+		  "<div class='container-fluid text-center'><div class='carousel-indicators'>" +
 			"<button type='button' data-bs-target='#demo' data-bs-slide-to='0' class='active'></button>" +
 			"<button type='button' data-bs-target='#demo' data-bs-slide-to='1'></button>" +
 			"<button type='button' data-bs-target='#demo' data-bs-slide-to='2'></button>" +
@@ -217,7 +212,7 @@ function bannerTemplate(templateVariables, container) {
 			"<span class='carousel-control-next-icon'></span>" +
 		  "</button>" +
 		"</div>" +
-	  "</div>";
+	  "</div></div>";
 
     template = template.replace("{{title}}", templateVariables.title);
     template = template.replace("{{badge}}", templateVariables.badge);
