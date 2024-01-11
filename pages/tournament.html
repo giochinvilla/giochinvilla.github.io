@@ -166,7 +166,7 @@ function loadExternalHTML() {
 function bannerTemplate(templateVariables, container) {
 
     var template = "" +
-	  "<div class='container-fluid bg-light bg-gradient p-4 mb-4 rounded border' style='--bs-bg-opacity: .85;'>" + 
+	  "<div class='container-fluid p-4 bg-white border'>" + 
 		"<div class='row'>" + 
 		  "<div class='col-lg-9'>" +
 			"<h2>" + 
@@ -189,7 +189,7 @@ function bannerTemplate(templateVariables, container) {
 		"<div class='text-center'><a href='{{link_href_2}}' class='btn btn-{{link_color_2}} btn-lg {{link_class_2}}' role='button'>{{link_name_2}}</a></div>" +
 		"<br>" +
 		"<br>" +
-		"<div><img alt='Immagine' style='max-width: 800px;' class='img-fluid mx-auto d-block rounded' src='{{image}}'></img></div>" +
+		"<div class='container-fluid text-center'><img alt='Immagine' style='max-width: 550px; height: 300px; width: 100%;' class='bg-white border p-2 img-fluid d-block mx-auto shadow' src='{{image}}'></img></div>" +
 		"<br>" +
 		"<div>{{description_3}}</div>" +
 		"<br>" +
