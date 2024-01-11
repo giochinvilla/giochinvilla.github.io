@@ -154,29 +154,25 @@ function loadExternalHTML() {
 function bannerTemplate(templateVariables, container) {
 
     var template = "" +
-	  "<div class='container-fluid bg-light bg-gradient p-4 mb-4 rounded border' style='--bs-bg-opacity: .85;'>" + 
-		"<div class='row'>" + 
-		  "<div class='col-lg-9'>" +
-			"<h2>" + 
-			  "<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width: 28px; margin-right: 15px;'></img>" + 
-			  "<span class='badge bg-{{color}} rounded-pill text-white'>{{badge}}</span>" + 
-			  "<span> {{title}}</span>" + 
-			"</h2>" + 
-		  "</div>" +
-		  "<div class='col-lg-3 text-end'>" +
-		    "<h5>{{subtitle}}</h5>" +
-		  "</div>" +
-	    "</div>" +
+	  "<div class='container-fluid p-4 bg-white border' style='height:100%'>" + 
+		"<h3>" + 
+		"<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>" + 
+		"<span class='badge bg-{{color}} rounded-pill text-white'>{{badge}}</span>" + 
+		"<span> {{title}}</span>" + 
+		"</h3>" + 
+		"<hr>" +
+		"<h6 class='text-end'>{{subtitle}}</h6>" +
 		"<br>" +
 		"<h6>{{description}}</h6>" +
 		"<br>" +
-		"<div><img alt='Immagine' style='max-width: 800px;' class='img-fluid mx-auto d-block rounded' src='{{image}}'></img></div>" +
-		"<br>" +
-		"<h6>{{description_2}}</h6>" +
-		"<br>" +
 		"<div class='text-center'><a href='{{link_href}}' class='btn btn-{{link_color}} btn-lg {{link_class}}' role='button'>{{link_name}}</a></div>" +
+		"<br>" +  
 		"<br>" +
-	  "</div>";
+		"<br>" +
+		"<br>" +
+		"<br>" +
+	  "</div>" +
+	  "<div class='container-fluid text-center' style='position: absolute; bottom: -100px;'><img alt='Immagine' style='max-width: 400px; height: 200px; width: 100%;' class='bg-white border p-2 img-fluid d-block mx-auto shadow' src='{{image}}'></img></div>";
 
     template = template.replace("{{title}}", templateVariables.title);
     template = template.replace("{{badge}}", templateVariables.badge);
