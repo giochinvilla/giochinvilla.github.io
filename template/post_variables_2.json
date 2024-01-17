@@ -1,12 +1,12 @@
 {
-    "color": "info",
-    "badge": "EVENTO",
-    "title": "SALA GIOCA",
-    "subtitle": "Sala Teatro di Villa Farsetti, Nov 21, 2023",
-    "description": "Siamo lieti di presentarvi Sala Gioca, il nuovo evento targato Giochi in Villa completamente pensato per il gioco e soprattutto... Per i giocatori!<br>Domenica 12 Novembre, nella sala teatro di Villa Farsetti, vi aspettiamo per farvi provare un'infinità di nuovi giochi, molti dei quali offerti dai nostri numerosi sponsor! Dai più colorati e divertenti, ai più seri e competitivi, ce n'è davvero per tutti i gusti!<br><br>E non solo! Ad attendervi anche tornei di carte, di warhammer, stand espositivi, avventure gdr e food truck!",
-    "image": "../images/longshot/salagioca.webp",    
-    "link_href": "../template_containers/protected.html?page=salagioca.html",
-    "link_name": "Leggi di piu' sull'evento",
-    "link_class": "",
-    "link_color": "primary"
+    "color": "warning",
+    "badge": "ANNUNCIO",
+    "title": "NUOVA SEDE IN VILLA FARSETTI",
+    "subtitle": "Nuova sede in via Roma 1<br>Santa Maria di Sala",
+    "description": "Questo lunedì abbiamo salutato definitivamente la vecchia sede di viale Ferraris 1 che ci ha accompagnato per tutti questi anni. Siamo lieti di annunciare che il GIV finalmente si trasferirà nella nuova sede sopra la biblioteca comunale in Villa Farsetti.<br> Ancora un po' di pulizia ci attendono ma non vediamo l'ora di provarla questo lunedì.
+    "image": "../images/longshot/nuovasede.webp",    
+    "link_href": "",
+    "link_name": "",
+    "link_class": "d-none",
+    "link_color": ""
 }

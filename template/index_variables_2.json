@@ -1,12 +1,12 @@
 {
     "color": "info",
     "badge": "EVENTO",
-    "title": "SALA GIOCA",
-    "subtitle": "Sala Teatro di Villa Farsetti, Nov 21, 2023",
-    "description": "Siamo lieti di presentarvi Sala Gioca, il nuovo evento targato Giochi in Villa completamente pensato per il gioco e soprattutto... Per i giocatori!<br>Domenica 12 Novembre, nella sala teatro di Villa Farsetti, vi aspettiamo per farvi provare un'infinità di nuovi giochi, molti dei quali offerti dai nostri numerosi sponsor! Dai più colorati e divertenti, ai più seri e competitivi, ce n'è davvero per tutti i gusti!<br><br>E non solo! Ad attendervi anche tornei di carte, di warhammer, stand espositivi, avventure gdr e food truck!",
-    "image": "../images/longshot/salagioca.webp",    
-    "link_href": "../template_containers/protected.html?page=salagioca.html",
-    "link_name": "Leggi di piu' sull'evento",
-    "link_class": "",
-    "link_color": "primary"
+    "title": "GIVVATONA DI NATALE",
+    "subtitle": "Sede di via Roma 1<br>Santa Maria di Sala, Dec 21, 2023",
+    "description": "L'anno nuovo è alle porte e non potevamo non salutarci con un'ultima Givvatona di fine anno. <br>Una bella pizza e delle one-shot di Giochi di Ruolo ci hanno accompagnato in questa ultima serata, da Dungeon and Dragon a Wrath & Glory i nostri associati si sono cimentati in molti modi per rovinare il Natale",
+    "image": "../images/longshot/christmas.webp",    
+    "link_href": "",
+    "link_name": "",
+    "link_class": "d-none",
+    "link_color": ""
 }
