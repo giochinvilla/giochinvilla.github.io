@@ -179,7 +179,16 @@ function bannerTemplate(templateVariables, container) {
 		"<hr>" +
 		"<h6 class='text-end'>{{subtitle}}</h6>" +
 		"<br>" +
-		"<h6>{{description}}</h6>" +
+		"<div class='row m-auto'>" +
+        "<div class='col-lg-6 pe-lg-1 ps-lg-0 p-0 mb-4'>" +
+	    "<div class='container-fluid text-center'>" +
+		"<img alt='Immagine' style='max-width: 500px; width: 100%;' class='bg-white border p-2 img-fluid d-block mx-auto shadow' src='../../images/banners/salagioca2.webp'></img>" +
+		"</div>" +
+		"</div>" +
+		"<div class='col-lg-6 ps-lg-1 pe-lg-0 p-0 mb-4'>" +
+	    "<h6>{{description}}</h6>" +
+		"</div>" +
+	    "</div>" +
 		"<br>" +
 		"<div class='text-center'><a href='{{link_href_1}}' class='btn btn-{{link_color_1}} btn-lg {{link_class_1}}' role='button'>{{link_name_1}}</a></div>" +
 		"<br>" +
