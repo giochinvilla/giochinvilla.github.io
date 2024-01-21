@@ -177,38 +177,29 @@ function bannerTemplate(templateVariables, container) {
 		"<span> {{title}}</span>" + 
 		"</h3>" + 
 		"<hr>" +
-		"<h6 class='text-end'>{{subtitle}}</h6>" +
+		"<h5 class='text-end'>{{subtitle}}</h5>" +
 		"<br>" +
 		"<div class='row m-auto'>" +
 		  "<div class='col-lg-6 pe-lg-1 ps-lg-0 p-0 mb-4'>" +
 			"<div class='container-fluid text-center'>" +
 			  "<img alt='Immagine' style='max-width: 500px; width: 100%;' class='bg-white border p-2 img-fluid d-block mx-auto shadow' src='{{image}}'></img>" +
 			"</div>" +
-			"</div>" +
-			"<div class='col-lg-6 ps-lg-1 pe-lg-0 p-0 mb-4'>" +
+		  "</div>" +
+		  "<div class='col-lg-6 ps-lg-1 pe-lg-0 p-0 mb-4'>" +
 			"<h6>{{description}}</h6>" +
-			"<br>" +
-			"<div class='text-center'><a href='{{link_href_1}}' class='btn btn-{{link_color_1}} btn-lg {{link_class_1}}' role='button'>{{link_name_1}}</a></div>" +
-			"<br>" +
-			"<h6>{{description_2}}</h6>" +
-			"<br>" +
-		    "<div class='text-center'><a href='{{link_href_2}}' class='btn btn-{{link_color_2}} btn-lg {{link_class_2}}' role='button'>{{link_name_2}}</a></div>" +
-		    "<br>" +
-		    "<div>{{description_3}}</div>" +
 		  "</div>" +
 	    "</div>" +
 	  "</div>" +
 	  
-	  
-	  "<div class='container-fluid p-4 bg-white border' style='height:100%'>" + 
+	  "<div class='container-fluid p-4 bg-white border d-{{winner_display}}' style='height:100%'>" + 
 	    "<h3>" + 
 		"<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>" + 
 		"<span>I VINCITORI</span>" + 
 		"</h3>" + 
 		"<hr>" +
-		"<h6>{{description_3}}</h6>" +
+		"<h6>{{description_2}}</h6>" +
 		"<br>" +
-		"<div id='demo' style='max-width: 550px; margin: auto;' class='bg-white border p-2 shadow carousel slide d-{{carousel_display}}' data-bs-ride='carousel'>" +
+		"<div id='demo' style='max-width: 550px; margin: auto;' class='bg-white border p-2 shadow carousel slide' data-bs-ride='carousel'>" +
 		  "<div class='container-fluid text-center p-0'><div class='carousel-indicators'>" +
 			"<button type='button' data-bs-target='#demo' data-bs-slide-to='0' class='active'></button>" +
 			"<button type='button' data-bs-target='#demo' data-bs-slide-to='1'></button>" +
@@ -240,18 +231,9 @@ function bannerTemplate(templateVariables, container) {
     template = template.replace("{{subtitle}}", templateVariables.subtitle);
 	template = template.replace("{{description}}", templateVariables.description);
 	template = template.replace("{{image}}", templateVariables.image);
-	template = template.replace("{{link_href_1}}", templateVariables.link_href_1);
-	template = template.replace("{{link_color_1}}", templateVariables.link_color_1);
-	template = template.replace("{{link_class_1}}", templateVariables.link_class_1);
-	template = template.replace("{{link_name_1}}", templateVariables.link_name_1);
-	template = template.replace("{{link_href_2}}", templateVariables.link_href_2);
-	template = template.replace("{{link_color_2}}", templateVariables.link_color_2);
-	template = template.replace("{{link_class_2}}", templateVariables.link_class_2);
-	template = template.replace("{{link_name_2}}", templateVariables.link_name_2);
+	template = template.replace("{{winner_display}}", templateVariables.title_2);
 	template = template.replace("{{description_2}}", templateVariables.description_2);
-	template = template.replace("{{description_3}}", templateVariables.description_3);
-	template = template.replace("{{description_4}}", templateVariables.description_4);
-	template = template.replace("{{carousel_display}}", templateVariables.carousel_display);
+	template = template.replace("{{winner_display}}", templateVariables.winner_display);
 	template = template.replace("{{carousel_1}}", templateVariables.carousel_1);
 	template = template.replace("{{carousel_2}}", templateVariables.carousel_2);
 	template = template.replace("{{carousel_3}}", templateVariables.carousel_3);
