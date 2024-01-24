@@ -57,9 +57,39 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		<br>
 		<h6>Testo da aggiungere</h6>
 	  </div>
+	  
+	  <div style="height:100%; position: relative;" id="gameDescriptor"></div>
 		
 	</div>
     <div class="col-xl-3 pe-xl-5 p-3">  
+	
+	<div  class="p-0 mb-4 border bg-white shadow">
+	<h4 class="m-4">Menu dei Giochi</h4>
+	<hr class="m-4">
+	  <nav class="navbar navbar-light flex-column align-items-stretch w-100 p-0 m-0" style="max-height:400px; overflow-x: hidden; overflow-y: scroll;">
+	    <nav class="ps-4 pe-2 nav nav-pills flex-column">
+	  	  <span class="nav-link pt-0 pb-0 mb-1">0-9</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">A</span>
+		  <nav class="nav nav-pills flex-column">
+		    <a id="1" class="nav-link ms-3 pt-0 pb-0 m-1" href="#item-1-1">Item 1-1</a>
+		  </nav>
+	  	  <span class="nav-link pt-0 pb-0 mb-1">B</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">C</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">D</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">E</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">F</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">G-L</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">M</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">N-P</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">P</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">R</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">S</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">T</span>
+		  <span class="nav-link pt-0 pb-0 mb-1">U-Z</span>
+	    </nav>
+      </nav>
+	  </div>
+
 	  <div loadHTML="../template_containers/social.html"></div>
 	  
     </div>
@@ -74,6 +104,37 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 
 
 <script>
+function loadTemplateVariables(callback, container) {
+    var xhr = new XMLHttpRequest();
+	const urlParams = new URLSearchParams(window.location.search);
+	let game = urlParams.get('game');
+	var file = "../template/tablegames/" + game + ".json"
+    xhr.open("GET", file, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var templateVariables = JSON.parse(xhr.responseText);
+            callback(templateVariables, container);
+        }
+    };
+    xhr.send();
+}
+
+function bannerTemplate(templateVariables, container) {
+
+    var template = "" +  
+	  "<div class='container-fluid p-4 bg-white border' style='height:100%'>" + 
+	    "<h3>" + 
+		"<span>EXAMPLE</span>" + 
+		"</h3>" + 
+		"<hr>" +
+		"<h6>{{description_2}}</h6>" +
+		"<br>" +
+	  "</div>";
+
+	template = template.replace("{{description_2}}", templateVariables.description_2);
+    document.getElementById(container).innerHTML = template;
+}
+	
 function loadExternalHTML() {
 	var z, i, elmnt, file, xhttp;
 	z = document.getElementsByTagName("*");
@@ -98,6 +159,7 @@ function loadExternalHTML() {
 	};
 
 loadExternalHTML();
+loadTemplateVariables(bannerTemplate, "gameDescriptor");
 
 </script>
 
