@@ -1,9 +1,9 @@
 {
     "color": "warning",
-    "badge": "ANNUNCIO",
-    "title": "NUOVA SEDE",
-    "subtitle": "Nuova sede in via Roma 1<br>Santa Maria di Sala",
-    "description": "Questo lunedì abbiamo salutato definitivamente la vecchia sede di viale Ferraris 1 che ci ha accompagnato per tutti questi anni. Siamo lieti di annunciare che il GIV finalmente si trasferirà nella nuova sede sopra la biblioteca comunale in Villa Farsetti.<br> Ancora un po' di pulizia ci attendono ma non vediamo l'ora di provarla questo lunedì.",
+    "badge": "EVENTO",
+    "title": "GIVVATONA",
+    "subtitle": "Nuova sede in via Roma 1<br>Santa Maria di Sala<br>Sabato 26, ore 16.00",
+    "description": "Questo lunedì abbiamo salutato definitivamente la vecchia sede di viale Ferraris 1 che ci ha accompagnato per tutti questi anni. Siamo lieti di annunciare che il GIV finalmente si trasferirà nella nuova sede sopra la biblioteca comunale in Villa Farsetti.<br> Ancora un po' di pulizia ci attendono ma non vediamo l'ora di provarla questo sabato dalle 16.00.",
     "image": "../images/longshot/nuovasede.webp",    
     "link_href": "",
     "link_name": "",
