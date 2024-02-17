@@ -1,5 +1,5 @@
 {
-    "color": "alert",
+    "color": "danger",
     "badge": "EVENTO",
     "title": "SALA GIOCA 2",
     "subtitle": "Sala teatro di Villa Farsetti<br>Santa Maria di Sala, Mar 19, 2024",
@@ -8,5 +8,5 @@
     "link_href": "https://giochinvilla.it/pages/tournament.html?number=1",
     "link_name": "Torneo Warhammer",
     "link_class": "",
-    "link_color": "alert"
+    "link_color": "danger"
 }
