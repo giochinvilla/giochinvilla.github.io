@@ -1,12 +1,9 @@
 {
-    "color": "info",
+    "color": "alert",
     "badge": "EVENTO",
     "title": "SALA GIOCA 2",
     "subtitle": "Sala teatro di Villa Farsetti<br>Santa Maria di Sala, Mar 19, 2024",
-    "description": "Visto il grande successo della prima edizione, siete pronti... Per fare il bis?<br>Torna il <b>Sala Gioca</b>, sempre nella sala teatro di Villa Farsetti!<br>
-Anche stavolta ad aspettarvi ci saranno i nostri associati con una selezione sempre più ampia di nuovi giochi da tavolo da provare! Non mancheranno inoltre giochi di ruolo, venditori ed espositore del settore, e un'area food arricchita da nuove proposte culinarie!<br>
-Ricordiamo infine che siamo tornati anche con Ordalia per la terza tappa del nostro circuito torneistico di Warhammer 40k targato Giochi in Villa!<br>
-<b>Sala Gioca: un evento fatto da giocatori, per i giocatori!</b>",
+    "description": "Visto il grande successo della prima edizione, siete pronti... Per fare il bis?<br>Torna il <b>Sala Gioca</b>, sempre nella sala teatro di Villa Farsetti!<br>Anche stavolta ad aspettarvi ci saranno i nostri associati con una selezione sempre più ampia di nuovi giochi da tavolo da provare! Non mancheranno inoltre giochi di ruolo, venditori ed espositore del settore, e un'area food arricchita da nuove proposte culinarie!<br>Ricordiamo infine che siamo tornati anche con Ordalia per la terza tappa del nostro circuito torneistico di Warhammer 40k targato Giochi in Villa!<br><b>Sala Gioca: un evento fatto da giocatori, per i giocatori!</b>",
     "image": "../images/longshot/salagioca2.webp",    
     "link_href": "",
     "link_name": "",
