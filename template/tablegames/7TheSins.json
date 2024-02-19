@@ -1,5 +1,11 @@
 {
     "title": "7 the Sins",
-    "image": "../images/games/7TheSins.webp",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "carousel_1": "../../images/games/7TheSins_A.webp",
+    "carousel_2": "../../images/games/7TheSins_B.webp",
+    "carousel_3": "../../images/games/7TheSins_C.webp",
+    "description": "Allora, ragazzi, vi voglio parlare di <b>7 The Sins</b>, un gioco da tavolo che ti fa impazzire ma in senso buono (o cattivo, dipende dai punti di vista!).<br><br>Lo scopo è raccimolare carte rappresentanti i sette peccati capitali per ottenere punti. Ma state attenti, perché l'obiettivo può cambiare come una diva sul red carpet. Puoi trovarvi a tirare avanti con più punti di tutti, pensando di essere il re del mondo, e BOOM! Scopri che ora devi collezionarne meno. Che ansia, eh?<br><br>Questo gioco è caotico e imprevedibile. Pensi di avere tutto sotto controllo, e invece gli avversari ti tirano il tappeto sotto i piedi. Non c'è strategia chiara qui, ragazzi, è una vera e propria giungla di decisioni impulsive e colpi di scena a sorpresa.<br><br>La cosa bella, però, è che le partite sono brevi. Tipo, 10-15 minuti, perfetto se hai l'attenzione di una mosca. Non c'è tempo per annoiarsi o per fare la strategia dell'architetto di successo. È un assoluto casino, ma nel senso più divertente possibile.<br><br>Non posso inoltre non parlare dei magnifici disegni sulle carte di <b>7 The Sins</b>. Sono veri capolavori visivi, con dettagli incantevoli e colori accattivanti che aggiungono un tocco artistico al caos divertente del gioco. Un'esperienza di gioco che coinvolge non solo strategicamente, ma anche esteticamente!<br><br>In conclusione, se vuoi un gioco che ti metta alla prova <b>7 The Sins</b> è il tuo nuovo amico. Ah, e se per caso finisci col collezionare i peccati capitali nella vita reale, non dirmi che non te l'avevo detto!"
+    "players": "2-5 giocatori",
+    "time": "10-15 min",
+    "producer": "GateOnGames",
+    "type": "Competitivo"
 }

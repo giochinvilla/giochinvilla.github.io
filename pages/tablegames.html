@@ -155,7 +155,8 @@ function bannerTemplate(templateVariables, container) {
 		  "<h6>{{description}}</h6>" +
 		  "<h6 class='text-end'>" +
 			"<i class='fa fa-group' style='font-size:20px'></i> {{players}}, " +
-			"<i class='fa fa-hourglass-end' style='font-size:20px'></i> {{time}}, " +
+			"<i class='fa fa-tag' style='font-size:20px'></i> {{type}}, " +
+			"<i class='fa fa-tachometer' style='font-size:20px'></i> {{time}}, " +
 			"<i class='fa fa-map-marker' style='font-size:20px'></i> {{producer}}" +
 		  "</h6>" +
 		"</div>" +
@@ -163,8 +164,14 @@ function bannerTemplate(templateVariables, container) {
 	"</div>";
 
 	template = template.replace("{{title}}", templateVariables.title);
-	template = template.replace("{{image}}", templateVariables.image);
+	template = template.replace("{{carousel_1}}", templateVariables.carousel_1);
+	template = template.replace("{{carousel_2}}", templateVariables.carousel_2);
+	template = template.replace("{{carousel_3}}", templateVariables.carousel_3);
 	template = template.replace("{{description}}", templateVariables.description);
+	template = template.replace("{{players}}", templateVariables.players);
+	template = template.replace("{{time}}", templateVariables.time);
+	template = template.replace("{{producer}}", templateVariables.producer);
+	template = template.replace("{{type}}", templateVariables.type);
     document.getElementById(container).innerHTML = template;
 }
 	
