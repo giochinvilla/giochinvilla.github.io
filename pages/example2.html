@@ -30,6 +30,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="utf-8">
   
+  <script src="https://www.google.com/recaptcha/api.js?render=6LesXqopAAAAAPK7JHu1QaLSByQr9ElGqmGd9QzY"></script>
   <style>
   .accordion {
     --bs-accordion-active-bg: #CFF4FC;
@@ -90,7 +91,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 				
 				<div class="col-md-8 col-lg-4">
 				  <div clasS="form-floating">
-				    <input type="text" id="codice_fiscale" maxlength="16" placeholder=" " pattern="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z]{3}[0-9]{1}" class="form-control" style="text-transform:uppercase" required>
+				    <input type="text" id="codice_fiscale" maxlength="16" placeholder=" " pattern="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]" class="form-control" style="text-transform:uppercase" required>
 				    <label class="form-label" for="codice_fiscale">Codice Fiscale</label>
 				    <div class="invalid-feedback">Inserisci un codice fiscale valido</div>
 				  </div>
@@ -117,11 +118,11 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		  </div>
 		  <div class="accordion-item">
 			<div class="accordion-header">
-			  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#anagrafica" aria-expanded="true" aria-controls="anagrafica">
+			  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#torneo" aria-expanded="true" aria-controls="torneo">
 				<h4>Torneo</h4>
 			  </button>
 			</div>
-			<div id="anagrafica" class="accordion-collapse collapse show">
+			<div id="torneo" class="accordion-collapse collapse show">
 			  <div class="accordion-body row">
 			  
 				<div class="col-md-8">
@@ -143,46 +144,44 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 				  <input type="checkbox" id="battle_ready" class="form-check-input">
 				  <span class="form-text">Seleziona se le tue truppe sono Battle Ready</span>
 				</div>
-			  
-			  </div>
-			</div>
-		  </div>
-		  
-		  
-		  
-		  <div class="accordion-item">
-			<h2 class="accordion-header">
-			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				Accordion Item #2
-			  </button>
-			</h2>
-			<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-			  <div class="accordion-body">
-				<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+				
+				<div class="col-md-8 mb-4">
+				  <label for="lista" class="form-check-label">Lista dei punti </label>
+				  <input type="file" class="form-control" id="lista" aria-label="Carica" accept=".pdf, .doc, .docx" required>	
+				  <div class="invalid-feedback">Inserisci la lista delle tue truppe</div>
+				</div>
+				
+				<div class="col-md-8">
+				  <div clasS="form-floating">
+				    <input type="text" id="fazione" class="form-control" placeholder=" " required>
+				    <label for="fazione" class="form-label">Fazione</label>
+				    <span class="form-text">Inserisci il nome della tua fazione</span>
+				  </div>
+				</div>
+				
 			  </div>
 			</div>
 		  </div>
 		</div>
-
-
-
-		  <hr>
-		  <div class="col-12">
-			<div class="form-check">
-			  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-			  <label class="form-check-label" for="invalidCheck">
-				Agree to terms and conditions
-			  </label>
-			  <div class="invalid-feedback">
-				You must agree before submitting.
-			  </div>
-			</div>
-		  </div>
-		  <div class="col-12">
-			<button class="btn btn-primary" type="submit">Submit form</button>
-		  </div>
-		</form>
-	</div></div>
+		<br>
+		<hr>
+		<div class="mt-4">
+		  <input type="checkbox" id="gdpr" class="form-check-input" required>
+		  <label for="gdpr" class="form-check-label">Dichiaro di accettare i termini e le condizioni del trattamento dei dati conformemente alla normativa europea in materia di protezione dei dati (GDPR).</label>
+		  <div class="invalid-feedback">Devi accettare per poterti iscrivere</div>
+		</div>
+				
+		<div class="mt-2">
+		  <input type="checkbox" id="infopack" class="form-check-input" required>
+		  <label for="infopack" class="form-check-label">Dichiaro di aver letto e compreso il regolamendo del torneo presente nell'Infopack </label>
+		  <div class="invalid-feedback">Devi accettare per poterti iscrivere</div>
+		</div>
+				
+		<br>
+		<button class="g-recaptcha btn-lg btn btn-primary" data-sitekey="6LesXqopAAAAAPK7JHu1QaLSByQr9ElGqmGd9QzY" data-callback='onSubmit'>Iscriviti</button>
+	    </form>
+	  </div>
+	</div>
 	
 	<div class="col-xl-3 pe-xl-5 p-3">  
 	  <div loadHTML="../template_containers/social.html"></div>
@@ -212,7 +211,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	  })
 	})()
   </script>
-
+    
 <script>
 function loadExternalHTML() {
 	var z, i, elmnt, file, xhttp;
