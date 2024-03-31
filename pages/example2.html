@@ -178,7 +178,12 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		</div>
 				
 		<br>
-		<button class="g-recaptcha btn-lg btn btn-primary" data-sitekey="6LesXqopAAAAAPK7JHu1QaLSByQr9ElGqmGd9QzY" data-callback='onSubmit'>Iscriviti</button>
+		<button class="g-recaptcha btn btn-primary" 
+            data-sitekey="YOUR_SITE_KEY" 
+            data-callback="enableFormSubmission">reCAPTCHA
+		</button>
+		<br>
+		<button id="submitBtn" type="submit" class="btn btn-primary" disabled>Submit</button>
 	    </form>
 	  </div>
 	</div>
