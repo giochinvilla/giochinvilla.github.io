@@ -207,22 +207,23 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
         }
   </script>
   
-  <script>
-        // Function to handle form submission
-        function submitFormData() {
-            // Get form data
-            const formData = new FormData(document.getElementById('myForm'));
-            const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                    // Handle success
-                    console.log('Form submitted successfully');
-                }
-            };
-            xhr.send(new URLSearchParams(formData).toString());
-        }
+  <script> 
+	document.getElementById('inputForm').addEventListener('submit', function(event) { 
+	  event.preventDefault(); 
+	  var formData = new FormData(this); 
+	  fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
+		method: 'POST', 
+		body: formData 
+	  }) 
+	  .then(response => { 
+		console.log('Success:', response); 
+		alert('Input sent successfully!'); 
+	  }) 
+	  .catch(error => { 
+		console.error('Error:', error); 
+		alert('An error occurred while sending input.'); 
+	  }); 
+	}); 
   </script>
 
   <script>
