@@ -178,9 +178,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		</div>
 				
 		<br>
-		<button class="g-recaptcha btn btn-primary" 
-            data-sitekey="YOUR_SITE_KEY" 
-            data-callback="enableFormSubmission">reCAPTCHA
+		<button class="g-recaptcha btn btn-primary" data-sitekey="6LesXqopAAAAAPK7JHu1QaLSByQr9ElGqmGd9QzY" data-callback="enableFormSubmission">reCAPTCHA
 		</button>
 		<br>
 		<button id="submitBtn" type="submit" class="btn btn-primary" disabled>Submit</button>
@@ -200,6 +198,13 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		<span class="p-0 m-0" style="font-size:12px;">Images Credits: labuu, camille unknown</span>
 	</div>
   </nav>
+  
+  <script>
+        // Function to enable form submission upon reCAPTCHA verification
+        function enableFormSubmission() {
+            document.getElementById('submitBtn').removeAttribute('disabled');
+        }
+  </script>
 
   <script>
 	(() => {
