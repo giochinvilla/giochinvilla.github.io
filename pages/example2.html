@@ -209,6 +209,15 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
   
   <script>
   document.getElementById('inputForm').addEventListener('submit', function(event) { 
+    // Prevent form submission if form is invalid
+    if (!this.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+      // Show validation feedback to the user
+      this.classList.add('was-validated');
+      return;
+    }
+
     event.preventDefault(); 
     var formData = new FormData(this); 
     fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
