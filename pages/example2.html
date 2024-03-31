@@ -182,7 +182,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		<button class="g-recaptcha btn btn-primary" data-sitekey="6LesXqopAAAAAPK7JHu1QaLSByQr9ElGqmGd9QzY" data-callback="enableFormSubmission">Verifica reCAPTCHA
 		</button>
 		<br><br>
-		<button id="submitBtn" type="submit" class="btn btn-primary" disabled>Submit</button>
+		<button id="submit" type="submit" class="btn btn-primary" disabled>Submit</button>
 	    </form>
 	  </div>
 	</div>
@@ -203,7 +203,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
   <script>
         // Function to enable form submission upon reCAPTCHA verification
         function enableFormSubmission() {
-            document.getElementById('submitBtn').removeAttribute('disabled');
+            document.getElementById('submit').removeAttribute('disabled');
         }
   </script>
   
