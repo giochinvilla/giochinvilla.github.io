@@ -207,23 +207,23 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
         }
   </script>
   
-  <script> 
-	document.getElementById('inputForm').addEventListener('submit', function(event) { 
-	  event.preventDefault(); 
-	  var formData = new FormData(this); 
-	  fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
-		method: 'POST', 
-		body: formData 
-	  }) 
-	  .then(response => { 
-		console.log('Success:', response); 
-		alert('Input sent successfully!'); 
-	  }) 
-	  .catch(error => { 
-		console.error('Error:', error); 
-		alert('An error occurred while sending input.'); 
-	  }); 
-	}); 
+  <script>
+  document.getElementById('inputForm').addEventListener('submit', function(event) { 
+    event.preventDefault(); 
+    var formData = new FormData(this); 
+    fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
+      method: 'POST', 
+      body: formData 
+    }) 
+    .then(response => { 
+      console.log('Success:', response); 
+      alert('Input sent successfully!'); 
+    }) 
+    .catch(error => { 
+      console.error('Error:', error); 
+      alert('An error occurred while sending input.'); 
+    }); 
+  }); 
   </script>
 
   <script>
