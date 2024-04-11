@@ -1,5 +1,5 @@
 {
-    "color": "info",
+    "color": "primary",
     "badge": "STORIE",
     "title": "Il Torneo di Black Rose Wars",
     "subtitle": "30 marzo 2024",
@@ -8,5 +8,5 @@
 	"link_href": "https://giochinvilla.it/pages/posts/raccontidelGIV1.html",
     "link_name": "Scopri di più",
     "link_class": "",
-    "link_color": "info"
+    "link_color": "primary"
 }
