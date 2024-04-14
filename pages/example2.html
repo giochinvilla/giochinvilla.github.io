@@ -182,7 +182,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		<button class="g-recaptcha btn btn-primary" data-sitekey="6LesXqopAAAAAPK7JHu1QaLSByQr9ElGqmGd9QzY" data-callback="enableFormSubmission">Verifica reCAPTCHA
 		</button>
 		<br><br>
-		<button id="submit" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Submit</button>
+		<button id="submit" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>Submit</button>
 	    </form>
 	  </div>
 	</div>
@@ -200,8 +200,8 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 			  </div>
 			</div>
 		  </div>
-		  <div class="modal-footer">
-			<a href='../index.html' class='btn btn-primary text-white' role='button'>Esci</a>
+		  <div class="modal-footer" id="modal-footer">
+			<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>
 		  </div>
 		</div>
 	  </div>
@@ -235,7 +235,8 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
       event.stopPropagation();
       // Show validation feedback to the user
       this.classList.add('was-validated');
-	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore Critico</h2>I tuoi dati risultano non completi e pertanto non sono stati inviati.<br>Se questo errore persiste contatta un amministratore!";
+	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>Completa tutti i dati necessari prima di inviare!";
+	  document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Esci</button>";
       return;
     }
 
@@ -247,11 +248,13 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     }) 
     .then(response => { 
       console.log('Success:', response); 
-	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";		
+	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";	
+	  document.getElementById("modal-footer").innerHTML = "<a href='../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
     }) 
     .catch(error => { 
       console.error('Error:', error); 
 	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore Critico</h2>La tua iscrizione non è stata ricevuta correttamente!<br>Se questo errore persiste contatta un amministratore!";
+	  document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
     }); 
   }); 
   </script>
