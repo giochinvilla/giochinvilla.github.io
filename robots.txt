@@ -1,7 +1,3 @@
-# Ehy Doro stop snooping around!
-# Im joking ty a lot
-# ---------------------------
-
 User-agent: *
 Disallow:
 
