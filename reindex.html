@@ -46,19 +46,6 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     .shadow-effect:hover {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
-	.outlined-text {
-    color: black; /* Text color */
-    text-shadow: 
-        2px 2px 0 white, /* Right, down */
-        -2px 2px 0 white, /* Left, down */
-        2px -2px 0 white, /* Right, up */
-        -2px -2px 0 white, /* Left, up */
-        2px 0 0 white, /* Right */
-        -2px 0 0 white, /* Left */
-        0 2px 0 white, /* Down */
-        0 -2px 0 white; /* Up */
-    font-size: 48px; /* Example font size */
-}
   </style>
   
   
@@ -79,12 +66,6 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     <div class="col-xl-9 ps-xl-5 p-3">
 		
 	  <div loadHTML="../template_containers/annouce.html"></div>
-	  
-	  <div class="container-fluid p-2 mb-4 border bg-white shadow">
-		  <a href="#" style="text-decoration:none; color:black;" class="text-center">
-			<h1 clasS="outlined-text">Partecipa con noi al <span class="text-primary typewrite" data-period="2000" data-type='[ "Sala Gioca", "Farsetti Comix & Games"]'></span></h1>
-		  </a>
-	  </div>
 	  
 	  <div class="row m-auto">
 		<div class="col-xl-4 p-1 col-md-6 p-0 mb-4">
@@ -232,61 +213,6 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 
 
 <script>
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
-        document.body.appendChild(css);
-    };
 	
 function loadTemplateVariables(callback, file, container) {
     var xhr = new XMLHttpRequest();
