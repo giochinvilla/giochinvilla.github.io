@@ -40,22 +40,22 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
   <meta charset="utf-8">
   
 </head>
+
 <body>
-  
-  <div class="container-fluid text-center bg-white p-4" style="background-image: url('./images/backgrounds/header2.gif'); background-size:100% 100%;">
-    <h1 class="text-light d-none d-md-block" style="font-size: 3.5em; font-family: Pixel">Giochi in Villa</h1>
-	<h1 class="text-light d-block d-md-none" style="font-size: 2em; font-family: Pixel">Giochi in Villa</h1>
-    <br class="d-none d-md-block">
-	<br class="d-none d-md-block">
-	<br class="d-none d-md-block">
+
+  <div class="container-fluid text-center bg-gradient bg-red2 p-2">
+	<div class="circle mx-auto">
+	  <div><img src='./images/icons/logo.webp' width="75%"></img></div>
+	  <div class="rotatinglogo text-light" style="font-family: 'Typewriter';">
+	    <div>Associazione Giochi in Villa</div>
+      </div>
+    </div>
   </div>
   
   <div class="sticky-top" loadHTML="../template_containers/nav.html"></div>
   
   <div class="row m-auto">
     <div class="col-xl-9 ps-xl-5 p-3">
-		
-	  <div loadHTML="../template_containers/annouce.html"></div>
 	  
 	  <div class="container-fluid p-4 mb-4 border bg-white shadow rounded">
 		<div class="text-center"><h1 href="" class="typewrite" data-period="2000" data-type='[ "Sala Gioca", "Farsetti Comix & Games" ]' style="font-family: 'Typewriter';"></h1></div>
@@ -233,6 +233,15 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 
 
 <script>
+const text = document.querySelector(".rotatinglogo");
+text.innerHTML = text.innerText
+	.split("")
+	.map(
+		(char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+	)
+	.join("");
+	
+	
 var intervalId;
 
     $(document).ready(function() {
