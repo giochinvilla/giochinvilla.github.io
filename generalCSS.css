@@ -8,6 +8,22 @@ body {
   background-color: #20c997;
 }
 
+.bg-red1 {
+  background-color: #FF4252;
+}
+
+.bg-red2 {
+  background-color: #DD2336;
+}
+
+.bg-red3 {
+  background-color: #C60133;
+}
+
+.bg-red4 {
+  background-color: #B20133;
+}
+
 .shadow-effect {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
