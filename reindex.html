@@ -28,6 +28,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <link rel="stylesheet" href="./generalCSS.css">
   <link rel="stylesheet" href="./fonts/fonts.css">
@@ -40,11 +41,12 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
    
   <style>
     .shadow-effect {
-        transition: box-shadow 0.6s ease;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
     }
 
     .shadow-effect:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
   </style>
   
@@ -68,54 +70,93 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	  <div loadHTML="../template_containers/annouce.html"></div>
 	  
 	  <div class="row m-auto">
-		<div class="col-xl-4 p-1 col-md-6 p-0 mb-4">
+		<div class="col-xl-4 p-1 col-md-6 p-0 mb-4 rounded">
 		  <div id="templateContainer_1" style="height:100%;" class="shadow shadow-effect"></div>
 		</div>
 		
-		<div class="col-xl-4 p-1 col-md-6 p-0 mb-4">
+		<div class="col-xl-4 p-1 col-md-6 p-0 mb-4 rounded">
 	      <div id="templateContainer_2" style="height:100%;" class="shadow shadow-effect"></div>
 		</div>
 		
-		<div class="shadow-effect col-xl-4 d-md-none d-xl-block p-0 shadow mb-4">
+		<div class="shadow-effect col-xl-4 d-md-none d-xl-block p-0 shadow mb-4 rounded">
 	      <div id="templateContainer_3" style="height:100%;"></div>
 		</div>
 	  </div>
 	  
-	  <div class="container-fluid p-2 mb-4 border bg-white shadow">
-	    <div class="container-fluid">
+	  <div style="width:100%; " class="text-center bg-gradient bg-light shadow rounded mb-3">
+	  <br>
+	  <h1 href="" class="typewrite" data-period="2000" data-type='[ "Sala Gioca", "Farsetti Comix & Games" ]' style="font-family: 'Typewriter';">
+    <span class="wrap"></span>
+	
+	
+  </h1><h5>Scopri i nostri eventi in questo link molto bello e colorato!</h5>
+  <br>
+  <div id="carouselExampleControls" class="carousel slide m-auto" data-ride="carousel" style="max-width: 500px;">
+    <div class="carousel-inner">
+        <div class="carousel-item active rounded">
+            <img class='object-fit-scale' alt='Immagine' src='./images/longshot/example.webp' style='margin-right: 10px;'></img>
+        </div>
+        <div class="carousel-item rounded">
+            <img class='object-fit-scale' alt='Immagine' src='./images/longshot/example.webp' style='margin-right: 10px;'></img>
+        </div>
+        <div class="carousel-item rounded">
+            <img class='object-fit-scale' alt='Immagine' src='./images/longshot/example.webp' style='margin-right: 10px;'></img>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+  
+  
+  
+	  <div class='text-center'><a href='pages/podcast.html' class='btn btn-danger btn-lg text-white' role='button'>Scopri di più</a></div>
+	  
+	  <br>
+	  
+	  </div>
+	  
+	  
+	    <div class="container-fluid mb-3">
 	      <div class="row">
-		    <div class="col-md-3 col-6 text-white bg-teal bg-gradient text-center p-4">
-		      <h3 style="height: 70px;">Giochi di Ruolo</h3>
-		  	  <img alt='Immagine' src="./images/icons/dungeonsanddragons.webp" style='width: 60%; max-width: 100px;'></img>  
-		  	  <p style="height: 100px;">Che tu sia un elfo o un nano l'avventura ti aspetta!</p>
-			  <a href="./pages/rolegames.html"><div class="btn-A"><span>Scopri</span></div></a>
-		    </div>
-		  
-		    <div class="col-md-3 col-6 text-white bg-info bg-gradient text-center p-4">
-		      <h3 style="height: 70px;">Giochi da Tavolo</h3>
-			  <img alt='Immagine' src="./images/icons/tabletop.webp" style='width: 60%; max-width: 100px;'></img>  
-			  <p style="height: 100px;">Sei pronto a rovinare amicizie e conquistare la vittoria?</p>
-			  <a href="./pages/tablegames.html"><div class="btn-A"><span>Scopri</span></div></a>
-		    </div>
-		  
-		    <div class="col-md-3 col-6 text-white bg-danger bg-gradient text-center p-4">
-		      <h3 style="height: 70px;">Black Rose Wars</h3>
-			  <img alt='Immagine' src="./images/icons/cards.webp" style='width: 60%; max-width: 100px;'></img>  
-			  <p style="height: 100px;">Siete pronti, aspiranti gran maestri delle scuole di magia? La Loggia vi aspetta!</p>
-		 	  <a href="./pages/blackrosegames.html"><div class="btn-A"><span>Scopri</span></div></a>
-		    </div>
-		  
-		    <div class="col-md-3 col-6 text-white bg-warning bg-gradient text-center p-4">
-		      <h3 style="height: 70px;">Warhammer 40k</h3>
-			  <img alt='Immagine' src="./images/icons/warhammer.webp" style='width: 60%; max-width: 100px;'></img>  
-			  <p style="height: 100px;">Sarai in grado di rispondere alla chiamata dell'Imperatore?</p>
-			  <a href="./pages/warhammergames.html"><div class="btn-A"><span>Scopri</span></div></a>
-		    </div>
+		    <div class="p-2 m-0 col-md-3 col-6 text-center">
+		      <div class="text-white bg-teal bg-gradient text-center p-4 m-auto shadow-effect" style="border-radius: 15px; max-width:250px;">
+		        <h3 style="height: 70px;">Giochi di Ruolo</h3>
+		  	    <img alt='Immagine' src="./images/icons/dungeonsanddragons.webp" style='width: 60%; max-width: 100px;'></img>  
+		  	    <p style="height: 100px;">Che tu sia un elfo o un nano l'avventura ti aspetta!</p>
+			    <a href="./pages/rolegames.html"><div class="btn-A"><span>Scopri</span></div></a>
+		      </div>
+			</div>
+			
+			<div class="p-2 m-0 col-md-3 col-6 text-center">
+		      <div class="text-white bg-info bg-gradient text-center p-4 m-auto shadow-effect" style="border-radius: 15px; max-width:250px;">
+		        <h3 style="height: 70px;">Giochi da Tavolo</h3>
+		  	    <img alt='Immagine' src="./images/icons/tabletop.webp" style='width: 60%; max-width: 100px;'></img>  
+		  	    <p style="height: 100px;">Sei pronto a rovinare amicizie e conquistare la vittoria?</p>
+			    <a href="./pages/rolegames.html"><div class="btn-A"><span>Scopri</span></div></a>
+		      </div>
+			</div>
+			
+			<div class="p-2 m-0 col-md-3 col-6 text-center">
+		      <div class="text-white bg-danger bg-gradient text-center p-4 m-auto shadow-effect" style="border-radius: 15px; max-width:250px;">
+		        <h3 style="height: 70px;">Black Rose Wars</h3>
+		  	    <img alt='Immagine' src="./images/icons/cards.webp" style='width: 60%; max-width: 100px;'></img>  
+		  	    <p style="height: 100px;">Siete pronti, aspiranti gran maestri delle scuole di magia? La Loggia vi aspetta!</p>
+			    <a href="./pages/rolegames.html"><div class="btn-A"><span>Scopri</span></div></a>
+		      </div>
+			</div>
+			
+			<div class="p-2 m-0 col-md-3 col-6 text-center">
+		      <div class="text-white bg-warning bg-gradient text-center p-4 m-auto shadow-effect" style="border-radius: 15px; max-width:250px;">
+		        <h3 style="height: 70px;">Warhammer 40k</h3>
+		  	    <img alt='Immagine' src="./images/icons/warhammer.webp" style='width: 60%; max-width: 100px;'></img>  
+		  	    <p style="height: 100px;">Sarai in grado di rispondere alla chiamata dell'Imperatore?</p>
+			    <a href="./pages/rolegames.html"><div class="btn-A"><span>Scopri</span></div></a>
+		      </div>
+			</div>
 		  </div>
 	    </div>
-	  </div>
-		
-	  <div class="container-fluid p-4 mb-4 border bg-white shadow">
+	  
+	  <div class="container-fluid p-4 mb-4 border bg-white shadow rounded">
 	    <h3>
 		  <img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>
 		  <span class='badge bg-danger rounded-pill text-white'>GIV-CAST</span>
@@ -130,7 +171,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		<div class='text-center'><a href='pages/podcast.html' class='btn btn-danger btn-lg text-white' role='button'>Scopri di più</a></div>
 	  </div>
 	  
-	  <div class="container-fluid p-4 mb-4 border bg-white shadow">
+	  <div class="container-fluid p-4 mb-4 border bg-white shadow rounded">
 	    <h3>
 		  <img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>
 		  <span class='badge bg-danger rounded-pill text-white'>SERATE</span>
@@ -213,6 +254,74 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 
 
 <script>
+var intervalId;
+
+    $(document).ready(function() {
+        $('#carouselExampleControls').on('mouseenter', function() {
+            clearInterval(intervalId); // Stop automatic scrolling when mouse enters the carousel
+        }).on('mouseleave', function() {
+            intervalId = setInterval(function() {
+                $('#carouselExampleControls').carousel('next'); // Resume automatic scrolling when mouse leaves the carousel
+            }, 3000); // Change this value to adjust the interval (in milliseconds)
+        }).trigger('mouseleave'); // Trigger the mouseleave event to start the automatic scrolling
+    });
+	
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #333}";
+        document.body.appendChild(css);
+    };
 	
 function loadTemplateVariables(callback, file, container) {
     var xhr = new XMLHttpRequest();
