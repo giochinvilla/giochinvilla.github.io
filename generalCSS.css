@@ -1,7 +1,14 @@
 body {
+  background-color: transparent;
   font-family: Google;
-background: url(./images/backgrounds/background2.webp) center center no-repeat fixed;
-  background-size:100% 100%;
+}
+
+html { 
+  background: url(./images/backgrounds/background3.webp) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .bg-teal {
@@ -33,6 +40,30 @@ background: url(./images/backgrounds/background2.webp) center center no-repeat f
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
 }
 
+.page-link {
+  color: #DC3545;
+}
+
+.page-link:hover {
+  color: #DC3545;
+}
+
+.page-link:focus {
+  color: #6C757D;
+}
+
+.nav-pills a {
+  color: #DC3545;
+}
+
+.nav-pills a:hover {
+  color: #B22C3A;
+}
+
+.nav-pills .active { 
+  background-color: #DC3545 !important;
+}
+
 
 * {
 	margin: 0;
@@ -57,7 +88,7 @@ background: url(./images/backgrounds/background2.webp) center center no-repeat f
 	font-family: consolas;
 	color: #000;
 	font-size: 17px;
-	animation: textRotation 15s linear infinite;
+	animation: textRotation 30s linear infinite;
 }
 
 @keyframes textRotation {
