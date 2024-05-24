@@ -60,15 +60,15 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		</div>
 		
 		<div class="col-xl-4 p-1 col-md-6 mb-4">
-		  <div id="templateContainer_1" style="height:100%;"></div>
+		  <div id="templateContainer_4" style="height:100%;"></div>
 		</div>
 		
 		<div class="col-xl-4 p-1 col-md-6 mb-4">
-	      <div id="templateContainer_2" style="height:100%;"></div>
+	      <div id="templateContainer_5" style="height:100%;"></div>
 		</div>
 		
 		<div class="col-xl-4 p-1 mb-4">
-	      <div id="templateContainer_3" style="height:100%;"></div>
+	      <div id="templateContainer_6" style="height:100%;"></div>
 		</div>
 	  </div>
 	
@@ -222,9 +222,12 @@ function bannerTemplate(templateVariables, container) {
     document.getElementById(container).innerHTML = template;
 }
 
-loadTemplateVariables(bannerTemplate, "templateContainer_1",2);
-loadTemplateVariables(bannerTemplate, "templateContainer_2",1);
-loadTemplateVariables(bannerTemplate, "templateContainer_3",0);
+loadTemplateVariables(bannerTemplate, "templateContainer_1",5);
+loadTemplateVariables(bannerTemplate, "templateContainer_2",4);
+loadTemplateVariables(bannerTemplate, "templateContainer_3",3);
+loadTemplateVariables(bannerTemplate, "templateContainer_4",2);
+loadTemplateVariables(bannerTemplate, "templateContainer_5",1);
+loadTemplateVariables(bannerTemplate, "templateContainer_6",0);
 loadExternalHTML();
 paginator();
 
