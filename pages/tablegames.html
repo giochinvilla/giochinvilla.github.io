@@ -128,13 +128,6 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		  </div>
 		</div>
 		
-		
-		
-	</div>
-
-	  
-	  <div id="gameDescriptor"></div>
-	</div>
     <div class="col-xl-3 pe-xl-5 p-3">  
 	
 	<div  class="p-0 mb-4 border bg-white shadow rounded">
@@ -426,44 +419,6 @@ function loadTemplateVariables(callback, container) {
         }
     };
     xhr.send();
-}
-
-function bannerTemplate(templateVariables, container) {
-
-    var template = "" +  
-	  "<div class='container-fluid p-4 mb-4 bg-white border rounded'>" + 
-	    "<h3>" +
-		  "<img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>" +
-		  "<span class='badge bg-danger rounded-pill text-white'>GIOCO</span>" +
-		  "<span> {{title}}</span>" +
-		"</h3>" +
-		"<hr>" +
-		"<div class='row m-auto'>" +
-		  "<div class='col-lg-6 pe-lg-1 ps-lg-0 p-0 mb-4'>" +
-			"<div class='container-fluid text-center'>" +
-			  "<img alt='Immagine' src='{{image}}' class='mx-auto d-block' style='width:100%'>" +
-		  "</div>" +
-		"</div>" +
-		"<div class='col-lg-6 ps-lg-1 pe-lg-0 p-0 mb-4'>" +
-		  "<h6>{{description}}</h6>" +
-		  "<h6 style='line-height:1.4' class='text-end'>" +
-			"<i class='fa fa-group' style='font-size:20px'></i> Giocatori: {{players}}<br> " +
-			"<i class='fa fa-tag' style='font-size:20px'></i> {{type}}<br> " +
-			"<i class='fa fa-tachometer' style='font-size:20px'></i> {{time}}<br> " +
-			"<i class='fa fa-map-marker' style='font-size:20px'></i> Produttore: {{producer}}<br>" +
-		  "</h6>" +
-		"</div>" +
-	  "</div>" +
-	"</div>";
-
-	template = template.replace("{{title}}", templateVariables.title);
-	template = template.replace("{{image}}", templateVariables.image);
-	template = template.replace("{{description}}", templateVariables.description);
-	template = template.replace("{{players}}", templateVariables.players);
-	template = template.replace("{{time}}", templateVariables.time);
-	template = template.replace("{{producer}}", templateVariables.producer);
-	template = template.replace("{{type}}", templateVariables.type);
-    document.getElementById(container).innerHTML = template;
 }
 	
 function loadExternalHTML() {
