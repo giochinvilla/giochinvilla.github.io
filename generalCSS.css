@@ -4,7 +4,7 @@ body {
 }
 
 html { 
-  background: url(./images/backgrounds/background3.webp) no-repeat center center fixed; 
+  background: url(./images/backgrounds/background.webp) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -102,4 +102,8 @@ html {
 	left: 50%;
 	font-size: 1.2em;
 	transform-origin: 0 100px;
+}
+
+.special-nav-item {
+    color: red !important; 
 }
