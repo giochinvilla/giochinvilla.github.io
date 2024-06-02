@@ -85,7 +85,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		  <div id="templateContainer_1" style="height:100%;"></div>
 		</div>
 		
-		<div class="col-xl-4 p-1 col-sm-6 mb-4">
+		<div class="col-xl-4 p-1 d-none d-sm-block col-sm-6 mb-4">
 	      <div id="templateContainer_2" style="height:100%;"></div>
 		</div>
 		
@@ -146,17 +146,17 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		  <div class="carousel-inner">
 			<div class="carousel-item active">
 			  <div class="p-1 mb-4">
-				<div id="templateContainer_1" style="height:100%;"></div>
+				<div id="templateContainer_1mob" style="height:100%;"></div>
 			  </div>
 			</div>
 			<div class="carousel-item">
 			  <div class="p-1 mb-4">
-				<div id="templateContainer_2" style="height:100%;"></div>
+				<div id="templateContainer_2mob" style="height:100%;"></div>
 			  </div>
 			</div>
 			<div class="carousel-item">
 			  <div class="p-1 mb-4">
-				<div id="templateContainer_3" style="height:100%;"></div>
+				<div id="templateContainer_3mob" style="height:100%;"></div>
 			  </div>
 			</div>
 		  </div>
@@ -413,6 +413,9 @@ function bannerTemplate(templateVariables, container) {
 loadTemplateVariables(bannerTemplate, "./template/index_variables_1.json", "templateContainer_1");
 loadTemplateVariables(bannerTemplate, "./template/index_variables_2.json", "templateContainer_2");
 loadTemplateVariables(bannerTemplate, "./template/index_variables_3.json", "templateContainer_3");
+loadTemplateVariables(bannerTemplate, "./template/index_variables_1.json", "templateContainer_1mob");
+loadTemplateVariables(bannerTemplate, "./template/index_variables_2.json", "templateContainer_2mob");
+loadTemplateVariables(bannerTemplate, "./template/index_variables_3.json", "templateContainer_3mob");
 loadExternalHTML();
 </script>
 </html>
