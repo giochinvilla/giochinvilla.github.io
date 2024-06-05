@@ -253,6 +253,35 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
   </nav>
 
   <script>
+  
+  document.getElementById('audioFile').addEventListener('change', function() {
+    const file = this.files[0];
+    if (file.size > 10 * 1024 * 1024) { // 10MB in bytes
+      alert('Il file supera il limite di 10MB. Si prega di caricare un file più piccolo.');
+      this.value = ''; // Clear the input
+    }
+  });
+  
+	  const minorenneCheckbox = document.getElementById('minorenne');
+	  const minorenneInputSection = document.getElementById('minorenne-input');
+	  const nomeTutoreInput = document.getElementById('nome_tutore');
+	  const cognomeTutoreInput = document.getElementById('cognome_tutore');
+	  const codiceFiscaleTutoreInput = document.getElementById('codice_fiscale_tutore');
+
+	  minorenneCheckbox.addEventListener('change', function() {
+		if (this.checked) {
+		  minorenneInputSection.style.display = 'block';
+		  nomeTutoreInput.required = true;
+		  cognomeTutoreInput.required = true;
+		  codiceFiscaleTutoreInput.required = true;
+		} else {
+		  minorenneInputSection.style.display = 'none';
+		  nomeTutoreInput.required = false;
+		  cognomeTutoreInput.required = false;
+		  codiceFiscaleTutoreInput.required = false;
+		}
+	  });
+  
     document.getElementById('minorenne').addEventListener('change', function() {
       var additionalInput = document.getElementById('minorenne-input');
       if (this.checked) {
@@ -261,16 +290,12 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
         additionalInput.style.display = 'none';
       }
     });
-  </script>
-  
-  <script>
+
         // Function to enable form submission upon reCAPTCHA verification
         function enableFormSubmission() {
             document.getElementById('submit').removeAttribute('disabled');
         }
-  </script>
-  
-  <script>
+
   const text = document.querySelector(".rotatinglogo");
 	text.innerHTML = text.innerText
 	.split("")
@@ -300,11 +325,13 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     // Create a FileReader to read the audio file
     var reader = new FileReader();
     reader.onload = function(event) {
+	
+	
         // Convert the audio file to base64 string
         var audioData = event.target.result.split(',')[1]; // Extract the base64 data
         // Add the audio data to the form data
         formData.append('audio_file_text', audioData);
-		console.log('A'); 
+		
         // Now, send the form data with the audio file text
         fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
             method: 'POST', 
@@ -326,9 +353,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     // Read the audio file as Data URL
     reader.readAsDataURL(audioFile);
 });
-  </script>
 
-  <script>
 	(() => {
 	  'use strict'
 	  const forms = document.querySelectorAll('.needs-validation')
@@ -342,9 +367,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		}, false)
 	  })
 	})()
-  </script>
-    
-  <script>
+
   function loadExternalHTML() {
 	var z, i, elmnt, file, xhttp;
 	z = document.getElementsByTagName("*");
