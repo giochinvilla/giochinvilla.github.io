@@ -304,7 +304,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
         var audioData = event.target.result.split(',')[1]; // Extract the base64 data
         // Add the audio data to the form data
         formData.append('audio_file_text', audioData);
-
+		console.log('A'); 
         // Now, send the form data with the audio file text
         fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
             method: 'POST', 
