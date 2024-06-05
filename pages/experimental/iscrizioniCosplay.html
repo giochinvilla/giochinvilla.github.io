@@ -53,6 +53,8 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
   
   <div class="row m-auto">
     <div class="col-xl-9 ps-xl-5 p-3">
+		
+	  <div loadHTML="../../template_containers/annouce.html"></div>
 
 	  <div class="container-fluid p-md-5 p-3 border bg-white shadow">
 		<h3>
@@ -284,51 +286,45 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
         event.stopPropagation();
         // Show validation feedback to the user
         this.classList.add('was-validated');
-        document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>Completa tutti i dati necessari prima di inviare!";
-        document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Esci</button>";
+        document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Error</h2>Please complete all required fields before submitting!";
+        document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Close</button>";
         return;
     }
 
     event.preventDefault(); 
     var formData = new FormData(this); 
-    
-    // Get the audio file input element
-    var audioFileInput = document.getElementById('file_audio');
-    // Get the selected file
-    var file = audioFileInput.files[0];
-    // Create a new FileReader
+
+    // Get the audio file
+    var audioFile = this.elements['audio_file'].files[0];
+
+    // Create a FileReader to read the audio file
     var reader = new FileReader();
     reader.onload = function(event) {
-        // Convert ArrayBuffer to base64 string
-        var arrayBuffer = event.target.result;
-        var binaryString = '';
-        var bytes = new Uint8Array(arrayBuffer);
-        for (var i = 0; i < bytes.byteLength; i++) {
-            binaryString += String.fromCharCode(bytes[i]);
-        }
-        var dataUrl = btoa(binaryString);
+        // Convert the audio file to base64 string
+        var audioData = event.target.result.split(',')[1]; // Extract the base64 data
+        // Add the audio data to the form data
+        formData.append('audio_file_text', audioData);
 
-        // Append the base64 string to the form data
-        formData.append('audioFile', dataUrl);
-
-        // Now, send the form data
+        // Now, send the form data with the audio file text
         fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
             method: 'POST', 
-            body: formData
+            body: formData,
+            // Set the Content-Type header to 'multipart/form-data'
+            // No need to set headers here as FormData will automatically set proper headers
         }) 
         .then(response => { 
             console.log('Success:', response); 
-            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";   
-            document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
+            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulations!</h2>Your submission has been successfully sent!";    
+            document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Close</a>";
         }) 
         .catch(error => { 
             console.error('Error:', error); 
-            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore Critico</h2>La tua iscrizione non è stata ricevuta correttamente!<br>Se questo errore persiste contatta un amministratore!";
-            document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
-        });
+            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Critical Error</h2>Your submission was not received correctly!<br>If this error persists, please contact an administrator!";
+            document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Close</a>";
+        }); 
     };
-    // Read the file as ArrayBuffer
-    reader.readAsArrayBuffer(file);
+    // Read the audio file as Data URL
+    reader.readAsDataURL(audioFile);
 });
   </script>
 
