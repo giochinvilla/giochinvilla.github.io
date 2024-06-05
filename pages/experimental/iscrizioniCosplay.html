@@ -62,7 +62,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		</h3>
 		<hr>
 		
-		<form class="g-2 needs-validation" id="inputForm" enctype="multipart/form-data" novalidate>
+		<form class="g-2 needs-validation" id="inputForm" novalidate>
 		<div class="accordion shadow">
 		  <div class="accordion-item">
 		  
@@ -277,7 +277,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	)
 	.join("");
 	
-  document.getElementById('inputForm').addEventListener('submit', function(event) { 
+  document.getElementById('inputForm').addEventListener('submit', (e) => { 
     // Prevent form submission if form is invalid
     if (!this.checkValidity()) {
       event.preventDefault();
@@ -290,6 +290,26 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     }
 
     event.preventDefault(); 
+	const file = document.getElementById('inputForm').file_audio.files[0];
+	const fr = new FileReader();
+    fr.readAsArrayBuffer(file);
+	fr.onload = (f) => {
+      const url = "https://script.google.com/macros/s/AKfycbymleNt7LnqM6zWFL56PwRlL5m7xu9sOvZlmqAx-MKE7bHjVTrBlcd6__w8RYPRhnt5jA/exec"; // Please set the URL of Web Apps.
+
+      const qs = new URLSearchParams({
+        filename: file.name,
+        mimeType: file.type,
+      });
+      fetch(`${url}?${qs}`, {
+        method: "POST",
+        body: JSON.stringify([...new Int8Array(f.target.result)]),
+      })
+        .then((res) => res.json())
+        .then(console.log)
+        .catch(console.log);
+    };
+	
+	
     var formData = new FormData(this); 
     fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
       method: 'POST', 
