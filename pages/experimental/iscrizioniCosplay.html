@@ -185,7 +185,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 				
 				<div class="mb-2">
 				  <div class="form-floating">
-					<input id="file_audio" name="file_audio" class="form-control" type="file" accept="audio/*"> placeholder="" required>
+					<input id="file_audio" name="file_audio" class="form-control" type="file" accept="audio/*" placeholder="" required>
 					<label for="file_audio" class="form-label">File audio</label><div class="invalid-feedback">Carica un file audio in formato MP3</div>
 				  </div>
 				</div>
@@ -295,7 +295,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     var formData = new FormData(this); 
 
     // Get the audio file
-    var audioFile = this.elements['audio_file'].files[0];
+    var audioFile = this.elements['file_audio'].files[0];
 
     // Create a FileReader to read the audio file
     var reader = new FileReader();
