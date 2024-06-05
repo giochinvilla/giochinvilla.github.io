@@ -31,6 +31,11 @@ html {
   background-color: #B20133;
 }
 
+.accordion-button:not(.collapsed) {
+  background-color: #FF5262;
+  color:white;
+}
+
 .shadow-effect {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
