@@ -295,7 +295,11 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     var formData = new FormData(this); 
     fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
       method: 'POST', 
-      body: formData 
+      body: formData,
+      // Set the Content-Type header to 'multipart/form-data'
+      headers: {
+          'Content-Type': 'multipart/form-data'
+      }
     }) 
     .then(response => { 
       console.log('Success:', response); 
