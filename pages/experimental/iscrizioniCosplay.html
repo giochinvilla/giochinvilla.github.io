@@ -254,21 +254,20 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 
   <script>
   
-  document.getElementById('audioFile').addEventListener('change', function() {
-    const file = this.files[0];
-    if (file.size > 10 * 1024 * 1024) { // 10MB in bytes
-      alert('Il file supera il limite di 10MB. Si prega di caricare un file più piccolo.');
-      this.value = ''; // Clear the input
-    }
-  });
+	  document.getElementById('file_audio').addEventListener('change', function() {
+		const file = this.files[0];
+		if (file.size > 10 * 1024 * 1024) {
+		  alert('Il file supera il limite di 10MB. Si prega di caricare un file più piccolo.');
+		  this.value = '';
+		}
+	  });
   
-	  const minorenneCheckbox = document.getElementById('minorenne');
 	  const minorenneInputSection = document.getElementById('minorenne-input');
 	  const nomeTutoreInput = document.getElementById('nome_tutore');
 	  const cognomeTutoreInput = document.getElementById('cognome_tutore');
 	  const codiceFiscaleTutoreInput = document.getElementById('codice_fiscale_tutore');
 
-	  minorenneCheckbox.addEventListener('change', function() {
+	  document.getElementById('minorenne').addEventListener('change', function() {	
 		if (this.checked) {
 		  minorenneInputSection.style.display = 'block';
 		  nomeTutoreInput.required = true;
@@ -281,20 +280,11 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		  codiceFiscaleTutoreInput.required = false;
 		}
 	  });
-  
-    document.getElementById('minorenne').addEventListener('change', function() {
-      var additionalInput = document.getElementById('minorenne-input');
-      if (this.checked) {
-        additionalInput.style.display = 'block';
-      } else {
-        additionalInput.style.display = 'none';
-      }
-    });
 
-        // Function to enable form submission upon reCAPTCHA verification
-        function enableFormSubmission() {
-            document.getElementById('submit').removeAttribute('disabled');
-        }
+      // Function to enable form submission upon reCAPTCHA verification
+      function enableFormSubmission() {
+        document.getElementById('submit').removeAttribute('disabled');
+      }
 
   const text = document.querySelector(".rotatinglogo");
 	text.innerHTML = text.innerText
