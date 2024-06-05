@@ -53,8 +53,6 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
   
   <div class="row m-auto">
     <div class="col-xl-9 ps-xl-5 p-3">
-		
-	  <div loadHTML="../../template_containers/annouce.html"></div>
 
 	  <div class="container-fluid p-md-5 p-3 border bg-white shadow">
 		<h3>
@@ -64,7 +62,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		</h3>
 		<hr>
 		
-		<form class="g-2 needs-validation" id="inputForm" novalidate>
+		<form class="g-2 needs-validation" id="inputForm" enctype="multipart/form-data" novalidate>
 		<div class="accordion shadow">
 		  <div class="accordion-item">
 		  
@@ -295,11 +293,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     var formData = new FormData(this); 
     fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
       method: 'POST', 
-      body: formData,
-      // Set the Content-Type header to 'multipart/form-data'
-      //headers: {
-          //'Content-Type': 'multipart/form-data'
-      //}
+      body: formData
     }) 
     .then(response => { 
       console.log('Success:', response); 
