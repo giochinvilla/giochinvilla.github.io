@@ -225,11 +225,12 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		<div class="modal-content">
 		  <div class="modal-header">
 			<h1 class="modal-title fs-5" id="exampleModalLabel"><img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>Invio del Modulo di iscrizione!</h1>
+			<div>Questa operazione potrebbe richiedere qualche minuto!<div>
 		  </div>
 		  <div id="modalText" class="p-3">
 			<div class="modal-body d-flex justify-content-center">
 			  <div class="spinner-border" role="status">
-				<span class="visually-hidden">Loading...</span>
+				<span class="visually-hidden">Caricamento...</span>
 			  </div>
 			</div>
 		  </div>
@@ -286,25 +287,23 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
         document.getElementById('submit').removeAttribute('disabled');
       }
 
-  const text = document.querySelector(".rotatinglogo");
-	text.innerHTML = text.innerText
-	.split("")
-	.map(
-		(char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
-	)
-	.join("");
+      const text = document.querySelector(".rotatinglogo");
+	    text.innerHTML = text.innerText
+	    .split("")
+	    .map(
+		  (char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+	    ).join("");
 	
-  document.getElementById('inputForm').addEventListener('submit', function(event) { 
-    // Prevent form submission if form is invalid
-    if (!this.checkValidity()) {
+	document.getElementById('inputForm').addEventListener('submit', function(event) { 
+	  // Prevent form submission if form is invalid
+	  if (!this.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
-        // Show validation feedback to the user
         this.classList.add('was-validated');
-        document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Error</h2>Please complete all required fields before submitting!";
-        document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Close</button>";
+        document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>Completa tutti i campi prima di inviare l'iscrizione!";
+        document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Esci</button>";
         return;
-    }
+	  }
 
     event.preventDefault(); 
     var formData = new FormData(this); 
@@ -331,18 +330,18 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
         }) 
         .then(response => { 
             console.log('Success:', response); 
-            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulations!</h2>Your submission has been successfully sent!";    
-            document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Close</a>";
+            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";    
+            document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
         }) 
         .catch(error => { 
             console.error('Error:', error); 
-            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Critical Error</h2>Your submission was not received correctly!<br>If this error persists, please contact an administrator!";
-            document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Close</a>";
+            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>La tua iscrizione non è inviata correttamente<br>Se questo errore persiste contatta tecnico.giochinvilla@gmail.com";
+            document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
         }); 
     };
     // Read the audio file as Data URL
     reader.readAsDataURL(audioFile);
-});
+  });
 
 	(() => {
 	  'use strict'
