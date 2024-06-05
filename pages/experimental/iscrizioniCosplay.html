@@ -277,55 +277,59 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	)
 	.join("");
 	
-  document.getElementById('inputForm').addEventListener('submit', (e) => { 
+  document.getElementById('inputForm').addEventListener('submit', function(event) { 
     // Prevent form submission if form is invalid
     if (!this.checkValidity()) {
-      event.preventDefault();
-      event.stopPropagation();
-      // Show validation feedback to the user
-      this.classList.add('was-validated');
-	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>Completa tutti i dati necessari prima di inviare!";
-	  document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Esci</button>";
-      return;
+        event.preventDefault();
+        event.stopPropagation();
+        // Show validation feedback to the user
+        this.classList.add('was-validated');
+        document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>Completa tutti i dati necessari prima di inviare!";
+        document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Esci</button>";
+        return;
     }
 
     event.preventDefault(); 
-	const file = document.getElementById('inputForm').file_audio.files[0];
-	const fr = new FileReader();
-    fr.readAsArrayBuffer(file);
-	fr.onload = (f) => {
-      const url = "https://script.google.com/macros/s/AKfycbymleNt7LnqM6zWFL56PwRlL5m7xu9sOvZlmqAx-MKE7bHjVTrBlcd6__w8RYPRhnt5jA/exec"; // Please set the URL of Web Apps.
-
-      const qs = new URLSearchParams({
-        filename: file.name,
-        mimeType: file.type,
-      });
-      fetch(`${url}?${qs}`, {
-        method: "POST",
-        body: JSON.stringify([...new Int8Array(f.target.result)]),
-      })
-        .then((res) => res.json())
-        .then(console.log)
-        .catch(console.log);
-    };
-	
-	
     var formData = new FormData(this); 
-    fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
-      method: 'POST', 
-      body: formData
-    }) 
-    .then(response => { 
-      console.log('Success:', response); 
-	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";	
-	  document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
-    }) 
-    .catch(error => { 
-      console.error('Error:', error); 
-	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore Critico</h2>La tua iscrizione non è stata ricevuta correttamente!<br>Se questo errore persiste contatta un amministratore!";
-	  document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
-    }); 
-  }); 
+    
+    // Get the audio file input element
+    var audioFileInput = document.getElementById('file_audio');
+    // Get the selected file
+    var file = audioFileInput.files[0];
+    // Create a new FileReader
+    var reader = new FileReader();
+    reader.onload = function(event) {
+        // Convert ArrayBuffer to base64 string
+        var arrayBuffer = event.target.result;
+        var binaryString = '';
+        var bytes = new Uint8Array(arrayBuffer);
+        for (var i = 0; i < bytes.byteLength; i++) {
+            binaryString += String.fromCharCode(bytes[i]);
+        }
+        var dataUrl = btoa(binaryString);
+
+        // Append the base64 string to the form data
+        formData.append('audioFile', dataUrl);
+
+        // Now, send the form data
+        fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
+            method: 'POST', 
+            body: formData
+        }) 
+        .then(response => { 
+            console.log('Success:', response); 
+            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";   
+            document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
+        }) 
+        .catch(error => { 
+            console.error('Error:', error); 
+            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore Critico</h2>La tua iscrizione non è stata ricevuta correttamente!<br>Se questo errore persiste contatta un amministratore!";
+            document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
+        });
+    };
+    // Read the file as ArrayBuffer
+    reader.readAsArrayBuffer(file);
+});
   </script>
 
   <script>
