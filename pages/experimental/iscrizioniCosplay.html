@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+<meta name="description" content="Esplora il mondo avvincente dei giochi da tavolo, Warhammer e giochi di ruolo sul 
+nostro sito. Scopri guide, risorse e comunità appassionate per arricchire la tua esperienza ludica. 
+Unisciti a noi nel coltivare la passione per l'immaginazione e la strategia, dove ogni dado lanciato porta avventure senza fine. 
+Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'unico scopo è condividere la gioia del gioco!.">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YXSNQ75QND"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YXSNQ75QND');
+</script>
+
+  <title>Giochi in Villa</title>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel="stylesheet" href="../../generalCSS.css">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../buttons.css">
+  
+  <link rel="icon" type="image/x-icon" href="../images/icons/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  
+  <script src="https://www.google.com/recaptcha/api.js?render=6LesXqopAAAAAPK7JHu1QaLSByQr9ElGqmGd9QzY"></script>
+  <style>
+  .accordion {
+    --bs-accordion-active-bg: #CFF4FC;
+  </style>
+  <script src="https://apis.google.com/js/api.js"></script>
+  
+</head>
+<body>
+  
+  <div class="container-fluid text-center bg-gradient bg-red2 p-2">
+	<div class="circle mx-auto">
+	  <div><img src='../../images/icons/logo.webp' width="75%"></img></div>
+	  <div class="rotatinglogo text-light" style="font-family: 'Typewriter';">
+	    <div>Giochi in Villa • Giochi in Villa •</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="sticky-top" loadHTML="../../template_containers/nav.html"></div>
+  
+  <div class="row m-auto">
+    <div class="col-xl-9 ps-xl-5 p-3">
+		
+	  <div loadHTML="../../template_containers/annouce.html"></div>
+
+	  <div class="container-fluid p-md-5 p-3 border bg-white shadow">
+		<h3>
+		  <img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>
+		  <span class='badge bg-danger rounded-pill text-white'>ISCRIZIONE</span>
+		  <span> Gara Cosplay - Farsetti Comix & Games II<span>
+		</h3>
+		<hr>
+		
+		<form class="g-2 needs-validation" id="inputForm" novalidate>
+		<div class="accordion shadow">
+		  <div class="accordion-item">
+		  
+			<div class="accordion-header">
+			  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#anagrafica_partecipante" aria-expanded="true" aria-controls="anagrafica_partecipante">
+				<h4>Dati anagrafici del partecipante</h4>
+			  </button>
+			</div>
+			
+			<div id="anagrafica_partecipante" class="accordion-collapse collapse show">
+			  <div class="accordion-body row">
+			  
+				<div class="col-md-6 mb-2">
+				  <div class="form-floating">
+				    <input id="nome" class="form-control" placeholder="" required>
+				    <label class="form-label">Nome*</label><div class="invalid-feedback">Inserisci un nome</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-6 mb-2">
+				  <div class="form-floating">
+				    <input id="cognome" class="form-control" placeholder="" required>
+				    <label class="form-label">Cognome*</label><div class="invalid-feedback">Inserisci un cognome</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-4 mb-2">
+				  <div class="form-floating">
+				    <input id="codice_fiscale" class="form-control" maxlength="16" placeholder="" pattern="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]" class="form-control" style="text-transform:uppercase" required>
+				    <label class="form-label">Codice Fiscale*</label><div class="invalid-feedback">Inserisci un codice fiscale valido</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-4 mb-2">
+				  <div class="form-floating">
+				    <input id="telefono" class="form-control" placeholder="" required>
+				    <label class="form-label">Telefono*</label><div class="invalid-feedback">Inserisci un numero di telefono</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-4 mb-2">
+				  <div class="form-floating">
+				    <input id="email" class="form-control" placeholder="" required>
+				    <label class="form-label">Email*</label><div class="invalid-feedback">Inserisci un indirizzo email</div>
+				  </div>
+				</div>
+				
+				<div>
+				  <input type="checkbox" id="minorenne" class="form-check-input">
+				  <span class="form-text">Seleziona se il partecipante risulta minore di 18 anni alla data della gara</span>
+				</div>
+				
+			  </div>
+			</div>
+		  </div>
+		  
+		  <div class="accordion-item" id="minorenne-input" style="display:none;">
+			<div class="accordion-header">
+			  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#anagrafica_tutore" aria-expanded="true" aria-controls="anagrafica_tutore">
+				<h4>Dati anagrafici del genitore/tutore legale</h4>
+			  </button>
+			</div>
+			<div id="anagrafica_tutore" class="accordion-collapse collapse show">
+			  <div class="accordion-body row">
+			  
+				<div class="col-md-6 mb-2">
+				  <div class="form-floating">
+				    <input id="nome_tutore" class="form-control" placeholder="" required>
+				    <label class="form-label">Nome*</label><div class="invalid-feedback">Inserisci un nome</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-6 mb-2">
+				  <div class="form-floating">
+				    <input id="cognome_tutore" class="form-control" placeholder="" required>
+				    <label class="form-label">Cognome*</label><div class="invalid-feedback">Inserisci un cognome</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-4">
+				  <div class="form-floating">
+				    <input id="codice_fiscale_tutore" class="form-control" maxlength="16" placeholder="" pattern="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]" class="form-control" style="text-transform:uppercase" required>
+				    <label class="form-label">Codice Fiscale*</label><div class="invalid-feedback">Inserisci un codice fiscale valido</div>
+				  </div>
+				</div>
+				
+			  </div>
+			  
+			  <div class="ps-4 pb-2">
+				Il genitore/tutore iscrivente dovrà presenziare il giorno della gara e portare un documento di identità!
+			  </div>
+			  
+			</div>
+		  </div>
+		  
+		  <div class="accordion-item">
+			<div class="accordion-header">
+			  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#gara" aria-expanded="true" aria-controls="gara">
+				<h4>Gara</h4>
+			  </button>
+			</div>
+			<div id="gara" class="accordion-collapse collapse show">
+			  <div class="accordion-body row">
+			  
+				<div class="col-md-6 mb-2">
+				  <div class="form-floating">
+				    <input id="personaggio" class="form-control" placeholder="" required>
+				    <label class="form-label">Nome del Personaggio*</label><div class="invalid-feedback">Inserisci il nome del tuo personaggio</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-6 mb-2">
+				  <div class="form-floating">
+				    <input id="personaggio" class="form-control" placeholder="">
+				    <label class="form-label">Nome del Gruppo <i>(Se in un gruppo di più persone)</i></label>
+				  </div>
+				</div>
+				
+				<div class="mb-2">
+				  <div class="form-floating">
+					<input id="file_audio" class="form-control" type="file" accept=".mp3" placeholder="" required>
+					<label for="file_audio" class="form-label">File audio</label><div class="invalid-feedback">Carica un file audio in formato MP3</div>
+				  </div>
+				</div>
+				<div class="ps-4 pb-2">
+					Nel caso di gruppi con più persone è sufficiente che uno solo carichi il file audio a nome 'nome_del_gruppo.mp3'
+			    </div>
+				
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<br>
+		<hr>
+		<div class="mt-4">
+		  <input type="checkbox" id="gdpr" class="form-check-input" required>
+		  <label for="gdpr" class="form-check-label">Dichiaro di accettare i termini e le condizioni del trattamento dei dati conformemente alla normativa europea in materia di protezione dei dati (GDPR).</label>
+		  <div class="invalid-feedback">Devi accettare per poterti iscrivere</div>
+		</div>
+				
+		<div class="mt-2">
+		  <input type="checkbox" id="infopack" class="form-check-input" required>
+		  <label for="infopack" class="form-check-label">Dichiaro di aver letto e compreso il regolamendo della gara </label>
+		  <div class="invalid-feedback">Devi accettare per poterti iscrivere</div>
+		</div>
+				
+		<br>
+		<button class="g-recaptcha btn btn-danger" data-sitekey="6LesXqopAAAAAPK7JHu1QaLSByQr9ElGqmGd9QzY" data-callback="enableFormSubmission">Verifica reCAPTCHA
+		</button>
+		<br><br>
+		<button id="submit" type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>Invia</button>
+	    </form>
+	  </div>
+	</div>
+	
+	<div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="exampleModalLabel"><img alt='Immagine' src='../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>Invio del Modulo di iscrizione!</h1>
+		  </div>
+		  <div id="modalText" class="p-3">
+			<div class="modal-body d-flex justify-content-center">
+			  <div class="spinner-border" role="status">
+				<span class="visually-hidden">Loading...</span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal-footer" id="modal-footer">
+			<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div class="col-xl-3 pe-xl-5 p-3">  
+	  <div loadHTML="../../template_containers/social.html"></div>
+	  
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-secondary">
+    <div class="ps-3">
+		Powered by Github - Made by Vice<br>
+	</div>
+  </nav>
+
+  <script>
+    document.getElementById('minorenne').addEventListener('change', function() {
+      var additionalInput = document.getElementById('minorenne-input');
+      if (this.checked) {
+        additionalInput.style.display = 'block';
+      } else {
+        additionalInput.style.display = 'none';
+      }
+    });
+  </script>
+  
+  <script>
+        // Function to enable form submission upon reCAPTCHA verification
+        function enableFormSubmission() {
+            document.getElementById('submit').removeAttribute('disabled');
+        }
+  </script>
+  
+  <script>
+  const text = document.querySelector(".rotatinglogo");
+	text.innerHTML = text.innerText
+	.split("")
+	.map(
+		(char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+	)
+	.join("");
+	
+  document.getElementById('inputForm').addEventListener('submit', function(event) { 
+    // Prevent form submission if form is invalid
+    if (!this.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+      // Show validation feedback to the user
+      this.classList.add('was-validated');
+	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>Completa tutti i dati necessari prima di inviare!";
+	  document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Esci</button>";
+      return;
+    }
+
+    event.preventDefault(); 
+    var formData = new FormData(this); 
+    fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
+      method: 'POST', 
+      body: formData 
+    }) 
+    .then(response => { 
+      console.log('Success:', response); 
+	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";	
+	  document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
+    }) 
+    .catch(error => { 
+      console.error('Error:', error); 
+	  document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore Critico</h2>La tua iscrizione non è stata ricevuta correttamente!<br>Se questo errore persiste contatta un amministratore!";
+	  document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
+    }); 
+  }); 
+  </script>
+
+  <script>
+	(() => {
+	  'use strict'
+	  const forms = document.querySelectorAll('.needs-validation')
+	  Array.from(forms).forEach(form => {
+		form.addEventListener('submit', event => {
+		  if (!form.checkValidity()) {
+			event.preventDefault()
+			event.stopPropagation()
+		  }
+		  form.classList.add('was-validated')
+		}, false)
+	  })
+	})()
+  </script>
+    
+  <script>
+  function loadExternalHTML() {
+	var z, i, elmnt, file, xhttp;
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+		file = elmnt.getAttribute("loadHTML");
+		if (file) {
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				if (this.status == 404) {elmnt.innerHTML = "";}
+				elmnt.removeAttribute("loadHTML");
+				loadExternalHTML();
+				}
+			}      
+			xhttp.open("GET", file, true);
+			xhttp.send();
+			return;
+			}
+		}
+	};
+
+  loadExternalHTML();
+  enableFormSubmission();
+  </script>
+
+</body>
+</html>
