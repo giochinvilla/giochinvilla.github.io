@@ -1,9 +1,9 @@
 {
     "color": "danger",
-    "badge": "EVENTO",
-    "title": "SALA GIOCA 2",
-    "subtitle": "Sala teatro di Villa Farsetti<br>Santa Maria di Sala, Mar 19, 2024",
-    "description": "Visto il grande successo della prima edizione, siete pronti... Per fare il bis?<br>Torna il <b>Sala Gioca</b>, sempre nella sala teatro di Villa Farsetti!<br>Anche stavolta ad aspettarvi ci saranno i nostri associati con una selezione sempre più ampia di nuovi giochi da tavolo da provare! Non mancheranno inoltre giochi di ruolo, venditori ed espositore del settore, e un'area food arricchita da nuove proposte culinarie!<br>Ricordiamo infine che siamo tornati anche con Ordalia per la terza tappa del nostro circuito torneistico di Warhammer 40k targato Giochi in Villa!<br><b>Sala Gioca: un evento fatto da giocatori, per i giocatori!</b>",
-    "image": "../images/longshot/salagioca2.webp",    
-    "link_href": "https://giochinvilla.it/pages/tournament.html?number=1"
+    "badge": "STORIE",
+    "title": "Il Torneo di BRW",
+    "subtitle": "30 marzo 2024",
+    "description": "Ci sono poche cose che possono costringermi ad alzarmi alle quattro di mattina di un giorno festivo, ma da sabato 30.03, ce n’è una in più: un torneo fuori porta di <b>Black Rose Wars!</b><br>Assemblo quindi una libreria e partiamo!<br>L'atmosfera è subito <b>sensazionale!</b> Siamo stati accolti all’interno di una location incredibile, messa a disposizione dalla Ludic Roma, ricolma di gente appassionata di questo gioco e anche dallo staff della Ludus Magnus Studio.<br>Vuoi scoprire di più sul nostro viaggio? Clicca il link qui sotto!",
+    "image": "../images/longshot/blackrose.webp", 
+	"link_href": "https://giochinvilla.it/pages/posts/raccontidelGIV1.html"
 }
