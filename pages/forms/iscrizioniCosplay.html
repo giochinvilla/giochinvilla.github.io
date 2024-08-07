@@ -217,6 +217,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		<br><br>
 		<button id="submit" type="submit" class="btn btn-danger d-none" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>Invia l'iscrizione</button>
 	    </form>
+		<br>
 		<span class="h5"><b>RICORDA!</b></span> A seguito dell'iscrizione bisogna fare il bonifico al <b>IT95E0832736300000000800568</b> o via Paypal a giochinvilla@gmail.com con causale <b>[Nome Cognome - Gara Cosplay]</b> entro il 6 settembre 2024<b></b>
 	  </div>
 	</div>
@@ -298,15 +299,15 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	    ).join("");
 	
 	document.getElementById('inputForm').addEventListener('submit', function(event) { 
-	  // Prevent form submission if form is invalid
-	  if (!this.checkValidity()) {
+    // Prevent form submission if form is invalid
+    if (!this.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
         this.classList.add('was-validated');
         document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>Completa tutti i campi prima di inviare l'iscrizione!";
         document.getElementById("modal-footer").innerHTML = "<button type='button' class='btn btn-primary' data-bs-dismiss='modal'>Esci</button>";
         return;
-	  }
+    }
 
     event.preventDefault(); 
     var formData = new FormData(this); 
@@ -314,22 +315,46 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
     // Get the audio file
     var audioFile = this.elements['file_audio'].files[0];
 
-    // Create a FileReader to read the audio file
-    var reader = new FileReader();
-    reader.onload = function(event) {
-	
-	
-        // Convert the audio file to base64 string
-        var audioData = event.target.result.split(',')[1]; // Extract the base64 data
-        // Add the audio data to the form data
-        formData.append('audio_file_text', audioData);
-		
-        // Now, send the form data with the audio file text
+    if (audioFile) {
+        // Create a FileReader to read the audio file
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            // Convert the audio file to base64 string
+            var audioData = event.target.result.split(',')[1]; // Extract the base64 data
+            // Add the audio data to the form data
+            formData.append('audio_file_text', audioData);
+            sendFormData(formData);
+        };
+        // Read the audio file as Data URL
+        reader.readAsDataURL(audioFile);
+    } else {
+        // No audio file provided, use placeholder
+        fetch('../../files/placeholder.mp3')
+            .then(response => response.blob())
+            .then(blob => {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    // Convert the placeholder audio file to base64 string
+                    var audioData = event.target.result.split(',')[1]; // Extract the base64 data
+                    // Add the audio data to the form data
+                    formData.append('audio_file_text', audioData);
+                    sendFormData(formData);
+                };
+                // Read the blob as Data URL
+                reader.readAsDataURL(blob);
+            })
+            .catch(error => {
+                console.error('Error loading placeholder audio file:', error);
+                document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>Impossibile caricare il file audio di placeholder. Verifica la tua connessione e riprova.";
+                document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
+            });
+    }
+
+    function sendFormData(formData) {
         fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
             method: 'POST', 
             body: formData,
-            // Set the Content-Type header to 'multipart/form-data'
-            // No need to set headers here as FormData will automatically set proper headers
+            // No need to set headers as FormData will automatically set proper headers
         }) 
         .then(response => { 
             console.log('Success:', response); 
@@ -341,24 +366,22 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
             document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore</h2>La tua iscrizione non è inviata correttamente<br>Se questo errore persiste contatta tecnico.giochinvilla@gmail.com";
             document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
         }); 
-    };
-    // Read the audio file as Data URL
-    reader.readAsDataURL(audioFile);
-  });
+    }
+});
 
-	(() => {
-	  'use strict'
-	  const forms = document.querySelectorAll('.needs-validation')
-	  Array.from(forms).forEach(form => {
-		form.addEventListener('submit', event => {
-		  if (!form.checkValidity()) {
-			event.preventDefault()
-			event.stopPropagation()
-		  }
-		  form.classList.add('was-validated')
-		}, false)
-	  })
-	})()
+(() => {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
 
   function loadExternalHTML() {
 	var z, i, elmnt, file, xhttp;
