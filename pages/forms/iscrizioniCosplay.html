@@ -298,7 +298,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		  (char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
 	    ).join("");
 	
-	document.getElementById('inputForm').addEventListener('submit', function(event) { 
+document.getElementById('inputForm').addEventListener('submit', function(event) {
     // Prevent form submission if form is invalid
     if (!this.checkValidity()) {
         event.preventDefault();
