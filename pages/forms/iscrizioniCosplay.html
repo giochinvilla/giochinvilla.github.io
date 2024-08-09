@@ -299,7 +299,7 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 	    ).join("");
 	
 document.getElementById('inputForm').addEventListener('submit', function(event) {
-    // Prevent form submission if form is invalid
+    // Check form validity immediately
     if (!this.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
@@ -309,7 +309,11 @@ document.getElementById('inputForm').addEventListener('submit', function(event) 
         return;
     }
 
-    event.preventDefault(); 
+    // Clear previous error messages
+    document.getElementById("modalText").innerHTML = "";
+    document.getElementById("modal-footer").innerHTML = "";
+
+    event.preventDefault();
     var formData = new FormData(this); 
 
     // Get the audio file
@@ -354,7 +358,6 @@ document.getElementById('inputForm').addEventListener('submit', function(event) 
         fetch('https://script.google.com/macros/s/AKfycbwjKhrCft5ApPSqCP1gk9ImslcHysEkcWtVrYYE3SSUEa92ZMh-p0KbccbULHbWn_NF/exec', { 
             method: 'POST', 
             body: formData,
-            // No need to set headers as FormData will automatically set proper headers
         }) 
         .then(response => { 
             console.log('Success:', response); 
