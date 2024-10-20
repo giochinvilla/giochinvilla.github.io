@@ -11,10 +11,12 @@
 <select id="dropdownMenu"></select>
 
 <script>
+console.log("A1");
     document.addEventListener("DOMContentLoaded", function() {
+	console.log("A2");
         fetch("https://script.googleusercontent.com/macros/echo?user_content_key=ZpX7ZHV92NwPZFVimQS5a55cDsDFi7W2Cvyg0PaDnmoRAqbOHHNZErnsoh_WTSkXVdxvOSGebXOlDnFu5XdrF3NHop7z02CYm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMKxiOk-R_2FDQLcPmg46jxQboixSaHK9eAtbmpLBeL9QOuGTYYExZTVPrAAgHcEOzwzrdBmyPfyodCnGtIafrwkKmy46I1IR9z9Jw9Md8uu&lib=M4q2togw7r1CvisGYYwXcl9AHJQtDQYqo")
             .then(response => {
-			console.log("A");
+			console.log("A3");
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
                 }
@@ -23,10 +25,10 @@
             .then(data => {
                 console.log(data); // Log the retrieved data for debugging
                 const dropdown = document.getElementById("dropdownMenu");
-				console.log("A");
+				console.log("A4");
                 // Loop through the data and create options for the dropdown
                 data.forEach(item => {
-				console.log("A");
+				console.log("A5");
                     const option = document.createElement("option");
                     option.value = item[0]; // Set value to the first item of the sub-array
                     option.textContent = item[0]; // Set display text to the first item of the sub-array
