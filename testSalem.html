@@ -15,7 +15,7 @@
     </form>
 
     <script>
-        // URL dell'applicazione Google Apps Script (includendo il tuo Deployment ID)
+        // URL dell'applicazione Google Apps Script
         const scriptUrl = 'https://script.google.com/macros/s/AKfycbwWUwNR8SMX7cx9_UFN8P-p1id0R4pdaR29fDSzGUWIh46Q-mGjvOv6l4ajlzBPD48URA/exec';
 
         // Funzione per popolare il dropdown
@@ -33,7 +33,12 @@
 
         // Funzione per recuperare i dati dall'app Google Apps Script
         fetch(scriptUrl)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
             .then(data => {
                 console.log(data); // Controlla i dati in console
                 populateDropdown(data); // Popola il dropdown
