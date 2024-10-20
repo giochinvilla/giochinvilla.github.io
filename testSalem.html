@@ -17,15 +17,23 @@
         console.log("A2");
 
         // Fetch data from the Google Apps Script endpoint with redirect option
-		fetch("https://script.google.com/macros/s/AKfycbwWUwNR8SMX7cx9_UFN8P-p1id0R4pdaR29fDSzGUWIh46Q-mGjvOv6l4ajlzBPD48URA/exec", redirect: "follow",
-      method: "POST",
-      body: JSON.stringify(DATA),
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8",
-      },) // Please set your Web Apps URL.
-		.then(res => res.json())
-		.then(res => console.log(res));
-			});
+    fetch("https://script.google.com/macros/s/AKfycbwWUwNR8SMX7cx9_UFN8P-p1id0R4pdaR29fDSzGUWIh46Q-mGjvOv6l4ajlzBPD48URA/exec", {
+        redirect: "follow",
+        method: "POST",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+        },
+    }) // Please set your Web Apps URL.
+    .then(res => {
+        // Check if response is ok
+        if (!res.ok) {
+            throw new Error('Network response was not ok: ' + res.statusText);
+        }
+        return res.json();
+    })
+    .then(res => console.log(res))
+    .catch(err => console.error('Fetch error:', err)); // Handle errors
+});
 </script>
 
 </body>
