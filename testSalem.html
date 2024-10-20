@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown da Google Sheet</title>
+</head>
+<body>
+    <h1>Seleziona un Nome</h1>
+
+    <!-- Form con il dropdown -->
+    <form>
+        <label for="nameDropdown">Nomi:</label>
+        <select id="nameDropdown" name="nameDropdown"></select>
+    </form>
+
+    <script>
+        // URL dell'applicazione Google Apps Script (includendo il tuo Deployment ID)
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbwWUwNR8SMX7cx9_UFN8P-p1id0R4pdaR29fDSzGUWIh46Q-mGjvOv6l4ajlzBPD48URA/exec';
+
+        // Funzione per popolare il dropdown
+        function populateDropdown(data) {
+            const dropdown = document.getElementById('nameDropdown');
+            
+            // Itera attraverso i dati e crea le opzioni del dropdown
+            data.forEach(row => {
+                const option = document.createElement('option');
+                option.value = row[0]; // Il valore della cella
+                option.textContent = row[0]; // Il testo da visualizzare nel dropdown
+                dropdown.appendChild(option);
+            });
+        }
+
+        // Funzione per recuperare i dati dall'app Google Apps Script
+        fetch(scriptUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Controlla i dati in console
+                populateDropdown(data); // Popola il dropdown
+            })
+            .catch(error => console.error('Errore nel recupero dei dati:', error));
+    </script>
+</body>
+</html>
