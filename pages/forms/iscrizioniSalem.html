@@ -264,19 +264,29 @@ const text = document.querySelector(".rotatinglogo");
         formData.append("campagna", selectedDropdownValue); // Add selected value as "selectedOpzione"
 
         fetch('https://script.google.com/macros/s/AKfycbwWUwNR8SMX7cx9_UFN8P-p1id0R4pdaR29fDSzGUWIh46Q-mGjvOv6l4ajlzBPD48URA/exec', { 
-            method: 'POST', 
-            body: formData 
-        }) 
-        .then(response => { 
-            console.log('Success:', response); 
-            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";	
-            document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
-        }) 
-        .catch(error => { 
-            console.error('Error:', error); 
-            document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore Critico</h2>La tua iscrizione non è stata ricevuta correttamente!<br>Se questo errore persiste contatta un amministratore!";
-            document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
-        }); 
+			method: 'POST', 
+			body: formData 
+		}) 
+		.then(response => response.text()) // Read the response body as text
+		.then(text => {
+			console.log('Server response:', text);
+
+			// Handle the "Campagna is Full" case
+			if (text === 'Campagna is Full') {
+				document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Posti Finiti</h2>Mi dispiace, ma nel frattempo che inviavi l'iscrizione qualcuno ti ha preceduto!";
+				document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
+			} 
+			// Handle success case
+			else {
+				document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-check-circle-o'></i> Congratulazioni!</h2>La tua iscrizione è stata inviata con successo!";
+				document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
+			}
+		})
+		.catch(error => { 
+			console.error('Error:', error); 
+			document.getElementById("modalText").innerHTML = "<h2 class='fs-5'><i class='fa fa-exclamation-triangle'></i> Errore Critico</h2>La tua iscrizione non è stata ricevuta correttamente!<br>Se questo errore persiste contatta un amministratore!";
+			document.getElementById("modal-footer").innerHTML = "<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>";
+		});
     }); 
 
     (() => {
