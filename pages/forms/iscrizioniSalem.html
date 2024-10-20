@@ -123,7 +123,8 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
         <label for="gdpr" class="form-check-label">Dichiaro di accettare i termini e le condizioni del trattamento dei dati conformemente alla normativa europea in materia di protezione dei dati (GDPR).</label>
         <div class="invalid-feedback">Devi accettare per poterti iscrivere</div>
     </div>
-            
+    <br>
+	<h5>Vuoi annullare la tua iscrizione? Mandaci una mail a giochinvilla@gmail.com</h5>
     <br>
     <button id="submit" type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>Invia l'iscrizione</button>
 </form>
@@ -150,6 +151,24 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
 		</div>
 	  </div>
 	</div>
+	
+	<div class="modal fade" id="loadingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="loadingModalLabel">
+                    <img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>
+                    Caricamento in corso
+                </h1>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Caricamento...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 	
 	<div class="col-xl-3 pe-xl-5 p-3">  
 	  <div loadHTML="../../template_containers/social.html"></div>
@@ -198,21 +217,32 @@ const text = document.querySelector(".rotatinglogo");
 		
 		
     document.addEventListener("DOMContentLoaded", function() {
-        fetch("https://script.google.com/macros/s/AKfycbwWUwNR8SMX7cx9_UFN8P-p1id0R4pdaR29fDSzGUWIh46Q-mGjvOv6l4ajlzBPD48URA/exec", {
-            method: "GET",
-            redirect: "follow",
-            headers: {
-                "Content-Type": "text/plain;charset=utf-8"
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            const dropdown = document.getElementById("dropdownMenu");
+    // Mostra il modal di caricamento
+    var loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'), {
+        backdrop: 'static',
+        keyboard: false
+    });
+    loadingModal.show();
+
+    fetch("https://script.google.com/macros/s/AKfycbwWUwNR8SMX7cx9_UFN8P-p1id0R4pdaR29fDSzGUWIh46Q-mGjvOv6l4ajlzBPD48URA/exec", {
+        method: "GET",
+        redirect: "follow",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Nascondi il modal di caricamento quando i dati vengono recuperati con successo
+        loadingModal.hide();
+
+        const dropdown = document.getElementById("dropdownMenu");
+
 
             if (Array.isArray(data) && data.length > 0) {
                 data.forEach((item, index) => {
