@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+<meta name="description" content="Esplora il mondo avvincente dei giochi da tavolo, Warhammer e giochi di ruolo sul 
+nostro sito. Scopri guide, risorse e comunità appassionate per arricchire la tua esperienza ludica. 
+Unisciti a noi nel coltivare la passione per l'immaginazione e la strategia, dove ogni dado lanciato porta avventure senza fine. 
+Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'unico scopo è condividere la gioia del gioco!.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXSNQ75QND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YXSNQ75QND');
+  </script>
+
+  <title>Giochi in Villa</title>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel="stylesheet" href="../../generalCSS.css">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../buttons.css">
+  
+  <link rel="icon" type="image/x-icon" href="../../images/icons/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  
+</head>
+<body>
+
+	<div class="modal fade" id="sendingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="sendingModalLabel"><img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img>
+				<span class='badge bg-danger rounded-pill text-white'>CARICAMENTO</span> Cancellazione in corso
+			</h1>
+		  </div>
+		  <div id="modalText" class="p-3">
+			<div class="modal-body d-flex justify-content-center">
+			  <div class="spinner-border" role="status">
+				<span class="visually-hidden">Caricamento...</span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal-footer" id="modal-footer">
+			<a href='#' class='btn btn-primary text-white' role='button'>Esci</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+<script>
+	
+	document.addEventListener('DOMContentLoaded', async function () {
+
+        // Show the modal
+        const modal = new bootstrap.Modal(document.getElementById('sendingModal'));
+        modal.show();
+
+        // Fetch UUID and handle cancellation
+        const urlParams = new URLSearchParams(window.location.search);
+        const uuid = urlParams.get('uuid');
+
+        if (uuid) {
+            let formData = new FormData();
+            formData.append("requestType", "cancellation");
+            formData.append('uuid', uuid);
+
+            try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbwy6ucZYjYYJAzC5GxxoQBi3-f9xXl75LtR_erNjfbGnJUXMby_JFmibfumGqa_Z7DGVA/exec', { 
+                    method: 'POST', 
+                    body: formData 
+                });
+                const text = await response.text();
+				
+				if (text === 'La prenotazione è stata cancellata con successo') {
+				
+                document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>CONGRATULAZIONI</span> Iscrizione cancellata con successo!";
+                document.getElementById("modalText").innerHTML = "A breve ti arriverà una mail che ti confermerà la cancellazione!";
+                document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
+				} else {
+				
+				document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>ATTENZIONE</span> La tua iscrizione risulta già cancellata!";
+                document.getElementById("modalText").innerHTML = "";
+                document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
+				}
+			} catch (error) {
+                console.error('Error:', error);
+                document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>ERRORE</span> Impossibile cancellare";
+                document.getElementById("modalText").innerHTML = "<i class='fa fa-exclamation-triangle'></i> Errore nella cancellazione. Contatta tecnico.giochinvilla@gmail.com";
+                document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-primary text-white' role='button'>Esci</a>";
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
