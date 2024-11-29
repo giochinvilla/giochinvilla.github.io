@@ -242,6 +242,8 @@ function submitForm(fetchUrl, formData) {
         .then(text => {
         if (text === '{"status":101}') {
             summonModal('modalID', "Dati incorretti", "Il nome utente o la password non sono corretti! Se questo è un errore contatta tecnico.giochinvilla@gmail.com", [{label: 'Esci', dismiss: false, link: 'javascript:location.reload();' }], "alert");
+        } else if (text === '{"status":97}') {
+            summonModal('modalID', "Iscrizione Effettuata", "Congratulazioni la tua iscrizione è stata effettuata con successo!", [{label: 'Esci', dismiss: false, link: '../../index.html' }], "success");
         } else if (text === '{"status":102}') {
             summonModal('modalID', "Giornata Annullata", "Mi dispiace! Questa giornata è stata annullata, quindi non puoi più prenotarti!", [{label: 'Esci', dismiss: false, link: 'javascript:location.reload();' }], "alert");
         } else if (text === '{"status":103}') {
