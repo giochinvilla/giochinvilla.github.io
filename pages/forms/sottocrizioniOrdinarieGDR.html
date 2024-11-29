@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXSNQ75QND"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YXSNQ75QND');
+    </script>
+
+    <title>Giochi in Villa</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../../generalCSS.css">
+    <link rel="stylesheet" href="../../fonts/fonts.css">
+    <link rel="stylesheet" href="../../buttons.css">
+
+    <link rel="icon" type="image/x-icon" href="../../images/icons/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+
+    <script src="formHelper.js"></script>
+    <script src="../../loaderHelper.js"></script>
+  </head>
+
+<body onload="checkPassword()">
+
+  <script>
+
+    summonModal(
+        'modalID',
+        `Iscrizione Master di Associazione GIV`,
+        `<form class="g-2 needs-validation m-2" id="inputForm" novalidate style="font-size: 1rem;">
+            <div class="container mt-4 mb-4 p-0">
+                <div class="accordion" id="accordionExample"></div>
+                <br>
+                <hr>
+                <div id="submitId"></div>
+            </div>
+        </form>`,
+        [],
+        ""
+    );
+
+    setTimeout(() => {
+        document.getElementById('submitId').appendChild(loadSubmit(true));
+
+        const accordionData = [
+            {
+                title: 'Iscrizione',
+                inputs: [
+                    { id: 'username', name: 'username', label: 'Nome', required: true, size: 'large', type: 'text' },
+                    { id: 'password', name: 'password', label: 'Password', required: true, size: 'large', type: 'text' },
+                    { id: 'email', name: 'email', label: 'Email', required: true, size: 'large', type: 'text'},
+                ]
+            }
+        ];
+
+        accordionData.forEach(section => {
+            document.getElementById('accordionExample').appendChild(createAccordion(section.title, section.inputs));
+        });
+
+        document.getElementById('inputForm').addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                this.classList.add('was-validated');
+                summonModal('modalID', "Form non completato", "Completa tutti i dati necessari prima di inviare!", [{label: 'Esci', dismiss: true, link: '' }], "alert");
+                return;
+            }
+
+            event.preventDefault();
+            var formData = new FormData(this);
+            formData.append("requestType", "subscription");
+
+            submitForm('https://script.google.com/macros/s/AKfycbwYlKq9mUnuMx5w2vS3wqo8UMESC77TC_gFzorhw4hLnq8BDKtPHU9gdUa6Xrm0mb2d/exec', formData);
+        });
+    }, 100);
+
+    function loadFormsDefiner(data) {}
+
+    function checkPassword() {
+        const password = "Tosano";
+        const userInput = prompt("Inserisci la password:");
+        if (userInput === password) {}
+        else {
+            window.location = "https://www.google.com";
+        }
+    }
+
+  </script>
+</body>
+</html>
