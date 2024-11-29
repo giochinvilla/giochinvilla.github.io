@@ -80,17 +80,15 @@ Entra nel nostro regno virtuale dedicato agli appassionati di giochi, dove l'uni
                 const text = await response.text();
 				
 				if (text === '{"status":99}') {
-				
-                document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>CONGRATULAZIONI</span> Iscrizione cancellata con successo!";
-                document.getElementById("modalText").innerHTML = "A breve ti arriverà una mail che ti confermerà la cancellazione!";
-                document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-danger text-white' role='button'>Esci</a>";
+                	document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>CONGRATULAZIONI</span> Iscrizione cancellata con successo!";
+                	document.getElementById("modalText").innerHTML = "A breve ti arriverà una mail che ti confermerà la cancellazione!";
+                	document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-danger text-white' role='button'>Esci</a>";
 				} else if (text === '{"status":98}') {
-				
-				document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>ATTENZIONE</span> La tua iscrizione risulta già cancellata!";
-                document.getElementById("modalText").innerHTML = "";
-                document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-danger text-white' role='button'>Esci</a>";
+					document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>ATTENZIONE</span> La tua iscrizione risulta già cancellata!";
+                	document.getElementById("modalText").innerHTML = "";
+                	document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-danger text-white' role='button'>Esci</a>";
 				} else {
-					document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>ATTENZIONE</span> ???!";
+					document.getElementById("sendingModalLabel").innerHTML = "<img alt='Immagine' src='../../images/icons/subtitle-logo.webp' style='width:28px; margin-right: 10px;'></img><span class='badge bg-danger rounded-pill text-white'>ERRORE</span> Risposta inaspettata! Contatta tecnico.giochinvilla@gmail.com";
 					document.getElementById("modalText").innerHTML = "";
 					document.getElementById("modal-footer").innerHTML = "<a href='../../index.html' class='btn btn-danger text-white' role='button'>Esci</a>";
 				}
