@@ -320,7 +320,7 @@ function loadSubmit(disabled = true) {
     const label = document.createElement('label');
     label.setAttribute('for', 'gdpr');
     label.className = 'form-check-label';
-    label.textContent = 'Accetto i termini e le condizioni del trattamento dei dati conformemente alla normativa europea in materia di protezione dei dati (GDPR).';
+    label.innerHTML = '<a href="https://www.termsfeed.com/live/64bd2141-32f0-4f97-a604-0f3769f30d6f" target="_blank" style="text-decoration: none; color: #000000;">Accetto i termini e le condizioni del trattamento dei dati conformemente alla normativa europea in materia di protezione dei dati (GDPR)</a>.';
 
     const invalidFeedback = document.createElement('div');
     invalidFeedback.className = 'invalid-feedback';
