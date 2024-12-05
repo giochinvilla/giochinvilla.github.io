@@ -252,6 +252,8 @@ function submitForm(fetchUrl, formData) {
             summonModal('modalID', "Posto già prenotato", "Mi dispiace! Questo slot ti è appena stato soffiato all'ultimo secondo, quindi non puoi più prenotarti!", [{label: 'Esci', dismiss: false, link: 'javascript:location.reload();' }], "alert");
         } else if (text === '{"status":105}') {
             summonModal('modalID', "Mail Invalida", "La mail che hai inserito non risulta valida! Se questo è un errore contatta tecnico.giochinvilla@gmail.com", [{label: 'Esci', dismiss: false, link: 'javascript:location.reload();' }], "alert");
+        } else if (text === '{"status":106}') {
+            summonModal('modalID', "Mail già utilizzata", "La mail che hai inserito risulta già utilizzata! Se questo è un errore contatta tecnico.giochinvilla@gmail.com", [{label: 'Esci', dismiss: false, link: 'javascript:location.reload();' }], "alert");
         } else if (text === '{"status":100}'){
             summonModal('modalID', "Prenotazione Effettuata", "Iscrizione completata con successo! A breve ti arriverà una mail che ti confermerà la prenotazione effettuata!", [{label: 'Esci', dismiss: false, link: 'javascript:location.reload();' }], "success");
         } else {
